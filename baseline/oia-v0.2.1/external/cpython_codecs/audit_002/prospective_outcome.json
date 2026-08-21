@@ -1,0 +1,36 @@
+{
+  "audit_id": "OIA-1-TRACK-A-002",
+  "interpretation": "the first prospective observation was absent from every branch of the frozen candidate policy",
+  "leaf_candidates": null,
+  "opened_target_codec": "cp437",
+  "outcome_status": "outside_model",
+  "post_outcome_policy_changes": 0,
+  "pre_outcome_manifest_verified": true,
+  "primary_policy_exact": true,
+  "primary_policy_status": "solved",
+  "steps_executed": 1,
+  "target_id": "t_7aa9b30659da7223",
+  "target_was_frozen_outside_candidate_set": true,
+  "trace": [
+    {
+      "branch_present": false,
+      "candidate_branch_observations": [
+        "o_a4a07edff17329dd",
+        "o_fbf3945ce39feea7"
+      ],
+      "opaque_action": "a_10bdb5ac0766844c",
+      "opaque_observation": "o_88cc3407185e6aeb",
+      "opened_action": {
+        "kind": "push_byte",
+        "value": 239
+      },
+      "opened_observation": {
+        "codepoints": [
+          8745
+        ],
+        "kind": "text"
+      },
+      "step": 1
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "audit_id": "OIA-1-TRACK-A-002",
+  "expected_historical_policy_sha256": "612c0572b8f04a4fd3ff82ef2f33f198cda6442200ca7876f24deb6cd3918799",
+  "expected_historical_report_sha256": "10bbdb8151be0b073a76a2faa4cdb8083a992aed3820977c17193a40fbe5f2ce",
+  "expected_tie_branch_action": "a_4763bdccab175d30",
+  "maintenance_release": "0.2.1",
+  "matches_canonical_tie_action": true,
+  "matches_historical_policy": true,
+  "matches_historical_report": true,
+  "pass": true,
+  "rows": [
+    {
+      "exact": true,
+      "policy_sha256": "612c0572b8f04a4fd3ff82ef2f33f198cda6442200ca7876f24deb6cd3918799",
+      "python_hash_seed": "0",
+      "report_sha256": "10bbdb8151be0b073a76a2faa4cdb8083a992aed3820977c17193a40fbe5f2ce",
+      "root_action": "a_10bdb5ac0766844c",
+      "tie_branch_action": "a_4763bdccab175d30",
+      "worst_case_steps": 3
+    },
+    {
+      "exact": true,
+      "policy_sha256": "612c0572b8f04a4fd3ff82ef2f33f198cda6442200ca7876f24deb6cd3918799",
+      "python_hash_seed": "1",
+      "report_sha256": "10bbdb8151be0b073a76a2faa4cdb8083a992aed3820977c17193a40fbe5f2ce",
+      "root_action": "a_10bdb5ac0766844c",
+      "tie_branch_action": "a_4763bdccab175d30",
+      "worst_case_steps": 3
+    },
+    {
+      "exact": true,
+      "policy_sha256": "612c0572b8f04a4fd3ff82ef2f33f198cda6442200ca7876f24deb6cd3918799",
+      "python_hash_seed": "2",
+      "report_sha256": "10bbdb8151be0b073a76a2faa4cdb8083a992aed3820977c17193a40fbe5f2ce",
+      "root_action": "a_10bdb5ac0766844c",
+      "tie_branch_action": "a_4763bdccab175d30",
+      "worst_case_steps": 3
+    },
+    {
+      "exact": true,
+      "policy_sha256": "612c0572b8f04a4fd3ff82ef2f33f198cda6442200ca7876f24deb6cd3918799",
+      "python_hash_seed": "5",
+      "report_sha256": "10bbdb8151be0b073a76a2faa4cdb8083a992aed3820977c17193a40fbe5f2ce",
+      "root_action": "a_10bdb5ac0766844c",
+      "tie_branch_action": "a_4763bdccab175d30",
+      "worst_case_steps": 3
+    },
+    {
+      "exact": true,
+      "policy_sha256": "612c0572b8f04a4fd3ff82ef2f33f198cda6442200ca7876f24deb6cd3918799",
+      "python_hash_seed": "10",
+      "report_sha256": "10bbdb8151be0b073a76a2faa4cdb8083a992aed3820977c17193a40fbe5f2ce",
+      "root_action": "a_10bdb5ac0766844c",
+      "tie_branch_action": "a_4763bdccab175d30",
+      "worst_case_steps": 3
+    },
+    {
+      "exact": true,
+      "policy_sha256": "612c0572b8f04a4fd3ff82ef2f33f198cda6442200ca7876f24deb6cd3918799",
+      "python_hash_seed": "42",
+      "report_sha256": "10bbdb8151be0b073a76a2faa4cdb8083a992aed3820977c17193a40fbe5f2ce",
+      "root_action": "a_10bdb5ac0766844c",
+      "tie_branch_action": "a_4763bdccab175d30",
+      "worst_case_steps": 3
+    },
+    {
+      "exact": true,
+      "policy_sha256": "612c0572b8f04a4fd3ff82ef2f33f198cda6442200ca7876f24deb6cd3918799",
+      "python_hash_seed": "123",
+      "report_sha256": "10bbdb8151be0b073a76a2faa4cdb8083a992aed3820977c17193a40fbe5f2ce",
+      "root_action": "a_10bdb5ac0766844c",
+      "tie_branch_action": "a_4763bdccab175d30",
+      "worst_case_steps": 3
+    }
+  ],
+  "schema_version": 1,
+  "scope": "recompute the frozen opaque audit input only; no codec substrate or cp437 outcome execution",
+  "seeds": [
+    0,
+    1,
+    2,
+    5,
+    10,
+    42,
+    123
+  ],
+  "serialization": "UTF-8 json.dumps(indent=2, sort_keys=True) plus newline",
+  "single_policy_hash": true,
+  "single_report_hash": true,
+  "single_tie_action": true,
+  "unique_policy_sha256": [
+    "612c0572b8f04a4fd3ff82ef2f33f198cda6442200ca7876f24deb6cd3918799"
+  ],
+  "unique_report_sha256": [
+    "10bbdb8151be0b073a76a2faa4cdb8083a992aed3820977c17193a40fbe5f2ce"
+  ],
+  "unique_tie_branch_actions": [
+    "a_4763bdccab175d30"
+  ]
+}

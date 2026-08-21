@@ -1,0 +1,11 @@
+{
+  "artifacts_produced": false,
+  "attempt": "all 256 one-byte pushes plus finish, horizon 4",
+  "audit_id": "OIA-1-TRACK-A-000",
+  "date": "2026-08-21",
+  "engineering_cap_seconds": 120,
+  "interpretation": "the initial all-byte adapter validation did not complete inside the engineering cap; this is a real scaling negative, not evidence of identifiability or non-identifiability",
+  "next_numbered_audit": "audit 001 freezes a seven-action opened diagnostic alphabet before running OIA or the prospective target",
+  "result": "cap_limited_noncompletion",
+  "validation": "complete reachable-state and edge replay"
+}

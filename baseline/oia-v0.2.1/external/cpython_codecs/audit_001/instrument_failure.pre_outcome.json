@@ -1,0 +1,23 @@
+{
+  "audit_id": "OIA-1-TRACK-A-001",
+  "closure_date": "2026-08-21",
+  "corrective_action": {
+    "change": "refine inside each prior block and stop when no old block splits, independent of block-ID numbering",
+    "next_numbered_audit": "OIA-1-TRACK-A-002",
+    "regression_test": "tests/test_track_a_codec.py"
+  },
+  "failure": {
+    "component": "behavioral_partition",
+    "diagnosis": "the behavioral partition reached a stable set partition but globally renumbered numeric block IDs; exact mapping comparison therefore failed to recognize convergence",
+    "scientific_interpretation": "instrument failure only; no identification or outside-model conclusion",
+    "symptom": "full OIA report did not complete inside a 120-second engineering execution cap"
+  },
+  "freeze_manifest_verified_before_closure": true,
+  "outcome_consulted": false,
+  "prospective_target_executed": false,
+  "source_checksums": {
+    "corrected_equivalence_py_sha256": "55dd827b43197c8c145431a5f55f899ac6a3631fedaff84e0f548e1d8b732b0d",
+    "pre_fix_equivalence_py_sha256": "d9a782b9db55d84fc5736a228503ebf10ad31d990d24bb5f4578f2e986166d70"
+  },
+  "status": "closed_pre_outcome_instrument_failure"
+}

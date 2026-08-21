@@ -1,0 +1,108 @@
+{
+  "evidence_class": "deterministic_structural_scaling_probe",
+  "rows": [
+    {
+      "adaptive_depth_claim": "minimum",
+      "adaptive_exact": true,
+      "adaptive_status": "solved",
+      "adaptive_worst_case_steps": 3,
+      "candidate_count": 4,
+      "explored_partitions": 7,
+      "family": "isolate_one",
+      "preset_exact": true,
+      "preset_length": 3,
+      "preset_status": "solved",
+      "reachable_beliefs": 11
+    },
+    {
+      "adaptive_depth_claim": "minimum",
+      "adaptive_exact": true,
+      "adaptive_status": "solved",
+      "adaptive_worst_case_steps": 5,
+      "candidate_count": 6,
+      "explored_partitions": 31,
+      "family": "isolate_one",
+      "preset_exact": true,
+      "preset_length": 5,
+      "preset_status": "solved",
+      "reachable_beliefs": 37
+    },
+    {
+      "adaptive_depth_claim": "minimum",
+      "adaptive_exact": true,
+      "adaptive_status": "solved",
+      "adaptive_worst_case_steps": 7,
+      "candidate_count": 8,
+      "explored_partitions": 127,
+      "family": "isolate_one",
+      "preset_exact": true,
+      "preset_length": 7,
+      "preset_status": "solved",
+      "reachable_beliefs": 135
+    },
+    {
+      "adaptive_depth_claim": "minimum",
+      "adaptive_exact": true,
+      "adaptive_status": "solved",
+      "adaptive_worst_case_steps": 9,
+      "candidate_count": 10,
+      "explored_partitions": 511,
+      "family": "isolate_one",
+      "preset_exact": true,
+      "preset_length": 9,
+      "preset_status": "solved",
+      "reachable_beliefs": 521
+    },
+    {
+      "adaptive_depth_claim": "minimum",
+      "adaptive_exact": true,
+      "adaptive_status": "solved",
+      "adaptive_worst_case_steps": 11,
+      "candidate_count": 12,
+      "explored_partitions": 2047,
+      "family": "isolate_one",
+      "preset_exact": true,
+      "preset_length": 11,
+      "preset_status": "solved",
+      "reachable_beliefs": 2059
+    },
+    {
+      "delay": 4,
+      "distinguishable": true,
+      "family": "delayed_pair",
+      "separator_length": 5
+    },
+    {
+      "delay": 8,
+      "distinguishable": true,
+      "family": "delayed_pair",
+      "separator_length": 9
+    },
+    {
+      "delay": 16,
+      "distinguishable": true,
+      "family": "delayed_pair",
+      "separator_length": 17
+    },
+    {
+      "delay": 32,
+      "distinguishable": true,
+      "family": "delayed_pair",
+      "separator_length": 33
+    },
+    {
+      "delay": 64,
+      "distinguishable": true,
+      "family": "delayed_pair",
+      "separator_length": 65
+    },
+    {
+      "delay": 128,
+      "distinguishable": true,
+      "family": "delayed_pair",
+      "separator_length": 129
+    }
+  ],
+  "schema_version": 2,
+  "timing_policy": "wall-clock values are console-only local diagnostics and are not included in this checksummed artifact"
+}

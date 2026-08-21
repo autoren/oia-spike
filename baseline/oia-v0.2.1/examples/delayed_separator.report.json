@@ -1,0 +1,81 @@
+{
+  "behavioral_equivalence_classes": [
+    [
+      "right"
+    ],
+    [
+      "left"
+    ]
+  ],
+  "full_candidate_identification": {
+    "adaptive": {
+      "depth_claim": "minimum",
+      "enumeration_complete": true,
+      "exact": true,
+      "impossibility_certificate": null,
+      "optimality_certified": true,
+      "policy": {
+        "action": "prime",
+        "branches": {
+          "ok": {
+            "action": "inspect",
+            "branches": {
+              "blue": {
+                "candidates": [
+                  "right"
+                ],
+                "conclusion": "identified candidate right",
+                "type": "leaf"
+              },
+              "red": {
+                "candidates": [
+                  "left"
+                ],
+                "conclusion": "identified candidate left",
+                "type": "leaf"
+              }
+            },
+            "type": "action"
+          }
+        },
+        "type": "action"
+      },
+      "reachable_beliefs": 4,
+      "reason": "minimum worst-case policy over the complete reachable belief graph",
+      "status": "solved",
+      "worst_case_steps": 2
+    },
+    "adaptive_expected_steps": 2.0,
+    "preset": {
+      "exact": true,
+      "explored_partitions": 2,
+      "length": 2,
+      "reason": "shortest fixed action sequence",
+      "sequence": [
+        "prime",
+        "inspect"
+      ],
+      "status": "solved"
+    }
+  },
+  "pairwise_separation": [
+    {
+      "distinguishable": true,
+      "left": "left",
+      "right": "right",
+      "sequence": [
+        "prime",
+        "inspect"
+      ]
+    }
+  ],
+  "scope": {
+    "actions": [
+      "inspect",
+      "prime"
+    ],
+    "candidate_count": 2,
+    "semantics": "deterministic complete finite Mealy candidates",
+    "state_count": 4
+  }
+}

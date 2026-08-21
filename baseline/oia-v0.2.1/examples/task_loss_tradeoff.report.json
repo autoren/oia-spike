@@ -1,0 +1,269 @@
+{
+  "behavioral_equivalence_classes": [
+    [
+      "H0"
+    ],
+    [
+      "H1"
+    ]
+  ],
+  "decision_relevance": {
+    "common_optimal_initially": [],
+    "decisions": [
+      "choose_0",
+      "choose_1"
+    ],
+    "expected_value_policy": {
+      "baseline_value": 9.0,
+      "criterion": "expected",
+      "max_depth": 1,
+      "policy": {
+        "action": "b",
+        "branches": {
+          "0": {
+            "candidates": [
+              "H0"
+            ],
+            "conditional_value": 10.0,
+            "decision": "choose_0",
+            "type": "decision"
+          },
+          "1": {
+            "candidates": [
+              "H1"
+            ],
+            "conditional_value": 10.0,
+            "decision": "choose_1",
+            "type": "decision"
+          }
+        },
+        "conditional_value": 9.891,
+        "type": "probe"
+      },
+      "value": 9.891,
+      "value_of_information": 0.891
+    },
+    "minimum_probe_to_common_optimum": {
+      "adaptive": {
+        "depth_claim": "minimum",
+        "enumeration_complete": true,
+        "exact": true,
+        "impossibility_certificate": null,
+        "optimality_certified": true,
+        "policy": {
+          "action": "a",
+          "branches": {
+            "0": {
+              "candidates": [
+                "H0"
+              ],
+              "conclusion": "common-optimal decision(s): choose_0",
+              "type": "leaf"
+            },
+            "1": {
+              "candidates": [
+                "H1"
+              ],
+              "conclusion": "common-optimal decision(s): choose_1",
+              "type": "leaf"
+            }
+          },
+          "type": "action"
+        },
+        "reachable_beliefs": 3,
+        "reason": "minimum worst-case policy over the complete reachable belief graph",
+        "status": "solved",
+        "worst_case_steps": 1
+      },
+      "preset": {
+        "exact": true,
+        "explored_partitions": 1,
+        "length": 1,
+        "reason": "shortest fixed action sequence",
+        "sequence": [
+          "a"
+        ],
+        "status": "solved"
+      }
+    },
+    "model_dependent_task_loss": {
+      "expected_value_policy": {
+        "baseline_value": 9.0,
+        "criterion": "expected",
+        "exact": true,
+        "largest_frontier_size": 4,
+        "max_depth": 1,
+        "policy": {
+          "action": "b",
+          "branches": {
+            "0": {
+              "candidates": [
+                "H0"
+              ],
+              "decision": "choose_0",
+              "outcome_vector": {
+                "H0": 10.0
+              },
+              "type": "decision"
+            },
+            "1": {
+              "candidates": [
+                "H1"
+              ],
+              "decision": "choose_1",
+              "outcome_vector": {
+                "H1": 10.0
+              },
+              "type": "decision"
+            }
+          },
+          "outcome_vector": {
+            "H0": 9.99,
+            "H1": 9.0
+          },
+          "type": "probe"
+        },
+        "reason": "complete Pareto frontier enumerated within the declared depth",
+        "root_frontier_size": 4,
+        "status": "solved",
+        "value": 9.891,
+        "value_of_information": 0.891
+      },
+      "robust_value_policy": {
+        "baseline_value": 0.0,
+        "criterion": "robust",
+        "exact": true,
+        "largest_frontier_size": 4,
+        "max_depth": 1,
+        "policy": {
+          "action": "a",
+          "branches": {
+            "0": {
+              "candidates": [
+                "H0"
+              ],
+              "decision": "choose_0",
+              "outcome_vector": {
+                "H0": 10.0
+              },
+              "type": "decision"
+            },
+            "1": {
+              "candidates": [
+                "H1"
+              ],
+              "decision": "choose_1",
+              "outcome_vector": {
+                "H1": 10.0
+              },
+              "type": "decision"
+            }
+          },
+          "outcome_vector": {
+            "H0": 9.5,
+            "H1": 9.5
+          },
+          "type": "probe"
+        },
+        "reason": "complete Pareto frontier enumerated within the declared depth",
+        "root_frontier_size": 4,
+        "status": "solved",
+        "value": 9.5,
+        "value_of_information": 9.5
+      }
+    },
+    "robust_value_policy": {
+      "baseline_value": 0.0,
+      "criterion": "robust",
+      "max_depth": 1,
+      "policy": {
+        "action": "b",
+        "branches": {
+          "0": {
+            "candidates": [
+              "H0"
+            ],
+            "conditional_value": 10.0,
+            "decision": "choose_0",
+            "type": "decision"
+          },
+          "1": {
+            "candidates": [
+              "H1"
+            ],
+            "conditional_value": 10.0,
+            "decision": "choose_1",
+            "type": "decision"
+          }
+        },
+        "conditional_value": 9.891,
+        "type": "probe"
+      },
+      "value": 9.891,
+      "value_of_information": 9.891
+    }
+  },
+  "full_candidate_identification": {
+    "adaptive": {
+      "depth_claim": "minimum",
+      "enumeration_complete": true,
+      "exact": true,
+      "impossibility_certificate": null,
+      "optimality_certified": true,
+      "policy": {
+        "action": "a",
+        "branches": {
+          "0": {
+            "candidates": [
+              "H0"
+            ],
+            "conclusion": "identified candidate H0",
+            "type": "leaf"
+          },
+          "1": {
+            "candidates": [
+              "H1"
+            ],
+            "conclusion": "identified candidate H1",
+            "type": "leaf"
+          }
+        },
+        "type": "action"
+      },
+      "reachable_beliefs": 3,
+      "reason": "minimum worst-case policy over the complete reachable belief graph",
+      "status": "solved",
+      "worst_case_steps": 1
+    },
+    "adaptive_expected_steps": 1.0,
+    "preset": {
+      "exact": true,
+      "explored_partitions": 1,
+      "length": 1,
+      "reason": "shortest fixed action sequence",
+      "sequence": [
+        "a"
+      ],
+      "status": "solved"
+    }
+  },
+  "pairwise_separation": [
+    {
+      "distinguishable": true,
+      "left": "H0",
+      "right": "H1",
+      "sequence": [
+        "a"
+      ]
+    }
+  ],
+  "scope": {
+    "actions": [
+      "a",
+      "b"
+    ],
+    "candidate_count": 2,
+    "semantics": "deterministic complete finite Mealy candidates",
+    "state_count": 2
+  }
+}

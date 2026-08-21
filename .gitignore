@@ -1,0 +1,21 @@
+# Local execution environments and caches
+.venv/
+**/.venv/
+__pycache__/
+**/__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+
+# Local acquisition and execution state
+/artifacts/
+/local-work/
+/work/
+/.env
+/.env.*
+
+# Bulk packages are represented by hashes/manifests, not committed ad hoc.
+/*.tar
+/*.tar.gz
+/*.tgz
+/*.zip

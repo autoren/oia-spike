@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "maintenance_release": "0.2.1",
+  "historical_release": {
+    "archive_path": "historical/OIA-1-v0.2.0-Frozen-Package.zip",
+    "archive_sha256": "0c70cd82282f91a2c4a1ec61416fbbabd7ba9566ade8527253384ceb8b28c2d3",
+    "status": "immutable byte-for-byte v0.2.0 release"
+  },
+  "historical_audit_002": {
+    "artifact_root": "external/cpython_codecs/audit_002",
+    "instrument_manifest": "external/cpython_codecs/audit_002/instrument_source_provenance.json",
+    "instrument_source_resolution_root": "historical/v0.2.0/instrument_sources",
+    "oia_report_sha256": "10bbdb8151be0b073a76a2faa4cdb8083a992aed3820977c17193a40fbe5f2ce",
+    "prospective_outcome_sha256": "3ad0fb8e9969056da81c5a78c1825fdc170a2eff1d6544ef5f961a81f95f927c",
+    "status": "historical evidence; not refrozen or rewritten in v0.2.1"
+  },
+  "current_release": {
+    "source_root": ".",
+    "source_manifest": "maintenance/CURRENT_SOURCE_SHA256SUMS",
+    "corrected_file": "src/ontology_auditor/synthesis.py",
+    "cross_process_regression": "research/hash_seed_reproducibility_results.json",
+    "status": "current maintained instrument source"
+  },
+  "resolution_rule": "Historical audit source hashes are resolved only against historical/v0.2.0/instrument_sources. Current source hashes are resolved only against maintenance/CURRENT_SOURCE_SHA256SUMS. They are never silently substituted for one another.",
+  "prospective_status": "The cp437 outcome was not rerun. Current-source replay uses only the frozen opaque candidate-machine input and is maintenance validation, not a prospective audit."
+}

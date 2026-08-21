@@ -1,0 +1,77 @@
+{
+  "audit_id": "OIA-1-TRACK-A-002",
+  "files": [
+    {
+      "path": "src/ontology_auditor/model.py",
+      "sha256": "9d622641f267e7dc1e99302060ac0a3a7ecd654e46f3162c9605c9ba602eca24",
+      "size_bytes": 11021
+    },
+    {
+      "path": "src/ontology_auditor/equivalence.py",
+      "sha256": "55dd827b43197c8c145431a5f55f899ac6a3631fedaff84e0f548e1d8b732b0d",
+      "size_bytes": 5472
+    },
+    {
+      "path": "src/ontology_auditor/synthesis.py",
+      "sha256": "c2cad713b732bd7131f94331a2c45765eb3fc1129c2482063a0f3acbf60f7d1b",
+      "size_bytes": 28195
+    },
+    {
+      "path": "src/ontology_auditor/decision.py",
+      "sha256": "978a333681702eb6b93947c15df4fcd92b220808d208c794a3afd9854029922f",
+      "size_bytes": 10642
+    },
+    {
+      "path": "src/ontology_auditor/task_loss.py",
+      "sha256": "1aa6563c7f104d8ed3b932221659b776a73400c074b744ba3973fbe984849e00",
+      "size_bytes": 13087
+    },
+    {
+      "path": "src/ontology_auditor/audit.py",
+      "sha256": "a396aa577c7490b4ca96031a543d09557956f68eb2276cb08dbfd7c495b62393",
+      "size_bytes": 5861
+    },
+    {
+      "path": "src/ontology_auditor/io.py",
+      "sha256": "ad9fa0ccb090d97ae52bf11abf0063a675cad7ccf5c7d7a970c82eae5784c02f",
+      "size_bytes": 3800
+    },
+    {
+      "path": "external/cpython_codecs/codec_adapter.py",
+      "sha256": "1501e59ceb83258d7318544526cb9e86afa04d544a0dd1d144229a312c1a97c4",
+      "size_bytes": 10071
+    },
+    {
+      "path": "external/cpython_codecs/validate_adapter.py",
+      "sha256": "455a8ff23a40374f13a02fd849426a811b5837a4463f338031df364e6fef019a",
+      "size_bytes": 4963
+    },
+    {
+      "path": "external/cpython_codecs/prepare_audit.py",
+      "sha256": "ab15dbe761f1da7799dc32c9a2e8c09145caeecdf6b3b4468c5f3c6ec27e7801",
+      "size_bytes": 13674
+    },
+    {
+      "path": "external/cpython_codecs/run_opened_audit.py",
+      "sha256": "a4f55c3dca6e5c5461610665d7e6b546e518f1fbae08c9702e9e11586f5b425e",
+      "size_bytes": 7986
+    },
+    {
+      "path": "external/cpython_codecs/execute_prospective_outcome.py",
+      "sha256": "a04c28d00cfd4cd0402a9a7e79ae9069c0cfa3d289144b61304bae500685557d",
+      "size_bytes": 5315
+    },
+    {
+      "path": "tests/test_auditor.py",
+      "sha256": "9d902c7b09f0f4564b3bf227972356c9f4b4e2762e1a17649d7ae73951e21d84",
+      "size_bytes": 19832
+    },
+    {
+      "path": "tests/test_track_a_codec.py",
+      "sha256": "1dd97666ca0b9f105001ced457c0891c45709bf075b53123373208fabae870c0",
+      "size_bytes": 1229
+    }
+  ],
+  "hash_algorithm": "SHA-256",
+  "purpose": "freeze the exact OIA core, substrate adapter, validators, outcome runner, and regression tests before prospective execution"
+}

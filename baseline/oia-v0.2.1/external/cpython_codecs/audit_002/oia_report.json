@@ -1,0 +1,370 @@
+{
+  "behavioral_equivalence_classes": [
+    [
+      "c_5120cb3b4d8ff3f6"
+    ],
+    [
+      "c_5207a34e77ed93fd"
+    ],
+    [
+      "c_af323b69f90d357f"
+    ],
+    [
+      "c_0119c746663fa122"
+    ],
+    [
+      "c_0708de506fc4ac58"
+    ]
+  ],
+  "decision_relevance": {
+    "common_optimal_initially": [],
+    "decisions": [
+      "d_d4a08a0734fb24f4",
+      "d_03350e3c27e7a18d"
+    ],
+    "expected_value_policy": {
+      "baseline_value": 0.6000000000000001,
+      "criterion": "expected",
+      "max_depth": 4,
+      "policy": {
+        "action": "a_10bdb5ac0766844c",
+        "branches": {
+          "o_a4a07edff17329dd": {
+            "candidates": [
+              "c_5120cb3b4d8ff3f6",
+              "c_5207a34e77ed93fd",
+              "c_af323b69f90d357f"
+            ],
+            "conditional_value": 1.0,
+            "decision": "d_03350e3c27e7a18d",
+            "type": "decision"
+          },
+          "o_fbf3945ce39feea7": {
+            "candidates": [
+              "c_0119c746663fa122",
+              "c_0708de506fc4ac58"
+            ],
+            "conditional_value": 1.0,
+            "decision": "d_d4a08a0734fb24f4",
+            "type": "decision"
+          }
+        },
+        "conditional_value": 0.9900000000000001,
+        "type": "probe"
+      },
+      "value": 0.9900000000000001,
+      "value_of_information": 0.39
+    },
+    "minimum_probe_to_common_optimum": {
+      "adaptive": {
+        "depth_claim": "minimum",
+        "enumeration_complete": true,
+        "exact": true,
+        "impossibility_certificate": null,
+        "optimality_certified": true,
+        "policy": {
+          "action": "a_10bdb5ac0766844c",
+          "branches": {
+            "o_a4a07edff17329dd": {
+              "candidates": [
+                "c_5120cb3b4d8ff3f6",
+                "c_5207a34e77ed93fd",
+                "c_af323b69f90d357f"
+              ],
+              "conclusion": "common-optimal decision(s): d_03350e3c27e7a18d",
+              "type": "leaf"
+            },
+            "o_fbf3945ce39feea7": {
+              "candidates": [
+                "c_0119c746663fa122",
+                "c_0708de506fc4ac58"
+              ],
+              "conclusion": "common-optimal decision(s): d_d4a08a0734fb24f4",
+              "type": "leaf"
+            }
+          },
+          "type": "action"
+        },
+        "reachable_beliefs": 38,
+        "reason": "minimum worst-case policy over the complete reachable belief graph",
+        "status": "solved",
+        "worst_case_steps": 1
+      },
+      "preset": {
+        "exact": true,
+        "explored_partitions": 1,
+        "length": 1,
+        "reason": "shortest fixed action sequence",
+        "sequence": [
+          "a_10bdb5ac0766844c"
+        ],
+        "status": "solved"
+      }
+    },
+    "robust_value_policy": {
+      "baseline_value": 0.0,
+      "criterion": "robust",
+      "max_depth": 4,
+      "policy": {
+        "action": "a_10bdb5ac0766844c",
+        "branches": {
+          "o_a4a07edff17329dd": {
+            "candidates": [
+              "c_5120cb3b4d8ff3f6",
+              "c_5207a34e77ed93fd",
+              "c_af323b69f90d357f"
+            ],
+            "conditional_value": 1.0,
+            "decision": "d_03350e3c27e7a18d",
+            "type": "decision"
+          },
+          "o_fbf3945ce39feea7": {
+            "candidates": [
+              "c_0119c746663fa122",
+              "c_0708de506fc4ac58"
+            ],
+            "conditional_value": 1.0,
+            "decision": "d_d4a08a0734fb24f4",
+            "type": "decision"
+          }
+        },
+        "conditional_value": 0.99,
+        "type": "probe"
+      },
+      "value": 0.99,
+      "value_of_information": 0.99
+    }
+  },
+  "full_candidate_identification": {
+    "adaptive": {
+      "depth_claim": "minimum",
+      "enumeration_complete": true,
+      "exact": true,
+      "impossibility_certificate": null,
+      "optimality_certified": true,
+      "policy": {
+        "action": "a_10bdb5ac0766844c",
+        "branches": {
+          "o_a4a07edff17329dd": {
+            "action": "a_4763bdccab175d30",
+            "branches": {
+              "o_1df6f21c6900e2ca": {
+                "action": "a_7621d131541b7a81",
+                "branches": {
+                  "o_7c1dcdb49b5d49e6": {
+                    "candidates": [
+                      "c_5120cb3b4d8ff3f6"
+                    ],
+                    "conclusion": "identified candidate c_5120cb3b4d8ff3f6",
+                    "type": "leaf"
+                  },
+                  "o_9216017f82e5bdbf": {
+                    "candidates": [
+                      "c_5207a34e77ed93fd"
+                    ],
+                    "conclusion": "identified candidate c_5207a34e77ed93fd",
+                    "type": "leaf"
+                  }
+                },
+                "type": "action"
+              },
+              "o_9216017f82e5bdbf": {
+                "candidates": [
+                  "c_af323b69f90d357f"
+                ],
+                "conclusion": "identified candidate c_af323b69f90d357f",
+                "type": "leaf"
+              }
+            },
+            "type": "action"
+          },
+          "o_fbf3945ce39feea7": {
+            "action": "a_4e2e5c7e163b9aef",
+            "branches": {
+              "o_e48eba60a937e7dc": {
+                "candidates": [
+                  "c_0119c746663fa122"
+                ],
+                "conclusion": "identified candidate c_0119c746663fa122",
+                "type": "leaf"
+              },
+              "o_fbf3945ce39feea7": {
+                "candidates": [
+                  "c_0708de506fc4ac58"
+                ],
+                "conclusion": "identified candidate c_0708de506fc4ac58",
+                "type": "leaf"
+              }
+            },
+            "type": "action"
+          }
+        },
+        "type": "action"
+      },
+      "reachable_beliefs": 75,
+      "reason": "minimum worst-case policy over the complete reachable belief graph",
+      "status": "solved",
+      "worst_case_steps": 3
+    },
+    "adaptive_expected_steps": 2.4000000000000004,
+    "preset": {
+      "exact": true,
+      "explored_partitions": 138,
+      "length": null,
+      "reason": "the complete preset-experiment state graph contains no distinguishing sequence",
+      "sequence": null,
+      "status": "impossible"
+    }
+  },
+  "pairwise_separation": [
+    {
+      "distinguishable": true,
+      "left": "c_0119c746663fa122",
+      "right": "c_0708de506fc4ac58",
+      "sequence": [
+        "a_10bdb5ac0766844c",
+        "a_4e2e5c7e163b9aef"
+      ]
+    },
+    {
+      "distinguishable": true,
+      "left": "c_0119c746663fa122",
+      "right": "c_5120cb3b4d8ff3f6",
+      "sequence": [
+        "a_10bdb5ac0766844c"
+      ]
+    },
+    {
+      "distinguishable": true,
+      "left": "c_0119c746663fa122",
+      "right": "c_5207a34e77ed93fd",
+      "sequence": [
+        "a_10bdb5ac0766844c"
+      ]
+    },
+    {
+      "distinguishable": true,
+      "left": "c_0119c746663fa122",
+      "right": "c_af323b69f90d357f",
+      "sequence": [
+        "a_10bdb5ac0766844c"
+      ]
+    },
+    {
+      "distinguishable": true,
+      "left": "c_0708de506fc4ac58",
+      "right": "c_5120cb3b4d8ff3f6",
+      "sequence": [
+        "a_10bdb5ac0766844c"
+      ]
+    },
+    {
+      "distinguishable": true,
+      "left": "c_0708de506fc4ac58",
+      "right": "c_5207a34e77ed93fd",
+      "sequence": [
+        "a_10bdb5ac0766844c"
+      ]
+    },
+    {
+      "distinguishable": true,
+      "left": "c_0708de506fc4ac58",
+      "right": "c_af323b69f90d357f",
+      "sequence": [
+        "a_10bdb5ac0766844c"
+      ]
+    },
+    {
+      "distinguishable": true,
+      "left": "c_5120cb3b4d8ff3f6",
+      "right": "c_5207a34e77ed93fd",
+      "sequence": [
+        "a_7621d131541b7a81"
+      ]
+    },
+    {
+      "distinguishable": true,
+      "left": "c_5120cb3b4d8ff3f6",
+      "right": "c_af323b69f90d357f",
+      "sequence": [
+        "a_4763bdccab175d30"
+      ]
+    },
+    {
+      "distinguishable": true,
+      "left": "c_5207a34e77ed93fd",
+      "right": "c_af323b69f90d357f",
+      "sequence": [
+        "a_4763bdccab175d30"
+      ]
+    }
+  ],
+  "scope": {
+    "actions": [
+      "a_10bdb5ac0766844c",
+      "a_14b885a047783f17",
+      "a_4763bdccab175d30",
+      "a_4e2e5c7e163b9aef",
+      "a_7621d131541b7a81",
+      "a_9149ba5122ad640f",
+      "a_c08bd337298cf953"
+    ],
+    "candidate_count": 5,
+    "semantics": "deterministic complete finite Mealy candidates",
+    "state_count": 90
+  },
+  "target_class_identification": {
+    "adaptive": {
+      "depth_claim": "minimum",
+      "enumeration_complete": true,
+      "exact": true,
+      "impossibility_certificate": null,
+      "optimality_certified": true,
+      "policy": {
+        "action": "a_10bdb5ac0766844c",
+        "branches": {
+          "o_a4a07edff17329dd": {
+            "candidates": [
+              "c_5120cb3b4d8ff3f6",
+              "c_5207a34e77ed93fd",
+              "c_af323b69f90d357f"
+            ],
+            "conclusion": "identified target class k_c702da36c16db19f",
+            "type": "leaf"
+          },
+          "o_fbf3945ce39feea7": {
+            "candidates": [
+              "c_0119c746663fa122",
+              "c_0708de506fc4ac58"
+            ],
+            "conclusion": "identified target class k_0121c7057f387b85",
+            "type": "leaf"
+          }
+        },
+        "type": "action"
+      },
+      "reachable_beliefs": 38,
+      "reason": "minimum worst-case policy over the complete reachable belief graph",
+      "status": "solved",
+      "worst_case_steps": 1
+    },
+    "cuts_behavioral_equivalence_class": false,
+    "labels": {
+      "c_0119c746663fa122": "k_0121c7057f387b85",
+      "c_0708de506fc4ac58": "k_0121c7057f387b85",
+      "c_5120cb3b4d8ff3f6": "k_c702da36c16db19f",
+      "c_5207a34e77ed93fd": "k_c702da36c16db19f",
+      "c_af323b69f90d357f": "k_c702da36c16db19f"
+    },
+    "preset": {
+      "exact": true,
+      "explored_partitions": 1,
+      "length": 1,
+      "reason": "shortest fixed action sequence",
+      "sequence": [
+        "a_10bdb5ac0766844c"
+      ],
+      "status": "solved"
+    }
+  }
+}

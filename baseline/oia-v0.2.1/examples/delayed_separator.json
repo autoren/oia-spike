@@ -1,0 +1,32 @@
+{
+  "machines": [
+    {
+      "name": "left",
+      "initial_state": "s0",
+      "transitions": {
+        "s0": {
+          "inspect": {"output": "neutral", "next_state": "s0"},
+          "prime": {"output": "ok", "next_state": "s1"}
+        },
+        "s1": {
+          "inspect": {"output": "red", "next_state": "s1"},
+          "prime": {"output": "ok", "next_state": "s1"}
+        }
+      }
+    },
+    {
+      "name": "right",
+      "initial_state": "s0",
+      "transitions": {
+        "s0": {
+          "inspect": {"output": "neutral", "next_state": "s0"},
+          "prime": {"output": "ok", "next_state": "s1"}
+        },
+        "s1": {
+          "inspect": {"output": "blue", "next_state": "s1"},
+          "prime": {"output": "ok", "next_state": "s1"}
+        }
+      }
+    }
+  ]
+}

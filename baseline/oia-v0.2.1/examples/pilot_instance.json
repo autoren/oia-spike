@@ -1,0 +1,106 @@
+{
+  "machines": [
+    {
+      "name": "H1",
+      "initial_state": "s",
+      "transitions": {
+        "s": {
+          "a": {
+            "output": "0",
+            "next_state": "s"
+          },
+          "b": {
+            "output": "0",
+            "next_state": "s"
+          }
+        }
+      }
+    },
+    {
+      "name": "H2",
+      "initial_state": "s",
+      "transitions": {
+        "s": {
+          "a": {
+            "output": "0",
+            "next_state": "s"
+          },
+          "b": {
+            "output": "1",
+            "next_state": "s"
+          }
+        }
+      }
+    },
+    {
+      "name": "H3",
+      "initial_state": "s",
+      "transitions": {
+        "s": {
+          "a": {
+            "output": "1",
+            "next_state": "s"
+          },
+          "b": {
+            "output": "1",
+            "next_state": "s"
+          }
+        }
+      }
+    }
+  ],
+  "labels": {
+    "H1": "repair_A",
+    "H2": "repair_A",
+    "H3": "repair_B"
+  },
+  "decision_problem": {
+    "decisions": [
+      "repair_A",
+      "repair_B"
+    ],
+    "utilities": {
+      "H1": {
+        "repair_A": 10,
+        "repair_B": 0
+      },
+      "H2": {
+        "repair_A": 10,
+        "repair_B": 0
+      },
+      "H3": {
+        "repair_A": 0,
+        "repair_B": 10
+      }
+    }
+  },
+  "priors": {
+    "H1": 1,
+    "H2": 1,
+    "H3": 1
+  },
+  "action_costs": {
+    "a": 1,
+    "b": 1
+  },
+  "options": {
+    "max_beliefs": 10000,
+    "max_partitions": 10000,
+    "value_depth": 2,
+    "max_task_loss_frontier": 50000
+  },
+  "task_losses": {
+    "H1": {
+      "a": 1,
+      "b": 1
+    },
+    "H2": {
+      "a": 1,
+      "b": 1
+    },
+    "H3": {
+      "a": 1,
+      "b": 1
+    }
+  }
+}

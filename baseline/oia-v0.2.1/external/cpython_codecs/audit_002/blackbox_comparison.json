@@ -1,0 +1,109 @@
+{
+  "all_paths_valid": true,
+  "baseline": "reset_and_query_direct_codec_oracle_policy_replay",
+  "candidate_count": 5,
+  "comparative_superiority_claim": false,
+  "maximum_steps": 3,
+  "rows": [
+    {
+      "candidate_id": "c_0119c746663fa122",
+      "leaf_candidates": [
+        "c_0119c746663fa122"
+      ],
+      "opaque_trace": [
+        {
+          "action": "a_10bdb5ac0766844c",
+          "output": "o_fbf3945ce39feea7"
+        },
+        {
+          "action": "a_4e2e5c7e163b9aef",
+          "output": "o_e48eba60a937e7dc"
+        }
+      ],
+      "result": "pass",
+      "steps": 2
+    },
+    {
+      "candidate_id": "c_0708de506fc4ac58",
+      "leaf_candidates": [
+        "c_0708de506fc4ac58"
+      ],
+      "opaque_trace": [
+        {
+          "action": "a_10bdb5ac0766844c",
+          "output": "o_fbf3945ce39feea7"
+        },
+        {
+          "action": "a_4e2e5c7e163b9aef",
+          "output": "o_fbf3945ce39feea7"
+        }
+      ],
+      "result": "pass",
+      "steps": 2
+    },
+    {
+      "candidate_id": "c_5120cb3b4d8ff3f6",
+      "leaf_candidates": [
+        "c_5120cb3b4d8ff3f6"
+      ],
+      "opaque_trace": [
+        {
+          "action": "a_10bdb5ac0766844c",
+          "output": "o_a4a07edff17329dd"
+        },
+        {
+          "action": "a_4763bdccab175d30",
+          "output": "o_1df6f21c6900e2ca"
+        },
+        {
+          "action": "a_7621d131541b7a81",
+          "output": "o_7c1dcdb49b5d49e6"
+        }
+      ],
+      "result": "pass",
+      "steps": 3
+    },
+    {
+      "candidate_id": "c_5207a34e77ed93fd",
+      "leaf_candidates": [
+        "c_5207a34e77ed93fd"
+      ],
+      "opaque_trace": [
+        {
+          "action": "a_10bdb5ac0766844c",
+          "output": "o_a4a07edff17329dd"
+        },
+        {
+          "action": "a_4763bdccab175d30",
+          "output": "o_1df6f21c6900e2ca"
+        },
+        {
+          "action": "a_7621d131541b7a81",
+          "output": "o_9216017f82e5bdbf"
+        }
+      ],
+      "result": "pass",
+      "steps": 3
+    },
+    {
+      "candidate_id": "c_af323b69f90d357f",
+      "leaf_candidates": [
+        "c_af323b69f90d357f"
+      ],
+      "opaque_trace": [
+        {
+          "action": "a_10bdb5ac0766844c",
+          "output": "o_a4a07edff17329dd"
+        },
+        {
+          "action": "a_4763bdccab175d30",
+          "output": "o_9216017f82e5bdbf"
+        }
+      ],
+      "result": "pass",
+      "steps": 2
+    }
+  ],
+  "selection_role": "none; this baseline verifies behavioral adequacy of the selected policy only",
+  "uses_compiled_candidate_states": false
+}

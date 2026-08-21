@@ -1,0 +1,29 @@
+{
+  "audit_id": "OIA-1-TRACK-A-002",
+  "options": [
+    {
+      "name": "Automata Wiki / AALpy MQTT Mealy models",
+      "outcomes_consulted": false,
+      "public_urls": [
+        "https://automata.cs.ru.nl/BenchmarkMQTT/",
+        "https://github.com/DES-Lab/AALpy"
+      ],
+      "reason": "the exact public model archive/source files could not be materialized reproducibly in this execution environment, so their bytes and license could not be frozen into the package",
+      "result": "not_selected_acquisition_failure",
+      "strength": "independently authored shared-alphabet protocol model family"
+    },
+    {
+      "name": "CPython incremental codec implementations",
+      "outcomes_consulted_before_freeze": false,
+      "public_urls": [
+        "https://docs.python.org/3/library/codecs.html",
+        "https://docs.python.org/3/license.html"
+      ],
+      "reason": "five externally implemented candidates and one outside-model target could be frozen byte-for-byte and exhaustively replayed through a small finite-horizon adapter",
+      "result": "selected",
+      "strength": "public licensed deterministic resettable implementations already present with source-file provenance in the runtime"
+    }
+  ],
+  "screen_date": "2026-08-21",
+  "selection_rule": "prefer a public licensed resettable deterministic family whose exact source bytes can be frozen and whose traces can be replayed independently"
+}

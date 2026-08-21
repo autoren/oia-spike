@@ -1,0 +1,47 @@
+{
+  "action_count": 7,
+  "candidate_count": 5,
+  "horizon": 4,
+  "independent_replay_path": true,
+  "result": "pass",
+  "rows": [
+    {
+      "candidate_id": "c_0119c746663fa122",
+      "canonical_codec": "utf-8",
+      "edges_checked": 210,
+      "result": "pass",
+      "states_checked": 30
+    },
+    {
+      "candidate_id": "c_0708de506fc4ac58",
+      "canonical_codec": "utf-8-sig",
+      "edges_checked": 210,
+      "result": "pass",
+      "states_checked": 30
+    },
+    {
+      "candidate_id": "c_5120cb3b4d8ff3f6",
+      "canonical_codec": "iso8859-1",
+      "edges_checked": 70,
+      "result": "pass",
+      "states_checked": 10
+    },
+    {
+      "candidate_id": "c_af323b69f90d357f",
+      "canonical_codec": "cp1252",
+      "edges_checked": 70,
+      "result": "pass",
+      "states_checked": 10
+    },
+    {
+      "candidate_id": "c_5207a34e77ed93fd",
+      "canonical_codec": "iso8859-15",
+      "edges_checked": 70,
+      "result": "pass",
+      "states_checked": 10
+    }
+  ],
+  "total_edges_checked": 630,
+  "total_states_checked": 90,
+  "validation": "complete_reachable_state_and_edge_replay"
+}

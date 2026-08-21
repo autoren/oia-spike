@@ -1,0 +1,386 @@
+OIA-1 v0.2.1 maintenance validation transcript
+Date: 2026-08-21
+Scope: source-only reproducibility maintenance; no cp437 execution
+
+$ python --version
+Python 3.13.5
+
+$ uname -a
+Linux 51c5f1fa241a 6.18.35 #1 SMP Mon Jul 27 18:07:50 UTC 2026 x86_64 GNU/Linux
+
+$ PYTHONPATH=src python -m unittest discover -s tests -v
+test_adaptive_and_preset_caps_fail_closed (test_auditor.BehavioralAuditTests.test_adaptive_and_preset_caps_fail_closed) ... ok
+test_adaptive_identity_and_preset_identity (test_auditor.BehavioralAuditTests.test_adaptive_identity_and_preset_identity) ... ok
+test_aliases_are_exactly_behaviorally_equivalent (test_auditor.BehavioralAuditTests.test_aliases_are_exactly_behaviorally_equivalent) ... ok
+test_cap_limited_policy_is_witness_not_minimum_claim (test_auditor.BehavioralAuditTests.test_cap_limited_policy_is_witness_not_minimum_claim) ... ok
+test_cap_limited_run_never_reports_impossibility (test_auditor.BehavioralAuditTests.test_cap_limited_run_never_reports_impossibility) ... ok
+test_delayed_pairwise_separator_is_shortest (test_auditor.BehavioralAuditTests.test_delayed_pairwise_separator_is_shortest) ... ok
+test_direct_pairwise_separator (test_auditor.BehavioralAuditTests.test_direct_pairwise_separator) ... ok
+test_label_cut_across_alias_class_is_impossible (test_auditor.BehavioralAuditTests.test_label_cut_across_alias_class_is_impossible) ... ok
+test_target_class_needs_less_than_full_identity (test_auditor.BehavioralAuditTests.test_target_class_needs_less_than_full_identity) ... ok
+test_expected_and_robust_can_choose_different_task_loss_profiles (test_auditor.DecisionValueTests.test_expected_and_robust_can_choose_different_task_loss_profiles) ... ok
+test_high_cost_probe_is_rejected (test_auditor.DecisionValueTests.test_high_cost_probe_is_rejected) ... ok
+test_low_cost_probe_has_positive_expected_value (test_auditor.DecisionValueTests.test_low_cost_probe_has_positive_expected_value) ... ok
+test_low_cost_probe_has_positive_robust_value (test_auditor.DecisionValueTests.test_low_cost_probe_has_positive_robust_value) ... ok
+test_task_loss_frontier_cap_fails_closed (test_auditor.DecisionValueTests.test_task_loss_frontier_cap_fails_closed) ... ok
+test_task_loss_policy_rejects_destructive_probe (test_auditor.DecisionValueTests.test_task_loss_policy_rejects_destructive_probe) ... ok
+test_uniform_task_loss_matches_scalar_cost_result (test_auditor.DecisionValueTests.test_uniform_task_loss_matches_scalar_cost_result) ... ok
+test_end_to_end_payload (test_auditor.JsonInterfaceTests.test_end_to_end_payload) ... ok
+test_serialized_certificate_tampering_is_rejected (test_auditor.JsonInterfaceTests.test_serialized_certificate_tampering_is_rejected) ... ok
+test_serialized_impossibility_certificate_round_trip (test_auditor.JsonInterfaceTests.test_serialized_impossibility_certificate_round_trip) ... ok
+test_serialized_policy_tampering_is_rejected (test_auditor.JsonInterfaceTests.test_serialized_policy_tampering_is_rejected) ... ok
+test_serialized_witness_cannot_claim_exact_optimality (test_auditor.JsonInterfaceTests.test_serialized_witness_cannot_claim_exact_optimality) ... ok
+test_audit_002_report_and_policy_are_cross_process_deterministic (test_hash_seed_reproducibility.HashSeedReproducibilityTests.test_audit_002_report_and_policy_are_cross_process_deterministic) ... ok
+test_codec_partition_converges_after_stable_split (test_track_a_codec.TrackACodecRegressionTests.test_codec_partition_converges_after_stable_split) ... ok
+
+----------------------------------------------------------------------
+Ran 23 tests in 6.593s
+
+OK
+
+$ PYTHONPATH=src python research/randomized_validation.py
+seed=20260821
+static systems=200
+dynamic pair systems=100
+pairwise checks=1027
+adaptive checks=200
+preset checks=200
+
+$ PYTHONPATH=src python research/task_loss_validation.py
+seed=20260821
+cases=250
+expected checks=250
+robust checks=250
+
+$ PYTHONPATH=src python research/scaling_probe.py  # first deterministic structural replay
+STRUCTURAL {"adaptive_depth_claim": "minimum", "adaptive_exact": true, "adaptive_status": "solved", "adaptive_worst_case_steps": 3, "candidate_count": 4, "explored_partitions": 7, "family": "isolate_one", "preset_exact": true, "preset_length": 3, "preset_status": "solved", "reachable_beliefs": 11}
+STRUCTURAL {"adaptive_depth_claim": "minimum", "adaptive_exact": true, "adaptive_status": "solved", "adaptive_worst_case_steps": 5, "candidate_count": 6, "explored_partitions": 31, "family": "isolate_one", "preset_exact": true, "preset_length": 5, "preset_status": "solved", "reachable_beliefs": 37}
+STRUCTURAL {"adaptive_depth_claim": "minimum", "adaptive_exact": true, "adaptive_status": "solved", "adaptive_worst_case_steps": 7, "candidate_count": 8, "explored_partitions": 127, "family": "isolate_one", "preset_exact": true, "preset_length": 7, "preset_status": "solved", "reachable_beliefs": 135}
+STRUCTURAL {"adaptive_depth_claim": "minimum", "adaptive_exact": true, "adaptive_status": "solved", "adaptive_worst_case_steps": 9, "candidate_count": 10, "explored_partitions": 511, "family": "isolate_one", "preset_exact": true, "preset_length": 9, "preset_status": "solved", "reachable_beliefs": 521}
+STRUCTURAL {"adaptive_depth_claim": "minimum", "adaptive_exact": true, "adaptive_status": "solved", "adaptive_worst_case_steps": 11, "candidate_count": 12, "explored_partitions": 2047, "family": "isolate_one", "preset_exact": true, "preset_length": 11, "preset_status": "solved", "reachable_beliefs": 2059}
+STRUCTURAL {"delay": 4, "distinguishable": true, "family": "delayed_pair", "separator_length": 5}
+STRUCTURAL {"delay": 8, "distinguishable": true, "family": "delayed_pair", "separator_length": 9}
+STRUCTURAL {"delay": 16, "distinguishable": true, "family": "delayed_pair", "separator_length": 17}
+STRUCTURAL {"delay": 32, "distinguishable": true, "family": "delayed_pair", "separator_length": 33}
+STRUCTURAL {"delay": 64, "distinguishable": true, "family": "delayed_pair", "separator_length": 65}
+STRUCTURAL {"delay": 128, "distinguishable": true, "family": "delayed_pair", "separator_length": 129}
+TIMING_LOCAL {"adaptive_seconds": 0.0005462810004246421, "candidate_count": 4, "family": "isolate_one", "preset_seconds": 0.00013952900008007418}
+TIMING_LOCAL {"adaptive_seconds": 0.005549159001020598, "candidate_count": 6, "family": "isolate_one", "preset_seconds": 0.001351967999653425}
+TIMING_LOCAL {"adaptive_seconds": 0.04487268299999414, "candidate_count": 8, "family": "isolate_one", "preset_seconds": 0.014077400001042406}
+TIMING_LOCAL {"adaptive_seconds": 0.42731522400026734, "candidate_count": 10, "family": "isolate_one", "preset_seconds": 0.0829537049994542}
+TIMING_LOCAL {"adaptive_seconds": 1.3378980030011007, "candidate_count": 12, "family": "isolate_one", "preset_seconds": 0.5655420500006585}
+TIMING_LOCAL {"delay": 4, "family": "delayed_pair", "pair_seconds": 2.4999000743264332e-05}
+TIMING_LOCAL {"delay": 8, "family": "delayed_pair", "pair_seconds": 1.1993999578407966e-05}
+TIMING_LOCAL {"delay": 16, "family": "delayed_pair", "pair_seconds": 1.7154001398012042e-05}
+TIMING_LOCAL {"delay": 32, "family": "delayed_pair", "pair_seconds": 2.6271998649463058e-05}
+TIMING_LOCAL {"delay": 64, "family": "delayed_pair", "pair_seconds": 6.106100045144558e-05}
+TIMING_LOCAL {"delay": 128, "family": "delayed_pair", "pair_seconds": 0.00012014599997201003}
+wrote deterministic structural evidence /mnt/data/oia_v021_final_build/ontology-intervention-auditor-v0.2.1/research/scaling_probe_results.json
+deterministic_scaling_sha256_first=78b73bf5faf5b21f7d57a5c40cabab883d306399583a1b82817eea491554d2b0
+
+$ PYTHONPATH=src python research/scaling_probe.py  # second deterministic structural replay
+STRUCTURAL {"adaptive_depth_claim": "minimum", "adaptive_exact": true, "adaptive_status": "solved", "adaptive_worst_case_steps": 3, "candidate_count": 4, "explored_partitions": 7, "family": "isolate_one", "preset_exact": true, "preset_length": 3, "preset_status": "solved", "reachable_beliefs": 11}
+STRUCTURAL {"adaptive_depth_claim": "minimum", "adaptive_exact": true, "adaptive_status": "solved", "adaptive_worst_case_steps": 5, "candidate_count": 6, "explored_partitions": 31, "family": "isolate_one", "preset_exact": true, "preset_length": 5, "preset_status": "solved", "reachable_beliefs": 37}
+STRUCTURAL {"adaptive_depth_claim": "minimum", "adaptive_exact": true, "adaptive_status": "solved", "adaptive_worst_case_steps": 7, "candidate_count": 8, "explored_partitions": 127, "family": "isolate_one", "preset_exact": true, "preset_length": 7, "preset_status": "solved", "reachable_beliefs": 135}
+STRUCTURAL {"adaptive_depth_claim": "minimum", "adaptive_exact": true, "adaptive_status": "solved", "adaptive_worst_case_steps": 9, "candidate_count": 10, "explored_partitions": 511, "family": "isolate_one", "preset_exact": true, "preset_length": 9, "preset_status": "solved", "reachable_beliefs": 521}
+STRUCTURAL {"adaptive_depth_claim": "minimum", "adaptive_exact": true, "adaptive_status": "solved", "adaptive_worst_case_steps": 11, "candidate_count": 12, "explored_partitions": 2047, "family": "isolate_one", "preset_exact": true, "preset_length": 11, "preset_status": "solved", "reachable_beliefs": 2059}
+STRUCTURAL {"delay": 4, "distinguishable": true, "family": "delayed_pair", "separator_length": 5}
+STRUCTURAL {"delay": 8, "distinguishable": true, "family": "delayed_pair", "separator_length": 9}
+STRUCTURAL {"delay": 16, "distinguishable": true, "family": "delayed_pair", "separator_length": 17}
+STRUCTURAL {"delay": 32, "distinguishable": true, "family": "delayed_pair", "separator_length": 33}
+STRUCTURAL {"delay": 64, "distinguishable": true, "family": "delayed_pair", "separator_length": 65}
+STRUCTURAL {"delay": 128, "distinguishable": true, "family": "delayed_pair", "separator_length": 129}
+TIMING_LOCAL {"adaptive_seconds": 0.0006528449994220864, "candidate_count": 4, "family": "isolate_one", "preset_seconds": 0.00014512000052491203}
+TIMING_LOCAL {"adaptive_seconds": 0.0051771140006167116, "candidate_count": 6, "family": "isolate_one", "preset_seconds": 0.0013641459991049487}
+TIMING_LOCAL {"adaptive_seconds": 0.05468818200097303, "candidate_count": 8, "family": "isolate_one", "preset_seconds": 0.020644214000640204}
+TIMING_LOCAL {"adaptive_seconds": 0.4340581039996323, "candidate_count": 10, "family": "isolate_one", "preset_seconds": 0.11661146000005829}
+TIMING_LOCAL {"adaptive_seconds": 1.3012780959998054, "candidate_count": 12, "family": "isolate_one", "preset_seconds": 0.8186564229999931}
+TIMING_LOCAL {"delay": 4, "family": "delayed_pair", "pair_seconds": 7.577600081276614e-05}
+TIMING_LOCAL {"delay": 8, "family": "delayed_pair", "pair_seconds": 1.2529000741778873e-05}
+TIMING_LOCAL {"delay": 16, "family": "delayed_pair", "pair_seconds": 1.7874999684863724e-05}
+TIMING_LOCAL {"delay": 32, "family": "delayed_pair", "pair_seconds": 2.895599936891813e-05}
+TIMING_LOCAL {"delay": 64, "family": "delayed_pair", "pair_seconds": 0.00010536599984334316}
+TIMING_LOCAL {"delay": 128, "family": "delayed_pair", "pair_seconds": 0.00016611099999863654}
+wrote deterministic structural evidence /mnt/data/oia_v021_final_build/ontology-intervention-auditor-v0.2.1/research/scaling_probe_results.json
+deterministic_scaling_sha256_second=78b73bf5faf5b21f7d57a5c40cabab883d306399583a1b82817eea491554d2b0
+deterministic_scaling_replay=pass
+
+$ PYTHONPATH=src python research/hash_seed_reproducibility.py --output research/hash_seed_reproducibility_results.json
+wrote /mnt/data/oia_v021_final_build/ontology-intervention-auditor-v0.2.1/research/hash_seed_reproducibility_results.json
+{
+  "audit_id": "OIA-1-TRACK-A-002",
+  "expected_historical_policy_sha256": "612c0572b8f04a4fd3ff82ef2f33f198cda6442200ca7876f24deb6cd3918799",
+  "expected_historical_report_sha256": "10bbdb8151be0b073a76a2faa4cdb8083a992aed3820977c17193a40fbe5f2ce",
+  "expected_tie_branch_action": "a_4763bdccab175d30",
+  "maintenance_release": "0.2.1",
+  "matches_canonical_tie_action": true,
+  "matches_historical_policy": true,
+  "matches_historical_report": true,
+  "pass": true,
+  "rows": [
+    {
+      "exact": true,
+      "policy_sha256": "612c0572b8f04a4fd3ff82ef2f33f198cda6442200ca7876f24deb6cd3918799",
+      "python_hash_seed": "0",
+      "report_sha256": "10bbdb8151be0b073a76a2faa4cdb8083a992aed3820977c17193a40fbe5f2ce",
+      "root_action": "a_10bdb5ac0766844c",
+      "tie_branch_action": "a_4763bdccab175d30",
+      "worst_case_steps": 3
+    },
+    {
+      "exact": true,
+      "policy_sha256": "612c0572b8f04a4fd3ff82ef2f33f198cda6442200ca7876f24deb6cd3918799",
+      "python_hash_seed": "1",
+      "report_sha256": "10bbdb8151be0b073a76a2faa4cdb8083a992aed3820977c17193a40fbe5f2ce",
+      "root_action": "a_10bdb5ac0766844c",
+      "tie_branch_action": "a_4763bdccab175d30",
+      "worst_case_steps": 3
+    },
+    {
+      "exact": true,
+      "policy_sha256": "612c0572b8f04a4fd3ff82ef2f33f198cda6442200ca7876f24deb6cd3918799",
+      "python_hash_seed": "2",
+      "report_sha256": "10bbdb8151be0b073a76a2faa4cdb8083a992aed3820977c17193a40fbe5f2ce",
+      "root_action": "a_10bdb5ac0766844c",
+      "tie_branch_action": "a_4763bdccab175d30",
+      "worst_case_steps": 3
+    },
+    {
+      "exact": true,
+      "policy_sha256": "612c0572b8f04a4fd3ff82ef2f33f198cda6442200ca7876f24deb6cd3918799",
+      "python_hash_seed": "5",
+      "report_sha256": "10bbdb8151be0b073a76a2faa4cdb8083a992aed3820977c17193a40fbe5f2ce",
+      "root_action": "a_10bdb5ac0766844c",
+      "tie_branch_action": "a_4763bdccab175d30",
+      "worst_case_steps": 3
+    },
+    {
+      "exact": true,
+      "policy_sha256": "612c0572b8f04a4fd3ff82ef2f33f198cda6442200ca7876f24deb6cd3918799",
+      "python_hash_seed": "10",
+      "report_sha256": "10bbdb8151be0b073a76a2faa4cdb8083a992aed3820977c17193a40fbe5f2ce",
+      "root_action": "a_10bdb5ac0766844c",
+      "tie_branch_action": "a_4763bdccab175d30",
+      "worst_case_steps": 3
+    },
+    {
+      "exact": true,
+      "policy_sha256": "612c0572b8f04a4fd3ff82ef2f33f198cda6442200ca7876f24deb6cd3918799",
+      "python_hash_seed": "42",
+      "report_sha256": "10bbdb8151be0b073a76a2faa4cdb8083a992aed3820977c17193a40fbe5f2ce",
+      "root_action": "a_10bdb5ac0766844c",
+      "tie_branch_action": "a_4763bdccab175d30",
+      "worst_case_steps": 3
+    },
+    {
+      "exact": true,
+      "policy_sha256": "612c0572b8f04a4fd3ff82ef2f33f198cda6442200ca7876f24deb6cd3918799",
+      "python_hash_seed": "123",
+      "report_sha256": "10bbdb8151be0b073a76a2faa4cdb8083a992aed3820977c17193a40fbe5f2ce",
+      "root_action": "a_10bdb5ac0766844c",
+      "tie_branch_action": "a_4763bdccab175d30",
+      "worst_case_steps": 3
+    }
+  ],
+  "schema_version": 1,
+  "scope": "recompute the frozen opaque audit input only; no codec substrate or cp437 outcome execution",
+  "seeds": [
+    0,
+    1,
+    2,
+    5,
+    10,
+    42,
+    123
+  ],
+  "serialization": "UTF-8 json.dumps(indent=2, sort_keys=True) plus newline",
+  "single_policy_hash": true,
+  "single_report_hash": true,
+  "single_tie_action": true,
+  "unique_policy_sha256": [
+    "612c0572b8f04a4fd3ff82ef2f33f198cda6442200ca7876f24deb6cd3918799"
+  ],
+  "unique_report_sha256": [
+    "10bbdb8151be0b073a76a2faa4cdb8083a992aed3820977c17193a40fbe5f2ce"
+  ],
+  "unique_tie_branch_actions": [
+    "a_4763bdccab175d30"
+  ]
+}
+
+$ PYTHONPATH=src:external/cpython_codecs python -  # candidate-family adapter replay only
+{
+  "candidate_set": [
+    "utf-8",
+    "utf-8-sig",
+    "latin-1",
+    "cp1252",
+    "iso8859-15"
+  ],
+  "matches_frozen_adapter_trace_validation": true,
+  "prospective_target_executed": false,
+  "total_edges_checked": 630,
+  "total_states_checked": 90
+}
+
+$ python maintenance/verify_provenance.py
+{
+  "audit_002_files_equal_to_historical_archive": 17,
+  "current_source_count": 24,
+  "current_source_manifest": "maintenance/CURRENT_SOURCE_SHA256SUMS",
+  "expected_current_differences_from_frozen_instrument": [
+    "src/ontology_auditor/synthesis.py"
+  ],
+  "historical_archive": {
+    "path": "historical/OIA-1-v0.2.0-Frozen-Package.zip",
+    "sha256": "0c70cd82282f91a2c4a1ec61416fbbabd7ba9566ade8527253384ceb8b28c2d3"
+  },
+  "historical_audit_002_artifacts_mutated": false,
+  "historical_instrument_source_count": 14,
+  "historical_source_resolution_root": "historical/v0.2.0/instrument_sources",
+  "maintenance_release": "0.2.1",
+  "nested_manifest_entry_counts": {
+    "audit_001_closure": 10,
+    "audit_001_freeze": 8,
+    "audit_002_final": 16,
+    "audit_002_freeze": 10,
+    "audit_002_pre_outcome": 14
+  },
+  "observed_current_differences_from_frozen_instrument": [
+    "src/ontology_auditor/synthesis.py"
+  ],
+  "pass": true,
+  "prospective_outcome_handling": "immutable-byte verification only",
+  "prospective_outcome_reexecuted": false,
+  "schema_version": 1
+}
+
+$ sha256sum -c maintenance/CURRENT_SOURCE_SHA256SUMS
+examples/run_pilot.py: OK
+external/cpython_codecs/codec_adapter.py: OK
+external/cpython_codecs/execute_prospective_outcome.py: OK
+external/cpython_codecs/prepare_audit.py: OK
+external/cpython_codecs/run_opened_audit.py: OK
+external/cpython_codecs/validate_adapter.py: OK
+maintenance/verify_provenance.py: OK
+pyproject.toml: OK
+research/hash_seed_reproducibility.py: OK
+research/randomized_validation.py: OK
+research/scaling_probe.py: OK
+research/task_loss_validation.py: OK
+src/ontology_auditor/__init__.py: OK
+src/ontology_auditor/audit.py: OK
+src/ontology_auditor/cli.py: OK
+src/ontology_auditor/decision.py: OK
+src/ontology_auditor/equivalence.py: OK
+src/ontology_auditor/io.py: OK
+src/ontology_auditor/model.py: OK
+src/ontology_auditor/synthesis.py: OK
+src/ontology_auditor/task_loss.py: OK
+tests/test_auditor.py: OK
+tests/test_hash_seed_reproducibility.py: OK
+tests/test_track_a_codec.py: OK
+
+$ (cd external/cpython_codecs/audit_001 && sha256sum -c FREEZE_SHA256SUMS)
+adapter_access_words.json: OK
+adapter_state_manifest.json: OK
+adapter_trace_validation.json: OK
+audit_000_engineering_negative.json: OK
+audit_input.opaque.json: OK
+audit_protocol.frozen.json: OK
+encoder_manifest.opened.json: OK
+source_provenance.json: OK
+
+$ (cd external/cpython_codecs/audit_001 && sha256sum -c AUDIT_CLOSURE_SHA256SUMS)
+FREEZE_SHA256SUMS: OK
+adapter_access_words.json: OK
+adapter_state_manifest.json: OK
+adapter_trace_validation.json: OK
+audit_000_engineering_negative.json: OK
+audit_input.opaque.json: OK
+audit_protocol.frozen.json: OK
+encoder_manifest.opened.json: OK
+instrument_failure.pre_outcome.json: OK
+source_provenance.json: OK
+
+$ (cd external/cpython_codecs/audit_002 && sha256sum -c FREEZE_SHA256SUMS)
+adapter_access_words.json: OK
+adapter_state_manifest.json: OK
+adapter_trace_validation.json: OK
+audit_000_engineering_negative.json: OK
+audit_input.opaque.json: OK
+audit_protocol.frozen.json: OK
+encoder_manifest.opened.json: OK
+instrument_source_provenance.json: OK
+source_provenance.json: OK
+source_screening.json: OK
+
+$ (cd external/cpython_codecs/audit_002 && sha256sum -c PRE_OUTCOME_SHA256SUMS)
+FREEZE_SHA256SUMS: OK
+adapter_access_words.json: OK
+adapter_state_manifest.json: OK
+adapter_trace_validation.json: OK
+audit_000_engineering_negative.json: OK
+audit_input.opaque.json: OK
+audit_protocol.frozen.json: OK
+blackbox_comparison.json: OK
+encoder_manifest.opened.json: OK
+instrument_source_provenance.json: OK
+oia_report.json: OK
+selection_record.pre_outcome.json: OK
+source_provenance.json: OK
+source_screening.json: OK
+
+$ (cd external/cpython_codecs/audit_002 && sha256sum -c FINAL_SHA256SUMS)
+FREEZE_SHA256SUMS: OK
+PRE_OUTCOME_SHA256SUMS: OK
+adapter_access_words.json: OK
+adapter_state_manifest.json: OK
+adapter_trace_validation.json: OK
+audit_000_engineering_negative.json: OK
+audit_input.opaque.json: OK
+audit_protocol.frozen.json: OK
+blackbox_comparison.json: OK
+encoder_manifest.opened.json: OK
+instrument_source_provenance.json: OK
+oia_report.json: OK
+prospective_outcome.json: OK
+selection_record.pre_outcome.json: OK
+source_provenance.json: OK
+source_screening.json: OK
+
+$ historical runner fail-closed check (no substrate or outcome execution)
+Traceback (most recent call last):
+  File "/mnt/data/oia_v021_final_build/ontology-intervention-auditor-v0.2.1/external/cpython_codecs/run_opened_audit.py", line 218, in <module>
+    main()
+    ~~~~^^
+  File "/mnt/data/oia_v021_final_build/ontology-intervention-auditor-v0.2.1/external/cpython_codecs/run_opened_audit.py", line 133, in main
+    verify_instrument_sources()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/mnt/data/oia_v021_final_build/ontology-intervention-auditor-v0.2.1/external/cpython_codecs/run_opened_audit.py", line 70, in verify_instrument_sources
+    raise RuntimeError(
+    ...<2 lines>...
+    )
+RuntimeError: instrument source checksum mismatch for src/ontology_auditor/synthesis.py: 7df543e8af759a26ea2d5c256de4a66fb60a33dc3a42b2fea0d720c430f21f07 != c2cad713b732bd7131f94331a2c45765eb3fc1129c2482063a0f3acbf60f7d1b
+historical_runner_exit=1
+audit_002_tree_sha256_before=0decf67df96ac6de59ef8208ac5bc5b89428653966642532efebe710b9176bef
+audit_002_tree_sha256_after=0decf67df96ac6de59ef8208ac5bc5b89428653966642532efebe710b9176bef
+historical_runner_failed_before_write=pass
+cp437_executed=false
+
+$ final maintenance assertions
+{
+  "corrected_synthesis_sha256": "7df543e8af759a26ea2d5c256de4a66fb60a33dc3a42b2fea0d720c430f21f07",
+  "cross_process_policy_hash_count": 1,
+  "cross_process_report_hash_count": 1,
+  "cross_process_seed_count": 7,
+  "deterministic_scaling_sha256": "78b73bf5faf5b21f7d57a5c40cabab883d306399583a1b82817eea491554d2b0",
+  "historical_oia_report_sha256": "10bbdb8151be0b073a76a2faa4cdb8083a992aed3820977c17193a40fbe5f2ce",
+  "historical_prospective_outcome_sha256": "3ad0fb8e9969056da81c5a78c1825fdc170a2eff1d6544ef5f961a81f95f927c",
+  "historical_v0.2.0_archive_sha256": "0c70cd82282f91a2c4a1ec61416fbbabd7ba9566ade8527253384ceb8b28c2d3",
+  "prospective_outcome_reexecuted": false,
+  "result": "pass"
+}
+
+VALIDATION_RESULT=PASS
+PROSPECTIVE_OUTCOME_REEXECUTED=false

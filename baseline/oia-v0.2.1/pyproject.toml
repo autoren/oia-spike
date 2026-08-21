@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ontology-intervention-auditor"
+version = "0.2.1"
+description = "Exact bounded identifiability and intervention synthesis for executable ontology candidates"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+authors = [{name = "Research prototype"}]
+dependencies = []
+
+[project.scripts]
+ontology-auditor = "ontology_auditor.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

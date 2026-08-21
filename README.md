@@ -1,7 +1,42 @@
-# Ontology Intervention Auditor
+# OIA Spike
 
-This repository currently contains the opened OIA-1 Track A 003a candidate-acquisition feasibility audit.
+This is the standalone local execution workspace for bounded, opened Ontology Intervention Auditor (OIA) research spikes.
 
-The accepted OIA-1 v0.2.1 baseline is referenced by commit `3ca35d4`, tag `oia-v0.2.1`, and archive SHA-256 `2653020afcbf636def260da1517c9e3ba41c2ba1175fc210d4847b303febc33b`. It is not modified or repackaged here.
+It is intentionally separate from [`autoren/ontology-intervention-auditor`](https://github.com/autoren/ontology-intervention-auditor). The Git history through commit `e56f885` was imported from that repository to preserve the Track A 003a and early 003b record. There is no automatic synchronization back to it, and this checkout's `origin` is only [`autoren/oia-spike`](https://github.com/autoren/oia-spike).
 
-See [`audits/track-a-003a/`](audits/track-a-003a/) for the report, frozen protocol, attempt/provenance registry, source pins, validation transcript, and checksums.
+## Contents
+
+- [`baseline/oia-v0.2.1/`](baseline/oia-v0.2.1/) is an exact import of the accepted executable OIA-1 v0.2.1 tree from `executable-ontology-lab` commit `3ca35d4`. It includes the core implementation, tests, CPython Track A 002 evidence, maintenance provenance, and Track A/Track B claim boundaries.
+- [`audits/track-a-003a/`](audits/track-a-003a/) is the closed candidate-acquisition feasibility audit. Its frozen artifacts and package manifest are unchanged.
+- [`audits/track-a-003b/`](audits/track-a-003b/) records the authorized public-archive acquisition step. The existing GitHub workflow is retained but has not been treated as an experimental result.
+- [`docs/context/`](docs/context/) contains curated parent-project decision records needed to interpret the spike. These copies are contextual and are not part of the frozen 003a package.
+
+## Local baseline validation
+
+The baseline requires Python 3.11 or newer and has no runtime dependencies:
+
+```bash
+cd baseline/oia-v0.2.1
+python3 -m venv .venv
+. .venv/bin/activate
+python -m pip install -e .
+python -m unittest discover -s tests -v
+python maintenance/verify_provenance.py
+```
+
+Run additional deterministic and randomized checks from the same directory as needed:
+
+```bash
+python research/randomized_validation.py
+python research/task_loss_validation.py
+python research/scaling_probe.py
+python research/hash_seed_reproducibility.py
+```
+
+## Artifact handling
+
+Downloaded archives, extracted candidate trees, virtual environments, and run outputs belong under `local-work/` or `artifacts/`; both are ignored. Do not commit credentials, private ARC material, service state, or acquired bulk artifacts. Commit only compact manifests, hashes, protocols, and reviewed evidence that the applicable gate authorizes.
+
+## Claim boundary
+
+This workspace remains opened Track A work. It does not authorize paid or API model runs, private or sealed evaluation, real ARC interventions, retroactive changes to frozen artifacts, or Track B claims. The accepted baseline archive remains identified by SHA-256 `2653020afcbf636def260da1517c9e3ba41c2ba1175fc210d4847b303febc33b`.

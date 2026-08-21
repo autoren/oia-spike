@@ -1,0 +1,64 @@
+OIA-1 v0.1 validation transcript
+Date: 2026-08-21
+
+$ python -m unittest discover -s tests -v
+test_adaptive_and_preset_caps_fail_closed (test_auditor.BehavioralAuditTests.test_adaptive_and_preset_caps_fail_closed) ... ok
+test_adaptive_identity_and_preset_identity (test_auditor.BehavioralAuditTests.test_adaptive_identity_and_preset_identity) ... ok
+test_aliases_are_exactly_behaviorally_equivalent (test_auditor.BehavioralAuditTests.test_aliases_are_exactly_behaviorally_equivalent) ... ok
+test_delayed_pairwise_separator_is_shortest (test_auditor.BehavioralAuditTests.test_delayed_pairwise_separator_is_shortest) ... ok
+test_direct_pairwise_separator (test_auditor.BehavioralAuditTests.test_direct_pairwise_separator) ... ok
+test_label_cut_across_alias_class_is_impossible (test_auditor.BehavioralAuditTests.test_label_cut_across_alias_class_is_impossible) ... ok
+test_target_class_needs_less_than_full_identity (test_auditor.BehavioralAuditTests.test_target_class_needs_less_than_full_identity) ... ok
+test_expected_and_robust_can_choose_different_task_loss_profiles (test_auditor.DecisionValueTests.test_expected_and_robust_can_choose_different_task_loss_profiles) ... ok
+test_high_cost_probe_is_rejected (test_auditor.DecisionValueTests.test_high_cost_probe_is_rejected) ... ok
+test_low_cost_probe_has_positive_expected_value (test_auditor.DecisionValueTests.test_low_cost_probe_has_positive_expected_value) ... ok
+test_low_cost_probe_has_positive_robust_value (test_auditor.DecisionValueTests.test_low_cost_probe_has_positive_robust_value) ... ok
+test_task_loss_frontier_cap_fails_closed (test_auditor.DecisionValueTests.test_task_loss_frontier_cap_fails_closed) ... ok
+test_task_loss_policy_rejects_destructive_probe (test_auditor.DecisionValueTests.test_task_loss_policy_rejects_destructive_probe) ... ok
+test_uniform_task_loss_matches_scalar_cost_result (test_auditor.DecisionValueTests.test_uniform_task_loss_matches_scalar_cost_result) ... ok
+test_end_to_end_payload (test_auditor.JsonInterfaceTests.test_end_to_end_payload) ... ok
+test_serialized_certificate_tampering_is_rejected (test_auditor.JsonInterfaceTests.test_serialized_certificate_tampering_is_rejected) ... ok
+test_serialized_impossibility_certificate_round_trip (test_auditor.JsonInterfaceTests.test_serialized_impossibility_certificate_round_trip) ... ok
+test_serialized_policy_tampering_is_rejected (test_auditor.JsonInterfaceTests.test_serialized_policy_tampering_is_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 18 tests in 0.005s
+
+OK
+
+$ python research/randomized_validation.py
+seed=20260821
+static systems=200
+dynamic pair systems=100
+pairwise checks=1027
+adaptive checks=200
+preset checks=200
+
+$ python research/task_loss_validation.py
+seed=20260821
+cases=250
+expected checks=250
+robust checks=250
+
+$ python research/scaling_probe.py
+{'family': 'isolate_one', 'candidate_count': 4, 'adaptive_status': 'solved', 'adaptive_worst_case_steps': 3, 'reachable_beliefs': 11, 'adaptive_seconds': 0.00029903300014666456, 'preset_length': 3, 'explored_partitions': 7, 'preset_seconds': 0.00013508400002137932}
+{'family': 'isolate_one', 'candidate_count': 6, 'adaptive_status': 'solved', 'adaptive_worst_case_steps': 5, 'reachable_beliefs': 37, 'adaptive_seconds': 0.002765957999827151, 'preset_length': 5, 'explored_partitions': 31, 'preset_seconds': 0.0013015810000069905}
+{'family': 'isolate_one', 'candidate_count': 8, 'adaptive_status': 'solved', 'adaptive_worst_case_steps': 7, 'reachable_beliefs': 135, 'adaptive_seconds': 0.02372262500011857, 'preset_length': 7, 'explored_partitions': 127, 'preset_seconds': 0.012261179999995875}
+{'family': 'isolate_one', 'candidate_count': 10, 'adaptive_status': 'solved', 'adaptive_worst_case_steps': 9, 'reachable_beliefs': 521, 'adaptive_seconds': 0.13903551900011735, 'preset_length': 9, 'explored_partitions': 511, 'preset_seconds': 0.10145262799983357}
+{'family': 'isolate_one', 'candidate_count': 12, 'adaptive_status': 'solved', 'adaptive_worst_case_steps': 11, 'reachable_beliefs': 2059, 'adaptive_seconds': 0.7507796800000506, 'preset_length': 11, 'explored_partitions': 2047, 'preset_seconds': 0.5033004809999966}
+{'family': 'delayed_pair', 'delay': 4, 'separator_length': 5, 'pair_seconds': 2.7018000082534854e-05}
+{'family': 'delayed_pair', 'delay': 8, 'separator_length': 9, 'pair_seconds': 1.2624999953914084e-05}
+{'family': 'delayed_pair', 'delay': 16, 'separator_length': 17, 'pair_seconds': 1.7210999885719502e-05}
+{'family': 'delayed_pair', 'delay': 32, 'separator_length': 33, 'pair_seconds': 2.758100004029984e-05}
+{'family': 'delayed_pair', 'delay': 64, 'separator_length': 65, 'pair_seconds': 6.310599997050304e-05}
+{'family': 'delayed_pair', 'delay': 128, 'separator_length': 129, 'pair_seconds': 0.00011952399995607266}
+wrote /mnt/data/ontology-intervention-auditor/research/scaling_probe_results.json
+
+$ python examples/run_pilot.py
+wrote pilot_instance.report.json
+wrote alias_impossibility.report.json
+wrote delayed_separator.report.json
+wrote task_loss_tradeoff.report.json
+
+$ ontology-auditor examples/pilot_instance.json ...
+CLI and serialized witness verification=pass

@@ -1,0 +1,153 @@
+{
+  "behavioral_equivalence_classes": [
+    [
+      "predicate_P7",
+      "predicate_Q9"
+    ]
+  ],
+  "full_candidate_identification": {
+    "adaptive": {
+      "depth_claim": null,
+      "enumeration_complete": true,
+      "exact": true,
+      "impossibility_certificate": {
+        "blocking_successors": [
+          {
+            "action": "probe",
+            "belief": [
+              {
+                "model": "predicate_P7",
+                "state": "s"
+              },
+              {
+                "model": "predicate_Q9",
+                "state": "s"
+              }
+            ],
+            "output": "same",
+            "successor": [
+              {
+                "model": "predicate_P7",
+                "state": "s"
+              },
+              {
+                "model": "predicate_Q9",
+                "state": "s"
+              }
+            ]
+          }
+        ],
+        "losing_beliefs": [
+          [
+            {
+              "model": "predicate_P7",
+              "state": "s"
+            },
+            {
+              "model": "predicate_Q9",
+              "state": "s"
+            }
+          ]
+        ],
+        "type": "closed_losing_set"
+      },
+      "optimality_certified": false,
+      "policy": null,
+      "reachable_beliefs": 1,
+      "reason": "the complete reachable belief graph contains no terminating adaptive policy for the requested target",
+      "status": "impossible",
+      "worst_case_steps": null
+    },
+    "preset": {
+      "exact": true,
+      "explored_partitions": 1,
+      "length": null,
+      "reason": "the complete preset-experiment state graph contains no distinguishing sequence",
+      "sequence": null,
+      "status": "impossible"
+    }
+  },
+  "pairwise_separation": [
+    {
+      "distinguishable": false,
+      "left": "predicate_P7",
+      "right": "predicate_Q9",
+      "sequence": null
+    }
+  ],
+  "scope": {
+    "actions": [
+      "probe"
+    ],
+    "candidate_count": 2,
+    "semantics": "deterministic complete finite Mealy candidates",
+    "state_count": 2
+  },
+  "target_class_identification": {
+    "adaptive": {
+      "depth_claim": null,
+      "enumeration_complete": true,
+      "exact": true,
+      "impossibility_certificate": {
+        "blocking_successors": [
+          {
+            "action": "probe",
+            "belief": [
+              {
+                "model": "predicate_P7",
+                "state": "s"
+              },
+              {
+                "model": "predicate_Q9",
+                "state": "s"
+              }
+            ],
+            "output": "same",
+            "successor": [
+              {
+                "model": "predicate_P7",
+                "state": "s"
+              },
+              {
+                "model": "predicate_Q9",
+                "state": "s"
+              }
+            ]
+          }
+        ],
+        "losing_beliefs": [
+          [
+            {
+              "model": "predicate_P7",
+              "state": "s"
+            },
+            {
+              "model": "predicate_Q9",
+              "state": "s"
+            }
+          ]
+        ],
+        "type": "closed_losing_set"
+      },
+      "optimality_certified": false,
+      "policy": null,
+      "reachable_beliefs": 1,
+      "reason": "the complete reachable belief graph contains no terminating adaptive policy for the requested target",
+      "status": "impossible",
+      "worst_case_steps": null
+    },
+    "cuts_behavioral_equivalence_class": true,
+    "labels": {
+      "predicate_P7": "concept_absent",
+      "predicate_Q9": "concept_present"
+    },
+    "preset": {
+      "exact": true,
+      "explored_partitions": 1,
+      "length": null,
+      "reason": "the complete preset-experiment state graph contains no distinguishing sequence",
+      "sequence": null,
+      "status": "impossible"
+    }
+  }
+}

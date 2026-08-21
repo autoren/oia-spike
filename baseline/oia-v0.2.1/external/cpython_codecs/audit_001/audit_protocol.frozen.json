@@ -1,0 +1,66 @@
+{
+  "adapter": "cpython_incremental_codec_finite_horizon_v1",
+  "adapter_boundary": {
+    "completion": "common explicit horizon/closed sinks make every adapted machine finite and input-complete",
+    "error_semantics": "first strict UnicodeDecodeError closes the episode",
+    "horizon_actions": 4,
+    "inputs": "six frozen diagnostic one-byte pushes plus explicit finish",
+    "outputs": "Unicode codepoint vector, normalized decode_error, or terminal/horizon token",
+    "reset": "fresh strict incremental decoder"
+  },
+  "audit_id": "OIA-1-TRACK-A-001",
+  "black_box_comparison": "replay the selected policy against reset-and-query candidate codec oracles without reading compiled states; compare branch traces and witness depth only",
+  "candidate_ids": [
+    "c_0119c746663fa122",
+    "c_0708de506fc4ac58",
+    "c_5120cb3b4d8ff3f6",
+    "c_5207a34e77ed93fd",
+    "c_af323b69f90d357f"
+  ],
+  "candidate_set": [
+    "utf-8",
+    "utf-8-sig",
+    "latin-1",
+    "cp1252",
+    "iso8859-15"
+  ],
+  "caps": {
+    "max_beliefs": 500000,
+    "max_partitions": 500000,
+    "max_task_loss_frontier": 50000,
+    "value_depth": 4
+  },
+  "claim_boundary": "opened adapter fidelity, exact/cap behavior, prospective separator execution, decision-vs-identity efficiency, outside-model detection, and scaling only",
+  "decision_criterion": {
+    "action_cost": 0.01,
+    "choices": [
+      "streaming_multibyte_path",
+      "single_byte_path"
+    ],
+    "interpretation": "instrument-level routing decision only; not an operational superiority claim",
+    "utility": "1 for the path assigned to the candidate codec family, 0 otherwise"
+  },
+  "diagnostic_byte_alphabet": [
+    65,
+    128,
+    164,
+    187,
+    191,
+    239
+  ],
+  "encoder": {
+    "OIA_visibility": "opaque IDs only",
+    "algorithm": "SHA-256 over canonical JSON, first 16 hexadecimal digits",
+    "opened_sidecar": "encoder_manifest.opened.json"
+  },
+  "freeze_date": "2026-08-21",
+  "primary_policy": "minimum-worst-case adaptive policy if exact; otherwise verified witness only",
+  "primary_target": "full candidate identity",
+  "prospective_execution_rule": "after OIA selection and pre-outcome checksum freeze, execute the primary adaptive policy once against a fresh cp437 decoder; report outside_model immediately if the encoded observation is absent from the policy branches",
+  "prospective_target": "cp437",
+  "prospective_target_id": "t_7aa9b30659da7223",
+  "secondary_target": "two-class decoder-mode distinction",
+  "status_at_freeze": "opened_outcome_not_yet_executed",
+  "target_membership": "outside_frozen_candidate_set",
+  "track": "A_opened_external_instrument_validation"
+}

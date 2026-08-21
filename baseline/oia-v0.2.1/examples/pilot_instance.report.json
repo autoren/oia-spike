@@ -1,0 +1,361 @@
+{
+  "behavioral_equivalence_classes": [
+    [
+      "H1"
+    ],
+    [
+      "H2"
+    ],
+    [
+      "H3"
+    ]
+  ],
+  "decision_relevance": {
+    "common_optimal_initially": [],
+    "decisions": [
+      "repair_A",
+      "repair_B"
+    ],
+    "expected_value_policy": {
+      "baseline_value": 6.666666666666667,
+      "criterion": "expected",
+      "max_depth": 2,
+      "policy": {
+        "action": "a",
+        "branches": {
+          "0": {
+            "candidates": [
+              "H1",
+              "H2"
+            ],
+            "conditional_value": 10.0,
+            "decision": "repair_A",
+            "type": "decision"
+          },
+          "1": {
+            "candidates": [
+              "H3"
+            ],
+            "conditional_value": 10.0,
+            "decision": "repair_B",
+            "type": "decision"
+          }
+        },
+        "conditional_value": 9.0,
+        "type": "probe"
+      },
+      "value": 9.0,
+      "value_of_information": 2.333333333333333
+    },
+    "minimum_probe_to_common_optimum": {
+      "adaptive": {
+        "depth_claim": "minimum",
+        "enumeration_complete": true,
+        "exact": true,
+        "impossibility_certificate": null,
+        "optimality_certified": true,
+        "policy": {
+          "action": "a",
+          "branches": {
+            "0": {
+              "candidates": [
+                "H1",
+                "H2"
+              ],
+              "conclusion": "common-optimal decision(s): repair_A",
+              "type": "leaf"
+            },
+            "1": {
+              "candidates": [
+                "H3"
+              ],
+              "conclusion": "common-optimal decision(s): repair_B",
+              "type": "leaf"
+            }
+          },
+          "type": "action"
+        },
+        "reachable_beliefs": 6,
+        "reason": "minimum worst-case policy over the complete reachable belief graph",
+        "status": "solved",
+        "worst_case_steps": 1
+      },
+      "preset": {
+        "exact": true,
+        "explored_partitions": 1,
+        "length": 1,
+        "reason": "shortest fixed action sequence",
+        "sequence": [
+          "a"
+        ],
+        "status": "solved"
+      }
+    },
+    "model_dependent_task_loss": {
+      "expected_value_policy": {
+        "baseline_value": 6.666666666666667,
+        "criterion": "expected",
+        "exact": true,
+        "largest_frontier_size": 3,
+        "max_depth": 2,
+        "policy": {
+          "action": "a",
+          "branches": {
+            "0": {
+              "candidates": [
+                "H1",
+                "H2"
+              ],
+              "decision": "repair_A",
+              "outcome_vector": {
+                "H1": 10.0,
+                "H2": 10.0
+              },
+              "type": "decision"
+            },
+            "1": {
+              "candidates": [
+                "H3"
+              ],
+              "decision": "repair_B",
+              "outcome_vector": {
+                "H3": 10.0
+              },
+              "type": "decision"
+            }
+          },
+          "outcome_vector": {
+            "H1": 9.0,
+            "H2": 9.0,
+            "H3": 9.0
+          },
+          "type": "probe"
+        },
+        "reason": "complete Pareto frontier enumerated within the declared depth",
+        "root_frontier_size": 3,
+        "status": "solved",
+        "value": 9.0,
+        "value_of_information": 2.333333333333333
+      },
+      "robust_value_policy": {
+        "baseline_value": 0.0,
+        "criterion": "robust",
+        "exact": true,
+        "largest_frontier_size": 3,
+        "max_depth": 2,
+        "policy": {
+          "action": "a",
+          "branches": {
+            "0": {
+              "candidates": [
+                "H1",
+                "H2"
+              ],
+              "decision": "repair_A",
+              "outcome_vector": {
+                "H1": 10.0,
+                "H2": 10.0
+              },
+              "type": "decision"
+            },
+            "1": {
+              "candidates": [
+                "H3"
+              ],
+              "decision": "repair_B",
+              "outcome_vector": {
+                "H3": 10.0
+              },
+              "type": "decision"
+            }
+          },
+          "outcome_vector": {
+            "H1": 9.0,
+            "H2": 9.0,
+            "H3": 9.0
+          },
+          "type": "probe"
+        },
+        "reason": "complete Pareto frontier enumerated within the declared depth",
+        "root_frontier_size": 3,
+        "status": "solved",
+        "value": 9.0,
+        "value_of_information": 9.0
+      }
+    },
+    "robust_value_policy": {
+      "baseline_value": 0.0,
+      "criterion": "robust",
+      "max_depth": 2,
+      "policy": {
+        "action": "a",
+        "branches": {
+          "0": {
+            "candidates": [
+              "H1",
+              "H2"
+            ],
+            "conditional_value": 10.0,
+            "decision": "repair_A",
+            "type": "decision"
+          },
+          "1": {
+            "candidates": [
+              "H3"
+            ],
+            "conditional_value": 10.0,
+            "decision": "repair_B",
+            "type": "decision"
+          }
+        },
+        "conditional_value": 9.0,
+        "type": "probe"
+      },
+      "value": 9.0,
+      "value_of_information": 9.0
+    }
+  },
+  "full_candidate_identification": {
+    "adaptive": {
+      "depth_claim": "minimum",
+      "enumeration_complete": true,
+      "exact": true,
+      "impossibility_certificate": null,
+      "optimality_certified": true,
+      "policy": {
+        "action": "b",
+        "branches": {
+          "0": {
+            "candidates": [
+              "H1"
+            ],
+            "conclusion": "identified candidate H1",
+            "type": "leaf"
+          },
+          "1": {
+            "action": "a",
+            "branches": {
+              "0": {
+                "candidates": [
+                  "H2"
+                ],
+                "conclusion": "identified candidate H2",
+                "type": "leaf"
+              },
+              "1": {
+                "candidates": [
+                  "H3"
+                ],
+                "conclusion": "identified candidate H3",
+                "type": "leaf"
+              }
+            },
+            "type": "action"
+          }
+        },
+        "type": "action"
+      },
+      "reachable_beliefs": 6,
+      "reason": "minimum worst-case policy over the complete reachable belief graph",
+      "status": "solved",
+      "worst_case_steps": 2
+    },
+    "adaptive_expected_steps": 1.6666666666666667,
+    "preset": {
+      "exact": true,
+      "explored_partitions": 3,
+      "length": 2,
+      "reason": "shortest fixed action sequence",
+      "sequence": [
+        "a",
+        "b"
+      ],
+      "status": "solved"
+    }
+  },
+  "pairwise_separation": [
+    {
+      "distinguishable": true,
+      "left": "H1",
+      "right": "H2",
+      "sequence": [
+        "b"
+      ]
+    },
+    {
+      "distinguishable": true,
+      "left": "H1",
+      "right": "H3",
+      "sequence": [
+        "a"
+      ]
+    },
+    {
+      "distinguishable": true,
+      "left": "H2",
+      "right": "H3",
+      "sequence": [
+        "a"
+      ]
+    }
+  ],
+  "scope": {
+    "actions": [
+      "a",
+      "b"
+    ],
+    "candidate_count": 3,
+    "semantics": "deterministic complete finite Mealy candidates",
+    "state_count": 3
+  },
+  "target_class_identification": {
+    "adaptive": {
+      "depth_claim": "minimum",
+      "enumeration_complete": true,
+      "exact": true,
+      "impossibility_certificate": null,
+      "optimality_certified": true,
+      "policy": {
+        "action": "a",
+        "branches": {
+          "0": {
+            "candidates": [
+              "H1",
+              "H2"
+            ],
+            "conclusion": "identified target class repair_A",
+            "type": "leaf"
+          },
+          "1": {
+            "candidates": [
+              "H3"
+            ],
+            "conclusion": "identified target class repair_B",
+            "type": "leaf"
+          }
+        },
+        "type": "action"
+      },
+      "reachable_beliefs": 6,
+      "reason": "minimum worst-case policy over the complete reachable belief graph",
+      "status": "solved",
+      "worst_case_steps": 1
+    },
+    "cuts_behavioral_equivalence_class": false,
+    "labels": {
+      "H1": "repair_A",
+      "H2": "repair_A",
+      "H3": "repair_B"
+    },
+    "preset": {
+      "exact": true,
+      "explored_partitions": 1,
+      "length": 1,
+      "reason": "shortest fixed action sequence",
+      "sequence": [
+        "a"
+      ],
+      "status": "solved"
+    }
+  }
+}

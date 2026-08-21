@@ -1,0 +1,26 @@
+{
+  "machines": [
+    {
+      "name": "predicate_P7",
+      "initial_state": "s",
+      "transitions": {
+        "s": {
+          "probe": {"output": "same", "next_state": "s"}
+        }
+      }
+    },
+    {
+      "name": "predicate_Q9",
+      "initial_state": "s",
+      "transitions": {
+        "s": {
+          "probe": {"output": "same", "next_state": "s"}
+        }
+      }
+    }
+  ],
+  "labels": {
+    "predicate_P7": "concept_absent",
+    "predicate_Q9": "concept_present"
+  }
+}

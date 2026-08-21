@@ -1,0 +1,71 @@
+{
+  "audit_id": "OIA-1-TRACK-A-002",
+  "cache_tag": "cpython-313",
+  "candidate_codecs": [
+    "utf-8",
+    "utf-8-sig",
+    "latin-1",
+    "cp1252",
+    "iso8859-15"
+  ],
+  "candidate_family_source": "stdlib codec implementations installed with the frozen CPython runtime",
+  "codec_sources": [
+    {
+      "canonical_name": "utf-8",
+      "module": "encodings.utf_8",
+      "requested_name": "utf-8",
+      "source_path_at_freeze": "/usr/lib/python3.13/encodings/utf_8.py",
+      "source_sha256": "ba0cac060269583523ca9506473a755203037c57d466a11aa89a30a5f6756f3d",
+      "source_size_bytes": 1005
+    },
+    {
+      "canonical_name": "utf-8-sig",
+      "module": "encodings.utf_8_sig",
+      "requested_name": "utf-8-sig",
+      "source_path_at_freeze": "/usr/lib/python3.13/encodings/utf_8_sig.py",
+      "source_sha256": "1ef3da8d8aa08149e7f274dc64dbfce2155da812e5258ca8e8f832428d3b5c2d",
+      "source_size_bytes": 4133
+    },
+    {
+      "canonical_name": "iso8859-1",
+      "module": "encodings.latin_1",
+      "requested_name": "latin-1",
+      "source_path_at_freeze": "/usr/lib/python3.13/encodings/latin_1.py",
+      "source_sha256": "b75503e532a27c636477396c855209ff5f3036536d2a4bede0a576c89382b60c",
+      "source_size_bytes": 1264
+    },
+    {
+      "canonical_name": "cp1252",
+      "module": "encodings.cp1252",
+      "requested_name": "cp1252",
+      "source_path_at_freeze": "/usr/lib/python3.13/encodings/cp1252.py",
+      "source_sha256": "19aa5bee667f5fb387924a813aec9fa1dda47769d09e8483a748bdb202be6a84",
+      "source_size_bytes": 13511
+    },
+    {
+      "canonical_name": "iso8859-15",
+      "module": "encodings.iso8859_15",
+      "requested_name": "iso8859-15",
+      "source_path_at_freeze": "/usr/lib/python3.13/encodings/iso8859_15.py",
+      "source_sha256": "01976a81811873dc9a0c79db9fc00d1c30103487f3c6bc3a6d81b4043cd48e02",
+      "source_size_bytes": 13212
+    },
+    {
+      "canonical_name": "cp437",
+      "module": "encodings.cp437",
+      "requested_name": "cp437",
+      "source_path_at_freeze": "/usr/lib/python3.13/encodings/cp437.py",
+      "source_sha256": "5c2a5015cd36cf7f561269f33dec4c323093d3d88b0673969accdabdcb9ce2cb",
+      "source_size_bytes": 34564
+    }
+  ],
+  "documentation_url": "https://docs.python.org/3/library/codecs.html",
+  "license_url": "https://docs.python.org/3/license.html",
+  "outside_target_codec": "cp437",
+  "python_hexversion": 51185136,
+  "python_implementation": "cpython",
+  "python_version": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+  "substrate": "CPython incremental codec registry",
+  "upstream_license": "Python Software Foundation License Version 2",
+  "upstream_project": "CPython"
+}

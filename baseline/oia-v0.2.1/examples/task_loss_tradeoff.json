@@ -1,0 +1,43 @@
+{
+  "machines": [
+    {
+      "name": "H0",
+      "initial_state": "s",
+      "transitions": {
+        "s": {
+          "a": {"output": "0", "next_state": "s"},
+          "b": {"output": "0", "next_state": "s"}
+        }
+      }
+    },
+    {
+      "name": "H1",
+      "initial_state": "s",
+      "transitions": {
+        "s": {
+          "a": {"output": "1", "next_state": "s"},
+          "b": {"output": "1", "next_state": "s"}
+        }
+      }
+    }
+  ],
+  "decision_problem": {
+    "decisions": ["choose_0", "choose_1"],
+    "utilities": {
+      "H0": {"choose_0": 10, "choose_1": 0},
+      "H1": {"choose_0": 0, "choose_1": 10}
+    }
+  },
+  "priors": {"H0": 0.9, "H1": 0.1},
+  "action_costs": {"a": 0.5, "b": 0.109},
+  "task_losses": {
+    "H0": {"a": 0.5, "b": 0.01},
+    "H1": {"a": 0.5, "b": 1.0}
+  },
+  "options": {
+    "max_beliefs": 10000,
+    "max_partitions": 10000,
+    "value_depth": 1,
+    "max_task_loss_frontier": 50000
+  }
+}

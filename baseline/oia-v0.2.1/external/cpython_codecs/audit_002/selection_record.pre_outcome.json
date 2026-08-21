@@ -1,0 +1,21 @@
+{
+  "audit_id": "OIA-1-TRACK-A-002",
+  "blackbox_maximum_steps": 3,
+  "blackbox_replay_all_paths_valid": true,
+  "decision_verified_steps": 1,
+  "depth_claim": "minimum",
+  "enumeration_complete": true,
+  "exact": true,
+  "freeze_manifest_verified": true,
+  "identity_minus_decision_worst_case_steps": 2,
+  "local_runtime_seconds_console_only": null,
+  "optimality_certified": true,
+  "outcome_execution_authorized": true,
+  "primary_endpoint": "full_candidate_identification.adaptive",
+  "prospective_target_not_executed": true,
+  "reachable_beliefs": 75,
+  "root_action": "a_10bdb5ac0766844c",
+  "secondary_target_verified_steps": 1,
+  "status": "solved",
+  "verified_worst_case_steps": 3
+}

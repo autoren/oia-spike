@@ -1,0 +1,41 @@
+{
+  "audit_id": "OIA-1-TRACK-A-003a",
+  "files": [
+    {
+      "path": "OIA-1-Track-A-003a-Attempt-Provenance-Registry.json",
+      "sha256": "79c397b3bf4c0e8453575b23d415a3733d165f3e1b1f743515d5018f8d9bf825",
+      "size_bytes": 12658
+    },
+    {
+      "path": "OIA-1-Track-A-003a-Candidate-Acquisition-Report.md",
+      "sha256": "b8374134d5ecf86c14ea47eea2081c31da07aec541db31c95b9283f246f33116",
+      "size_bytes": 8224
+    },
+    {
+      "path": "OIA-1-Track-A-003a-Frozen-Protocol.json",
+      "sha256": "47c18e32ea64a19d45842fd13d2a80ab59161992aaef7c13cf501459de75ea59",
+      "size_bytes": 10066
+    },
+    {
+      "path": "OIA-1-Track-A-003a-SHA256SUMS.txt",
+      "sha256": "bf618d393c4c3db5de087516862245da3e0ca36adb45b88e7dc8ca9e5aeda0cb",
+      "size_bytes": 630
+    },
+    {
+      "path": "OIA-1-Track-A-003a-Source-Pins.json",
+      "sha256": "99acfd2e4da409e37c924d7925141b85dd74ac610843cd040d6715b17392075b",
+      "size_bytes": 5743
+    },
+    {
+      "path": "OIA-1-Track-A-003a-Validation-Transcript.txt",
+      "sha256": "4b45533674a1936739854079cf7331188c06bc5b1014c9e7c5b61e830db8c58b",
+      "size_bytes": 1355
+    },
+    {
+      "path": "README.md",
+      "sha256": "38d5829ebb6498be65ec34b364e74c57f8e2e050af384be61e9bcaa1495a7a8c",
+      "size_bytes": 466
+    }
+  ],
+  "schema_version": 1
+}

@@ -1,0 +1,56 @@
+name: OIA integrity
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: oia-integrity-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  integrity:
+    name: integrity
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Set up Python
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.12"
+
+      - name: Verify frozen Track A 003a package
+        run: python scripts/verify_track_a_003a.py
+
+      - name: Verify accepted v0.2.1 baseline bytes and provenance
+        working-directory: baseline/oia-v0.2.1
+        run: |
+          sha256sum -c SHA256SUMS
+          python maintenance/verify_provenance.py
+
+      - name: Run deterministic unit suite
+        env:
+          PYTHONPATH: baseline/oia-v0.2.1/src
+        run: python -m unittest discover -s baseline/oia-v0.2.1/tests -v
+
+      - name: Run randomized and serialization validation
+        working-directory: baseline/oia-v0.2.1
+        env:
+          PYTHONPATH: src
+        run: |
+          python research/randomized_validation.py
+          python research/task_loss_validation.py
+          python research/scaling_probe.py
+          python research/hash_seed_reproducibility.py
+
+      - name: Confirm validation did not mutate tracked evidence
+        run: git diff --exit-code

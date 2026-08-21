@@ -1,0 +1,163 @@
+{
+  "accepted_baseline": {
+    "archive_filename": "OIA-1-v0.2.1-Reproducibility-Maintenance-Package.zip",
+    "archive_sha256": "2653020afcbf636def260da1517c9e3ba41c2ba1175fc210d4847b303febc33b",
+    "commit": "3ca35d4",
+    "mutation_rule": "The accepted v0.2.1 archive is historical read-only evidence. This audit neither modifies nor repackages it.",
+    "tag": "oia-v0.2.1"
+  },
+  "allowed_verdicts": [
+    "candidate_frontier_feasible",
+    "single_model_only",
+    "no_behavioral_divergence",
+    "replay_failure",
+    "nondeterministic_candidate",
+    "state_initialization_blocker",
+    "action_boundary_blocker",
+    "provenance_or_license_blocker",
+    "resource_authorization_required",
+    "unknown"
+  ],
+  "attempt_accounting": {
+    "required_integrity_topics": [
+      "game_source_or_web_leakage",
+      "hidden_conversation_or_service_state",
+      "parameterized_click_actions",
+      "animation_and_multiframe_serialization",
+      "state_initialization",
+      "dependency_and_license_closure"
+    ],
+    "retain_all_attempts_and_rejections": true
+  },
+  "audit_id": "OIA-1-TRACK-A-003a",
+  "authority_pins": {
+    "official_arc_engine": {
+      "commit": "b495c6acaf253c9681cd7b75c4299d352e9ce6f8",
+      "license": "MIT",
+      "package": "arcengine",
+      "python_requirement": ">=3.12",
+      "repository": "https://github.com/arcprize/ARCEngine",
+      "version": "0.9.3"
+    },
+    "official_arc_toolkit": {
+      "commit": "f12822c4d550121c35a275008d964afbbed47d2f",
+      "license": "MIT",
+      "package": "arc-agi",
+      "python_requirement": ">=3.12",
+      "repository": "https://github.com/arcprize/ARC-AGI",
+      "version": "0.9.9"
+    },
+    "selected_learner": {
+      "agent_label": "ewma_sv_v1.6",
+      "agent_path": "papers/paper02/agents/ewma_sv_v1.6",
+      "commit": "ef104f198adf2ad2a3506638dc21d0249eb8308c",
+      "license": "MIT",
+      "release_status": "No software tag is used; the exact Git commit is the source authority.",
+      "repository": "https://github.com/astroseger/arc-3-agents-baseline1"
+    }
+  },
+  "candidate_admission_rule": {
+    "action_completeness": "Every action in the frozen candidate-independent boundary yields a deterministic next result or an explicit deterministic unsupported/error result.",
+    "behavioral_deduplication": "Retain the earliest-provenance candidate for each distinct finite trace signature. Source or checkpoint identity alone does not make a behavioral candidate.",
+    "complete_bytes_and_provenance": "Candidate source, static data, helper files, creation point, source commit, run identity, upstream artifact checksum, local SHA-256, dependency envelope, and licenses are recorded.",
+    "determinism": "For PYTHONHASHSEED values 0, 1, 5, and 10, run every frozen deduplication word twice in fresh processes; canonical traces must be byte-identical.",
+    "offline_execution": "After extraction, candidate execution occurs in fresh local processes with network disabled and no LLM, hosted service, credential, hidden conversation, or external memory.",
+    "prefix_replay": "Initial reconstruction and rendering exactly reproduce the frozen final settled P0 frame and declared status/level metadata.",
+    "reset": "Every word starts from a fresh immutable process or documented local reset that deterministically reconstructs P0 without ARC or service calls.",
+    "source_blindness_audit": "Inspect mounts, source tree access, network/web traces, scorecards, prior-run files, and game aliases. Unexplained game-source or web access blocks admission.",
+    "state_initialization": "Initialize only from the frozen P0 evidence and checkpoint-contained files. Reject dependence on later observations, unreleased state, hosted thread state, or mutable files outside the bundle."
+  },
+  "candidate_sources": {
+    "candidate_enumeration_order": [
+      "Final executable world-model bundle from each selected run.",
+      "Exact iteration_N Git commits/tags retained inside each run workspace.",
+      "Explicit immutable checkpoint/snapshot directories retained by the release."
+    ],
+    "maximum_admitted_candidates": 8,
+    "minimum_frontier_size": 2,
+    "no_reconstruction_rule": "Do not reconstruct missing candidate files from narrative logs, LLM transcripts, diffs, or game outcomes. Candidate bytes and dependency closure must be released.",
+    "preferred_frontier_size": "3-8",
+    "primary_run_attempts": [
+      {
+        "game": "ls20",
+        "run_id": "ewma_sv_v1.6_gpt-5.6-sol_max_run1"
+      },
+      {
+        "game": "ls20",
+        "run_id": "ewma_sv_v1.6_gpt-5.6-sol_xhigh_run1"
+      }
+    ],
+    "sampling_interpretation": "Different checkpoints or runs of the same learner are separately sampled candidates, not independently authored learners."
+  },
+  "claim_boundary": "Track A opened instrument feasibility only. No sealed confirmation, evaluator-private identification, necessary ontology-revision claim, decision superiority, global equivalence, or Track B claim.",
+  "freeze_date": "2026-08-21",
+  "frozen_finite_behavior_boundary": {
+    "action6_words": "If ACTION6 is available, expand its official finite x,y domain 0..63 by 0..63 and enumerate every one-step ACTION6(x,y) plus every one-step simple action. Do not enumerate longer ACTION6 words in 003a.",
+    "action_source": "Use the byte-identical P0 available-actions metadata, not candidate predictions.",
+    "non_equivalence_endpoint": "At least one frozen word produces different canonical traces from the same P0.",
+    "non_separation_wording": "No divergence within the frozen finite boundary. Never describe this as global equivalence or impossibility.",
+    "output_signature": "At each predicted step record final settled frame SHA-256, predicted status, predicted level/progress fields if modeled, and deterministic error category. Preserve any candidate-emitted intermediate frames separately but do not require them because the selected source verifier does not.",
+    "purpose": "Acquisition-level behavioral deduplication only. This is not the full ARC adapter, an OIA separator run, or a global equivalence test.",
+    "reset_handling": "RESET is an initialization operation and is not part of the deduplication alphabet.",
+    "simple_action_words": "If the admitted alphabet has at most eight non-parameterized actions and excludes ACTION6, enumerate all words of lengths 1 through 3."
+  },
+  "opened_environment": {
+    "game_slug": "ls20",
+    "real_environment_execution_authorized": false,
+    "required_version_check_after_acquisition": "The full game identifier/version and P0 bytes must match across candidate sources. A slug match alone is insufficient.",
+    "selection_basis": [
+      "The official toolkit uses ls20 as a public quickstart environment.",
+      "The selected learner publishes completed ls20 result rows for both GPT-5.6-sol max and xhigh runs.",
+      "The released run family is reported to include executable workspaces and per-iteration snapshots."
+    ],
+    "visibility": "public_opened_only"
+  },
+  "opened_prefix": {
+    "actions": [],
+    "canonicalization": {
+      "candidate_replay_boundary": "Because the selected learner executable interface verifies the final settled frame and status, candidate admission requires exact initial-state rendering of the final settled P0 frame and exact status/level metadata. No animation-modeling claim is made.",
+      "envelope": "Canonical JSON UTF-8, sorted object keys, compact separators, integers preserved exactly, no NaN.",
+      "frames": "Preserve every returned frame in original order in the evidence registry.",
+      "hash": "SHA-256 of canonical bytes."
+    },
+    "definition": "The complete ordered initial observation packet immediately after reset and before the first environment action, as released inside each selected run.",
+    "identity_requirement": "The canonical P0 packet, full game identifier/version, level index, available-actions metadata, state/status, and final settled frame must be byte-identical across all admitted candidate sources.",
+    "prefix_id": "ls20_P0_reset_observation",
+    "rationale": "A zero-action prefix makes the two released runs eligible for one identical opened starting point without executing or selecting a new real ARC action."
+  },
+  "schema_version": 1,
+  "scope": {
+    "authorized": "Public-source and released-artifact inspection plus local, non-mutating candidate-acquisition checks for one source-blind executable-world-model learner on one public ARC-AGI-3 environment.",
+    "forbidden": [
+      "modify_or_repackage_v0.2.1",
+      "rerun_cp437",
+      "build_full_ARC_adapter",
+      "execute_OIA_selected_real_environment_intervention",
+      "execute_any_new_real_ARC_action",
+      "use_private_or_sealed_ARC_environment",
+      "make_Track_B_claim",
+      "paid_model_or_API_run_without_new_authorization",
+      "credential_request_without_new_authorization",
+      "scarce_resource_use_without_new_authorization"
+    ]
+  },
+  "selected_released_artifact": {
+    "download_authorized_in_003a": false,
+    "expected_content_scope": "Exploratory ewma_sv_v1.6 GPT-5.6-sol max and xhigh run artifacts, including generated workspaces/world models.",
+    "filename": "article2_main_runs_additional.tar.gz",
+    "record": "https://doi.org/10.5281/zenodo.21412274",
+    "record_id": 21412274,
+    "record_license": "CC-BY-4.0",
+    "size_bytes": 797835543,
+    "upstream_checksum": {
+      "algorithm": "md5",
+      "value": "4dd279f099609392c30cffa468801316"
+    }
+  },
+  "status_at_freeze": "frozen_before_candidate_artifact_download_behavioral_deduplication_or_OIA_separability",
+  "stop_rule": {
+    "before_download": "Because the selected archive is a 797,835,543-byte compressed object requiring multi-gigabyte temporary extraction, stop with resource_authorization_required before download under the current prompt.",
+    "before_real_or_paid_work": "No paid/API/model run, credential request, or real ARC action may occur under 003a."
+  },
+  "track": "A_opened_candidate_acquisition_feasibility"
+}

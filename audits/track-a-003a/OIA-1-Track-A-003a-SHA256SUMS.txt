@@ -1,0 +1,6 @@
+79c397b3bf4c0e8453575b23d415a3733d165f3e1b1f743515d5018f8d9bf825  OIA-1-Track-A-003a-Attempt-Provenance-Registry.json
+b8374134d5ecf86c14ea47eea2081c31da07aec541db31c95b9283f246f33116  OIA-1-Track-A-003a-Candidate-Acquisition-Report.md
+47c18e32ea64a19d45842fd13d2a80ab59161992aaef7c13cf501459de75ea59  OIA-1-Track-A-003a-Frozen-Protocol.json
+99acfd2e4da409e37c924d7925141b85dd74ac610843cd040d6715b17392075b  OIA-1-Track-A-003a-Source-Pins.json
+4b45533674a1936739854079cf7331188c06bc5b1014c9e7c5b61e830db8c58b  OIA-1-Track-A-003a-Validation-Transcript.txt
+38d5829ebb6498be65ec34b364e74c57f8e2e050af384be61e9bcaa1495a7a8c  README.md

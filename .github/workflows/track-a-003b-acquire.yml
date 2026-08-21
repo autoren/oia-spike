@@ -1,9 +1,9 @@
 name: Track A 003b public artifact acquisition
 
 on:
-  push:
+  pull_request:
     paths:
-      - .github/workflows/track-a-003b-acquire.yml
+      - audits/track-a-003b/TRIGGER.txt
   workflow_dispatch:
 
 permissions:
@@ -88,7 +88,6 @@ jobs:
                       target.mkdir(parents=True, exist_ok=True)
                       continue
                   if not member.isfile():
-                      # Preserve provenance in inventory, but do not materialize links/devices.
                       continue
                   target.parent.mkdir(parents=True, exist_ok=True)
                   src = tf.extractfile(member)

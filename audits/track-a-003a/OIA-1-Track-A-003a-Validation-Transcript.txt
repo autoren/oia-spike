@@ -1,0 +1,30 @@
+OIA-1 Track A 003a validation transcript
+Date: 2026-08-21
+
+Accepted baseline expected SHA-256: 2653020afcbf636def260da1517c9e3ba41c2ba1175fc210d4847b303febc33b
+Accepted baseline observed SHA-256: 2653020afcbf636def260da1517c9e3ba41c2ba1175fc210d4847b303febc33b
+Baseline modified or repackaged: false
+
+Frozen protocol SHA-256: 47c18e32ea64a19d45842fd13d2a80ab59161992aaef7c13cf501459de75ea59
+Source-pins SHA-256: 99acfd2e4da409e37c924d7925141b85dd74ac610843cd040d6715b17392075b
+Protocol frozen before candidate behavior/OIA separability: true
+
+Official toolkit: arcprize/ARC-AGI@f12822c4d550121c35a275008d964afbbed47d2f / arc-agi 0.9.9 / MIT
+Official engine: arcprize/ARCEngine@b495c6acaf253c9681cd7b75c4299d352e9ce6f8 / arcengine 0.9.3 / MIT
+Selected learner: astroseger/arc-3-agents-baseline1@ef104f198adf2ad2a3506638dc21d0249eb8308c / ewma_sv_v1.6 / MIT
+Per-iteration Git snapshot mechanism found: true
+Selected public environment: ls20
+Selected archive bytes: 797835543
+Selected archive upstream MD5: 4dd279f099609392c30cffa468801316
+Selected archive downloaded: false
+Candidate programs acquired: 0
+Candidate replay/determinism/reset tests: 0
+Behavioral deduplication runs: 0
+OIA separability runs: 0
+Real ARC actions: 0
+Paid/model/API calls: 0
+Credentials requested: 0
+cp437 reruns: 0
+Track B claims: 0
+
+Gate verdict: resource_authorization_required

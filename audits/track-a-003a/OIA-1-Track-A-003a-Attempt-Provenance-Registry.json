@@ -1,0 +1,220 @@
+{
+  "accepted_baseline": {
+    "archive_filename": "OIA-1-v0.2.1-Reproducibility-Maintenance-Package.zip",
+    "archive_sha256": "2653020afcbf636def260da1517c9e3ba41c2ba1175fc210d4847b303febc33b",
+    "commit": "3ca35d4",
+    "modified": false,
+    "observed_archive_sha256": "2653020afcbf636def260da1517c9e3ba41c2ba1175fc210d4847b303febc33b",
+    "repackaged": false,
+    "tag": "oia-v0.2.1"
+  },
+  "aggregate_counts": {
+    "OIA_separability_runs": 0,
+    "behaviorally_unique_candidates_admitted": 0,
+    "candidate_attempt_records": 5,
+    "candidate_programs_acquired": 0,
+    "candidates_admitted": 0,
+    "credentials_requested": 0,
+    "paid_model_or_API_calls": 0,
+    "real_ARC_actions": 0,
+    "upstream_large_archives_downloaded": 0
+  },
+  "audit_id": "OIA-1-TRACK-A-003a",
+  "candidate_attempts": [
+    {
+      "acquisition_status": "not_acquired_resource_authorization_stop",
+      "action_boundary": "not_run; P0 available-actions metadata unavailable",
+      "admission_or_rejection_reason": "deferred before a 797,835,543-byte scarce-resource download; not rejected on behavior",
+      "animation_serialization": "source stores intermediate frames but verifier checks settled frame; run bytes unavailable",
+      "artifact_hash": {
+        "local_sha256_candidate_bundle": null,
+        "upstream_md5_container": "4dd279f099609392c30cffa468801316"
+      },
+      "artifact_locator": "Zenodo 10.5281/zenodo.21412274 / article2_main_runs_additional.tar.gz / matching run subtree",
+      "attempt_id": "PRIMARY-RODIONOV-EWMA16-LS20-MAX-RUN1",
+      "behavioral_deduplication": "not_run",
+      "determinism": "not_run; candidate bytes unavailable",
+      "exact_pin": {
+        "repository_commit": "ef104f198adf2ad2a3506638dc21d0249eb8308c",
+        "result_table_blob_sha1": "3b5c344800f0cf5ad3e58a5dac413c31d331b64b"
+      },
+      "leakage_audit": "source-level separate-container/fresh-workspace design inspected; run-level mounts, transcripts, and network evidence unavailable",
+      "license": {
+        "record": "CC-BY-4.0",
+        "source": "MIT"
+      },
+      "prefix_replay": "not_run; P0 bytes are inside archive",
+      "reset": "not_run",
+      "service_independence": "source architecture permits later fixed-code execution, but offline closure is unverified",
+      "source": "Rodionov ewma_sv_v1.6 GPT-5.6-sol max run1, ls20",
+      "state_initialization": "not_run; checkpoint-contained reconstruction dependencies unavailable"
+    },
+    {
+      "acquisition_status": "not_acquired_resource_authorization_stop",
+      "action_boundary": "not_run; P0 available-actions metadata unavailable",
+      "admission_or_rejection_reason": "deferred before a 797,835,543-byte scarce-resource download; not rejected on behavior",
+      "animation_serialization": "source stores intermediate frames but verifier checks settled frame; run bytes unavailable",
+      "artifact_hash": {
+        "local_sha256_candidate_bundle": null,
+        "upstream_md5_container": "4dd279f099609392c30cffa468801316"
+      },
+      "artifact_locator": "Zenodo 10.5281/zenodo.21412274 / article2_main_runs_additional.tar.gz / matching run subtree",
+      "attempt_id": "PRIMARY-RODIONOV-EWMA16-LS20-XHIGH-RUN1",
+      "behavioral_deduplication": "not_run",
+      "determinism": "not_run; candidate bytes unavailable",
+      "exact_pin": {
+        "repository_commit": "ef104f198adf2ad2a3506638dc21d0249eb8308c",
+        "result_table_blob_sha1": "be86db3366cd765ecc90b0687377eaeb98d28c52"
+      },
+      "leakage_audit": "source-level separate-container/fresh-workspace design inspected; run-level mounts, transcripts, and network evidence unavailable",
+      "license": {
+        "record": "CC-BY-4.0",
+        "source": "MIT"
+      },
+      "prefix_replay": "not_run; P0 bytes are inside archive",
+      "reset": "not_run",
+      "service_independence": "source architecture permits later fixed-code execution, but offline closure is unverified",
+      "source": "Rodionov ewma_sv_v1.6 GPT-5.6-sol xhigh run1, ls20",
+      "state_initialization": "not_run; checkpoint-contained reconstruction dependencies unavailable"
+    },
+    {
+      "acquisition_status": "source_mechanism_confirmed_artifact_retention_unverified",
+      "action_boundary": "not_run",
+      "admission_or_rejection_reason": "positive source-level feasibility signal only; archive must show that .git objects/tags or exact snapshots and all dependencies were retained",
+      "animation_serialization": "not_run",
+      "artifact_hash": null,
+      "artifact_locator": "agent_run/.git iteration_N tags or immutable snapshots inside selected released run trees",
+      "attempt_id": "PRIMARY-WITHIN-RUN-ITERATION-FRONTIER",
+      "behavioral_deduplication": "not_run",
+      "determinism": "not_run",
+      "exact_pin": {
+        "agent_funs_blob_sha1": "f92653fc3c1c8e55d9d4ead56e410ad097efbe8e"
+      },
+      "leakage_audit": "not available at checkpoint granularity without archive",
+      "license": {
+        "record": "CC-BY-4.0",
+        "source": "MIT"
+      },
+      "prefix_replay": "not_run",
+      "reset": "not_run",
+      "service_independence": "candidate generation used Codex; later fixed-code execution would be required offline",
+      "source": "Rodionov per-iteration Git snapshots",
+      "state_initialization": "not_run"
+    },
+    {
+      "acquisition_status": "not_acquired_host_binary_unavailable_and_superseded_by_pinned_zenodo_option",
+      "action_boundary": "not_run",
+      "admission_or_rejection_reason": "reasonable public option exhausted at metadata/source level; no binary was acquired, and the smaller exact Zenodo artifact is the preferred next acquisition",
+      "animation_serialization": "not_run",
+      "artifact_hash": null,
+      "artifact_locator": "Dropbox links in papers/paper01/results/README.md",
+      "attempt_id": "RODIONOV-PAPER01-DROPBOX-FULL-RUNS",
+      "behavioral_deduplication": "not_run",
+      "determinism": "not_run",
+      "exact_pin": {
+        "repository_commit": "ef104f198adf2ad2a3506638dc21d0249eb8308c"
+      },
+      "leakage_audit": "paper01 secure design inspected; run bytes unavailable",
+      "license": {
+        "source": "MIT"
+      },
+      "prefix_replay": "not_run",
+      "reset": "not_run",
+      "service_independence": "not_run",
+      "source": "Rodionov paper01 released full-run Dropbox archives",
+      "state_initialization": "not_run"
+    },
+    {
+      "acquisition_status": "secondary_screen_rejected_before_large_download",
+      "action_boundary": "not_run",
+      "admission_or_rejection_reason": "exact source is pinnable, but no explicit repository license or immutable archive checksum/intermediate frontier was established; it does not supersede the better-pinned primary option",
+      "animation_serialization": "not_run",
+      "artifact_hash": {
+        "immutable_upstream_checksum": null
+      },
+      "artifact_locator": "Google Drive OPINE-World-Results / opine-world-results.zip (displayed 804 MB)",
+      "attempt_id": "SECONDARY-OPINE-WORLD",
+      "behavioral_deduplication": "not_run",
+      "determinism": "not_run",
+      "exact_pin": {
+        "repository_commit": "e1553f29843a41a3d0b70d8a28357577d8b16849"
+      },
+      "leakage_audit": "repository describes source isolation, but archive and run evidence were not acquired",
+      "license": {
+        "artifact": "not established",
+        "repository": "not established at pin"
+      },
+      "prefix_replay": "not_run",
+      "reset": "not_run",
+      "service_independence": "generation uses hosted Claude; fixed candidate closure not inspected",
+      "source": "OPINE-World",
+      "state_initialization": "not_run"
+    }
+  ],
+  "claim_boundary": "This establishes a source-level checkpoint mechanism and a concrete opened acquisition resource boundary. It does not establish that two candidates exist in the archive, pass replay/determinism/reset checks, diverge within the frozen boundary, or are globally equivalent. It makes no ontology-revision, identification, planning-value, decision-superiority, sealed, or Track B claim.",
+  "cross_cutting_integrity_audit": {
+    "animation_and_multiframe_serialization": {
+      "claim_boundary": "Preserve all released frames as evidence; candidate replay/dedup is explicitly settled-state only and makes no animation fidelity claim.",
+      "source_finding": "Session tooling records intermediate and final frames, but the executable verifier compares the final settled frame and status."
+    },
+    "game_source_and_web_leakage": {
+      "source_finding": "The selected architecture places Codex in a separate container from the game implementation and starts fresh workspaces. The public repository claims no game-specific code or prompts.",
+      "unresolved_run_check": "Inspect actual archive mounts, client/server logs, transcripts, downloaded files, scorecards, Git history, and any web/network artifacts. Public-game knowledge in pretrained model weights cannot be excluded by source inspection."
+    },
+    "hidden_conversation_or_service_state": {
+      "admission_rule": "Only extracted executable code/static dependencies may run later; fresh offline processes must succeed without the hosted thread or credentials.",
+      "source_finding": "Generation uses a hosted Codex session and authentication state."
+    },
+    "parameterized_click_actions": {
+      "authority_finding": "Official ACTION6 has a finite x,y domain 0..63 by 0..63, while P0 reveals only whether ACTION6 is available.",
+      "frozen_handling": "Use all 4096 one-step coordinates if ACTION6 is present; do not use candidate-proposed click targets."
+    },
+    "state_initialization": {
+      "admission_rule": "P0 and files inside the immutable candidate bundle are the only allowed inputs. Any later-observation, missing-file, or hosted-state dependency blocks admission.",
+      "source_finding": "The model exposes initial-state reconstruction and rendering, with possible checkpoint-contained helper artifacts."
+    }
+  },
+  "date": "2026-08-21",
+  "frozen_protocol": {
+    "filename": "OIA-1-Track-A-003a-Frozen-Protocol.json",
+    "frozen_before_candidate_behavior_or_OIA_separability": true,
+    "sha256": "47c18e32ea64a19d45842fd13d2a80ab59161992aaef7c13cf501459de75ea59"
+  },
+  "gate_verdict": "resource_authorization_required",
+  "prohibited_actions_status": {
+    "OIA_selected_intervention_executed": false,
+    "Track_B_claim_made": false,
+    "cp437_rerun": false,
+    "credentials_requested": false,
+    "full_ARC_adapter_built": false,
+    "paid_or_API_model_run": false,
+    "private_or_sealed_ARC_used": false,
+    "real_ARC_action_executed": false,
+    "v0_2_1_modified_or_repackaged": false
+  },
+  "resource_authorization_boundary": {
+    "authorization_status": "not_authorized_by_current_prompt",
+    "compressed_transfer_bytes": 797835543,
+    "compressed_transfer_gib": 0.743,
+    "compressed_transfer_mib": 760.875,
+    "credentials_required": false,
+    "estimated_direct_monetary_cost_usd": 0,
+    "estimated_temporary_disk": "2-5 GiB; exact expansion is unavailable until the gzip tar is downloaded/listed.",
+    "paid_model_or_ARC_API_cost_usd": 0,
+    "required_operation": "Download article2_main_runs_additional.tar.gz from Zenodo record 21412274, verify MD5 4dd279f099609392c30cffa468801316, compute local SHA-256, read-only extract, and inventory only the two selected ls20 run trees and their checkpoint/dependency closure.",
+    "why_released_source_and_non_mutating_checks_are_insufficient": [
+      "GitHub contains empty model stubs and aggregate result tables, not generated candidate bytes.",
+      "The Zenodo metadata does not expose its internal per-run file list.",
+      "Retention/completeness of .git objects, iteration tags, or immutable snapshots is unknown.",
+      "P0 bytes, full game version, available actions, ordered frames, and candidate initialization inputs cannot be hashed.",
+      "Offline reset, exact P0 replay, cross-process determinism, service independence, and finite behavioral divergence cannot be tested."
+    ]
+  },
+  "schema_version": 1,
+  "source_pins": {
+    "filename": "OIA-1-Track-A-003a-Source-Pins.json",
+    "sha256": "99acfd2e4da409e37c924d7925141b85dd74ac610843cd040d6715b17392075b"
+  },
+  "track": "A",
+  "verdict_basis": "The selected public learner source naturally creates per-iteration executable snapshots and a public run archive is pinned by size, MD5, DOI, and record license. The actual candidates, P0, dependency closure, and traces are only inside a 797,835,543-byte compressed archive. The prompt requires stopping before that scarce-resource download/extraction."
+}

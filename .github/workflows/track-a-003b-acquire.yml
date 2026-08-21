@@ -1,0 +1,149 @@
+name: Track A 003b public artifact acquisition
+
+on:
+  push:
+    paths:
+      - .github/workflows/track-a-003b-acquire.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  acquire:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - name: Download and verify public Zenodo archive
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p work/out
+          url='https://zenodo.org/api/records/21412274/files/article2_main_runs_additional.tar.gz/content'
+          archive='work/article2_main_runs_additional.tar.gz'
+          curl --fail --location --retry 5 --retry-delay 3 --output "$archive" "$url"
+          test "$(stat -c %s "$archive")" = '797835543'
+          echo '4dd279f099609392c30cffa468801316  work/article2_main_runs_additional.tar.gz' | md5sum -c -
+          sha256sum "$archive" | tee work/out/ARCHIVE_SHA256SUMS.txt
+          md5sum "$archive" | tee work/out/ARCHIVE_MD5SUMS.txt
+          stat -c '%n %s bytes' "$archive" | tee work/out/ARCHIVE_SIZE.txt
+
+      - name: Inventory archive and select only named ls20 run trees
+        shell: bash
+        run: |
+          set -euo pipefail
+          archive='work/article2_main_runs_additional.tar.gz'
+          python3 - <<'PY'
+          from __future__ import annotations
+          import hashlib
+          import json
+          import os
+          import pathlib
+          import tarfile
+
+          archive = pathlib.Path('work/article2_main_runs_additional.tar.gz')
+          out = pathlib.Path('work/out')
+          selected_root = out / 'selected'
+          selected_root.mkdir(parents=True, exist_ok=True)
+          run_ids = (
+              'ewma_sv_v1.6_gpt-5.6-sol_max_run1',
+              'ewma_sv_v1.6_gpt-5.6-sol_xhigh_run1',
+          )
+
+          def safe_name(name: str) -> bool:
+              p = pathlib.PurePosixPath(name)
+              return bool(name) and not p.is_absolute() and '..' not in p.parts
+
+          members_meta = []
+          selected_names = []
+          with tarfile.open(archive, mode='r:gz') as tf:
+              for member in tf:
+                  name = member.name
+                  members_meta.append({
+                      'name': name,
+                      'size': member.size,
+                      'type': member.type.decode('ascii', 'replace') if isinstance(member.type, bytes) else str(member.type),
+                      'mode': member.mode,
+                  })
+                  low = name.lower()
+                  if any(run_id.lower() in low for run_id in run_ids) and 'ls20' in low:
+                      if not safe_name(name):
+                          raise RuntimeError(f'unsafe archive member: {name!r}')
+                      selected_names.append(name)
+
+          (out / 'ARCHIVE_MEMBERS.json').write_text(
+              json.dumps(members_meta, indent=2, sort_keys=True) + '\n', encoding='utf-8'
+          )
+          (out / 'SELECTED_MEMBER_NAMES.txt').write_text(
+              ''.join(f'{name}\n' for name in selected_names), encoding='utf-8'
+          )
+
+          selected_set = set(selected_names)
+          with tarfile.open(archive, mode='r:gz') as tf:
+              for member in tf:
+                  if member.name not in selected_set:
+                      continue
+                  target = selected_root / pathlib.PurePosixPath(member.name)
+                  if member.isdir():
+                      target.mkdir(parents=True, exist_ok=True)
+                      continue
+                  if not member.isfile():
+                      # Preserve provenance in inventory, but do not materialize links/devices.
+                      continue
+                  target.parent.mkdir(parents=True, exist_ok=True)
+                  src = tf.extractfile(member)
+                  if src is None:
+                      raise RuntimeError(f'cannot read selected member: {member.name}')
+                  with src, target.open('wb') as dst:
+                      while True:
+                          chunk = src.read(1024 * 1024)
+                          if not chunk:
+                              break
+                          dst.write(chunk)
+                  os.chmod(target, member.mode & 0o777)
+
+          hashes = []
+          for path in sorted(p for p in selected_root.rglob('*') if p.is_file()):
+              h = hashlib.sha256()
+              with path.open('rb') as f:
+                  for chunk in iter(lambda: f.read(1024 * 1024), b''):
+                      h.update(chunk)
+              hashes.append({'path': path.relative_to(selected_root).as_posix(), 'size': path.stat().st_size, 'sha256': h.hexdigest()})
+          (out / 'SELECTED_FILE_MANIFEST.json').write_text(
+              json.dumps(hashes, indent=2, sort_keys=True) + '\n', encoding='utf-8'
+          )
+          summary = {
+              'archive_member_count': len(members_meta),
+              'selected_member_count': len(selected_names),
+              'selected_file_count': len(hashes),
+              'selected_total_bytes': sum(x['size'] for x in hashes),
+              'run_ids': list(run_ids),
+              'selection_rule': 'member path contains exact run id and substring ls20 (case-insensitive)',
+              'candidate_execution': False,
+              'arc_execution': False,
+          }
+          (out / 'ACQUISITION_SUMMARY.json').write_text(
+              json.dumps(summary, indent=2, sort_keys=True) + '\n', encoding='utf-8'
+          )
+          print(json.dumps(summary, sort_keys=True))
+          PY
+
+      - name: Package selected material and deterministic evidence
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd work/out
+          find . -type f -print0 | sort -z | xargs -0 sha256sum > PAYLOAD_SHA256SUMS.txt
+          tar --sort=name --mtime='UTC 2026-08-21' --owner=0 --group=0 --numeric-owner -czf ../track-a-003b-selected-ls20.tar.gz .
+          sha256sum ../track-a-003b-selected-ls20.tar.gz | tee ../TRACK_A_003B_PACKAGE_SHA256SUMS.txt
+
+      - name: Upload acquisition evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: track-a-003b-selected-ls20
+          path: |
+            work/track-a-003b-selected-ls20.tar.gz
+            work/TRACK_A_003B_PACKAGE_SHA256SUMS.txt
+          if-no-files-found: error
+          compression-level: 0
+          retention-days: 30

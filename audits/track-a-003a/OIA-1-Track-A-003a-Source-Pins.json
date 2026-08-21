@@ -1,0 +1,137 @@
+{
+  "audit_id": "OIA-1-TRACK-A-003a",
+  "date": "2026-08-21",
+  "official_arc_engine": {
+    "action_and_observation_boundary": {
+      "actions": "RESET plus ACTION1..ACTION7; ACTION6 carries integer x,y each in 0..63.",
+      "frames": "An observation can carry an ordered list of frames, not only one settled frame."
+    },
+    "commit": "b495c6acaf253c9681cd7b75c4299d352e9ce6f8",
+    "declared_runtime_dependencies": [
+      "numpy>=1.24.0",
+      "pydantic>=2.10.6"
+    ],
+    "git_blobs_sha1": {
+      "arcengine/enums.py": "7d788d2bdc5a00944de2b42f634ee6f3b7d670e7",
+      "pyproject.toml": "089b8f729f8a3bd2de1ccbe3d9592acd0c99ec0f"
+    },
+    "license": "MIT",
+    "package_version": "0.9.3",
+    "python_requirement": ">=3.12",
+    "repository": "https://github.com/arcprize/ARCEngine"
+  },
+  "official_arc_toolkit": {
+    "commit": "f12822c4d550121c35a275008d964afbbed47d2f",
+    "commit_date_utc": "2026-06-10T21:29:53Z",
+    "declared_runtime_dependencies": [
+      "arcengine>=0.9.3",
+      "flask>=3.1.0",
+      "matplotlib>=3.7.0",
+      "pydantic>=2.0.0",
+      "python-dotenv>=1.0.0",
+      "pillow>=12.1.1",
+      "requests>=2.31.0"
+    ],
+    "git_blobs_sha1": {
+      "LICENSE": "80216ed3bbd1749bf73b6ab13188db27178b4578",
+      "pyproject.toml": "c0990195416eb6d21efd1383c5e76cd65306ff78",
+      "uv.lock": "ab138d3caf5f637f469b3bef85694a07e3a9d9d7"
+    },
+    "license": "MIT",
+    "package_version": "0.9.9",
+    "python_requirement": ">=3.12",
+    "repository": "https://github.com/arcprize/ARC-AGI"
+  },
+  "released_artifact_authority": {
+    "doi": "10.5281/zenodo.21412274",
+    "files": {
+      "article2_main_runs.tar.gz": {
+        "md5": "b9c8d4c4a4e40012366b15a9f2912c7e",
+        "size_bytes": 4081957952,
+        "status": "metadata inspected; not selected for 003a"
+      },
+      "article2_main_runs_additional.tar.gz": {
+        "md5": "4dd279f099609392c30cffa468801316",
+        "size_bytes": 797835543,
+        "status": "selected but not downloaded because scarce-resource authorization is required"
+      }
+    },
+    "record_id": 21412274,
+    "record_license": "CC-BY-4.0"
+  },
+  "schema_version": 1,
+  "secondary_opine_world_screen": {
+    "admission_result": "not selected: exact intermediate executable frontier and license were not sufficiently pinnable without another large external artifact acquisition",
+    "commit": "e1553f29843a41a3d0b70d8a28357577d8b16849",
+    "commit_date_utc": "2026-07-17T01:53:14Z",
+    "declared_dependencies": [
+      "arc-agi>=0.9.6",
+      "numpy>=2.0",
+      "pillow>=10.0",
+      "opencv-python>=4.8"
+    ],
+    "git_blobs_sha1": {
+      "README.md": "797e2063c98e5e64d5786c6d449a522d5b3b28b6",
+      "pyproject.toml": "6555306653a442eeb303375653808d369199e527",
+      "uv.lock": "f5ac8cbe3ea8a2a375c151ea2de188e745bd3c34"
+    },
+    "license_finding": "No root LICENSE file and no project license field were found at the pinned commit; no license was inferred.",
+    "project_version": "0.1.0",
+    "python_requirement": ">=3.12",
+    "repository": "https://github.com/david-courtis/opine-world",
+    "run_archive": {
+      "displayed_size": "804 MB",
+      "host": "Google Drive",
+      "immutable_checksum_acquired": false
+    }
+  },
+  "selected_learner": {
+    "agent": "ewma_sv_v1.6",
+    "checkpoint_mechanism": "run_git_snapshot commits git add -A and force-tags iteration_N before each learner iteration.",
+    "commit": "ef104f198adf2ad2a3506638dc21d0249eb8308c",
+    "commit_date_utc": "2026-07-20T09:07:34Z",
+    "git_blobs_sha1": {
+      "AGENT.md": "0061291a2c0ffadd858156bad457f430d64b26f8",
+      "Dockerfile.agent": "ff7791906a68dc4ba7a4b78bcaeabb5c42d650d9",
+      "Dockerfile.server": "53048cc735ecc343a3635a35c6276118a5bd1840",
+      "LICENSE": "91218c934997f9772d81c0ad0d62c3a190bb6bf8",
+      "agent.py": "3904614eac8ef14304e22bcc4c47d07f75a2f883",
+      "agent_README.md": "88aa064d0877f40e33cc10f7939a199e5a15215c",
+      "agent_funs.py": "f92653fc3c1c8e55d9d4ead56e410ad097efbe8e",
+      "run_config.yaml": "b9a31f66ce7d4190c43c0f94db91da96c34cc8be",
+      "session_tools.py": "cd59c588c8652b59d24e491b246bae04b6fd8f1a",
+      "verify_world_model.py": "fd703f59d52c30284df52487f428d68851d44979"
+    },
+    "known_exact_runtime_pins": {
+      "arc_agi_server_package": "0.9.9",
+      "codex_cli": "0.144.1"
+    },
+    "license": "MIT",
+    "repository": "https://github.com/astroseger/arc-3-agents-baseline1",
+    "source_isolation_boundary": "The agent runs in a separate Docker container from the game implementation and starts each playthrough from a clean workspace; run-specific mounts/network traces still require artifact inspection.",
+    "source_verification_boundary": "The released verifier reconstructs initial state and compares exact final settled frames and status for recorded steps; intermediate frames are retained by session tools but not verified by the executable model.",
+    "unlocked_runtime_elements": [
+      "ubuntu:24.04 image digest",
+      "python:3.13-slim image digest",
+      "apt package versions installed from Ubuntu repositories"
+    ]
+  },
+  "selected_run_summaries": {
+    "max_run1_ls20": {
+      "cost_tokens_millions": 3.78,
+      "environment_steps": 461,
+      "git_blob_sha1": "3b5c344800f0cf5ad3e58a5dac413c31d331b64b",
+      "levels_solved": "7/7",
+      "score": "100.00%",
+      "table_path": "papers/paper02/results/ewma_sv_v1.6_gpt-5.6-sol_max_run1_table.md"
+    },
+    "xhigh_run1_ls20": {
+      "cost_tokens_millions": 2.91,
+      "environment_steps": 465,
+      "git_blob_sha1": "be86db3366cd765ecc90b0687377eaeb98d28c52",
+      "levels_solved": "7/7",
+      "score": "100.00%",
+      "table_path": "papers/paper02/results/ewma_sv_v1.6_gpt-5.6-sol_xhigh_run1_table.md"
+    }
+  }
+}

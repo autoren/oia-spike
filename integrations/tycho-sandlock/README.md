@@ -11,3 +11,7 @@ preserves the pinned Tycho sandbox interface. It cannot establish that the
 competition evaluator exposes a sufficient Landlock ABI, that the model fits
 or is fast enough, that an evaluator adapter is correct, or that OIA discovers
 anything.
+
+R1 passed that local boundary. See `SANDBOX_REPORT.md` and
+`SANDBOX_RESULT.json`. The next gate is the model-free target-kernel preflight
+described in the result; it must not silently fall back to host Python.

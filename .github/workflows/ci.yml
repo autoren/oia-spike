@@ -128,6 +128,9 @@ jobs:
       - name: Verify Tycho local-Qwen evaluator-package R0 boundary
         run: python scripts/verify_tycho_kaggle_package.py
 
+      - name: Verify Tycho Docker-free Sandlock R1 boundary
+        run: python scripts/verify_tycho_sandlock.py
+
       - name: Verify Track A 006b reject-aware outcome when present
         run: python scripts/verify_track_a_006b_outcome.py
 

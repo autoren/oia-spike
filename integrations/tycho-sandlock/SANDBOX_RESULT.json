@@ -1,0 +1,92 @@
+{
+  "schema_version": "OIA-TYCHO-SANDLOCK-RESULT-0.1",
+  "gate_id": "tycho-sandlock-r1",
+  "completed_on": "2026-08-22",
+  "verdict": "sandlock_adapter_locally_qualified_target_and_throughput_unqualified",
+  "freeze_commits": {
+    "protocol": "273984335d93950b92511b6125cb6903b04f43ae",
+    "implementation": "785f3de1907aae7658e43c0e7e415bcae44de26e"
+  },
+  "artifact_hashes": {
+    "protocol_sha256": "0ab9e4e3e79768de9863c177cda912c9f269bddd779af9adb1c269b6d587da4b",
+    "implementation_freeze_sha256": "6c05bdde017d4b20953648d1c549c1d501f8f8d843bdabbffad76b53ad35d23e",
+    "patch_sha256": "a4f657e3e5cb0759bcab527d834eae169f5f704063109967d06acb5473aa78c8",
+    "live_probe_script_sha256": "e7d6e68daf9e0e51cc39d70a18d5665d187975419982c124396f135c9b896477",
+    "sandlock_release_asset_sha256": "b6af1d063b50edbcbd2f972fe15ac10a7332b046bfb3e793993a118c324c7edf",
+    "sandlock_binary_sha256": "346cd6c5c7773384f9803794a3ab6946aeb7f05e1d272c9d6fb7e01a2b4b5c98"
+  },
+  "qualification_host": {
+    "lima_version": "v2.2.0",
+    "guest_image_sha256": "7bcf159e29ad0000bfed9c57875908c39268f5ed1257f4958fa6a9f5f60edd54",
+    "os": "Ubuntu 26.04 LTS",
+    "kernel": "7.0.0-28-generic",
+    "architecture": "aarch64",
+    "landlock_abi": 8,
+    "sandlock_minimum_abi": 6,
+    "vm_resources": {"cpus": 4, "memory_bytes": 4294967296}
+  },
+  "execution_accounting": {
+    "sandlock_feature_checks": 1,
+    "functional_isolation_probes": 1,
+    "unsandboxed_network_controls": 1,
+    "timeout_limit_probes": 1,
+    "memory_limit_probes": 1,
+    "patch_application_checks": 1,
+    "patched_tycho_sandbox_unit_suites": 1,
+    "unit_tests_collected": 14,
+    "unit_tests_passed": 14,
+    "pre_suite_launcher_misses": 1,
+    "pre_suite_launcher_miss_detail": "The system Python 3.14 launcher had no pytest module; zero tests were collected or executed. The one actual isolated Python 3.12 suite then collected and passed 14 tests.",
+    "model_loads": 0,
+    "model_calls": 0,
+    "gpu_runs": 0,
+    "arc_environment_actions": 0,
+    "kaggle_runs_or_uploads": 0,
+    "oia_runs": 0
+  },
+  "observations": {
+    "patch_applied_to_exact_tycho_commit": true,
+    "adapter_selected_explicit_sandlock_runtime": true,
+    "auto_runtime_selection_unchanged": true,
+    "workspace_read": true,
+    "workspace_write": true,
+    "representative_grid_transform": [[6, 3, 0], [7, 4, 1], [8, 5, 2]],
+    "sibling_read_denied": true,
+    "host_etc_read_denied": true,
+    "host_users_read_denied": true,
+    "outside_write_denied": true,
+    "tcp_denied_with_reachable_control": true,
+    "udp_denied_with_reachable_control": true,
+    "child_process_denied": true,
+    "timeout_exit": 124,
+    "tycho_timeout_mapping": {"returncode": -1, "timed_out": true},
+    "memory_probe_limit": "64M",
+    "memory_probe_exit": 1,
+    "memory_probe_stderr": ""
+  },
+  "claim_boundary": {
+    "docker_free_mechanism_on_exact_vm": true,
+    "patched_tycho_sandbox_contract_on_exact_vm": true,
+    "target_evaluator_kernel_support": false,
+    "x86_64_target_execution": false,
+    "tycho_to_myagent_lifecycle_adapter": false,
+    "model_or_projector_target_gpu_load": false,
+    "nine_hour_throughput": false,
+    "package_ready": false,
+    "arc_correctness_or_progress": false,
+    "oia_discovery_or_transfer": false,
+    "sealed_or_hidden_evaluation": false
+  },
+  "remaining_blockers": [
+    "The official evaluator's kernel, seccomp, and Landlock configuration has not been checked; the local aarch64 VM cannot establish target compatibility.",
+    "The pinned x86_64 Sandlock asset has not been carried into and executed inside an internet-disabled evaluator session.",
+    "The Tycho-to-MyAgent lifecycle adapter and exact trace preservation have not been implemented or qualified.",
+    "The model, projector, llama.cpp runtime, adapter, and sandbox have not been loaded together on the target GPU.",
+    "Per-step latency and full-run throughput remain unmeasured."
+  ],
+  "next_gate": {
+    "id": "tycho-target-kernel-preflight-r2",
+    "scope": "Package the pinned x86_64 Sandlock asset, exact Tycho patch, and credential-free probe for one internet-disabled target notebook. Run only feature, filesystem, network-control, process, timeout, and memory checks.",
+    "forbidden": ["model loading or calls", "GPU use", "ARC environment actions", "OIA execution", "submission", "hidden or sealed evaluation", "host-mode fallback"]
+  }
+}

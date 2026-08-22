@@ -1,0 +1,23 @@
+{
+  "schema_version": "OIA-TYCHO-SANDLOCK-LIVE-PROBE-0.1",
+  "platform": "Linux-7.0.0-28-generic-aarch64-with-glibc2.43",
+  "python": "3.14.4",
+  "runtime_resolution": "sandlock",
+  "sandlock_binary_sha256": "346cd6c5c7773384f9803794a3ab6946aeb7f05e1d272c9d6fb7e01a2b4b5c98",
+  "unsandboxed_control": {"tcp": true, "udp": true},
+  "functional_returncode": 0,
+  "functional_timed_out": false,
+  "grid_result": [[6, 3, 0], [7, 4, 1], [8, 5, 2]],
+  "attempts": [
+    {"name": "workspace_read", "allowed": true, "value": "'{\"task\":\"representative_grid_rotation\"}\\n'"},
+    {"name": "workspace_write", "allowed": true, "value": "3"},
+    {"name": "sibling_sentinel_read", "allowed": false, "error_type": "PermissionError", "errno": 13, "error": "[Errno 13] Permission denied: '../sentinel.txt'"},
+    {"name": "host_etc_passwd_read", "allowed": false, "error_type": "PermissionError", "errno": 13, "error": "[Errno 13] Permission denied: '/etc/passwd'"},
+    {"name": "host_users_read", "allowed": false, "error_type": "PermissionError", "errno": 13, "error": "[Errno 13] Permission denied: '/Users'"},
+    {"name": "outside_write", "allowed": false, "error_type": "PermissionError", "errno": 13, "error": "[Errno 13] Permission denied: '../escape.txt'"},
+    {"name": "tcp_connect", "allowed": false, "error_type": "ConnectionRefusedError", "errno": 111, "error": "[Errno 111] Connection refused"},
+    {"name": "udp_send", "allowed": false, "error_type": "ConnectionRefusedError", "errno": 111, "error": "[Errno 111] Connection refused"},
+    {"name": "subprocess_spawn", "allowed": false, "error_type": "BlockingIOError", "errno": 11, "error": "[Errno 11] Resource temporarily unavailable: '/usr/bin/id'"}
+  ],
+  "timeout_probe": {"returncode": -1, "timed_out": true, "stderr": "sandlock: timeout after 1s"}
+}

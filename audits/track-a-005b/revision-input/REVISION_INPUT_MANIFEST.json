@@ -1,0 +1,98 @@
+{
+  "action": "ACTION6",
+  "audit_id": "OIA-1-TRACK-A-005b",
+  "normalized_status": "RUNNING",
+  "p0": {
+    "path": "p0.txt",
+    "sha256": "1e70d7b4ccd5c1ef1e03427d90f7295cdf461583efa978f285b55755e7a915a6"
+  },
+  "p1_settled": {
+    "path": "p1_settled.txt",
+    "replicate_count": 5,
+    "sha256": "80a2fd9a8813b7ee5cd6d63a3199ffc247119b39ab60b90709696b47ec58c140"
+  },
+  "prompt_boundary": {
+    "excluded": [
+      "game_id",
+      "archive_path",
+      "run_labels",
+      "source_model_labels",
+      "click_coordinates",
+      "scores",
+      "step_2_or_later"
+    ],
+    "includes_both_opened_transient_variants": true,
+    "transients_are_qualitative_not_calibration_targets": true
+  },
+  "schema_version": 1,
+  "source": {
+    "later_step_payloads_read": 0,
+    "opened_step1_evidence_sha256": "e6de7cd8db997c561cfb4be078cc3437347af90f9c59e402761c7d790e3ed3a4",
+    "record_count": 5
+  },
+  "transient_variants": [
+    {
+      "frames": [
+        {
+          "index": 0,
+          "path": "V1/intermediate_00.txt",
+          "sha256": "9caa7f985c33731991e4e9094d5ac6b9e66e81fd200161b0cac21248fa961c5b"
+        },
+        {
+          "index": 1,
+          "path": "V1/intermediate_01.txt",
+          "sha256": "7198b9cdcff6d504072b204dd400fe53eea0d722c08e5242f394bd830b73a25b"
+        },
+        {
+          "index": 2,
+          "path": "V1/intermediate_02.txt",
+          "sha256": "7f7859c7433fb4726aeb2919b72a9bc173119a03d7d8f2c293cebb0c6325b4b4"
+        },
+        {
+          "index": 3,
+          "path": "V1/intermediate_03.txt",
+          "sha256": "500ae55977013099e6771104838b6d9104b3569cf82ba4bc509c752c61572867"
+        }
+      ],
+      "multiplicity": 3,
+      "sequence_sha256": "8e4d2c24535047aa0aa687cc158764478c85f89b162c29f67b16f83c51de55aa",
+      "source_record_id_sha256": [
+        "1de37abfd14acaad3e381061596ddfca78488a0bb00e3835cc2eed5dc1091a12",
+        "3a7d7ea07d9655a749cd17125618ddb3eeeb47b9b6b149685b20a594d68cbabb",
+        "b9ecd3e65325fa5b383362cc24915fc213abeeef5727850928759e929273f5ef"
+      ],
+      "variant_id": "V1"
+    },
+    {
+      "frames": [
+        {
+          "index": 0,
+          "path": "V2/intermediate_00.txt",
+          "sha256": "c26571649351df0abd55866cc6bea9664cc49a8f80ddc0ae91487c96ba31ff14"
+        },
+        {
+          "index": 1,
+          "path": "V2/intermediate_01.txt",
+          "sha256": "b4cd77a6aceebea4ca1b3d0ae2f0e43585dd2ac918c60c20dbc07fb4bba19cb8"
+        },
+        {
+          "index": 2,
+          "path": "V2/intermediate_02.txt",
+          "sha256": "b7599f78d9aa61b83d268552a0a4a9f03d6bdacb92c6ebf4ca734ade0dab761d"
+        },
+        {
+          "index": 3,
+          "path": "V2/intermediate_03.txt",
+          "sha256": "f24b1f7d324b5378ca5b30409c1b30e1cce61606b48e0421c6c232bf61945d7c"
+        }
+      ],
+      "multiplicity": 2,
+      "sequence_sha256": "ac33b676327899ec666d716f581361dc5afee6be273df5ea18200bb1c04cdd4d",
+      "source_record_id_sha256": [
+        "a90e3488577d15e22cfb3841490fdff8e427cefa82a8bc1b391161c38f958d00",
+        "f14d2f0f66f02525b83df9f269c79caa71640f8bd964bb407ab7fffd7ca276ee"
+      ],
+      "variant_id": "V2"
+    }
+  ]
+}

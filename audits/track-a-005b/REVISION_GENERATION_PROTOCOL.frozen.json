@@ -1,0 +1,62 @@
+{
+  "audit_id": "OIA-1-TRACK-A-005b",
+  "schema_version": 1,
+  "freeze_date": "2026-08-22",
+  "status_at_freeze": "frozen_before_any_revision_generation_inference",
+  "research_question": "Can one opened ACTION6 transition support a fixed behaviorally plural revised frontier and a prospective OIA-selected next action before step-2 access?",
+  "input_boundary": {
+    "manifest": "audits/track-a-005b/revision-input/REVISION_INPUT_MANIFEST.json",
+    "p0_sha256": "1e70d7b4ccd5c1ef1e03427d90f7295cdf461583efa978f285b55755e7a915a6",
+    "p1_settled_sha256": "80a2fd9a8813b7ee5cd6d63a3199ffc247119b39ab60b90709696b47ec58c140",
+    "opened_action": "ACTION6",
+    "normalized_status": "RUNNING",
+    "opened_record_count": 5,
+    "transient_variant_multiplicities": [2, 3],
+    "transient_policy": "Both content-distinct opened variants are shown as qualitative evidence; neither is an exact calibration target because the candidate action interface excludes recorded click coordinates.",
+    "later_step_payloads_read": 0,
+    "prompt_excludes": [
+      "game_id",
+      "archive_path",
+      "run_labels",
+      "source_model_labels",
+      "click_coordinates",
+      "scores",
+      "step_2_or_later"
+    ]
+  },
+  "model": {
+    "repository": "mlx-community/Qwen3.8-27B-4bit",
+    "revision": "3e6447f082e89cc7f0bc6e5441afd38dfce760ff",
+    "license": "Apache-2.0",
+    "local_only": true,
+    "runtime": "Python 3.12.12, MLX 0.32.1, MLX-LM 0.31.3",
+    "provenance": "audits/track-a-005a/GENERATION_RUNTIME_PROVENANCE.json"
+  },
+  "sampling": {
+    "decode": "greedy",
+    "temperature": 0.0,
+    "enable_thinking": false,
+    "maximum_output_tokens_per_candidate": 2200,
+    "prompt_count": 8,
+    "prompt_order": ["R0001", "R0002", "R0003", "R0004", "R0005", "R0006", "R0007", "R0008"]
+  },
+  "parser": {
+    "ordered_forms": ["literal_markers", "single_python_or_plain_fence", "raw_python"],
+    "exactly_one_unambiguous_representation": true,
+    "surrounding_prose_allowed": false,
+    "maximum_source_bytes": 40000,
+    "repair_inferences": 0
+  },
+  "candidate_contract": {
+    "actions": ["ACTION6", "ACTION7"],
+    "interface": [
+      "initial_state(initial_frame) -> dict",
+      "step(state, action) -> (new_state, status)",
+      "render(state) -> 64x64 integer raster"
+    ],
+    "structural_gate_only": true,
+    "generated_candidates_execute_during_generation": false,
+    "minimum_later_behavioral_frontier": 2
+  },
+  "claim_boundary": "Opened Track A outcome-conditioned local candidate revision and static validation only. Calibration is not prediction; no generated behavior, OIA, step-2 payload, real ARC action, private/sealed evaluation, or Track B claim."
+}

@@ -1,0 +1,45 @@
+{
+  "schema_version": "OIA-TYCHO-TRACE-INTEGRATION-0.1",
+  "date": "2026-08-22",
+  "source": {
+    "origin": "https://github.com/NIMI-research/Tycho.git",
+    "commit": "f68912a764372ead0a610db2e1c011d41ce5197e",
+    "tree": "d5ff6a4e142934ceb865e403e3aa92d80bfa245c",
+    "license": "Apache-2.0"
+  },
+  "parent_contract": {
+    "freeze_commit": "b6d8d92f4b5106d3ebe28e9998807d3c5d7e8396",
+    "sha256": "6219a3a6e7a82fec0620892a426cee2d8daf82adf9cfd2872019a0bb6bab2a2f"
+  },
+  "artifacts": {
+    "integrations/tycho/trace-capture-v0.1.patch": {
+      "sha256": "804db588cce430242035c1d26e4f8f19bc214a3cacdfae277153dbeac5cdc27c",
+      "size": 3215,
+      "role": "logging_only_upstream_patch"
+    },
+    "scripts/export_tycho_observation_stream.py": {
+      "sha256": "5f0bc212ddaa8aef78f028e5a2e24b4d2b38288b6847c62a27eec1c799266fe4",
+      "size": 6296,
+      "role": "credential_free_observation_exporter"
+    },
+    "scripts/prepare_tycho_trace_capture.py": {
+      "sha256": "594dd05893c274500fb735dc78e21b42bae7de7ffbe43902aa55c83f87926a3c",
+      "size": 2993,
+      "role": "source_pin_and_patch_applicability_gate"
+    }
+  },
+  "execution_boundary": {
+    "model_calls_authorized": 0,
+    "service_calls_authorized": 0,
+    "arc_actions_authorized": 0,
+    "environment_resets_authorized": 0,
+    "private_payloads_authorized": 0
+  },
+  "claim_boundary": {
+    "project_reopening_effect": "none",
+    "broad_ontology_formation_claim_reopened": false,
+    "retrospective_public_bundle_maximum": "mechanism_qualification_only",
+    "prospective_evaluator_bundle_maximum": "external_transfer_candidate_pending_analysis"
+  },
+  "status": "logging_integration_frozen_unexecuted"
+}

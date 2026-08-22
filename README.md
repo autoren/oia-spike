@@ -19,6 +19,10 @@ It is intentionally separate from [`autoren/ontology-intervention-auditor`](http
 - [`audits/track-a-006b/`](audits/track-a-006b/) prospectively evaluates a frozen two-sentinel reject-aware policy on a disjoint controlled corpus, with the closed identity policy as a paired baseline. It is a synthetic method diagnostic and does not authorize real ARC execution.
 - [`audits/track-a-006c/`](audits/track-a-006c/) prospectively evaluates conservative resettable sequential fusion of the closed and reject-aware policies. It is the final same-family controlled diagnostic, not external or Track B evidence.
 - [`docs/context/`](docs/context/) contains curated parent-project decision records needed to interpret the spike. These copies are contextual and are not part of the frozen 003a package.
+- [`integrations/tycho/`](integrations/tycho/) contains a source-pinned,
+  logging-only patch and credential-free exporter for producing lossless Tycho
+  observation streams under the parent project's external trace-bundle
+  contract. It does not authorize a model or ARC run.
 
 ## Local baseline validation
 

@@ -1,0 +1,33 @@
+{
+  "audit_id": "OIA-1-TRACK-A-003b",
+  "date": "2026-08-21",
+  "schema_version": 1,
+  "status": "frozen_before_checkpoint_behavior_inspection",
+  "parent_protocol": {
+    "path": "audits/track-a-003a/OIA-1-Track-A-003a-Frozen-Protocol.json",
+    "sha256": "47c18e32ea64a19d45842fd13d2a80ab59161992aaef7c13cf501459de75ea59"
+  },
+  "unchanged_fields": {
+    "game": "ls20",
+    "prefix": "ls20_P0_reset_observation",
+    "actions": ["ACTION1", "ACTION2", "ACTION3", "ACTION4"],
+    "finite_boundary": "all action words of lengths 1 through 3",
+    "maximum_admitted_candidates": 8,
+    "behavioral_deduplication": "retain the first candidate in this frozen order for each distinct finite trace signature",
+    "admission": "exact P0 replay, complete fixed bytes and provenance, local reset, offline execution, deterministic output under PYTHONHASHSEED 0,1,5,10 with two fresh-process repetitions, no forbidden runtime event"
+  },
+  "candidate_order": {
+    "already_screened_final_worktrees": [
+      "ewma_sv_v1.6_gpt-5.6-sol_max_run1/final",
+      "ewma_sv_v1.6_gpt-5.6-sol_xhigh_run1/final"
+    ],
+    "checkpoint_rule": "round-robin by ascending iteration number across the frozen run order max then xhigh; if one run has no tag at an iteration, continue with the available run; stop after eight behaviorally unique admitted candidates or after all retained tags are exhausted",
+    "rationale": "balance the two separately sampled runs before taking deeper checkpoints from either one; the rule is source/provenance based and was fixed before any checkpoint behavior was executed"
+  },
+  "screening_rule": {
+    "provisional": "run exact P0 replay and one complete seed-0 finite-boundary process; candidates whose trace signature duplicates an earlier candidate are recorded and not admitted",
+    "promotion": "a provisionally unique candidate must then pass the complete eight-process seed/repetition requirement before admission",
+    "no_shortcut_claim": "a rejected duplicate receives no determinism claim beyond tests actually run"
+  },
+  "scope_boundary": "candidate acquisition and finite behavioral deduplication only; no OIA separator synthesis, real ARC action, paid/model/API call, credential use, sealed environment or Track B claim"
+}

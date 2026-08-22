@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "audit_id": "OIA-1-TRACK-A-003b",
+  "status": "corrected_acquisition_independently_imported",
+  "source_repository": {
+    "url": "https://github.com/autoren/ontology-intervention-auditor",
+    "main_commit_with_frozen_rule_and_erratum": "53efc333449eea27d8133322659622ee507f7e69",
+    "workflow_run_head_commit": "f5a88d41fb6c4abf34bbd5210ceedd4584ac3416",
+    "workflow_path": ".github/workflows/track-a-003b-acquire-v2.yml",
+    "workflow_sha256": "34ee32599bd1a456d1079de000d714a27e894aca73dbab1bd1c7db2ce7f14285"
+  },
+  "github_actions": {
+    "workflow_run_id": 32537337394,
+    "job_id": 96940609408,
+    "artifact_id": 9465881649,
+    "artifact_name": "track-a-003b-attempt-02-selected-ls20",
+    "artifact_zip_size": 8535286,
+    "artifact_zip_sha256": "1b239318741872a339e4a1a31aa3f6876ee298fdb17db328075a343d56a52a1a",
+    "inner_package_name": "track-a-003b-attempt-02-selected-ls20.tar.gz",
+    "inner_package_size": 8534786,
+    "inner_package_sha256": "de141756be11b7d54730584ce16d3d0979a9bbd8aef707a73d50ab8a112c2cbf",
+    "retention_days_at_upload": 30
+  },
+  "source_archive": {
+    "zenodo_record": 21412274,
+    "filename": "article2_main_runs_additional.tar.gz",
+    "size": 797835543,
+    "md5": "4dd279f099609392c30cffa468801316",
+    "sha256": "c3d85c4a75170de08837b9fc63cb7a7dde389b1205ca71b9f0fed16a9c09cf93",
+    "record_license": "CC-BY-4.0"
+  },
+  "selection": {
+    "selected_file_count": 10683,
+    "selected_member_count": 11407,
+    "selected_total_bytes": 28897676,
+    "runs": [
+      "ewma_sv_v1.6_gpt-5.6-sol_max_run1",
+      "ewma_sv_v1.6_gpt-5.6-sol_xhigh_run1"
+    ],
+    "game": "ls20",
+    "includes_each_complete_ls20_subtree": true,
+    "includes_three_named_ls20_sidecars_per_run": true
+  },
+  "omitted_bulk_evidence": {
+    "reason": "candidate-bearing and bulk run material remains in ignored local-work; compact hashes and summaries are committed",
+    "payload_sha256s_sha256": "ead36075e2ea150a5e43095322df87e0df8955ca1abf59e6be6d792c40b23704",
+    "selected_file_manifest_sha256": "4cf3910a1349388c9a857beb4380e949711a37ba3148a5654a03d09b1f63a7f1",
+    "selected_member_manifest_sha256": "8b05162dc5d07df54c6f0facdd6d5602399e84a5cd5e19e962f8d9b5b7e1e9f8"
+  },
+  "independent_import": {
+    "importer": "scripts/import_track_a_003b.py",
+    "outer_zip_verified": true,
+    "inner_package_verified": true,
+    "payload_manifest_verified": true,
+    "selected_file_manifest_verified": true,
+    "safe_regular_files_only": true,
+    "materialized_read_only": true
+  },
+  "execution_boundary": {
+    "candidate_execution": false,
+    "arc_execution": false,
+    "paid_or_model_api_calls": false,
+    "credentials_used": false,
+    "oia_separability": false,
+    "track_b_claim": false
+  }
+}

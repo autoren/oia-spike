@@ -1,0 +1,53 @@
+{
+  "audit_id": "OIA-1-TRACK-A-003b",
+  "attempt_id": "003b-01",
+  "date": "2026-08-21",
+  "status": "closed_locator_mismatch_before_candidate_acquisition",
+  "authorization_boundary": {
+    "public_archive_transfer": true,
+    "read_only_inventory_and_selective_extraction": true,
+    "candidate_execution": false,
+    "real_arc_execution": false,
+    "paid_or_model_api_calls": false,
+    "credentials": false
+  },
+  "archive": {
+    "filename": "article2_main_runs_additional.tar.gz",
+    "record_id": 21412274,
+    "size_bytes": 797835543,
+    "expected_md5": "4dd279f099609392c30cffa468801316",
+    "observed_md5": "4dd279f099609392c30cffa468801316",
+    "observed_sha256": "c3d85c4a75170de08837b9fc63cb7a7dde389b1205ca71b9f0fed16a9c09cf93",
+    "member_count": 916132
+  },
+  "frozen_published_run_labels": [
+    "ewma_sv_v1.6_gpt-5.6-sol_max_run1",
+    "ewma_sv_v1.6_gpt-5.6-sol_xhigh_run1"
+  ],
+  "attempted_selection_rule": "member path contains a frozen published run label and ls20, case-insensitively",
+  "result": {
+    "selected_member_count": 0,
+    "selected_file_count": 0,
+    "selected_total_bytes": 0
+  },
+  "diagnosis_from_archive_inventory": {
+    "reason": "The archive normalizes the learner label as ewma_v1.6_sv rather than the published-table label ewma_sv_v1.6.",
+    "actual_run_roots": [
+      "runs_additional/ewma_v1.6_sv_gpt-5.6-sol_max_run1",
+      "runs_additional/ewma_v1.6_sv_gpt-5.6-sol_xhigh_run1"
+    ],
+    "actual_selected_subtree_roots": [
+      "runs_additional/ewma_v1.6_sv_gpt-5.6-sol_max_run1/ls20",
+      "runs_additional/ewma_v1.6_sv_gpt-5.6-sol_xhigh_run1/ls20"
+    ],
+    "interpretation": "This is a locator correction inside the same pinned learner, run pair, game, archive and frozen admission rule; no candidate behavior was consulted."
+  },
+  "github_actions": {
+    "workflow_run_id": 32535331074,
+    "job_id": 96935040277,
+    "artifact_id": 9465263204,
+    "artifact_zip_sha256": "d707839034f844d8716a705ec6213f3bcbb4c8a23419d9219bb9a25557b24349",
+    "inner_package_sha256": "a6408d64f2f984765dad0462fed82a85c069fc02aec8b59d0d02c18328ea4ccb"
+  },
+  "claim_boundary": "No candidates were acquired or executed. This attempt says nothing about replay, determinism, behavioral divergence, separability, equivalence, ontology revision or decision value."
+}

@@ -1,0 +1,31 @@
+{
+  "arc_execution": false,
+  "archive_member_count": 916132,
+  "archive_run_roots": [
+    "runs_additional/ewma_v1.5_sv_gpt-5.5_xhigh_run1",
+    "runs_additional/ewma_v1.6_sv_gpt-5.6-sol_max_run1",
+    "runs_additional/ewma_v1.6_sv_gpt-5.6-sol_xhigh_run1",
+    "runs_additional/twma_v1.6_gpt-5.6-sol_max_run1",
+    "runs_additional/twma_v1.6_gpt-5.6-sol_xhigh_run1"
+  ],
+  "attempt_id": "003b-02",
+  "candidate_execution": false,
+  "credentials_used": false,
+  "paid_or_model_api_calls": false,
+  "per_frozen_run": {
+    "ewma_sv_v1.6_gpt-5.6-sol_max_run1": {
+      "bytes": 13252560,
+      "files": 4659,
+      "members": 4995
+    },
+    "ewma_sv_v1.6_gpt-5.6-sol_xhigh_run1": {
+      "bytes": 15645116,
+      "files": 6024,
+      "members": 6412
+    }
+  },
+  "selected_file_count": 10683,
+  "selected_member_count": 11407,
+  "selected_total_bytes": 28897676,
+  "selection_rule": "actual archive run-root mapping plus complete ls20 subtree and three named ls20 sidecars"
+}

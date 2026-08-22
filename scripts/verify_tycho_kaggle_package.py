@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import hashlib
 import json
 from pathlib import Path
 from typing import Any
@@ -81,16 +82,66 @@ def validate_result(
     manifest = load_object(manifest_path)
     if result.get("schema_version") != "OIA-TYCHO-KAGGLE-PACKAGE-R0-RESULT-0.1":
         raise ValueError("package result schema changed")
+    if result.get("protocol_commit") != "360174465d8d081e4a3f6b409411afee3c9d2780":
+        raise ValueError("package result freeze changed")
     if result.get("verdict") != (
         "runtime_bundle_qualified_adapter_sandbox_and_throughput_unqualified"
     ):
         raise ValueError("package result verdict changed")
     if manifest.get("schema_version") != "OIA-TYCHO-KAGGLE-RUNTIME-FILES-0.1":
         raise ValueError("runtime file manifest schema changed")
+    if (
+        manifest.get("source_oci_manifest_digest")
+        != "sha256:faebc1dd2e96e4ab9708e786f16477162ef8f3330d4a4838c371220409870fed"
+        or manifest.get("source_oci_config_digest")
+        != "sha256:ab11a04881d546069880d4b0a1c204e7146ae7bdcb9bd0340ab3ae498926bfc6"
+    ):
+        raise ValueError("runtime file manifest source changed")
+    entries = manifest.get("entries") or []
+    if not isinstance(entries, list):
+        raise ValueError("runtime entries must be a list")
+    if any(
+        not isinstance(entry, dict)
+        or not isinstance(entry.get("path"), str)
+        or entry["path"].startswith(("/", "../"))
+        for entry in entries
+    ):
+        raise ValueError("runtime entries are not relative objects")
+    files = [entry for entry in entries if entry.get("kind") == "file"]
+    symlinks = [entry for entry in entries if entry.get("kind") == "symlink"]
+    if len(files) != manifest.get("file_count") or len(symlinks) != manifest.get(
+        "symlink_count"
+    ):
+        raise ValueError("runtime entry counts changed")
+    if sum(int(entry.get("bytes", -1)) for entry in files) != manifest.get(
+        "total_file_bytes"
+    ):
+        raise ValueError("runtime entry byte total changed")
+    canonical = json.dumps(entries, sort_keys=True, separators=(",", ":")).encode()
+    if hashlib.sha256(canonical).hexdigest() != manifest.get("entries_sha256"):
+        raise ValueError("runtime entry-set hash changed")
+    by_path = {entry["path"]: entry for entry in entries}
+    expected_critical = {
+        "app/llama-server": "e3c775bb274d01d5c3345f37aaea55470902187b4433d2689eab367fa4150f3c",
+        "app/libggml-cuda.so": "4d4fcd9fc5274d29acc673bcaa48ebcfc3d9e35a601698d3200cd6658334015a",
+        "cuda/libcudart.so.13.3.29": "9f92e4c3f7e14d0fed69ef876a45d4255a2dc88cb552a673a90ce881c26282fe",
+        "cuda/libcublas.so.13.5.1.27": "bdcdcd88306621a8d6748b2750b14ad9c73fd80c8085d6a122bf39a6e9dd1375",
+        "cuda/libcublasLt.so.13.5.1.27": "db5c748bc095423401029c00294fb8eb3c721c75c363f3d8b744b7c274504ae0",
+        "syslib/libgomp.so.1.0.0": "135f3c8f006d2fe5e68e51281c7974cb991a03de3bfb3593d68d174dfcf854d1",
+    }
+    if any(
+        by_path.get(path, {}).get("sha256") != digest
+        for path, digest in expected_critical.items()
+    ):
+        raise ValueError("critical runtime file hash changed")
     runtime = result.get("runtime_bundle") or {}
     for field in ("entries_sha256", "file_count", "symlink_count", "total_file_bytes"):
         if runtime.get(field) != manifest.get(field):
             raise ValueError(f"runtime result/manifest mismatch: {field}")
+    if runtime.get("tracked_manifest_sha256") != hashlib.sha256(
+        manifest_path.read_bytes()
+    ).hexdigest():
+        raise ValueError("tracked runtime manifest hash changed")
     if int(manifest.get("total_file_bytes", 0)) > 5_000_000_000:
         raise ValueError("runtime bundle exceeds size cap")
     portability = manifest.get("portability_test") or {}
@@ -110,7 +161,14 @@ def validate_result(
     if not any("sandbox" in item.lower() for item in remaining):
         raise ValueError("package result omitted sandbox blocker")
     claims = result.get("claim_boundary") or {}
-    if claims.get("package_ready") is not False or claims.get("track_b") is not False:
+    allowed_true = {
+        "runtime_bundle_reproducible",
+        "docker_free_server_process_portability_at_version_and_linkage_level",
+    }
+    if any(
+        not isinstance(value, bool) or value != (field in allowed_true)
+        for field, value in claims.items()
+    ):
         raise ValueError("package result claim boundary broadened")
     if result.get("status") != "completed":
         raise ValueError("package result status changed")

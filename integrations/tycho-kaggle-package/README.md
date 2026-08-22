@@ -44,3 +44,12 @@ model-authored Python from reading unrelated evaluator or attached-input state.
 Tycho's `host` mode is not an acceptable substitute. R0 must therefore fail
 closed on full adapter/package readiness until a real Docker-free isolated
 runner and target-GPU load/throughput test exist.
+
+R0 is now complete. The exact post-freeze bundle contains 38 files and 15
+symlinks (772,679,288 regular-file bytes). Its clean, network-disabled,
+read-only Ubuntu smoke reports the pinned `llama-server` version and resolves
+all bundled CUDA user-space libraries; only host-driver `libcuda.so.1` remains
+external. See [`PACKAGE_REPORT.md`](PACKAGE_REPORT.md) and
+[`PACKAGE_RESULT.json`](PACKAGE_RESULT.json). The verdict remains explicitly
+blocked on the Docker-free isolated Python runner, `MyAgent` integration,
+target-GPU model load, and throughput.

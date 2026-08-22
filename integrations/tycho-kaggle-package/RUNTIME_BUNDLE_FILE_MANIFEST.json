@@ -1,0 +1,363 @@
+{
+  "entries": [
+    {
+      "kind": "symlink",
+      "path": "app/libggml-base.so",
+      "target": "libggml-base.so.0"
+    },
+    {
+      "kind": "symlink",
+      "path": "app/libggml-base.so.0",
+      "target": "libggml-base.so.0.18.0"
+    },
+    {
+      "bytes": 911520,
+      "executable": true,
+      "kind": "file",
+      "path": "app/libggml-base.so.0.18.0",
+      "sha256": "01a9af1b9e6bc25febe977d7ea24883e1e04971172825493fee2a6a4230fb9c8"
+    },
+    {
+      "bytes": 1168624,
+      "executable": true,
+      "kind": "file",
+      "path": "app/libggml-cpu-alderlake.so",
+      "sha256": "e0a6cf440af41989a3c5942b1c88349ca4a00c9bbc934bef3db3fa7d4326f3ca"
+    },
+    {
+      "bytes": 1403720,
+      "executable": true,
+      "kind": "file",
+      "path": "app/libggml-cpu-cannonlake.so",
+      "sha256": "e11e4f423a02223718cdf44d0ec04f0fae6135581d126fc0fae5950c8e53fe8d"
+    },
+    {
+      "bytes": 1399624,
+      "executable": true,
+      "kind": "file",
+      "path": "app/libggml-cpu-cascadelake.so",
+      "sha256": "14366161a181480efdcb191ce489b0b02a000c30ecb5f8cf12c8dec52fd20212"
+    },
+    {
+      "bytes": 1399792,
+      "executable": true,
+      "kind": "file",
+      "path": "app/libggml-cpu-cooperlake.so",
+      "sha256": "7d61b4396726c8279232fbc602cada313df4f9240fda56950d3ba922f7ebdb1b"
+    },
+    {
+      "bytes": 1168624,
+      "executable": true,
+      "kind": "file",
+      "path": "app/libggml-cpu-haswell.so",
+      "sha256": "68cda72ee6dc4df308813179ae5502101a4901e490784596c4471256bc6a6029"
+    },
+    {
+      "bytes": 1399624,
+      "executable": true,
+      "kind": "file",
+      "path": "app/libggml-cpu-icelake.so",
+      "sha256": "64ce3e156fc6ceb97a986109fd7df86b8bb3ec53104068396d16d161071d9b01"
+    },
+    {
+      "bytes": 1105680,
+      "executable": true,
+      "kind": "file",
+      "path": "app/libggml-cpu-ivybridge.so",
+      "sha256": "d760a0fc3fd9354e83bbd681efe4e8151b1e6c063f1f2a9f0e5b1d1ac611dec7"
+    },
+    {
+      "bytes": 1105680,
+      "executable": true,
+      "kind": "file",
+      "path": "app/libggml-cpu-piledriver.so",
+      "sha256": "47dd8ece6c1c783d2ca7ff73f8055bef3c3edacfab4d006a5ab01701c0fb7c29"
+    },
+    {
+      "bytes": 1100464,
+      "executable": true,
+      "kind": "file",
+      "path": "app/libggml-cpu-sandybridge.so",
+      "sha256": "fc47eebdbc6db5336f23fc6f8a3308c3729202c9323b467ec931099556db8358"
+    },
+    {
+      "bytes": 1673896,
+      "executable": true,
+      "kind": "file",
+      "path": "app/libggml-cpu-sapphirerapids.so",
+      "sha256": "9b812192e7f4c38d213ea96d08348df0bc5792e91cd2c974bf255dacf8df9c8d"
+    },
+    {
+      "bytes": 1403720,
+      "executable": true,
+      "kind": "file",
+      "path": "app/libggml-cpu-skylakex.so",
+      "sha256": "e7fe37fc8006b19613ed76676b63bc5247a3e45045c5038e6ed67e4cf6dce0b4"
+    },
+    {
+      "bytes": 938128,
+      "executable": true,
+      "kind": "file",
+      "path": "app/libggml-cpu-sse42.so",
+      "sha256": "8d576067c46b483d06138b8f25fbc17a1c9b30304e481b71d6fdd804ad4970a4"
+    },
+    {
+      "bytes": 905480,
+      "executable": true,
+      "kind": "file",
+      "path": "app/libggml-cpu-x64.so",
+      "sha256": "4231c3c8694dc7be7ea84b985694d499594fab78ea1a3d49c9f70abd14b13814"
+    },
+    {
+      "bytes": 1399792,
+      "executable": true,
+      "kind": "file",
+      "path": "app/libggml-cpu-zen4.so",
+      "sha256": "17d9d170792d1e4531e445c3b240bfe1ebee727f81b04395cbc1f17eb0e40106"
+    },
+    {
+      "bytes": 155033224,
+      "executable": true,
+      "kind": "file",
+      "path": "app/libggml-cuda.so",
+      "sha256": "4d4fcd9fc5274d29acc673bcaa48ebcfc3d9e35a601698d3200cd6658334015a"
+    },
+    {
+      "kind": "symlink",
+      "path": "app/libggml.so",
+      "target": "libggml.so.0"
+    },
+    {
+      "kind": "symlink",
+      "path": "app/libggml.so.0",
+      "target": "libggml.so.0.18.0"
+    },
+    {
+      "bytes": 55544,
+      "executable": true,
+      "kind": "file",
+      "path": "app/libggml.so.0.18.0",
+      "sha256": "405378274848a8724127c0a66fa12bdfaf4b25ecb7172c889bd99414e0cdceb2"
+    },
+    {
+      "bytes": 44392,
+      "executable": true,
+      "kind": "file",
+      "path": "app/libllama-batched-bench-impl.so",
+      "sha256": "29ef1907386e3bdc633ef2cb3a01473beb64a047b3b48e93ffc40baef51c3603"
+    },
+    {
+      "bytes": 467680,
+      "executable": true,
+      "kind": "file",
+      "path": "app/libllama-bench-impl.so",
+      "sha256": "0e9ab93099544e94a6dbd8652d9fe04e66a8728260f7d9d19765430400bd17c5"
+    },
+    {
+      "bytes": 454048,
+      "executable": true,
+      "kind": "file",
+      "path": "app/libllama-cli-impl.so",
+      "sha256": "f60115c4c9275a868f47536ffda3e3cadc2bf3eea2d47a561e72974871bf8179"
+    },
+    {
+      "kind": "symlink",
+      "path": "app/libllama-common.so",
+      "target": "libllama-common.so.0"
+    },
+    {
+      "kind": "symlink",
+      "path": "app/libllama-common.so.0",
+      "target": "libllama-common.so.0.0.10236"
+    },
+    {
+      "bytes": 6270976,
+      "executable": true,
+      "kind": "file",
+      "path": "app/libllama-common.so.0.0.10236",
+      "sha256": "29f29f342d078d0e1d6fbe7533a093b50a77526892f4a5a388e6c9cef3f13118"
+    },
+    {
+      "bytes": 107208,
+      "executable": true,
+      "kind": "file",
+      "path": "app/libllama-completion-impl.so",
+      "sha256": "238ed4fbe9daa4185daea7370fea2e7e009be66a59d8bd04e07b947de9a71e1f"
+    },
+    {
+      "bytes": 34952,
+      "executable": true,
+      "kind": "file",
+      "path": "app/libllama-fit-params-impl.so",
+      "sha256": "61feef4e8287281ff62971337a42a2a2924d5dd56cc0d31e2b75bfbdf178850b"
+    },
+    {
+      "bytes": 172160,
+      "executable": true,
+      "kind": "file",
+      "path": "app/libllama-perplexity-impl.so",
+      "sha256": "d647d46e5df70e41b8ab1299b9334c3f4173d25dd56210f4f53ac6345ac5c779"
+    },
+    {
+      "bytes": 88376,
+      "executable": true,
+      "kind": "file",
+      "path": "app/libllama-quantize-impl.so",
+      "sha256": "b322dba6dc2aaec995d8853993be614c50b7fe4e55eef17bdfbb7e316ed1f3a5"
+    },
+    {
+      "bytes": 7680896,
+      "executable": true,
+      "kind": "file",
+      "path": "app/libllama-server-impl.so",
+      "sha256": "2eaf4ef0f846c73e6d4c3401ad59e74e0c2e6e0ce735c9c4c5c7a86b82f64bd2"
+    },
+    {
+      "kind": "symlink",
+      "path": "app/libllama.so",
+      "target": "libllama.so.0"
+    },
+    {
+      "kind": "symlink",
+      "path": "app/libllama.so.0",
+      "target": "libllama.so.0.0.10236"
+    },
+    {
+      "bytes": 4293848,
+      "executable": true,
+      "kind": "file",
+      "path": "app/libllama.so.0.0.10236",
+      "sha256": "bf6e251625ba21a5d0da50dd42168bc67cc9cd444614f4ccb0b4e7b400afa17e"
+    },
+    {
+      "kind": "symlink",
+      "path": "app/libmtmd.so",
+      "target": "libmtmd.so.0"
+    },
+    {
+      "kind": "symlink",
+      "path": "app/libmtmd.so.0",
+      "target": "libmtmd.so.0.0.10236"
+    },
+    {
+      "bytes": 1555544,
+      "executable": true,
+      "kind": "file",
+      "path": "app/libmtmd.so.0.0.10236",
+      "sha256": "3a286808d44b699d596ddc7264ff5922b801ed7095b5849785b49c6703b4f849"
+    },
+    {
+      "bytes": 53664,
+      "executable": true,
+      "kind": "file",
+      "path": "app/llama",
+      "sha256": "dfd7724a43c18df658d4b257f5efcf5b731337fde99cf8dbe1683c1688cb4884"
+    },
+    {
+      "bytes": 17912,
+      "executable": true,
+      "kind": "file",
+      "path": "app/llama-server",
+      "sha256": "e3c775bb274d01d5c3345f37aaea55470902187b4433d2689eab367fa4150f3c"
+    },
+    {
+      "kind": "symlink",
+      "path": "cuda/libcublas.so.13",
+      "target": "libcublas.so.13.5.1.27"
+    },
+    {
+      "bytes": 54502040,
+      "executable": false,
+      "kind": "file",
+      "path": "cuda/libcublas.so.13.5.1.27",
+      "sha256": "bdcdcd88306621a8d6748b2750b14ad9c73fd80c8085d6a122bf39a6e9dd1375"
+    },
+    {
+      "kind": "symlink",
+      "path": "cuda/libcublasLt.so.13",
+      "target": "libcublasLt.so.13.5.1.27"
+    },
+    {
+      "bytes": 513446912,
+      "executable": false,
+      "kind": "file",
+      "path": "cuda/libcublasLt.so.13.5.1.27",
+      "sha256": "db5c748bc095423401029c00294fb8eb3c721c75c363f3d8b744b7c274504ae0"
+    },
+    {
+      "kind": "symlink",
+      "path": "cuda/libcudart.so.13",
+      "target": "libcudart.so.13.3.29"
+    },
+    {
+      "bytes": 782080,
+      "executable": false,
+      "kind": "file",
+      "path": "cuda/libcudart.so.13.3.29",
+      "sha256": "9f92e4c3f7e14d0fed69ef876a45d4255a2dc88cb552a673a90ce881c26282fe"
+    },
+    {
+      "bytes": 5309400,
+      "executable": false,
+      "kind": "file",
+      "path": "syslib/libcrypto.so.3",
+      "sha256": "e6391daf670544d3a8f2b8a0cb8e27b4246fea109352abed50a29ec57f03153d"
+    },
+    {
+      "bytes": 183024,
+      "executable": false,
+      "kind": "file",
+      "path": "syslib/libgcc_s.so.1",
+      "sha256": "d93224d2b0dab4247598be683adca02f5cf00586f99c187579cd7e92058fb7cb"
+    },
+    {
+      "kind": "symlink",
+      "path": "syslib/libgomp.so.1",
+      "target": "libgomp.so.1.0.0"
+    },
+    {
+      "bytes": 352304,
+      "executable": false,
+      "kind": "file",
+      "path": "syslib/libgomp.so.1.0.0",
+      "sha256": "135f3c8f006d2fe5e68e51281c7974cb991a03de3bfb3593d68d174dfcf854d1"
+    },
+    {
+      "bytes": 696512,
+      "executable": false,
+      "kind": "file",
+      "path": "syslib/libssl.so.3",
+      "sha256": "0ca2c28b026f0084661fbb0e69079436680f3b6dd1f4aa3436395442456a6d4c"
+    },
+    {
+      "kind": "symlink",
+      "path": "syslib/libstdc++.so.6",
+      "target": "libstdc++.so.6.0.33"
+    },
+    {
+      "bytes": 2592224,
+      "executable": false,
+      "kind": "file",
+      "path": "syslib/libstdc++.so.6.0.33",
+      "sha256": "1fd75fe70354a416d75aef22bcae68c47bd25d20e2d0568c30b1a9838cf62f11"
+    }
+  ],
+  "entries_sha256": "a6048e50fc12d4a7ef379b4f03928076ce6a866f4e38eda8a3ec7a8e932eb4e6",
+  "file_count": 38,
+  "portability_test": {
+    "bundle_mount": "read_only",
+    "clean_image": "ubuntu@sha256:1e0a86e57d247923571b75e0aaf48a1449cf8c543d51fb3e07a4a7d7bfa79316",
+    "network": "none",
+    "root_filesystem": "read_only",
+    "unresolved_shared_libraries": [
+      "libcuda.so.1"
+    ],
+    "user_space_cuda_libraries_resolved_from_bundle": true,
+    "version_output": "Unable to find image 'ubuntu@sha256:1e0a86e57d247923571b75e0aaf48a1449cf8c543d51fb3e07a4a7d7bfa79316' locally\ndocker.io/library/ubuntu@sha256:1e0a86e57d247923571b75e0aaf48a1449cf8c543d51fb3e07a4a7d7bfa79316: Pulling from library/ubuntu\nDigest: sha256:1e0a86e57d247923571b75e0aaf48a1449cf8c543d51fb3e07a4a7d7bfa79316\nStatus: Downloaded newer image for ubuntu@sha256:1e0a86e57d247923571b75e0aaf48a1449cf8c543d51fb3e07a4a7d7bfa79316\nversion: 10236 (1464c62d8)\nbuilt with GNU 14.2.0 for Linux x86_64"
+  },
+  "schema_version": "OIA-TYCHO-KAGGLE-RUNTIME-FILES-0.1",
+  "source_oci_config_digest": "sha256:ab11a04881d546069880d4b0a1c204e7146ae7bdcb9bd0340ab3ae498926bfc6",
+  "source_oci_manifest_digest": "sha256:faebc1dd2e96e4ab9708e786f16477162ef8f3330d4a4838c371220409870fed",
+  "symlink_count": 15,
+  "total_file_bytes": 772679288
+}

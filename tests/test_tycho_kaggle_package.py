@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import hashlib
 import importlib.util
 import json
 from pathlib import Path
@@ -52,6 +53,37 @@ class TychoKagglePackageTests(unittest.TestCase):
         unsupported = payload["claim_boundary"]["does_not_support"]
         self.assertIn("Kaggle package readiness", unsupported)
         self.assertIn("safe Tycho run_python execution", unsupported)
+
+    def test_result_is_runtime_only_and_package_blocked(self) -> None:
+        payload = verifier.validate_result()
+        self.assertEqual(
+            payload["verdict"],
+            "runtime_bundle_qualified_adapter_sandbox_and_throughput_unqualified",
+        )
+        self.assertTrue(payload["claim_boundary"]["runtime_bundle_reproducible"])
+        self.assertFalse(payload["claim_boundary"]["safe_run_python"])
+        self.assertFalse(payload["claim_boundary"]["package_ready"])
+
+    def test_result_fails_closed_on_extra_unresolved_library(self) -> None:
+        result = json.loads(verifier.RESULT.read_text(encoding="utf-8"))
+        manifest = json.loads(verifier.FILE_MANIFEST.read_text(encoding="utf-8"))
+        manifest["portability_test"]["unresolved_shared_libraries"].append(
+            "libcublas.so.13"
+        )
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            result_path = root / "result.json"
+            manifest_path = root / "manifest.json"
+            manifest_path.write_text(
+                json.dumps(manifest, indent=2, sort_keys=True) + "\n",
+                encoding="utf-8",
+            )
+            result["runtime_bundle"]["tracked_manifest_sha256"] = hashlib.sha256(
+                manifest_path.read_bytes()
+            ).hexdigest()
+            result_path.write_text(json.dumps(result), encoding="utf-8")
+            with self.assertRaisesRegex(ValueError, "portability result changed"):
+                verifier.validate_result(result_path, manifest_path)
 
 
 if __name__ == "__main__":

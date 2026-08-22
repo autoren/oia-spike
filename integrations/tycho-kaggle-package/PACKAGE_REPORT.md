@@ -48,14 +48,17 @@ unrelated `/kaggle/input` and evaluator state, so R0 rejects that workaround.
 The `MyAgent` lifecycle/server manager, target-GPU model load, peak memory, and
 110-game throughput are also unqualified.
 
+Successor note: the bounded Sandlock R1 gate subsequently qualified a
+Docker-free adapter on one exact local Linux VM. That removes the local
+mechanism blocker but not the target-kernel boundary; see
+[`../tycho-sandlock/SANDBOX_REPORT.md`](../tycho-sandlock/SANDBOX_REPORT.md).
+
 ## Next bounded gate
 
-The next useful engineering slice is a credential-free, model-free feasibility
-test for a Docker-free isolated Python runner. The preferred route is a
-WebAssembly Python runtime with only the per-game Tycho workspace preopened and
-no network authority. It must run representative grid/NumPy analyses while
-proving that a sibling sentinel file and network socket are unreachable. A
-failure is an acceptable blocker. Ordinary host Python is not an allowed pass.
+That feasibility gate passed locally through Sandlock. The next useful slice is
+the credential-free, model-free target-kernel preflight defined by R1. A
+failure remains an acceptable blocker. Ordinary host Python is not an allowed
+pass.
 
 The complete compact byte/provenance record is
 [`RUNTIME_BUNDLE_FILE_MANIFEST.json`](RUNTIME_BUNDLE_FILE_MANIFEST.json), and

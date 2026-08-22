@@ -1,0 +1,321 @@
+diff --git a/README.md b/README.md
+index 62d33dc..f44b2b4 100644
+--- a/README.md
++++ b/README.md
+@@ -46,7 +46,7 @@ Equivalently, `make bootstrap` uses `python3`; when that name resolves to an old
+ select an installed interpreter explicitly, for example
+ `make bootstrap BOOTSTRAP_PYTHON=python3.12`.
+ 
+-Agent-authored Python runs in a fresh, network-disabled container. Docker Engine, Docker Desktop,
++Agent-authored Python runs in a fresh, network-disabled sandbox. Docker Engine, Docker Desktop,
+ and Finch are supported through their command-line interfaces:
+ 
+ ```bash
+@@ -57,6 +57,16 @@ make sandbox-check
+ Runtime selection is automatic; on macOS Finch is preferred when available. Set
+ `TYCHO_SANDBOX_RUNTIME=docker` or `finch` to select one explicitly.
+ 
++On a Linux host with Landlock ABI 6 or newer, an administrator may instead pin a
++qualified [Sandlock](https://github.com/multikernel/sandlock) binary and select it
++explicitly. Sandlock is never selected by `auto`:
++
++```bash
++export TYCHO_SANDBOX_RUNTIME=sandlock
++export TYCHO_SANDLOCK_BINARY=/opt/tycho/sandlock
++make sandbox-check
++```
++
+ Set one model provider:
+ 
+ ```bash
+diff --git a/tests/workspace/test_sandbox_runtime.py b/tests/workspace/test_sandbox_runtime.py
+index bb6492c..164c0a3 100644
+--- a/tests/workspace/test_sandbox_runtime.py
++++ b/tests/workspace/test_sandbox_runtime.py
+@@ -2,6 +2,7 @@ from __future__ import annotations
+ 
+ import json
+ from pathlib import Path
++import sys
+ 
+ import pytest
+ 
+@@ -31,6 +32,18 @@ def test_auto_runtime_uses_healthy_backend(monkeypatch) -> None:
+     assert sandbox_module.resolve_runtime("auto") == "finch"
+ 
+ 
++def test_auto_runtime_does_not_select_sandlock_implicitly(monkeypatch) -> None:
++    monkeypatch.setattr(sandbox_module.sys, "platform", "linux")
++    monkeypatch.setattr(
++        sandbox_module,
++        "_runtime_usable",
++        lambda name, timeout=8.0: name == "sandlock",
++    )
++
++    with pytest.raises(SandboxError, match="no usable container runtime"):
++        sandbox_module.resolve_runtime("auto")
++
++
+ def test_explicit_unavailable_runtime_fails(monkeypatch) -> None:
+     monkeypatch.setattr(sandbox_module, "_runtime_usable", lambda *args, **kwargs: False)
+ 
+@@ -72,6 +85,34 @@ def test_container_command_has_fixed_isolation_policy(tmp_path, monkeypatch) ->
+     ]
+ 
+ 
++def test_sandlock_command_has_fixed_isolation_policy(tmp_path, monkeypatch) -> None:
++    monkeypatch.setattr(sandbox_module, "_runtime_usable", lambda *args, **kwargs: True)
++    monkeypatch.setenv("TYCHO_SANDLOCK_BINARY", "/opt/oia/sandlock")
++    monkeypatch.setattr(sandbox_module, "_sandlock_read_roots", lambda: ("/usr", "/lib"))
++    script = tmp_path / "probe.py"
++    script.write_text("print('ok')\n")
++    runner = PythonSandbox(runtime="sandlock")
++
++    command = runner.command(tmp_path, script, name="ignored", timeout=7)
++
++    assert command[:2] == ["/opt/oia/sandlock", "run"]
++    assert ["--fs-write", str(tmp_path.resolve())] == command[
++        command.index("--fs-write") : command.index("--fs-write") + 2
++    ]
++    assert ["--net-deny", "*"] == command[
++        command.index("--net-deny") : command.index("--net-deny") + 2
++    ]
++    assert ["--max-processes", "1"] == command[
++        command.index("--max-processes") : command.index("--max-processes") + 2
++    ]
++    assert ["--timeout", "7"] == command[
++        command.index("--timeout") : command.index("--timeout") + 2
++    ]
++    assert "--clean-env" in command
++    assert "PYTHONHASHSEED=0" in command
++    assert command[-3:] == [sys.executable, "-B", str(script.resolve())]
++
++
+ def test_host_runner_executes_workspace_source(tmp_path) -> None:
+     runner = PythonSandbox(runtime="host")
+ 
+diff --git a/tycho/config/run_config.py b/tycho/config/run_config.py
+index da5cd51..035b4c9 100644
+--- a/tycho/config/run_config.py
++++ b/tycho/config/run_config.py
+@@ -69,7 +69,7 @@ CONFIG_KEYS: list[ConfigKey] = [
+     ConfigKey("TYCHO_MAX_TOOL_STEPS", "reasoning", "25", "cognitive tool calls/turn before forced action"),
+     ConfigKey("TYCHO_WALLCLOCK_BUDGET_SECONDS", "runtime", "0", "whole-run wall-clock guard"),
+     ConfigKey("TYCHO_PER_GAME_WALLCLOCK_BUDGET_SECONDS", "runtime", "0", "per-game wall-clock guard"),
+-    ConfigKey("TYCHO_SANDBOX_RUNTIME", "runtime", "auto", "auto | docker | finch"),
++    ConfigKey("TYCHO_SANDBOX_RUNTIME", "runtime", "auto", "auto | docker | finch | sandlock"),
+     ConfigKey("TYCHO_SANDBOX_IMAGE", "runtime", "tycho-python-sandbox:0.2", "workspace Python image"),
+     # ---- orchestration ----
+     ConfigKey("TYCHO_MODE", "orchestration", "single", "single | orchestrator | trigger | no_world_model"),
+diff --git a/tycho/workspace/sandbox.py b/tycho/workspace/sandbox.py
+index 1de6fb7..f1c354b 100644
+--- a/tycho/workspace/sandbox.py
++++ b/tycho/workspace/sandbox.py
+@@ -6,6 +6,7 @@ import argparse
+ from dataclasses import dataclass
+ from functools import lru_cache
+ import json
++import math
+ import os
+ from pathlib import Path
+ import shutil
+@@ -17,7 +18,8 @@ import uuid
+ 
+ 
+ DEFAULT_IMAGE = "tycho-python-sandbox:0.2"
+-RUNTIMES = ("docker", "finch")
++CONTAINER_RUNTIMES = ("docker", "finch")
++RUNTIMES = (*CONTAINER_RUNTIMES, "sandlock")
+ MAX_STDOUT_CHARS = 16 * 1024 * 1024
+ MAX_STDERR_CHARS = 1024 * 1024
+ 
+@@ -36,12 +38,14 @@ class SandboxResult:
+ 
+ @lru_cache(maxsize=len(RUNTIMES))
+ def _runtime_usable(name: str, *, timeout: float = 8.0) -> bool:
+-    executable = shutil.which(name)
++    configured = os.environ.get("TYCHO_SANDLOCK_BINARY") if name == "sandlock" else None
++    executable = configured or shutil.which(name)
+     if executable is None:
+         return False
++    command = [executable, "check"] if name == "sandlock" else [executable, "info"]
+     try:
+         result = subprocess.run(
+-            [executable, "info"],
++            command,
+             capture_output=True,
+             text=True,
+             timeout=timeout,
+@@ -49,7 +53,27 @@ def _runtime_usable(name: str, *, timeout: float = 8.0) -> bool:
+         )
+     except (OSError, subprocess.TimeoutExpired):
+         return False
+-    return result.returncode == 0
++    if result.returncode != 0:
++        return False
++    return name != "sandlock" or "Status:         OK" in result.stdout
++
++
++def _sandlock_binary() -> str:
++    configured = os.environ.get("TYCHO_SANDLOCK_BINARY")
++    executable = configured or shutil.which("sandlock")
++    if executable is None:
++        raise SandboxError("sandlock executable is unavailable")
++    return executable
++
++
++def _sandlock_read_roots() -> tuple[str, ...]:
++    roots = [Path("/usr"), Path("/lib"), Path("/etc/ld.so.cache")]
++    roots.extend(Path(value) for value in sorted({sys.prefix, sys.base_prefix}))
++    canonical: dict[str, None] = {}
++    for root in roots:
++        if root.exists():
++            canonical[str(root.resolve())] = None
++    return tuple(canonical)
+ 
+ 
+ def resolve_runtime(requested: str | None = None) -> str:
+@@ -64,15 +88,16 @@ def resolve_runtime(requested: str | None = None) -> str:
+         return value
+     if value != "auto":
+         raise SandboxError(
+-            f"unknown TYCHO_SANDBOX_RUNTIME={value!r}; expected auto, docker, finch, or host"
++            f"unknown TYCHO_SANDBOX_RUNTIME={value!r}; expected auto, docker, finch, sandlock, or host"
+         )
+-    candidates = ("finch", "docker") if sys.platform == "darwin" else RUNTIMES
++    candidates = ("finch", "docker") if sys.platform == "darwin" else CONTAINER_RUNTIMES
+     for candidate in candidates:
+         if _runtime_usable(candidate):
+             return candidate
+     raise SandboxError(
+-        "no usable container runtime found; install Docker or Finch, or explicitly set "
+-        "TYCHO_SANDBOX_RUNTIME=host for trusted local development"
++        "no usable container runtime found; install Docker or Finch, explicitly set "
++        "TYCHO_SANDBOX_RUNTIME=sandlock on a qualified Linux host, or use host only "
++        "for trusted local development"
+     )
+ 
+ 
+@@ -120,11 +145,62 @@ class PythonSandbox:
+         *,
+         name: str,
+         args: tuple[str, ...] = (),
++        timeout: int | float | None = None,
+     ) -> list[str]:
+         ws = self._workspace(workspace)
+         script_path = self._script(ws, script)
+         if self.runtime == "host":
+             return [sys.executable, "-B", str(script_path), *args]
++        if self.runtime == "sandlock":
++            command = [_sandlock_binary(), "run"]
++            for root in _sandlock_read_roots():
++                command.extend(["--fs-read", root])
++            command.extend(
++                [
++                    "--fs-write",
++                    str(ws),
++                    "--net-deny",
++                    "*",
++                    "--max-processes",
++                    "1",
++                    "--max-open-files",
++                    "256",
++                    "--max-memory",
++                    "1G",
++                    "--timeout",
++                    str(max(1, math.ceil(timeout or 300))),
++                    "--num-cpus",
++                    "1",
++                    "--no-coredump",
++                    "--no-huge-pages",
++                    "--deterministic-dirs",
++                    "--clean-env",
++                    "--env",
++                    f"HOME={ws}",
++                    "--env",
++                    "PATH=/usr/local/bin:/usr/bin:/bin",
++                    "--env",
++                    "PYTHONDONTWRITEBYTECODE=1",
++                    "--env",
++                    "PYTHONNOUSERSITE=1",
++                    "--env",
++                    "PYTHONHASHSEED=0",
++                    "--env",
++                    "OMP_NUM_THREADS=1",
++                    "--env",
++                    "OPENBLAS_NUM_THREADS=1",
++                    "--env",
++                    "MKL_NUM_THREADS=1",
++                    "--cwd",
++                    str(ws),
++                    "--",
++                    sys.executable,
++                    "-B",
++                    str(script_path),
++                    *args,
++                ]
++            )
++            return command
+         relative_script = script_path.relative_to(ws).as_posix()
+         mount = f"type=bind,src={ws},dst=/workspace"
+         command = [
+@@ -195,7 +271,9 @@ class PythonSandbox:
+     ) -> SandboxResult:
+         ws = self._workspace(workspace)
+         container_name = f"tycho-python-{uuid.uuid4().hex[:16]}"
+-        command = self.command(ws, script, name=container_name, args=args)
++        command = self.command(
++            ws, script, name=container_name, args=args, timeout=timeout
++        )
+         process = subprocess.Popen(
+             command,
+             cwd=ws,
+@@ -240,10 +318,10 @@ class PythonSandbox:
+         timed_out = False
+         cleanup_error: BaseException | None = None
+         try:
+-            process.wait(timeout=timeout)
++            process.wait(timeout=timeout + 2 if self.runtime == "sandlock" else timeout)
+         except subprocess.TimeoutExpired:
+             timed_out = True
+-            if self.runtime != "host":
++            if self.runtime in CONTAINER_RUNTIMES:
+                 try:
+                     cleanup = subprocess.run(
+                         [self.runtime, "rm", "-f", container_name],
+@@ -267,6 +345,8 @@ class PythonSandbox:
+             raise SandboxError(
+                 f"{self.runtime} could not stop timed-out workspace container"
+             ) from cleanup_error
++        if self.runtime == "sandlock" and process.returncode == 124:
++            timed_out = True
+         return SandboxResult(
+             self._portable_output("".join(captured["stdout"]), ws),
+             self._portable_output("".join(captured["stderr"]), ws),
+@@ -368,7 +448,7 @@ class PythonSandbox:
+             raise SandboxError(
+                 f"{self.runtime} sandbox check returned invalid output"
+             ) from exc
+-        if self.runtime != "host":
++        if self.runtime in CONTAINER_RUNTIMES:
+             expected = {
+                 "outside_readable": False,
+                 "network": False,
+@@ -382,6 +462,17 @@ class PythonSandbox:
+             observed = {key: payload.get(key) for key in expected}
+             if observed != expected:
+                 raise SandboxError(f"unexpected sandbox policy result: {observed}")
++        elif self.runtime == "sandlock":
++            expected = {
++                "outside_readable": False,
++                "network": False,
++                "workspace_write": True,
++                "cwd": "/workspace",
++                "home": "/workspace",
++            }
++            observed = {key: payload.get(key) for key in expected}
++            if observed != expected:
++                raise SandboxError(f"unexpected sandbox policy result: {observed}")
+         return {"runtime": self.runtime, "image": self.image, **payload}
+ 
+ 

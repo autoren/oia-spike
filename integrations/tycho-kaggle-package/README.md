@@ -53,3 +53,8 @@ external. See [`PACKAGE_REPORT.md`](PACKAGE_REPORT.md) and
 [`PACKAGE_RESULT.json`](PACKAGE_RESULT.json). The verdict remains explicitly
 blocked on the Docker-free isolated Python runner, `MyAgent` integration,
 target-GPU model load, and throughput.
+
+The subsequent Sandlock R1 result clears the Docker-free runner mechanism only
+on one exact local Linux VM. Target-kernel support, `MyAgent` integration,
+target-GPU loading, and throughput remain open; see
+[`../tycho-sandlock/SANDBOX_REPORT.md`](../tycho-sandlock/SANDBOX_REPORT.md).

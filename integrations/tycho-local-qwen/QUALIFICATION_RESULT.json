@@ -1,0 +1,172 @@
+{
+  "schema_version": "OIA-TYCHO-LOCAL-QWEN-QUALIFICATION-RESULT-0.1",
+  "date": "2026-08-22",
+  "protocol_commit": "ecedcc0f527181d8462986dae6121b9a7d3c0d19",
+  "transport_driver_commit": "0dd3192fbd1025c7031acca884a3221473ea2513",
+  "maintenance_commit": "36007e279e982ade75a0ec7e083380ba27b3b8f8",
+  "source": {
+    "repository": "https://github.com/NIMI-research/Tycho",
+    "commit": "f68912a764372ead0a610db2e1c011d41ce5197e",
+    "tree": "d5ff6a4e142934ceb865e403e3aa92d80bfa245c",
+    "tracked_source_clean_at_qualifying_run": true
+  },
+  "model": {
+    "repository": "https://huggingface.co/DavidAU/Qwen3.6-27B-Fable-Fusion-711-Uncensored-Heretic-NM-DAU-NEO-MAX-MTP-GGUF",
+    "revision": "b869816e657114167518d41ef84c8ece43d102d7",
+    "model_sha256": "2fff409d4a22e0cb11fb0ecfafed1c669b9808f7e6bc499036c6e85297f14f4d",
+    "projector_sha256": "fdc443e974cad1f61c45af1cfd5580855855ddce0d6c14cc500a5714c486ac1d",
+    "runtime_identifier": "qwen3.6-27b-oia",
+    "endpoint": "http://127.0.0.1:1234/v1"
+  },
+  "execution_environment": {
+    "runtime": "LM Studio OpenAI-compatible localhost endpoint plus Tycho Docker sandbox",
+    "docker_image": "tycho-python-sandbox:0.2",
+    "docker_base": "python:3.12.11-slim-bookworm@sha256:519591d6871b7bc437060736b9f7456b8731f1499a57e22e6c285135ae657bf7",
+    "docker_image_manifest_sha256": "9bdddb07c342ac131b1aed68163f0c752fd494ba4c42c45e897ef8423732eaa2",
+    "docker_image_config_sha256": "9e3d76a13e8119c830b8a40820b6a3ff377b42056720007f2d4e5a42b77520b5",
+    "docker_manifest_list_sha256": "d6548108637930e06da534c1ac2160042a2757123291928ba60062ed29e0d703",
+    "sandbox_doctor": {
+      "network_disabled": true,
+      "root_read_only": true,
+      "no_new_privileges": true,
+      "outside_workspace_unreadable": true,
+      "workspace_write_enabled": true
+    }
+  },
+  "attempt_accounting": [
+    {
+      "phase": "prefreeze_exploratory_transport",
+      "attempts": 1,
+      "model_calls": 1,
+      "qualification_evidence": false,
+      "outcome": "expected_tool_call_observed"
+    },
+    {
+      "phase": "postfreeze_transport",
+      "attempts": 1,
+      "model_calls": 1,
+      "qualification_evidence": true,
+      "outcome": "pass"
+    },
+    {
+      "phase": "premaintenance_harness_start",
+      "attempts": 2,
+      "model_calls": 0,
+      "resets": 0,
+      "environment_actions": 0,
+      "qualification_evidence": false,
+      "outcome": "blocked_by_paid-provider_cost_guard"
+    },
+    {
+      "phase": "maintained_public_harness",
+      "attempts": 1,
+      "model_calls": 2,
+      "tool_steps": 2,
+      "environment_actions": 1,
+      "qualification_evidence": true,
+      "outcome": "completed_at_frozen_call_limit"
+    }
+  ],
+  "postfreeze_transport": {
+    "calls": 1,
+    "input_tokens": 375,
+    "output_tokens": 169,
+    "tool_name": "report_transport_ok",
+    "tool_arguments": {
+      "status": "ok"
+    },
+    "pass": true
+  },
+  "public_harness_result": {
+    "game_base_id": "tr87",
+    "resolved_game_id": "tr87-cd924810",
+    "seed": 0,
+    "operation_mode": "normal",
+    "policy": "no_world_model",
+    "source_metadata": {
+      "size": 331,
+      "sha256": "ef53168a70367e3675ed7c9e938856b4345a02a2dc562836caf21a55c4ef0f03"
+    },
+    "source_program": {
+      "size": 49092,
+      "sha256": "3274657a6499af5c7a52390d58a5c5441497ed70b84388e418fdfa6c9601e305"
+    },
+    "run_spec_fingerprint": "b7b6ca829d25efd9de67acfd081d676cd0218673ded86154640c913258f0dba5",
+    "sources_sha256": "0a441ef8914e981863622e0061bf0d6107a2ce27b6b578e7ea4b2c549d49345d",
+    "model_calls": 2,
+    "tool_steps": 2,
+    "tool_names": [
+      "run_python",
+      "run_python"
+    ],
+    "tokens_in": 31713,
+    "tokens_out": 1554,
+    "mean_call_latency_seconds": 191.3,
+    "wall_clock_seconds": 387.2,
+    "game_wall_clock_seconds": 383.91,
+    "decode_tokens_per_second": 4.0,
+    "peak_prompt_tokens": 16195,
+    "stop_reason": "llm_call_limit",
+    "final_state": "GameState.NOT_FINISHED",
+    "levels_completed": 0,
+    "reported_reset_actions": 0,
+    "initial_environment_setup_not_counted_as_an_action": true,
+    "environment_actions_recorded": 1,
+    "environment_action_sequence": [
+      "ACTION1"
+    ],
+    "completed_level_actions": 0,
+    "unfinished_level_actions": 1,
+    "model_selected_actions": 0,
+    "defaulted_actions": 1,
+    "default_reason": "default (tool cap)",
+    "action_selection_by_model_established": false,
+    "cost_usd": 0.0,
+    "world_model_activity": null,
+    "registered_arc_credentials": 0,
+    "paid_model_or_api_calls": 0,
+    "semi_private_or_private_games": 0,
+    "competition_submissions": 0,
+    "world_models_generated": 0,
+    "oia_runs": 0
+  },
+  "artifact_hashes": {
+    "manifest.json": {
+      "size": 8201,
+      "sha256": "7d083be9ca09f9b027fefe6c3cde940695ceb9864237e97d853e3b3693c27266"
+    },
+    "game_tr87.json": {
+      "size": 168375,
+      "sha256": "cd48fa29b806562fe3110b26f33e5d2f5d175af3f9b0b82bf965bf0e5421e9af"
+    },
+    "run_spec.json": {
+      "size": 2983,
+      "sha256": "4c15fa7a1ca3fa0c0351aa19ba6f840e26990d2af02f67ce216cbcb12001a6cb"
+    },
+    "attempt_0001_result.json": {
+      "size": 618,
+      "sha256": "0bcb9449be2e1df23f23d02b6cf691be3dae204621bcbcbca1d3a4ee9ceabd66"
+    }
+  },
+  "verdict": "local_qwen_transport_and_opened_harness_qualification_pass",
+  "interpretation": {
+    "established": "The pinned local multimodal model completed the frozen text-image-tool transport check and two calls through the opened Tycho public-game harness without a paid model service.",
+    "critical_limitation": "Both public-game calls requested run_python. At the frozen tool cap, Tycho supplied ACTION1 by its default policy. The recorded environment action is therefore harness plumbing evidence, not evidence that the model chose an action.",
+    "project_reopening_effect": "none"
+  },
+  "claim_boundary": {
+    "action_selection_by_model": false,
+    "constructive_world_model": false,
+    "ontology_or_mechanism_discovery": false,
+    "prospective_separator_discovery": false,
+    "private_transfer": false,
+    "competition_performance": false,
+    "track_b": false
+  },
+  "next_gate": {
+    "name": "separately_frozen_local_qwen_action_selection_smoke",
+    "purpose": "Determine whether the same pinned local model can itself commit at least one public-game action with a modest but still hard call/tool ceiling.",
+    "status": "not_authorized_by_this_result"
+  },
+  "status": "completed"
+}

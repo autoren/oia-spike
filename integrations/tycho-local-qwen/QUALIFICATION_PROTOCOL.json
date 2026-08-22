@@ -1,0 +1,92 @@
+{
+  "schema_version": "OIA-TYCHO-LOCAL-QWEN-QUALIFICATION-0.1",
+  "date": "2026-08-22",
+  "evidence_class": "opened_local_offline_execution_engineering_qualification",
+  "source": {
+    "repository": "https://github.com/NIMI-research/Tycho",
+    "commit": "f68912a764372ead0a610db2e1c011d41ce5197e",
+    "tree": "d5ff6a4e142934ceb865e403e3aa92d80bfa245c",
+    "license": "Apache-2.0",
+    "license_sha256": "b4ad3ca25da70e93f6e81d6d7e4ab7930e027cabb8db6c990764b64fdf26e939",
+    "tracked_source_must_be_clean": true
+  },
+  "model": {
+    "repository": "https://huggingface.co/DavidAU/Qwen3.6-27B-Fable-Fusion-711-Uncensored-Heretic-NM-DAU-NEO-MAX-MTP-GGUF",
+    "revision": "b869816e657114167518d41ef84c8ece43d102d7",
+    "license": "Apache-2.0",
+    "model_file": {
+      "name": "Qwen3.6-27B-Fable-Fus-711-UnHeretic-NM-DAU-NEO-MAX-NEO-Q8_0.gguf",
+      "size": 29787701792,
+      "sha256": "2fff409d4a22e0cb11fb0ecfafed1c669b9808f7e6bc499036c6e85297f14f4d"
+    },
+    "vision_projector": {
+      "name": "mmproj-F32.gguf",
+      "size": 1842940480,
+      "sha256": "fdc443e974cad1f61c45af1cfd5580855855ddce0d6c14cc500a5714c486ac1d"
+    },
+    "local_runtime": {
+      "server": "LM Studio OpenAI-compatible localhost endpoint",
+      "cli_commit": "8d3f370",
+      "identifier": "qwen3.6-27b-oia",
+      "base_url": "http://127.0.0.1:1234/v1",
+      "context_length": 32768,
+      "parallel": 1,
+      "gpu_offload": "max"
+    }
+  },
+  "prefreeze_engineering_observation": {
+    "model_calls": 1,
+    "purpose": "Establish that the candidate endpoint was worth freezing; this call is not qualification evidence.",
+    "expected_tool_call_observed": true,
+    "input_tokens_reported": 373,
+    "output_tokens_reported": 157
+  },
+  "authorized_execution": {
+    "transport_calls": 1,
+    "public_game_model_calls_maximum": 2,
+    "public_game_tool_steps_maximum": 2,
+    "public_game_committed_actions_maximum": 2,
+    "public_game_initial_resets_maximum": 1,
+    "game_base_id": "tr87",
+    "game_version_rule": "Resolve the current official public version once before the reset, then record and hash it.",
+    "game_seed": 0,
+    "operation_mode": "normal_download_public_source_then_execute_locally",
+    "tycho_config": "configs/smoke/minimal.yaml",
+    "tycho_policy": "no_world_model",
+    "animation_summary_calls": 0,
+    "registered_arc_credentials": 0,
+    "paid_model_or_api_calls": 0,
+    "semi_private_or_private_games": 0,
+    "competition_submissions": 0,
+    "world_models_generated": 0,
+    "oia_runs": 0
+  },
+  "required_checks": [
+    "Rehash both local model files and match the Hugging Face revision metadata.",
+    "Remove OpenAI, Anthropic, and registered ARC credentials from both processes.",
+    "Require one exact text-image-tool transport response from the local endpoint.",
+    "Run only the upstream two-call direct-reasoning smoke on one public game.",
+    "Record the resolved public game version, source hash, calls, actions, resets, tool calls, tokens, wall time, and result artifact hashes.",
+    "Fail closed if any private payload, paid service, third model call, world-model generation, or competition submission occurs."
+  ],
+  "allowed_verdicts": [
+    "local_qwen_transport_and_opened_harness_qualification_pass",
+    "local_qwen_transport_or_opened_harness_blocker",
+    "qualification_boundary_violation"
+  ],
+  "claim_boundary": {
+    "supports": "Technical feasibility of running the pinned Tycho observation/action harness through one pinned local multimodal tool-use model without paid model service access.",
+    "does_not_support": [
+      "constructive executable-world-model generation",
+      "ontology or mechanism discovery",
+      "prospective separator discovery",
+      "semi-private or private transfer",
+      "decision superiority",
+      "ARC-AGI-3 competition performance",
+      "broad project reopening",
+      "Track B claims"
+    ],
+    "project_reopening_effect": "none"
+  },
+  "status": "frozen_unexecuted"
+}

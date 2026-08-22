@@ -32,6 +32,15 @@ It is intentionally separate from [`autoren/ontology-intervention-auditor`](http
   candidate, or private-world run. The adapter was frozen at `567ea676` and
   its credential-free qualification is recorded in
   [`INTEGRATION_RESULT.json`](integrations/discoverphysics/INTEGRATION_RESULT.json).
+- [`integrations/tycho-local-qwen/`](integrations/tycho-local-qwen/) freezes a
+  separately bounded local-model engineering qualification: one repeated
+  transport call and at most two local-model calls/two actions on one opened
+  public ARC-AGI-3 game. The qualification passed for local transport and
+  opened-harness compatibility. The sole recorded game action was Tycho's
+  default at the tool cap, not a model-selected action, so a larger bounded
+  action-selection smoke still requires its own freeze. This integration does
+  not authorize a private game, submission, executable-world-model generation,
+  or behavioral claim.
 
 ## Local baseline validation
 
@@ -75,4 +84,11 @@ manifests and verifiers remain unchanged; see
 
 ## Claim boundary
 
-This workspace remains opened Track A work. It does not authorize paid or API model runs, private or sealed evaluation, real ARC interventions, retroactive changes to frozen artifacts, or Track B claims. The accepted baseline archive remains identified by SHA-256 `2653020afcbf636def260da1517c9e3ba41c2ba1175fc210d4847b303febc33b`.
+This workspace remains opened Track A work. It does not authorize paid model
+runs, private or sealed evaluation, competition submissions, retroactive
+changes to frozen artifacts, or Track B claims. The sole current local-model
+exception is the exact opened public-game engineering qualification frozen in
+`integrations/tycho-local-qwen/QUALIFICATION_PROTOCOL.json`; it cannot be
+generalized to another game, model, call budget, or claim. The accepted
+baseline archive remains identified by SHA-256
+`2653020afcbf636def260da1517c9e3ba41c2ba1175fc210d4847b303febc33b`.

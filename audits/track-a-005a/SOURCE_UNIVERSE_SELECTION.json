@@ -1,0 +1,209 @@
+{
+  "access_accounting": {
+    "behavioral_traces_read": 0,
+    "candidate_files_read": 0,
+    "candidate_processes": 0,
+    "member_names_read": true,
+    "member_payloads_extracted": 0,
+    "model_or_api_calls": 0,
+    "oia_processes": 0,
+    "p0_payloads_read": 0,
+    "real_arc_actions": 0,
+    "scores_read": 0,
+    "tar_headers_read": true
+  },
+  "archive": {
+    "kind_counts": {
+      "directory": 39844,
+      "file": 876288
+    },
+    "member_count": 916132,
+    "member_name_index_sha256": "d30e6467f91ce934248b2247385fe104f0612c5d1dcc7fe274a1c22cbac8370f",
+    "sha256": "c3d85c4a75170de08837b9fc63cb7a7dde389b1205ca71b9f0fed16a9c09cf93",
+    "total_regular_file_bytes": 2803745539
+  },
+  "audit_id": "OIA-1-TRACK-A-005a",
+  "claim_boundary": "Held-out source selection from archive headers only; no P0 content, candidate code, behavior, score, OIA, model, or real environment outcome.",
+  "schema_version": 1,
+  "selection": {
+    "eligible_game_count": 24,
+    "excluded_games": [
+      "ls20"
+    ],
+    "ranking": [
+      {
+        "game": "su15",
+        "selection_token": "075146b304f6290656957947414ee2c5673b95af9e26bb4ddd306d21b389c8ea"
+      },
+      {
+        "game": "wa30",
+        "selection_token": "1e758d5672202dc19456ae72e5140fd3e8481fe0cc45878af1be7f81a864dbc9"
+      },
+      {
+        "game": "sp80",
+        "selection_token": "26e351362272ed4cdaab8018977d610415de0d7beaa3055f174f5c157b3e59c2"
+      },
+      {
+        "game": "cd82",
+        "selection_token": "3e27005a2a52af585988b83a704390e89f6bd1e85ab61379b1b5517f748b14c4"
+      },
+      {
+        "game": "tu93",
+        "selection_token": "44b6188f4d805876945e9278c024dca579c0bda2fe941824ab76f181106d4d8b"
+      },
+      {
+        "game": "bp35",
+        "selection_token": "53de795fc22dd22e572ac976bcd59daff52e8782678d1816e7cd0d16990716ae"
+      },
+      {
+        "game": "ft09",
+        "selection_token": "776eed935ea39976ff781894b4d7b1161c1577caa1c1a540c4f91c6ff8cadf22"
+      },
+      {
+        "game": "m0r0",
+        "selection_token": "ab57ce00180de37c178e8f03325566a253b1ee4cc4df2a03a772585e1c893c92"
+      },
+      {
+        "game": "ar25",
+        "selection_token": "afd340019c98627fa69362bfcd9fa3db9d9350529f97968313ce002642f7900c"
+      },
+      {
+        "game": "sb26",
+        "selection_token": "b2f7a18e1edb4deec3ac0cea4375692f53bbf9462b1e13b4348d1958faf14c8c"
+      },
+      {
+        "game": "re86",
+        "selection_token": "b83cd5f8c0b45efc27c590d17532baf6e3adf8fa1ce7ed21d57512efc152e17b"
+      },
+      {
+        "game": "ka59",
+        "selection_token": "ba61c97b57e6ee4b646b0cb4121ea0582a94af76acd15780daa49bed9d761d59"
+      },
+      {
+        "game": "sk48",
+        "selection_token": "c0760d6d0c7b274ee789d61ca1c1bed1cb26c9b14a902c846592bfc975cfd4dd"
+      },
+      {
+        "game": "g50t",
+        "selection_token": "ccc2f76f646b14b35e05b59815245a2e49ce3a30200bb5c84529409166b8451c"
+      },
+      {
+        "game": "cn04",
+        "selection_token": "d0e76fd07d679ba9455c5cd2bea370bc8be25c27b7a6209fb4c75073ef00250c"
+      },
+      {
+        "game": "tr87",
+        "selection_token": "d1076bee54d5e56887a38ec6f3e31a0ea7dfe3584681bdeea46e496d275c2f5d"
+      },
+      {
+        "game": "sc25",
+        "selection_token": "d614327953509e314738065749ef80cc2c5abc609817c6203ef69bb6ffd51a12"
+      },
+      {
+        "game": "r11l",
+        "selection_token": "e75d3a088bf72fecfcf1ab30d7e0118084a8b3632bae782780ef0041d85a5d9e"
+      },
+      {
+        "game": "lp85",
+        "selection_token": "f000ec61881800c0f5ea3ca2879f92c4f9354e76f1804468dc4a60ff4baa6108"
+      },
+      {
+        "game": "tn36",
+        "selection_token": "f00e57749449dae3dd4fe3294699b77307a9b17749bd876cbdf4f2d788b0ec52"
+      },
+      {
+        "game": "lf52",
+        "selection_token": "f0a61edbbd02ff06be344dd0b6b57ecdf02205926ebb3e4284471c8ce3a7dc40"
+      },
+      {
+        "game": "s5i5",
+        "selection_token": "f605977a29bf6f30a5ff38a644372e29538c027373a3e2778b7872829bfaa51a"
+      },
+      {
+        "game": "dc22",
+        "selection_token": "f66224bb30ff11fcfcce3af4b74e5e0e6486b50e6add3737d680caaced54ba2c"
+      },
+      {
+        "game": "vc33",
+        "selection_token": "fe0b9e03f1c09954359d11dad01e4671df83c2606ca4d9fb9d8ee005200d9469"
+      }
+    ],
+    "rejected": [
+      {
+        "game": "ls20",
+        "missing_p0_runs": [],
+        "reasons": [
+          "previously_opened_game"
+        ]
+      }
+    ],
+    "selected_game": "su15",
+    "selected_p0_paths": {
+      "ewma_v1.5_sv_gpt-5.5_xhigh_run1": {
+        "initial_frame.png": "runs_additional/ewma_v1.5_sv_gpt-5.5_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/initial_frame.png",
+        "initial_frame.txt": "runs_additional/ewma_v1.5_sv_gpt-5.5_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/initial_frame.txt",
+        "initial_metadata.json": "runs_additional/ewma_v1.5_sv_gpt-5.5_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/initial_metadata.json"
+      },
+      "ewma_v1.6_sv_gpt-5.6-sol_max_run1": {
+        "initial_frame.png": "runs_additional/ewma_v1.6_sv_gpt-5.6-sol_max_run1/su15/run/agent_run/client/session/level_01_attempt_01/initial_frame.png",
+        "initial_frame.txt": "runs_additional/ewma_v1.6_sv_gpt-5.6-sol_max_run1/su15/run/agent_run/client/session/level_01_attempt_01/initial_frame.txt",
+        "initial_metadata.json": "runs_additional/ewma_v1.6_sv_gpt-5.6-sol_max_run1/su15/run/agent_run/client/session/level_01_attempt_01/initial_metadata.json"
+      },
+      "ewma_v1.6_sv_gpt-5.6-sol_xhigh_run1": {
+        "initial_frame.png": "runs_additional/ewma_v1.6_sv_gpt-5.6-sol_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/initial_frame.png",
+        "initial_frame.txt": "runs_additional/ewma_v1.6_sv_gpt-5.6-sol_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/initial_frame.txt",
+        "initial_metadata.json": "runs_additional/ewma_v1.6_sv_gpt-5.6-sol_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/initial_metadata.json"
+      },
+      "twma_v1.6_gpt-5.6-sol_max_run1": {
+        "initial_frame.png": "runs_additional/twma_v1.6_gpt-5.6-sol_max_run1/su15/run/agent_run/client/session/level_01_attempt_01/initial_frame.png",
+        "initial_frame.txt": "runs_additional/twma_v1.6_gpt-5.6-sol_max_run1/su15/run/agent_run/client/session/level_01_attempt_01/initial_frame.txt",
+        "initial_metadata.json": "runs_additional/twma_v1.6_gpt-5.6-sol_max_run1/su15/run/agent_run/client/session/level_01_attempt_01/initial_metadata.json"
+      },
+      "twma_v1.6_gpt-5.6-sol_xhigh_run1": {
+        "initial_frame.png": "runs_additional/twma_v1.6_gpt-5.6-sol_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/initial_frame.png",
+        "initial_frame.txt": "runs_additional/twma_v1.6_gpt-5.6-sol_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/initial_frame.txt",
+        "initial_metadata.json": "runs_additional/twma_v1.6_gpt-5.6-sol_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/initial_metadata.json"
+      }
+    },
+    "selected_token": "075146b304f6290656957947414ee2c5673b95af9e26bb4ddd306d21b389c8ea"
+  },
+  "source_universe": {
+    "game_count_per_run": 25,
+    "games": [
+      "ar25",
+      "bp35",
+      "cd82",
+      "cn04",
+      "dc22",
+      "ft09",
+      "g50t",
+      "ka59",
+      "lf52",
+      "lp85",
+      "ls20",
+      "m0r0",
+      "r11l",
+      "re86",
+      "s5i5",
+      "sb26",
+      "sc25",
+      "sk48",
+      "sp80",
+      "su15",
+      "tn36",
+      "tr87",
+      "tu93",
+      "vc33",
+      "wa30"
+    ],
+    "p0_triplet_complete_for_every_run_game": true,
+    "runs": [
+      "ewma_v1.5_sv_gpt-5.5_xhigh_run1",
+      "ewma_v1.6_sv_gpt-5.6-sol_max_run1",
+      "ewma_v1.6_sv_gpt-5.6-sol_xhigh_run1",
+      "twma_v1.6_gpt-5.6-sol_max_run1",
+      "twma_v1.6_gpt-5.6-sol_xhigh_run1"
+    ]
+  },
+  "status": "held_out_source_selected_from_headers_only"
+}

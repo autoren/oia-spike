@@ -24,3 +24,11 @@ before inference.
 This gate authorizes neither candidate/model/OIA execution nor a real ARC action.
 It uses no credentials, hosted service, private/sealed material, or Track B
 procedure.
+
+## Source-selection result
+
+After the freeze was merged, the header-only rule selected `su15` from 24
+eligible games. `SOURCE_UNIVERSE_SELECTION.json` records the complete canonical
+game universe, selection-token ranking, five exact P0 member-path triplets, and
+zero payload access. P0 extraction remains a later step and did not occur during
+selection.

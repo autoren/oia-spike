@@ -17,6 +17,7 @@ It is intentionally separate from [`autoren/ontology-intervention-auditor`](http
 - [`audits/track-a-005e/`](audits/track-a-005e/) pins the official local `su15` source and freezes an offline outcome protocol. The gate is prepared but remains unexecuted pending explicit authorization for bounded local ARC actions.
 - [`audits/track-a-006a/`](audits/track-a-006a/) freezes a controlled prospective diagnostic of closed-frontier identity policies against independently generated outside-frontier targets. It is a synthetic Track A limitation study, not external or Track B evidence.
 - [`audits/track-a-006b/`](audits/track-a-006b/) prospectively evaluates a frozen two-sentinel reject-aware policy on a disjoint controlled corpus, with the closed identity policy as a paired baseline. It is a synthetic method diagnostic and does not authorize real ARC execution.
+- [`audits/track-a-006c/`](audits/track-a-006c/) prospectively evaluates conservative resettable sequential fusion of the closed and reject-aware policies. It is the final same-family controlled diagnostic, not external or Track B evidence.
 - [`docs/context/`](docs/context/) contains curated parent-project decision records needed to interpret the spike. These copies are contextual and are not part of the frozen 003a package.
 
 ## Local baseline validation
@@ -51,6 +52,13 @@ Track A 004a compiled the already-known deterministic 003b traces into the
 accepted finite OIA interface and passed its retrospective integration gate:
 unchanged OIA-1 v0.2.1 certified `ACTION2` as an exact minimum one-step separator.
 See [`audits/track-a-004a/README.md`](audits/track-a-004a/README.md).
+
+The 005e and 006a–006c historical freeze manifests included this mutable root
+index. Use `python scripts/verify_historical_freeze_continuity.py` to reconstruct
+each exact pre-outcome Git snapshot, run its original verifier there, and check
+current continuity of every experiment-local manifest entry. The original
+manifests and verifiers remain unchanged; see
+[`audits/FREEZE_VERIFIER_MAINTENANCE.json`](audits/FREEZE_VERIFIER_MAINTENANCE.json).
 
 ## Claim boundary
 

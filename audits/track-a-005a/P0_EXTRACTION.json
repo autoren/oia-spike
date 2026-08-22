@@ -1,0 +1,122 @@
+{
+  "access_accounting": {
+    "behavioral_traces_read": 0,
+    "candidate_files_read": 0,
+    "candidate_processes": 0,
+    "model_or_api_calls": 0,
+    "nonselected_member_payloads_read": 0,
+    "oia_processes": 0,
+    "real_arc_actions": 0,
+    "scores_read": 0,
+    "selected_p0_payloads_read": 15
+  },
+  "archive_sha256": "c3d85c4a75170de08837b9fc63cb7a7dde389b1205ca71b9f0fed16a9c09cf93",
+  "audit_id": "OIA-1-TRACK-A-005a",
+  "canonical_files": {
+    "initial_frame.png": {
+      "path": "audits/track-a-005a/p0/initial_frame.png",
+      "sha256": "a4866d89296b2191b5f7e056bc61715ff0c340394392bcbb15ceb95c8dd91953",
+      "size_bytes": 1887
+    },
+    "initial_frame.txt": {
+      "path": "audits/track-a-005a/p0/initial_frame.txt",
+      "sha256": "1e70d7b4ccd5c1ef1e03427d90f7295cdf461583efa978f285b55755e7a915a6",
+      "size_bytes": 4160
+    },
+    "initial_metadata.json": {
+      "path": "audits/track-a-005a/p0/initial_metadata.json",
+      "sha256": "3d9543812b624974d09b72111b55c0f99802220ed919ce79aa21b4d5e39a8281",
+      "size_bytes": 194
+    }
+  },
+  "claim_boundary": "Selected common reset P0 extraction only; no candidate, behavior, score, model, OIA, or real environment action.",
+  "schema_version": 1,
+  "selected_game": "su15",
+  "selection_sha256": "c7d6b17f0ed24811fef433899d3806afd4e22b1ba103c6ace5bbcae5080dbc3b",
+  "status": "selected_common_p0_extracted_and_validated",
+  "target_member_count": 15,
+  "target_member_paths": [
+    "runs_additional/ewma_v1.5_sv_gpt-5.5_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/initial_frame.png",
+    "runs_additional/ewma_v1.5_sv_gpt-5.5_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/initial_frame.txt",
+    "runs_additional/ewma_v1.5_sv_gpt-5.5_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/initial_metadata.json",
+    "runs_additional/ewma_v1.6_sv_gpt-5.6-sol_max_run1/su15/run/agent_run/client/session/level_01_attempt_01/initial_frame.png",
+    "runs_additional/ewma_v1.6_sv_gpt-5.6-sol_max_run1/su15/run/agent_run/client/session/level_01_attempt_01/initial_frame.txt",
+    "runs_additional/ewma_v1.6_sv_gpt-5.6-sol_max_run1/su15/run/agent_run/client/session/level_01_attempt_01/initial_metadata.json",
+    "runs_additional/ewma_v1.6_sv_gpt-5.6-sol_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/initial_frame.png",
+    "runs_additional/ewma_v1.6_sv_gpt-5.6-sol_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/initial_frame.txt",
+    "runs_additional/ewma_v1.6_sv_gpt-5.6-sol_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/initial_metadata.json",
+    "runs_additional/twma_v1.6_gpt-5.6-sol_max_run1/su15/run/agent_run/client/session/level_01_attempt_01/initial_frame.png",
+    "runs_additional/twma_v1.6_gpt-5.6-sol_max_run1/su15/run/agent_run/client/session/level_01_attempt_01/initial_frame.txt",
+    "runs_additional/twma_v1.6_gpt-5.6-sol_max_run1/su15/run/agent_run/client/session/level_01_attempt_01/initial_metadata.json",
+    "runs_additional/twma_v1.6_gpt-5.6-sol_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/initial_frame.png",
+    "runs_additional/twma_v1.6_gpt-5.6-sol_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/initial_frame.txt",
+    "runs_additional/twma_v1.6_gpt-5.6-sol_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/initial_metadata.json"
+  ],
+  "validation": {
+    "content_validation": {
+      "frame_png": {
+        "png_signature_valid": true
+      },
+      "frame_text": {
+        "encoding": "UTF-8",
+        "height": 64,
+        "rectangular": true,
+        "width": 64
+      },
+      "metadata": {
+        "available_actions": [
+          6,
+          7
+        ],
+        "reset_action": true,
+        "step_index": 0,
+        "top_level_keys": [
+          "action_input",
+          "available_actions",
+          "levels_completed",
+          "state",
+          "step_index",
+          "win_levels"
+        ]
+      }
+    },
+    "file_equality": {
+      "initial_frame.png": {
+        "all_five_byte_identical": true,
+        "per_run_sha256": {
+          "ewma_v1.5_sv_gpt-5.5_xhigh_run1": "a4866d89296b2191b5f7e056bc61715ff0c340394392bcbb15ceb95c8dd91953",
+          "ewma_v1.6_sv_gpt-5.6-sol_max_run1": "a4866d89296b2191b5f7e056bc61715ff0c340394392bcbb15ceb95c8dd91953",
+          "ewma_v1.6_sv_gpt-5.6-sol_xhigh_run1": "a4866d89296b2191b5f7e056bc61715ff0c340394392bcbb15ceb95c8dd91953",
+          "twma_v1.6_gpt-5.6-sol_max_run1": "a4866d89296b2191b5f7e056bc61715ff0c340394392bcbb15ceb95c8dd91953",
+          "twma_v1.6_gpt-5.6-sol_xhigh_run1": "a4866d89296b2191b5f7e056bc61715ff0c340394392bcbb15ceb95c8dd91953"
+        },
+        "sha256": "a4866d89296b2191b5f7e056bc61715ff0c340394392bcbb15ceb95c8dd91953",
+        "size_bytes": 1887
+      },
+      "initial_frame.txt": {
+        "all_five_byte_identical": true,
+        "per_run_sha256": {
+          "ewma_v1.5_sv_gpt-5.5_xhigh_run1": "1e70d7b4ccd5c1ef1e03427d90f7295cdf461583efa978f285b55755e7a915a6",
+          "ewma_v1.6_sv_gpt-5.6-sol_max_run1": "1e70d7b4ccd5c1ef1e03427d90f7295cdf461583efa978f285b55755e7a915a6",
+          "ewma_v1.6_sv_gpt-5.6-sol_xhigh_run1": "1e70d7b4ccd5c1ef1e03427d90f7295cdf461583efa978f285b55755e7a915a6",
+          "twma_v1.6_gpt-5.6-sol_max_run1": "1e70d7b4ccd5c1ef1e03427d90f7295cdf461583efa978f285b55755e7a915a6",
+          "twma_v1.6_gpt-5.6-sol_xhigh_run1": "1e70d7b4ccd5c1ef1e03427d90f7295cdf461583efa978f285b55755e7a915a6"
+        },
+        "sha256": "1e70d7b4ccd5c1ef1e03427d90f7295cdf461583efa978f285b55755e7a915a6",
+        "size_bytes": 4160
+      },
+      "initial_metadata.json": {
+        "all_five_byte_identical": true,
+        "per_run_sha256": {
+          "ewma_v1.5_sv_gpt-5.5_xhigh_run1": "3d9543812b624974d09b72111b55c0f99802220ed919ce79aa21b4d5e39a8281",
+          "ewma_v1.6_sv_gpt-5.6-sol_max_run1": "3d9543812b624974d09b72111b55c0f99802220ed919ce79aa21b4d5e39a8281",
+          "ewma_v1.6_sv_gpt-5.6-sol_xhigh_run1": "3d9543812b624974d09b72111b55c0f99802220ed919ce79aa21b4d5e39a8281",
+          "twma_v1.6_gpt-5.6-sol_max_run1": "3d9543812b624974d09b72111b55c0f99802220ed919ce79aa21b4d5e39a8281",
+          "twma_v1.6_gpt-5.6-sol_xhigh_run1": "3d9543812b624974d09b72111b55c0f99802220ed919ce79aa21b4d5e39a8281"
+        },
+        "sha256": "3d9543812b624974d09b72111b55c0f99802220ed919ce79aa21b4d5e39a8281",
+        "size_bytes": 194
+      }
+    }
+  }
+}

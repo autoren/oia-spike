@@ -1,0 +1,69 @@
+{
+  "audit_id": "OIA-1-TRACK-A-005a",
+  "candidate_route": {
+    "archived_candidate_programs_allowed": false,
+    "fresh_generation_requirement": "Generate fixed candidate programs locally from the selected canonical P0 only, after separately freezing the exact model, weights, runtime, prompts, sampling seeds, output schema, repair policy, and resource caps.",
+    "reason": "Released final/checkpoint programs may encode post-P0 observations and would weaken a prospective outcome interpretation."
+  },
+  "claim_target": "Prospective, investigator-blinded discovery of a separator among fresh P0-only executable hypotheses; any later real-outcome claim requires its own pre-outcome freeze and authorization.",
+  "failure_verdicts": [
+    "source_archive_identity_mismatch",
+    "unsafe_or_unexpected_archive_structure",
+    "no_common_game_universe",
+    "no_eligible_held_out_game",
+    "selected_game_missing_identical_common_p0",
+    "fresh_candidate_generation_infeasible",
+    "fewer_than_two_behaviorally_distinct_candidates",
+    "adapter_validation_failure"
+  ],
+  "freeze_date": "2026-08-21",
+  "future_phase_order": [
+    "execute this frozen header-only source selection",
+    "commit and merge the selected game name and selection proof",
+    "extract only the selected level-1 P0 triplets and require equality across all five runs",
+    "freeze the canonical P0 and local candidate-generation package before model inference",
+    "generate and structurally admit fresh P0-only candidates without exposing behavior",
+    "freeze the mechanical adapter and exact opaque OIA input before running OIA",
+    "record OIA's selected separator before any held-out outcome is revealed or executed"
+  ],
+  "prior_access": {
+    "archive_member_count_observed": 916132,
+    "behavioral_traces_read": 0,
+    "candidate_files_read": 0,
+    "game_ids_and_path_structure_read": true,
+    "member_payloads_read": 0,
+    "p0_payloads_read": 0,
+    "run_roots_and_per_run_game_counts_read": true,
+    "scores_read": 0
+  },
+  "prohibited_before_selection_is_merged": [
+    "execute the selection-token ranking",
+    "read or extract any archive member payload",
+    "read P0 bytes, candidate code, traces, reasoning logs, metadata content, or scores",
+    "execute a candidate, OIA, model, ARC action, hosted service, or credentialed operation"
+  ],
+  "schema_version": 1,
+  "selection_rule": {
+    "archive_sha256": "c3d85c4a75170de08837b9fc63cb7a7dde389b1205ca71b9f0fed16a9c09cf93",
+    "audit_id": "OIA-1-TRACK-A-005a",
+    "eligible_game": "A lowercase four-character game root present in all five frozen runs, with regular-file initial_frame.png, initial_frame.txt, and initial_metadata.json members at level_01_attempt_01 in every run.",
+    "excluded_games": [
+      "ls20"
+    ],
+    "ranking": "For each eligible game g, compute SHA-256 of UTF-8 AUDIT_ID, NUL, archive_sha256, NUL, g; choose the lexicographically smallest (digest, game) pair.",
+    "tie_break": "lexicographically smallest game id"
+  },
+  "source_universe": {
+    "expected_game_count_per_run": 25,
+    "expected_runs": [
+      "ewma_v1.5_sv_gpt-5.5_xhigh_run1",
+      "ewma_v1.6_sv_gpt-5.6-sol_max_run1",
+      "ewma_v1.6_sv_gpt-5.6-sol_xhigh_run1",
+      "twma_v1.6_gpt-5.6-sol_max_run1",
+      "twma_v1.6_gpt-5.6-sol_xhigh_run1"
+    ],
+    "root": "runs_additional"
+  },
+  "status_at_freeze": "frozen_before_selection_algorithm_execution",
+  "track": "A_held_out_source_and_fresh_candidate_feasibility"
+}

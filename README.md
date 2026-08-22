@@ -10,6 +10,7 @@ It is intentionally separate from [`autoren/ontology-intervention-auditor`](http
 - [`audits/track-a-003a/`](audits/track-a-003a/) is the closed candidate-acquisition feasibility audit. Its frozen artifacts and package manifest are unchanged.
 - [`audits/track-a-003b/`](audits/track-a-003b/) records the authorized public-archive acquisition and independent local import. The obsolete GitHub-only acquisition workflow has been replaced by a hash-pinned local importer.
 - [`audits/track-a-004a/`](audits/track-a-004a/) is the bounded retrospective OIA adapter-integration gate for the two candidates admitted by 003b.
+- [`audits/track-a-005a/`](audits/track-a-005a/) is the held-out successor, beginning with a header-only source selection and a fresh P0-only candidate route.
 - [`docs/context/`](docs/context/) contains curated parent-project decision records needed to interpret the spike. These copies are contextual and are not part of the frozen 003a package.
 
 ## Local baseline validation

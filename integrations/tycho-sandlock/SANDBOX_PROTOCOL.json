@@ -1,0 +1,120 @@
+{
+  "schema_version": "OIA-TYCHO-SANDLOCK-PROTOCOL-0.1",
+  "gate_id": "tycho-sandlock-r1",
+  "frozen_on": "2026-08-22",
+  "research_question": "Can the pinned Tycho Python execution contract be adapted to a Docker-free, unprivileged Sandlock process sandbox that permits one workspace and required Python runtime files while denying unrelated files, outbound networking, child processes, and unbounded resource use?",
+  "parent_evidence": {
+    "oia_spike_commit": "c1fb561fd851c22d3d33187846262b13d1948c11",
+    "tycho_commit": "f68912a764372ead0a610db2e1c011d41ce5197e",
+    "runtime_package_gate": "integrations/tycho-kaggle-package/PACKAGE_RESULT.json",
+    "established": "The pinned llama.cpp Linux CUDA runtime bundle is reproducible and clean-container portable; the pinned local model can emit one syntactically valid Tycho action under an explicit final commit-only prompt.",
+    "unresolved": "Docker-free run_python isolation, the Tycho-to-evaluator adapter, target-kernel support, GPU model loading, and throughput remain unqualified."
+  },
+  "pinned_sandlock": {
+    "repository": "https://github.com/multikernel/sandlock",
+    "tag": "v0.8.6",
+    "tag_commit": "033f7e24e29047a17aeb6f2f0e8fd77c69978abb",
+    "license": "Apache-2.0",
+    "aarch64_release_asset": {
+      "url": "https://github.com/multikernel/sandlock/releases/download/v0.8.6/sandlock-aarch64-unknown-linux-gnu.tar.gz",
+      "bytes": 11238313,
+      "sha256": "b6af1d063b50edbcbd2f972fe15ac10a7332b046bfb3e793993a118c324c7edf",
+      "sandlock_binary_sha256": "346cd6c5c7773384f9803794a3ab6946aeb7f05e1d272c9d6fb7e01a2b4b5c98"
+    },
+    "x86_64_release_asset": {
+      "url": "https://github.com/multikernel/sandlock/releases/download/v0.8.6/sandlock-x86_64-unknown-linux-gnu.tar.gz",
+      "bytes": 11424640,
+      "sha256": "86e89e5bdb2da748e683cda6908a95504ae6751f73d9dadf79cf0fc6843873fb",
+      "sandlock_binary_sha256": "86f80d68afe0146287ee9b950ca0223945fe49e8722f6c80ffb89eb623e53b27"
+    }
+  },
+  "qualification_host": {
+    "lima_repository": "https://github.com/lima-vm/lima",
+    "lima_version": "v2.2.0",
+    "lima_commit": "de0816ea4bdc5267b428ab21025889b8dd785526",
+    "darwin_arm64_asset_sha256": "bbdef91774885a0d05f7b048c4eb89ae2bcf3a0c252ae7ca7934e63df76d93c3",
+    "guest_image": "https://cloud-images.ubuntu.com/releases/resolute/release-20260720/ubuntu-26.04-server-cloudimg-arm64.img",
+    "guest_image_sha256": "7bcf159e29ad0000bfed9c57875908c39268f5ed1257f4958fa6a9f5f60edd54",
+    "expected_os": "Ubuntu 26.04 LTS",
+    "expected_arch": "aarch64",
+    "expected_kernel_minimum": "7.0.0",
+    "expected_landlock_abi_minimum": 6,
+    "qualification_scope": "Ephemeral local Linux VM only; this is not evidence about the competition evaluator kernel."
+  },
+  "pre_freeze_exploration": {
+    "status": "completed_before_this_protocol",
+    "used_to_design_not_score": true,
+    "observations": [
+      "Docker Desktop's LinuxKit guest did not expose Landlock, so it was rejected as the qualification host.",
+      "The pinned Ubuntu VM reported Landlock ABI v8 and completed one exploratory workspace-versus-host isolation probe.",
+      "Exploratory timeout and memory-limit probes terminated as expected.",
+      "No Tycho, model, ARC, Kaggle, or OIA execution occurred during exploration."
+    ]
+  },
+  "sandbox_policy_contract": {
+    "unprivileged": true,
+    "supervisor": "Sandlock default supervisor mode",
+    "readable_runtime_roots": [
+      "/usr",
+      "/lib",
+      "/etc/ld.so.cache"
+    ],
+    "writable_roots": [
+      "one fresh per-call workspace"
+    ],
+    "network": "deny all outbound TCP and UDP",
+    "maximum_processes": 1,
+    "maximum_open_files": 128,
+    "maximum_memory": "512M for the functional probe; 64M for the limit probe",
+    "timeout": "10 seconds for the functional probe; 1 second for the timeout probe",
+    "environment": "clean, with only bounded PATH, HOME, and Python determinism/thread variables",
+    "forbidden_substitute": "TYCHO_SANDBOX_RUNTIME=host"
+  },
+  "authorized_post_freeze_execution": {
+    "sandlock_feature_checks": 1,
+    "functional_isolation_probes": 1,
+    "unsandboxed_network_controls": 1,
+    "timeout_limit_probes": 1,
+    "memory_limit_probes": 1,
+    "patch_application_checks": 1,
+    "patched_tycho_sandbox_unit_suites": 1,
+    "model_loads": 0,
+    "model_calls": 0,
+    "gpu_runs": 0,
+    "arc_environment_actions": 0,
+    "kaggle_runs_or_uploads": 0,
+    "oia_runs": 0
+  },
+  "pass_criteria": {
+    "feature_check": "Landlock ABI 6 or newer with filesystem, network TCP, IPC, signal, truncate, and device-ioctl protections available.",
+    "positive_capability": "The sandbox reads and writes only its workspace and completes a deterministic representative grid transformation.",
+    "negative_capabilities": [
+      "A sibling sentinel cannot be read.",
+      "Host /etc/passwd and /Users cannot be read.",
+      "A file cannot be written outside the workspace.",
+      "TCP and UDP cannot reach listening control endpoints that are reachable outside the sandbox.",
+      "A child process cannot be spawned when maximum_processes is one."
+    ],
+    "resource_limits": "The timeout probe exits 124 after one second and the memory probe is terminated nonzero under 64M.",
+    "adapter": "A logging-neutral patch applies cleanly to the exact Tycho commit, adds an explicit sandlock runtime without making auto select it, preserves container behavior, rejects missing/underqualified Sandlock, and passes its bounded sandbox tests."
+  },
+  "allowed_verdicts": [
+    "sandlock_adapter_locally_qualified_target_and_throughput_unqualified",
+    "sandlock_mechanism_qualified_adapter_failed",
+    "sandlock_local_qualification_blocked"
+  ],
+  "claim_boundary": {
+    "supports_if_pass": "Only that the exact Sandlock asset and policy provide Docker-free Python process isolation in the pinned local Linux VM, and that the exact patch preserves the pinned Tycho sandbox contract under bounded tests.",
+    "does_not_support": [
+      "Kaggle or other evaluator kernel compatibility",
+      "submission readiness",
+      "Tycho-to-MyAgent lifecycle correctness",
+      "model or projector loading on the target GPU",
+      "throughput within the nine-hour evaluator window",
+      "ARC correctness or progress",
+      "OIA discovery, selection, or transfer claims",
+      "sealed or hidden evaluation"
+    ]
+  },
+  "stopping_rule": "Stop after the exact bounded probes, patch application check, and patched sandbox unit suite. Do not load a model, access ARC/Kaggle, run OIA, or infer target support from the local VM."
+}

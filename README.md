@@ -27,9 +27,11 @@ It is intentionally separate from [`autoren/ontology-intervention-auditor`](http
   source-pinned, execution-free context adapter for a possible prospective
   DiscoverPhysics-style study. It rejects the current time-blind submitted-law
   signature, requires `start_time` to reach the artifact and evaluator, binds
-  evaluator-held matched pairs by opaque commitment, and validates complete
-  ordered traces. It does not authorize a learner, simulator, candidate, or
-  private-world run.
+  evaluator-held matched pairs by nonce-hardened commitment, and validates
+  complete ordered traces. It does not authorize a learner, simulator,
+  candidate, or private-world run. The adapter was frozen at `567ea676` and
+  its credential-free qualification is recorded in
+  [`INTEGRATION_RESULT.json`](integrations/discoverphysics/INTEGRATION_RESULT.json).
 
 ## Local baseline validation
 

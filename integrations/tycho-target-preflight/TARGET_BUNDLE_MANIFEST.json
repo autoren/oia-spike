@@ -1,0 +1,469 @@
+{
+  "entries": [
+    {
+      "bytes": 824,
+      "mode": 420,
+      "path": "README.md",
+      "sha256": "250822e84ab766650fe202af9a56e5ea0d6509e31f6817a76428e92aff1681b2"
+    },
+    {
+      "bytes": 12204192,
+      "mode": 493,
+      "path": "bin/sandlock",
+      "sha256": "86f80d68afe0146287ee9b950ca0223945fe49e8722f6c80ffb89eb623e53b27"
+    },
+    {
+      "bytes": 10776,
+      "mode": 420,
+      "path": "licenses/SANDLOCK_LICENSE",
+      "sha256": "acd4c12f36e0da77644436747d76bf58d44f807869f3f79623086d03b7688702"
+    },
+    {
+      "bytes": 10792,
+      "mode": 420,
+      "path": "licenses/TYCHO_LICENSE",
+      "sha256": "b4ad3ca25da70e93f6e81d6d7e4ab7930e027cabb8db6c990764b64fdf26e939"
+    },
+    {
+      "bytes": 9299,
+      "mode": 493,
+      "path": "run_target_preflight.py",
+      "sha256": "17cd5e08622b8d89182e4e8b6cec8466e0744941dbe98f21730a864c51112a00"
+    },
+    {
+      "bytes": 403,
+      "mode": 493,
+      "path": "runtime/tycho/__init__.py",
+      "sha256": "dfc0bf1dbb11fa1b00ccb8fa425a75a204b484d12263ff603b30916e730c0180"
+    },
+    {
+      "bytes": 0,
+      "mode": 493,
+      "path": "runtime/tycho/agent/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 138313,
+      "mode": 493,
+      "path": "runtime/tycho/agent/agent.py",
+      "sha256": "38472ec280187305db3fd2325fb1197c28ac31b3e22c13d169b4aaa86daaf7dc"
+    },
+    {
+      "bytes": 28485,
+      "mode": 493,
+      "path": "runtime/tycho/agent/builder.py",
+      "sha256": "af955c06472f70a15a46bba0b5ffc122009079815c699227f8b08011743113a6"
+    },
+    {
+      "bytes": 573,
+      "mode": 493,
+      "path": "runtime/tycho/agent/colors.py",
+      "sha256": "d266c132404d72174eaa20ce018dd7939e33d92f480b797f7ca31ba7d85ed4a2"
+    },
+    {
+      "bytes": 10027,
+      "mode": 493,
+      "path": "runtime/tycho/agent/context_config.py",
+      "sha256": "817dd78e5f2fa15f2f931cd8ec616a93d76e6e2ea4016a947c9092839648e720"
+    },
+    {
+      "bytes": 8964,
+      "mode": 493,
+      "path": "runtime/tycho/agent/dispatcher.py",
+      "sha256": "c238f28b684d9cdc44a4294c0c0d37e1a82d3c048f6016e47f324ca1c65374d1"
+    },
+    {
+      "bytes": 4329,
+      "mode": 493,
+      "path": "runtime/tycho/agent/events.py",
+      "sha256": "0ce670f694fc2fe66de3b10da612a3215462e21dd32886c8a76697d19507f622"
+    },
+    {
+      "bytes": 8361,
+      "mode": 493,
+      "path": "runtime/tycho/agent/modes.py",
+      "sha256": "8ec171ff259e5733d2bb38f1d0dc15ca6dbc264183866bf62da5f77be45e7d95"
+    },
+    {
+      "bytes": 3874,
+      "mode": 493,
+      "path": "runtime/tycho/agent/vision.py",
+      "sha256": "046c8d6886841f0bf9c4ca027d5341a83576c517fbd9bb176af773766f5d92a5"
+    },
+    {
+      "bytes": 7517,
+      "mode": 493,
+      "path": "runtime/tycho/agent/wm_signal.py",
+      "sha256": "698c18ca3a9e90a9494a7b0d5ccfcecfb326519550a484fca3a107010178afcc"
+    },
+    {
+      "bytes": 524,
+      "mode": 493,
+      "path": "runtime/tycho/config/__init__.py",
+      "sha256": "e67683ac21cd50963251e818399ce7c00600a4b66159011e0c3498fd3c8f6055"
+    },
+    {
+      "bytes": 18749,
+      "mode": 493,
+      "path": "runtime/tycho/config/run_config.py",
+      "sha256": "5f373103167a401f414caebfebf825f08fb32ce72a90e9ad8a637ae84412fe62"
+    },
+    {
+      "bytes": 7638,
+      "mode": 493,
+      "path": "runtime/tycho/config/settings.py",
+      "sha256": "563d05b5dafd94bc7c1429f2a8efe1864ce851fa9570e08db697dc1c21e1a5a2"
+    },
+    {
+      "bytes": 0,
+      "mode": 493,
+      "path": "runtime/tycho/harness/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 1430,
+      "mode": 493,
+      "path": "runtime/tycho/harness/actions.py",
+      "sha256": "40f2eec701a7b4d32ff1e81af045d9afe4d45a17790b56ed0b8a75b0e81c93dc"
+    },
+    {
+      "bytes": 2283,
+      "mode": 493,
+      "path": "runtime/tycho/harness/agent.py",
+      "sha256": "232b20393480160016fca1ef95c4829b1b1781f58d00f8ec4dac78cfe8f04ed2"
+    },
+    {
+      "bytes": 18775,
+      "mode": 493,
+      "path": "runtime/tycho/harness/animation_evidence.py",
+      "sha256": "59ae67f91ae7ec7d3e2190986c1ececdfc414cb5b8588e77a5438d76e6c93189"
+    },
+    {
+      "bytes": 3903,
+      "mode": 493,
+      "path": "runtime/tycho/harness/diagnostics.py",
+      "sha256": "53c16aee7b47718e3576ffaafad7059d9b73b4241bf08ad44d812384822334d5"
+    },
+    {
+      "bytes": 34986,
+      "mode": 493,
+      "path": "runtime/tycho/harness/harness.py",
+      "sha256": "dcf3f7e33694876345c4e265bcae57d046e07f6fb21100fcdefe646c0192ed1e"
+    },
+    {
+      "bytes": 2652,
+      "mode": 493,
+      "path": "runtime/tycho/harness/inference_budget.py",
+      "sha256": "fc06e25311144b0883eea98a8c5603a136e1dcda7d5fa7a7b6c260de62e4e078"
+    },
+    {
+      "bytes": 20250,
+      "mode": 493,
+      "path": "runtime/tycho/harness/model_replay.py",
+      "sha256": "0d81337e3718ded5ef93f1fb1d9ba1a25c2e57fbaedbec83b44bde4f10f36a41"
+    },
+    {
+      "bytes": 15771,
+      "mode": 493,
+      "path": "runtime/tycho/harness/planner_follow_diagnostics.py",
+      "sha256": "2da680aa30f9c21d8d01c3388fa2416db22cdb395eb128fb2facfb331e74c8c1"
+    },
+    {
+      "bytes": 5627,
+      "mode": 493,
+      "path": "runtime/tycho/harness/record_slim.py",
+      "sha256": "8f71253b72c0fc2a4d6b6ca9ad90e489c684dc9f356fafccac015c1abe94b8d5"
+    },
+    {
+      "bytes": 17610,
+      "mode": 493,
+      "path": "runtime/tycho/harness/resume.py",
+      "sha256": "e686e9a2ed62cf9154cb5ce5e17129532115cb53c80d775017469da54235383a"
+    },
+    {
+      "bytes": 9190,
+      "mode": 493,
+      "path": "runtime/tycho/harness/run.py",
+      "sha256": "d8d743b9bfb2fac0a0ba342869370ba6bc1554b50c9ac0453f731df9fbc2d34d"
+    },
+    {
+      "bytes": 1225,
+      "mode": 493,
+      "path": "runtime/tycho/harness/run_hooks.py",
+      "sha256": "659aac45f7df6b1cb019919f5dd3e73dbf85625dd28ec6b9c7a28b99a0dbe124"
+    },
+    {
+      "bytes": 70565,
+      "mode": 493,
+      "path": "runtime/tycho/harness/run_parallel.py",
+      "sha256": "e56d4c13b5a31e17e1b347e1d846d52e7d02b35ab449461065445912cda7cac9"
+    },
+    {
+      "bytes": 13688,
+      "mode": 493,
+      "path": "runtime/tycho/harness/run_progress.py",
+      "sha256": "1d1f7da506f715e8edba4499f4ffc45651e1c614278b47a2926682eae58ba37c"
+    },
+    {
+      "bytes": 6409,
+      "mode": 493,
+      "path": "runtime/tycho/harness/run_spec.py",
+      "sha256": "bce172608246cad5ac7c7785c195978fb821bc461786eb4418e08f0a6a506b79"
+    },
+    {
+      "bytes": 22405,
+      "mode": 493,
+      "path": "runtime/tycho/harness/run_status.py",
+      "sha256": "7b11fe8815206d1b76726e637282073873651d3d32ba20216d6d0f29edd22148"
+    },
+    {
+      "bytes": 3046,
+      "mode": 493,
+      "path": "runtime/tycho/harness/scoring.py",
+      "sha256": "82f1b754ef368cee011babc5acaaee2433f1a3103e66f9881d9e74d6ec16cb14"
+    },
+    {
+      "bytes": 37762,
+      "mode": 493,
+      "path": "runtime/tycho/harness/submission_replay.py",
+      "sha256": "aa816343ed8ad49dc217a688733ff2384591e84223d897cc7f70f75e79cbfff9"
+    },
+    {
+      "bytes": 997,
+      "mode": 493,
+      "path": "runtime/tycho/prompts/__init__.py",
+      "sha256": "ab2d7c33aef5c0325d602bf63d0ca91567adfd227581be903e099533d450baa1"
+    },
+    {
+      "bytes": 7507,
+      "mode": 420,
+      "path": "runtime/tycho/prompts/actor.system.j2",
+      "sha256": "4d4483bf0b1ff1ce6008466a6d9cf213794e893d6f9977d2a27e049818b4970f"
+    },
+    {
+      "bytes": 2973,
+      "mode": 420,
+      "path": "runtime/tycho/prompts/actor.user.j2",
+      "sha256": "0ac11d91f447eb7409a398c5ef72f3dbeb17175dd7f2e1eddaab5483d6e996ef"
+    },
+    {
+      "bytes": 12054,
+      "mode": 420,
+      "path": "runtime/tycho/prompts/builder.system.j2",
+      "sha256": "50f0d1599fd657bceaefacce4c3f792befe37bd3287bbfa59bb6d4fcf6cf3e11"
+    },
+    {
+      "bytes": 938,
+      "mode": 420,
+      "path": "runtime/tycho/prompts/builder.user.j2",
+      "sha256": "d45e0c33b368bcb27beb956b77ab9e3b195cdd484852d4911a04e0018a01dcb4"
+    },
+    {
+      "bytes": 516,
+      "mode": 420,
+      "path": "runtime/tycho/prompts/partials/meta_reflect.j2",
+      "sha256": "b7a5fcacfa3ffb7e354d2180b74034b07bb05dc6e3c1862ab1edf4814668aece"
+    },
+    {
+      "bytes": 710,
+      "mode": 420,
+      "path": "runtime/tycho/prompts/partials/meta_reflect_builder.j2",
+      "sha256": "9b9fa508d2c2c79e01a1ffffe13d3ce36a42aea474471e54939deb627571f403"
+    },
+    {
+      "bytes": 602,
+      "mode": 420,
+      "path": "runtime/tycho/prompts/partials/wm_none.j2",
+      "sha256": "69bc10ec787be18d17360a69ad01a5738e4d915f55aa0a5bfdcbaa8e810e8f2d"
+    },
+    {
+      "bytes": 1277,
+      "mode": 420,
+      "path": "runtime/tycho/prompts/partials/wm_orch.j2",
+      "sha256": "8f3bb47fa81957224e7d25a9720237b8b1e681820f51d8861ac8a3a39e1a9656"
+    },
+    {
+      "bytes": 5304,
+      "mode": 420,
+      "path": "runtime/tycho/prompts/partials/wm_single.j2",
+      "sha256": "e8c8e6ee16a3af1b9921aae4c191128220bd789cf44b3a4f443f5a382e9857d2"
+    },
+    {
+      "bytes": 752,
+      "mode": 420,
+      "path": "runtime/tycho/prompts/partials/wm_trigger.j2",
+      "sha256": "a75c665466284735daa786f3be3bbb6984cb3529475a2f7886ca937d2cdb2c90"
+    },
+    {
+      "bytes": 2655,
+      "mode": 493,
+      "path": "runtime/tycho/prompts/render.py",
+      "sha256": "2400a49be40380b87a8b686d6047e70ace296391b026dd9b38a93c830ad654e7"
+    },
+    {
+      "bytes": 1411,
+      "mode": 420,
+      "path": "runtime/tycho/prompts/scribe.user.j2",
+      "sha256": "d11d990c0a3a1a435ea5fdd48d044655491b82be82401bcd0c2aa37ca202e44f"
+    },
+    {
+      "bytes": 0,
+      "mode": 493,
+      "path": "runtime/tycho/serving/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 16736,
+      "mode": 493,
+      "path": "runtime/tycho/serving/llm_client.py",
+      "sha256": "c23c49f7736e6721fc14d6009f7f0a427d221ba5157118b897326ca8bd708030"
+    },
+    {
+      "bytes": 3600,
+      "mode": 493,
+      "path": "runtime/tycho/serving/pricing.py",
+      "sha256": "77017eab3d5cae8ed76c935bb35d3d0d910c37c2fec47d3e2a2020e4dbdeeef0"
+    },
+    {
+      "bytes": 20744,
+      "mode": 493,
+      "path": "runtime/tycho/serving/public_backends.py",
+      "sha256": "08b7e4565c49c6ddfd36880d5670c02caecd1f65c5798109088401a1d258eb0e"
+    },
+    {
+      "bytes": 0,
+      "mode": 493,
+      "path": "runtime/tycho/viewer/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 37753,
+      "mode": 493,
+      "path": "runtime/tycho/viewer/serve.py",
+      "sha256": "34d71b9c1cd29aa1b30194673f44a465b420eb404221b1147787770944f04fa9"
+    },
+    {
+      "bytes": 103701,
+      "mode": 493,
+      "path": "runtime/tycho/viewer/viz.py",
+      "sha256": "3f9be1189a8bcce014da9620499a8a9eccb4d1b3b7a14232e2bb1bc0805dc00d"
+    },
+    {
+      "bytes": 387,
+      "mode": 493,
+      "path": "runtime/tycho/viewer/wm_predict.py",
+      "sha256": "67cb960363c5c60a9cb06e41a2fea2e1840d669edf7e45e47b06c8d00d24dd07"
+    },
+    {
+      "bytes": 0,
+      "mode": 493,
+      "path": "runtime/tycho/workspace/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 26194,
+      "mode": 493,
+      "path": "runtime/tycho/workspace/agent_tools.py",
+      "sha256": "08949ca81174280b9bb1fcbe45f3c85c8dc9f54f4cdd8d693262a9e25487ed40"
+    },
+    {
+      "bytes": 176,
+      "mode": 420,
+      "path": "runtime/tycho/workspace/container/Containerfile",
+      "sha256": "291722f5229642c9342402f05f44426a2706bbf5462634eec648adb3ebcad9a4"
+    },
+    {
+      "bytes": 785,
+      "mode": 493,
+      "path": "runtime/tycho/workspace/optional_channels.py",
+      "sha256": "70f60afc5c43fc38f951a8e0aba454a30e5d0eff04e63d59a7a4942564df98e6"
+    },
+    {
+      "bytes": 18676,
+      "mode": 493,
+      "path": "runtime/tycho/workspace/sandbox.py",
+      "sha256": "a1637855a550748fedbe6a27ff734b3c53e4965d6a0e7a06e1b0dd1ba7962ddc"
+    },
+    {
+      "bytes": 9100,
+      "mode": 420,
+      "path": "runtime/tycho/workspace/templates/seed_plan.py.tmpl",
+      "sha256": "9dd21236656a3ca2c4b050c4b795400dcec805736d0d6b1f7e97250b011fb26c"
+    },
+    {
+      "bytes": 14187,
+      "mode": 420,
+      "path": "runtime/tycho/workspace/templates/seed_verify.py.tmpl",
+      "sha256": "2be029caae341d0c6fcb3d656baf8a7a08208f0440555bed78acf2a754f27dd8"
+    },
+    {
+      "bytes": 4906,
+      "mode": 420,
+      "path": "runtime/tycho/workspace/templates/seed_world_model.py.tmpl",
+      "sha256": "d383f8efae32e0428e6401a97615e10f43f13c70d13d422d95a7fd6a5403236c"
+    },
+    {
+      "bytes": 39686,
+      "mode": 420,
+      "path": "runtime/tycho/workspace/templates/wm_feedback_probe.py.tmpl",
+      "sha256": "478cee5e02260ea8d5e702671248b7e2885a8a38ed1e3f014bfd1e994bcc0e0d"
+    },
+    {
+      "bytes": 8267,
+      "mode": 493,
+      "path": "runtime/tycho/workspace/version_store.py",
+      "sha256": "448c0806f7c1e30767a64a2aa05ed61b700e8c6bf0c687068c66dc9177831180"
+    },
+    {
+      "bytes": 1550,
+      "mode": 493,
+      "path": "runtime/tycho/workspace/wm_templates.py",
+      "sha256": "a8e7d217ec4672bc56b71e272acefbc6b2d1261018d163ee927f1f35f26e6420"
+    },
+    {
+      "bytes": 84700,
+      "mode": 493,
+      "path": "runtime/tycho/workspace/wmlib_template.py",
+      "sha256": "d73db57154a8fc113fcb492d5966f7e96f2b2991489a139a72691394ac7cf8bd"
+    },
+    {
+      "bytes": 38964,
+      "mode": 493,
+      "path": "runtime/tycho/workspace/workspace.py",
+      "sha256": "90a6a9d9060613c211708c2a99148acdb6754658e776d65556be670c43d796d3"
+    },
+    {
+      "bytes": 12881,
+      "mode": 420,
+      "path": "source/sandlock-python-sandbox-v0.1.patch",
+      "sha256": "a4f657e3e5cb0759bcab527d834eae169f5f704063109967d06acb5473aa78c8"
+    },
+    {
+      "bytes": 11424640,
+      "mode": 420,
+      "path": "source/sandlock-x86_64-v0.8.6.tar.gz",
+      "sha256": "86e89e5bdb2da748e683cda6908a95504ae6751f73d9dadf79cf0fc6843873fb"
+    },
+    {
+      "bytes": 387769,
+      "mode": 420,
+      "path": "source/tycho-f68912a.tar.gz",
+      "sha256": "c82c8dde62109ead0c67716a54b107bd060791ce5fd00d9123067e07d0ef6018"
+    },
+    {
+      "bytes": 5092,
+      "mode": 493,
+      "path": "verify_offline_bundle.py",
+      "sha256": "5550d9dcab22c1f45bd9152163ebd3d36acd5a0103d28e4174ea67f2d7c3bfca"
+    }
+  ],
+  "entries_sha256": "cac135dace6772d041b539a589baf65377a74893f2494654a0b91794f90bf1b4",
+  "gate_id": "tycho-target-preflight-r2a",
+  "sandlock_asset_sha256": "86e89e5bdb2da748e683cda6908a95504ae6751f73d9dadf79cf0fc6843873fb",
+  "sandlock_binary_sha256": "86f80d68afe0146287ee9b950ca0223945fe49e8722f6c80ffb89eb623e53b27",
+  "schema_version": "OIA-TYCHO-TARGET-PREFLIGHT-BUNDLE-0.1",
+  "source_oia_spike_commit": "4d8b11b60d23bfcc59d986fbe3bc4ce5c6ec204a",
+  "tycho_archive_sha256": "c82c8dde62109ead0c67716a54b107bd060791ce5fd00d9123067e07d0ef6018",
+  "tycho_commit": "f68912a764372ead0a610db2e1c011d41ce5197e",
+  "tycho_patch_sha256": "a4f657e3e5cb0759bcab527d834eae169f5f704063109967d06acb5473aa78c8"
+}

@@ -1,0 +1,41 @@
+You are revising one bounded executable world-model hypothesis after one opened intervention. This is not a request to identify a game or claim a true mechanism.
+
+Epistemic stance: {{STANCE_ID}}
+Stance instruction: {{STANCE_INSTRUCTION}}
+Opaque candidate id: {{CANDIDATE_ID}}
+
+Available action names: {{ACTION_NAMES}}
+Opened calibration action: ACTION6
+Opened normalized status after calibration: RUNNING
+
+The reset raster P0 is:
+{{P0_FRAME}}
+
+The common settled raster P1 after one ACTION6 is:
+{{P1_FRAME}}
+
+Five opened recordings agree exactly on P1. Their intermediate animation rasters form two content-only variants. The variants are qualitative evidence, not deterministic calibration targets, because the candidate interface exposes no action coordinates. Do not make exact reproduction of either transient sequence part of the model contract.
+
+Transient variant V1 (multiplicity 3), exact order:
+{{TRANSIENT_V1}}
+
+Transient variant V2 (multiplicity 2), exact order:
+{{TRANSIENT_V2}}
+
+Immutable diagnostic summary: P1 differs from P0 at exactly two pixels; a P0-persistence baseline misses 2 pixels with absolute error 10. The two earlier P0-only candidates missed 11 and 6 pixels, predicted 9 and 4 changed pixels, and had zero changed-pixel overlap with P1. Both correctly predicted RUNNING. This calibration outcome falsified those predictions; it was not a tolerance failure.
+
+Return exactly one unambiguous Python source representation in one of these forms: literal `<BEGIN_CANDIDATE_PY>` / `<END_CANDIDATE_PY>` delimiter lines with nothing outside; one `python` or unlabelled Markdown fence with nothing outside; or raw parseable Python with no prose. Do not return more than one representation.
+
+The source must:
+
+1. import only `numpy`, `math`, `copy`, or `typing`;
+2. define distinct string constants `RUNNING`, `LEVEL_COMPLETED`, and `GAME_OVER`;
+3. define `initial_state(initial_frame)`, returning a dictionary whose rendered frame exactly equals P0;
+4. define `step(state, action)`, accepting only {{ACTION_NAMES}} and returning `(new_state, status)`;
+5. make the first ACTION6 from a fresh initial state render exactly P1 with status RUNNING;
+6. support both actions for at least three additional sequential steps from that internally reached P1 state;
+7. define `render(state)`, returning a fresh 64x64 two-dimensional integer NumPy array with values 0 through 15;
+8. be deterministic, concise, and self-contained, with no file, network, process, environment, clock, randomness, dynamic import, reflection, printing, or user input; and
+9. implement the stance as a coherent action-conditioned extrapolation. Calibration to P1 is required but is not predictive success.
+
+Prefer a compact transformation of the supplied initial frame over embedding a full 64x64 future raster. Keep later motion and drawing within the image boundary.

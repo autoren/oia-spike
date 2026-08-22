@@ -1,0 +1,83 @@
+{
+  "audit_id": "OIA-1-TRACK-A-005b",
+  "schema_version": 1,
+  "freeze_date": "2026-08-22",
+  "status_at_freeze": "frozen_before_revision_generation_inference_or_candidate_execution",
+  "candidate_source": {
+    "package_not_yet_generated": true,
+    "preparation_requires_result_status": "revision_generation_feasible",
+    "preparation_requires_minimum_static_candidates": 2,
+    "package_sha256_must_be_supplied_and_match_result_and_bytes": true,
+    "candidate_source_open_before_this_freeze": false
+  },
+  "calibration": {
+    "p0_frame_sha256": "1e70d7b4ccd5c1ef1e03427d90f7295cdf461583efa978f285b55755e7a915a6",
+    "action": "ACTION6",
+    "p1_settled_frame_sha256": "80a2fd9a8813b7ee5cd6d63a3199ffc247119b39ab60b90709696b47ec58c140",
+    "required_status": "RUNNING",
+    "exact_p0_and_p1_required": true,
+    "candidate_must_reach_p1_internally": true,
+    "calibration_counts_as_prediction_success": false,
+    "minimum_calibrated_candidates": 2
+  },
+  "action_language": {
+    "actions": ["ACTION6", "ACTION7"],
+    "candidate_independent": true,
+    "starting_state": "Each word begins in a fresh process at P0, executes frozen calibration ACTION6, verifies exact P1/RUNNING, then begins the scored word from the candidate's internal P1 state.",
+    "horizon_after_p1": 3,
+    "ordering": "Lexicographic Cartesian order over ACTION6 then ACTION7 at lengths 1, 2, and 3.",
+    "word_count": 14
+  },
+  "screening": {
+    "hardened_static": "Reapply the AST contract and reject dangerous names and NumPy/file serialization attributes without importing source.",
+    "calibration": "Run empty post-P1 word once under PYTHONHASHSEED=0 for exact P0 replay and exact ACTION6 P1/RUNNING calibration.",
+    "provisional": "Run all 14 post-P1 words once under PYTHONHASHSEED=0; retain the first candidate in frozen id order for each complete trace signature.",
+    "full_determinism": "For every provisional unique candidate and word, run two repetitions under PYTHONHASHSEED 0, 1, 5, and 10; all projected traces must be byte-identical and successful.",
+    "success": "At least two exact-calibration, deterministic, behaviorally non-equivalent revised candidates; two is sufficient."
+  },
+  "runtime_isolation": {
+    "image_provenance": "audits/track-a-005b/PRE_REVISION_EXECUTION_RUNTIME.json",
+    "container": "Unprivileged UID/GID 65532, read-only root, no network, all capabilities dropped, no-new-privileges, bounded CPU/memory/PIDs/timeout, isolated noexec tmpfs.",
+    "mounts": "Candidate and calibration mounts are read-only; calibration contains P0 and opened settled P1 only.",
+    "candidate_runtime_calls": "No ARC, model, OIA, browser, API, hosted service, archive, or step-2 access from candidate processes."
+  },
+  "adapter_and_oia": {
+    "accepted_engine": "OIA-1 v0.2.1",
+    "adapter": "Complete deterministic bounded prefix-tree Mealy compilation over exact post-P1 traces.",
+    "candidate_specific_logic_forbidden": true,
+    "observation_fields": ["final_frame_sha256", "status"],
+    "post_horizon": "Candidate-independent OBS_BOUNDARY_EXHAUSTED sink.",
+    "caps": {
+      "max_beliefs": 100000,
+      "max_partitions": 100000,
+      "max_task_loss_frontier": 50000,
+      "value_depth": 3
+    },
+    "cross_process_pythonhashseed": [0, 1, 5, 10],
+    "require_byte_identical_reports": true,
+    "require_serialized_policy_verification": true,
+    "require_solved_exact_enumeration_complete_optimality_certified_minimum": true,
+    "selected_next_action": "Root action of the verified exact minimum-worst-case adaptive policy."
+  },
+  "future_step2_baseline": {
+    "name": "P1 persistence",
+    "prediction": "Exact settled P1 frame and RUNNING status after the selected next action.",
+    "tolerance_based_admission": false,
+    "step2_evaluation_during_this_gate": false
+  },
+  "epistemic_ordering": {
+    "generation_and_execution_freezes_merged_before_model_inference_required": true,
+    "generation_result_and_package_merged_before_source_open_required": true,
+    "admission_oia_result_and_selected_action_merged_before_step2_access_required": true,
+    "step_2_or_later_payloads_read": 0
+  },
+  "allowed_verdicts": [
+    "revision_generation_or_calibration_blocker",
+    "no_revised_behavioral_divergence",
+    "nondeterministic_or_runtime_blocker",
+    "revision_frontier_feasible",
+    "oia_blocker",
+    "revised_separator_selected_pre_step2"
+  ],
+  "claim_boundary": "Opened Track A intervention-triggered revision, exact calibration, bounded behavior admission, and OIA next-action selection only. Calibration is not prediction; no step-2 outcome, real ARC action, decision-value, private/sealed transfer, or Track B claim."
+}

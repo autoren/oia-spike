@@ -84,6 +84,15 @@ jobs:
       - name: Verify Track A 005a prediction-error diagnostic when present
         run: python scripts/verify_track_a_005a_prediction_diagnostic.py
 
+      - name: Verify Track A 005b intervention-revision freeze
+        run: python scripts/verify_track_a_005b_revision_freeze.py
+
+      - name: Verify Track A 005b revision-generation result when present
+        run: python scripts/verify_track_a_005b_generation_result.py
+
+      - name: Verify Track A 005b behavior/OIA outcome when present
+        run: python scripts/verify_track_a_005b_behavior_outcome.py
+
       - name: Verify accepted v0.2.1 baseline bytes and provenance
         working-directory: baseline/oia-v0.2.1
         run: |

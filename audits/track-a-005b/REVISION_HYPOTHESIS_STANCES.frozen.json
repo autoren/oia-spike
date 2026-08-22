@@ -1,0 +1,47 @@
+{
+  "audit_id": "OIA-1-TRACK-A-005b",
+  "schema_version": 1,
+  "stances": [
+    {
+      "candidate_id": "R0001",
+      "stance_id": "persistence_boundary_normalization",
+      "instruction": "Model the observed two-pixel settled delta as persistence plus a deterministic boundary-normalization rule. Keep later changes minimal but action-conditioned."
+    },
+    {
+      "candidate_id": "R0002",
+      "stance_id": "transient_impact_restoration",
+      "instruction": "Treat the varying intermediate rasters as transient target or impact animation and the common settled raster as restoration plus a small persistent state change."
+    },
+    {
+      "candidate_id": "R0003",
+      "stance_id": "diagonal_projectile_ray",
+      "instruction": "Interpret the visible diagonal structure as a projectile or ray and implement a concise action-conditioned continuation calibrated to the opened transition."
+    },
+    {
+      "candidate_id": "R0004",
+      "stance_id": "viewport_floor_boundary",
+      "instruction": "Interpret the settled delta as a camera, floor, or viewport-boundary update and extrapolate that mechanism without moving unrelated structures."
+    },
+    {
+      "candidate_id": "R0005",
+      "stance_id": "discrete_target_state",
+      "instruction": "Use a small discrete target-state machine whose first ACTION6 transition exactly calibrates and whose later ACTION6/ACTION7 paths remain distinct."
+    },
+    {
+      "candidate_id": "R0006",
+      "stance_id": "wraparound_clipped_motion",
+      "instruction": "Use wraparound or clipped-object motion at the image boundary as the explanatory mechanism, while preserving the exact opened calibration transition."
+    },
+    {
+      "candidate_id": "R0007",
+      "stance_id": "action_latent_minimal_effect",
+      "instruction": "Model a mostly latent action-conditioned state with minimal visible effects. Calibrate exactly, then make sparse but nontrivial later predictions."
+    },
+    {
+      "candidate_id": "R0008",
+      "stance_id": "skeptical_minimal_countermodel",
+      "instruction": "Construct the most conservative deterministic countermodel that exactly calibrates, preserves persistence when defensible, and still distinguishes later actions."
+    }
+  ],
+  "status": "frozen_before_revision_generation_inference"
+}

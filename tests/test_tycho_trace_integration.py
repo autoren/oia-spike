@@ -20,6 +20,7 @@ SPEC.loader.exec_module(integration)
 class TychoTraceIntegrationTests(unittest.TestCase):
     def test_manifest_pins_artifacts_and_preserves_boundaries(self) -> None:
         payload = integration.validate_manifest()
+        result = integration.validate_result()
         self.assertEqual(payload["status"], "logging_integration_frozen_unexecuted")
         self.assertEqual(payload["claim_boundary"]["project_reopening_effect"], "none")
         self.assertFalse(
@@ -28,6 +29,8 @@ class TychoTraceIntegrationTests(unittest.TestCase):
         self.assertTrue(
             all(value == 0 for value in payload["execution_boundary"].values())
         )
+        self.assertEqual(result["verdict"], "credential_free_logging_integration_pass")
+        self.assertEqual(result["project_reopening_effect"], "none")
 
     def test_artifact_tampering_fails_closed(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:

@@ -10,6 +10,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 MANIFEST = ROOT / "integrations/tycho/INTEGRATION_MANIFEST.json"
+RESULT = ROOT / "integrations/tycho/INTEGRATION_RESULT.json"
 
 
 def sha256(path: Path) -> str:
@@ -51,13 +52,45 @@ def validate_manifest(path: Path = MANIFEST, root: Path = ROOT) -> dict:
     return payload
 
 
+def validate_result(path: Path = RESULT) -> dict:
+    payload = json.loads(path.read_text(encoding="utf-8"))
+    if payload.get("schema_version") != "OIA-TYCHO-TRACE-INTEGRATION-RESULT-0.1":
+        raise ValueError("Tycho trace-integration result schema changed")
+    if payload.get("protocol_freeze_commit") != "20f40caacad89b5518f8b92a59cb083ce5841b2e":
+        raise ValueError("Tycho integration prospective ordering changed")
+    if payload.get("patch", {}).get("sha256") != (
+        "804db588cce430242035c1d26e4f8f19bc214a3cacdfae277153dbeac5cdc27c"
+    ):
+        raise ValueError("Tycho integration result patch changed")
+    attempts = payload.get("attempts") or []
+    if (
+        len(attempts) != 2
+        or attempts[0].get("tycho_tests_executed") != 0
+        or attempts[0].get("boundary_crossed") is not False
+        or attempts[1].get("tycho_tests_passed") != 164
+        or attempts[1].get("tycho_tests_failed") != 0
+        or attempts[1].get("exit_code") != 0
+    ):
+        raise ValueError("Tycho integration attempt accounting changed")
+    for field, value in (payload.get("execution_accounting") or {}).items():
+        if value != 0:
+            raise ValueError(f"Tycho integration result crossed boundary: {field}")
+    if payload.get("verdict") != "credential_free_logging_integration_pass":
+        raise ValueError("Tycho integration result verdict changed")
+    if payload.get("project_reopening_effect") != "none":
+        raise ValueError("Tycho integration result reopened project work")
+    return payload
+
+
 def main() -> None:
     payload = validate_manifest()
+    result = validate_result()
     print(
         json.dumps(
             {
                 "status": "tycho_trace_integration_verified",
                 "artifacts": len(payload["artifacts"]),
+                "qualification_verdict": result["verdict"],
                 "project_reopening_effect": "none",
             },
             sort_keys=True,

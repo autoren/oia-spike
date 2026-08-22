@@ -64,12 +64,20 @@ Legacy records without the new fields, partial records, malformed grids,
 result frames absent from the returned sequence, non-schema-2 workspaces, and
 accidental output overwrites fail closed.
 
-## Validation performed
+## Qualification result
 
 The patch was independently applied to the exact source pin in a disposable
-checkout. Its focused upstream test passed. The complete credential-free Tycho
-suite and repository integration suite are required before this integration is
-accepted.
+checkout after the integration was frozen in commit
+`20f40caacad89b5518f8b92a59cb083ce5841b2e`. The patched source passed all 164
+upstream Tycho tests. The standalone repository passed 72 utility tests, 23
+baseline tests, provenance verification, randomized and task-loss validation,
+the deterministic scaling probe, and seven-value hash-seed reproducibility.
+
+The first post-freeze command used the Tycho interpreter from the wrong working
+directory and stopped during collection of unrelated OIA/local-work files. No
+Tycho test, model, or environment executed in that attempt. The corrected
+repository-scoped command passed. Exact attempt accounting is in
+`INTEGRATION_RESULT.json`.
 
 This bridge can make a future artifact structurally complete. It cannot turn a
 known public run into a prospective discovery result or authenticate evaluator

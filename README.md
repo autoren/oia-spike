@@ -40,9 +40,10 @@ Downloaded archives, extracted candidate trees, virtual environments, and run ou
 
 The corrected Track A 003b Actions artifact can be verified and materialized read-only with `scripts/import_track_a_003b.py`; see [`audits/track-a-003b/README.md`](audits/track-a-003b/README.md). The importer does not execute candidates or ARC.
 
-Track A 004a compiles the already-known deterministic 003b traces into the
-accepted finite OIA interface. Its pre-run package must be merged before the OIA
-runner is used; see [`audits/track-a-004a/README.md`](audits/track-a-004a/README.md).
+Track A 004a compiled the already-known deterministic 003b traces into the
+accepted finite OIA interface and passed its retrospective integration gate:
+unchanged OIA-1 v0.2.1 certified `ACTION2` as an exact minimum one-step separator.
+See [`audits/track-a-004a/README.md`](audits/track-a-004a/README.md).
 
 ## Claim boundary
 

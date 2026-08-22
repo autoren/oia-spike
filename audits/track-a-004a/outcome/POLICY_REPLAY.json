@@ -1,0 +1,38 @@
+{
+  "all_paths_valid": true,
+  "audit_id": "OIA-1-TRACK-A-004a",
+  "baseline": "direct lookup in frozen Track A 003b source traces",
+  "maximum_steps": 1,
+  "rows": [
+    {
+      "leaf_candidates": [
+        "C0001"
+      ],
+      "machine_id": "C0001",
+      "result": "pass",
+      "steps": 1,
+      "trace": [
+        {
+          "action": "ACTION2",
+          "output": "OBS_b0a7d590fdc3bb4bc07549058152473db6fd3322ebcdc44a0bef26ed99029393"
+        }
+      ]
+    },
+    {
+      "leaf_candidates": [
+        "C0002"
+      ],
+      "machine_id": "C0002",
+      "result": "pass",
+      "steps": 1,
+      "trace": [
+        {
+          "action": "ACTION2",
+          "output": "OBS_308f0be3be87bed0635ac353aab0e4dc18309915d886d6efc5a2ed725079d929"
+        }
+      ]
+    }
+  ],
+  "selection_role": "none; retrospective policy verification only",
+  "uses_compiled_machine_transitions": false
+}

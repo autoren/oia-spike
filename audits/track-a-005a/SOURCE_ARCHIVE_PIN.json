@@ -1,0 +1,25 @@
+{
+  "access": "open",
+  "audit_id": "OIA-1-TRACK-A-005a",
+  "file": {
+    "content_url": "https://zenodo.org/api/records/21412274/files/article2_main_runs_additional.tar.gz/content",
+    "filename": "article2_main_runs_additional.tar.gz",
+    "md5": "4dd279f099609392c30cffa468801316",
+    "sha256": "c3d85c4a75170de08837b9fc63cb7a7dde389b1205ca71b9f0fed16a9c09cf93",
+    "size_bytes": 797835543
+  },
+  "license": "CC-BY-4.0",
+  "publication_date": "2026-07-17",
+  "record_api_url": "https://zenodo.org/api/records/21412274",
+  "record_doi": "10.5281/zenodo.21412274",
+  "record_id": 21412274,
+  "record_title": "Supporting Data and Full Run Artifacts for \"Do Coding Agents Need Executable World Models, Simplification, and Verification to Solve ARC-AGI-3?\"",
+  "retrieval_validation": {
+    "date": "2026-08-21",
+    "downloaded_size_bytes": 797835543,
+    "observed_md5": "4dd279f099609392c30cffa468801316",
+    "observed_sha256": "c3d85c4a75170de08837b9fc63cb7a7dde389b1205ca71b9f0fed16a9c09cf93",
+    "result": "pass"
+  },
+  "schema_version": 1
+}

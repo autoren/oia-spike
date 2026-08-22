@@ -44,6 +44,12 @@ It is intentionally separate from [`autoren/ontology-intervention-auditor`](http
   model-selected `ACTION1`. Its correctness and progress are unestablished.
   This integration does not authorize a private game, submission,
   executable-world-model generation, or behavioral claim.
+- [`integrations/tycho-kaggle-package/`](integrations/tycho-kaggle-package/)
+  freezes a credential-free evaluator-package R0. It tests extraction of the
+  exact Linux/CUDA `llama.cpp` OCI runtime into a normal read-only bundle. It
+  authorizes no model load, ARC action, Kaggle access, or submission and must
+  remain package-blocked until a Docker-free isolated replacement for Tycho's
+  `run_python` sandbox and target-GPU throughput evidence exist.
 
 ## Local baseline validation
 

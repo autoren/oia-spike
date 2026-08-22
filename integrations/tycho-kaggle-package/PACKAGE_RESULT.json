@@ -1,0 +1,87 @@
+{
+  "schema_version": "OIA-TYCHO-KAGGLE-PACKAGE-R0-RESULT-0.1",
+  "date": "2026-08-22",
+  "protocol_commit": "360174465d8d081e4a3f6b409411afee3c9d2780",
+  "execution": {
+    "runtime_bundle_builds": 1,
+    "clean_container_portability_tests": 1,
+    "source_oci_manifest_digest": "sha256:faebc1dd2e96e4ab9708e786f16477162ef8f3330d4a4838c371220409870fed",
+    "source_oci_config_digest": "sha256:ab11a04881d546069880d4b0a1c204e7146ae7bdcb9bd0340ab3ae498926bfc6",
+    "clean_test_image_manifest_digest": "sha256:1e0a86e57d247923571b75e0aaf48a1449cf8c543d51fb3e07a4a7d7bfa79316",
+    "network_during_test_container": "none",
+    "test_root_filesystem": "read_only",
+    "bundle_mount": "read_only",
+    "version_output_contains": "version: 10236 (1464c62d8)",
+    "unresolved_shared_libraries": [
+      "libcuda.so.1"
+    ],
+    "user_space_cuda_libraries_resolved_from_bundle": true,
+    "host_driver_injection_required": true
+  },
+  "runtime_bundle": {
+    "file_count": 38,
+    "symlink_count": 15,
+    "total_file_bytes": 772679288,
+    "entries_sha256": "a6048e50fc12d4a7ef379b4f03928076ce6a866f4e38eda8a3ec7a8e932eb4e6",
+    "tracked_manifest_sha256": "61e3ac6d738267ecd864ee4100ffa96e43f1da0d0ba3c81b162801e1f01cd4ee",
+    "local_sha256s_file_sha256": "f20b44de230f13d9162072f19492843fc4620b028ab56280d8d4b1cd567f8910",
+    "tracked_payload_bytes": 0,
+    "local_untracked_output": "local-work/tycho-kaggle-runtime-b10236"
+  },
+  "pre_freeze_exploration_excluded": {
+    "runtime_pulls": 1,
+    "manual_bundle_exports": 1,
+    "clean_container_attempts": 2,
+    "used_as_qualification_evidence": false
+  },
+  "zero_execution_boundaries": {
+    "source_repository_clones": 0,
+    "model_copies": 0,
+    "model_loads": 0,
+    "model_inference_calls": 0,
+    "gpu_executions": 0,
+    "arc_environment_starts": 0,
+    "arc_actions": 0,
+    "registered_credentials": 0,
+    "network_model_or_api_calls": 0,
+    "kaggle_uploads": 0,
+    "kaggle_phase_a_runs": 0,
+    "competition_submissions": 0,
+    "hidden_games": 0,
+    "oia_runs": 0
+  },
+  "remaining_blockers": [
+    "No target RTX PRO 6000 Blackwell model-load or inference measurement exists.",
+    "Tycho's isolated run_python implementation requires Docker or Finch, neither of which is supplied by the official notebook path.",
+    "Tycho host-mode Python is deliberately rejected because it could read evaluator or unrelated attached-input state.",
+    "No Docker-free isolated Python sandbox has been integrated and verified.",
+    "The MyAgent lifecycle/server manager is not package-qualified.",
+    "Peak memory and 110-game throughput remain unmeasured."
+  ],
+  "verdict": "runtime_bundle_qualified_adapter_sandbox_and_throughput_unqualified",
+  "next_gate": {
+    "name": "docker_free_isolated_python_runner_feasibility",
+    "preferred_route": "Evaluate a filesystem-confined WebAssembly Python runtime with only the Tycho workspace preopened; reject ordinary host Python.",
+    "model_loads": 0,
+    "model_calls": 0,
+    "arc_actions": 0,
+    "kaggle_access": 0,
+    "submissions": 0
+  },
+  "claim_boundary": {
+    "runtime_bundle_reproducible": true,
+    "docker_free_server_process_portability_at_version_and_linkage_level": true,
+    "target_gpu_compatible": false,
+    "model_load_or_inference": false,
+    "safe_run_python": false,
+    "adapter_qualified": false,
+    "throughput_qualified": false,
+    "package_ready": false,
+    "arc_behavioral_claim": false,
+    "ontology_or_mechanism_discovery": false,
+    "competition_submission": false,
+    "project_reopening": false,
+    "track_b": false
+  },
+  "status": "completed"
+}

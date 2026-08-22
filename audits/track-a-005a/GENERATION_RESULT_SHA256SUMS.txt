@@ -1,0 +1,2 @@
+9ae478a842b942bc80f3ff62063e4780d8097018384971d83db12fd6d87b167a  audits/track-a-005a/candidate-generation/CANDIDATE_PACKAGE.zip
+f2fcb08fbd2c163473bfab7905f40f6989a8ba9a91dde9011dbf610b3934b937  audits/track-a-005a/candidate-generation/GENERATION_RESULT.json

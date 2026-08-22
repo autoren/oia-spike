@@ -51,3 +51,18 @@ It pins the complete local Qwen3.8-27B 4-bit snapshot, MLX runtime, P0-only prom
 eight distinct epistemic stances, greedy decoding, static acceptance contract,
 and zero-repair rule. Candidate source is packaged opaquely and is not imported
 or executed during generation.
+
+## Candidate-generation result
+
+The single frozen offline pass made eight local-model calls and recorded 8,158
+output tokens. `C0006` (`discrete_mode_machine`) and `C0008`
+(`skeptical_countermodel`) passed static admission; the other six responses were
+rejected for failing the exact delimiter contract. No repair call was made.
+
+The two accepted sources are committed only inside the deterministic opaque
+`candidate-generation/CANDIDATE_PACKAGE.zip`. The package passed path, ordering,
+timestamp, mode, identity, byte-hash, and static-AST checks. It has not been
+imported or behaviorally executed. Thus the result establishes fresh P0-only
+candidate-generation feasibility, not a behaviorally non-equivalent frontier.
+An isolated runner and behavioral-admission protocol must be frozen and merged
+before opening or executing either candidate.

@@ -31,6 +31,21 @@ class TychoLocalQwenQualificationTests(unittest.TestCase):
         )
         self.assertEqual(payload["claim_boundary"]["project_reopening_effect"], "none")
 
+    def test_maintenance_changes_only_the_local_dollar_guard(self) -> None:
+        payload = verifier.validate_maintenance()
+        self.assertEqual(payload["single_correction"]["new_value"], "0")
+        self.assertEqual(
+            payload["unchanged_boundaries"]["public_game_model_calls_maximum"], 2
+        )
+        self.assertTrue(
+            all(
+                attempt["model_calls"] == 0
+                and attempt["resets"] == 0
+                and attempt["committed_actions"] == 0
+                for attempt in payload["premaintenance_attempts"]
+            )
+        )
+
     def test_protocol_fails_closed_if_model_bytes_change(self) -> None:
         payload = json.loads(verifier.PROTOCOL.read_text(encoding="utf-8"))
         payload["model"]["model_file"]["sha256"] = "0" * 64
@@ -48,6 +63,15 @@ class TychoLocalQwenQualificationTests(unittest.TestCase):
             path.write_text(json.dumps(payload), encoding="utf-8")
             with self.assertRaisesRegex(ValueError, "execution boundary changed"):
                 verifier.validate_protocol(path)
+
+    def test_maintenance_fails_closed_if_behavior_preceded_correction(self) -> None:
+        payload = json.loads(verifier.MAINTENANCE.read_text(encoding="utf-8"))
+        payload["premaintenance_attempts"][1]["model_calls"] = 1
+        with tempfile.TemporaryDirectory() as temporary:
+            path = Path(temporary) / "tampered.json"
+            path.write_text(json.dumps(payload), encoding="utf-8")
+            with self.assertRaisesRegex(ValueError, "followed qualification behavior"):
+                verifier.validate_maintenance(path)
 
 
 if __name__ == "__main__":

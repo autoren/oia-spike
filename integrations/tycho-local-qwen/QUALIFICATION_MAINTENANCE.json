@@ -1,0 +1,55 @@
+{
+  "schema_version": "OIA-TYCHO-LOCAL-QWEN-QUALIFICATION-MAINTENANCE-0.1",
+  "date": "2026-08-22",
+  "parent_protocol": "integrations/tycho-local-qwen/QUALIFICATION_PROTOCOL.json",
+  "parent_freeze_commit": "ecedcc0f527181d8462986dae6121b9a7d3c0d19",
+  "premaintenance_attempts": [
+    {
+      "attempt": 1,
+      "tracked_source_clean": true,
+      "harness_source_label": "f68912a-dirty-6702e98bd960",
+      "reason_for_dirty_label": "An untracked exploratory transport helper remained in the disposable checkout.",
+      "model_calls": 0,
+      "resets": 0,
+      "committed_actions": 0,
+      "error": "ValueError"
+    },
+    {
+      "attempt": 2,
+      "tracked_source_clean": true,
+      "harness_source_label": "f68912a",
+      "model_calls": 0,
+      "resets": 0,
+      "committed_actions": 0,
+      "error": "A dollar-denominated inference budget requires a positive frozen public price for LLM_MODEL='qwen3.6-27b-oia'; no such rate is registered."
+    }
+  ],
+  "diagnosis": {
+    "cause": "configs/smoke/minimal.yaml sets a 0.50 dollar cap designed for paid providers; Tycho correctly refuses to apply an unregistered dollar price to a local model.",
+    "why_the_condition_is_too_strict": "The local endpoint has zero marginal API charge and the independently frozen two-call maximum already supplies the relevant resource guard.",
+    "qualification_behavior_observed_before_correction": false
+  },
+  "single_correction": {
+    "environment_variable": "TYCHO_MAX_INFERENCE_COST_PER_GAME",
+    "old_value": "0.50",
+    "new_value": "0",
+    "meaning": "Disable only dollar accounting for the local backend; retain the exact two-call and two-tool-step ceilings."
+  },
+  "unchanged_boundaries": {
+    "transport_calls": 1,
+    "public_game_model_calls_maximum": 2,
+    "public_game_tool_steps_maximum": 2,
+    "public_game_committed_actions_maximum": 2,
+    "public_game_initial_resets_maximum": 1,
+    "game_base_id": "tr87",
+    "game_seed": 0,
+    "registered_arc_credentials": 0,
+    "paid_model_or_api_calls": 0,
+    "semi_private_or_private_games": 0,
+    "competition_submissions": 0,
+    "world_models_generated": 0,
+    "oia_runs": 0,
+    "project_reopening_effect": "none"
+  },
+  "status": "maintenance_frozen_unexecuted"
+}

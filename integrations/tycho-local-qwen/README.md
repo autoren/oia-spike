@@ -29,6 +29,13 @@ would not show that Qwen can construct or revise a useful world model, solve a
 game, transfer to private games, or improve decisions. Any constructive public
 smoke or externally scored evaluation needs its own later freeze.
 
+The first two harness starts stopped before any model call, reset, or action.
+The clean attempt established that the upstream `$0.50` paid-provider cost
+guard refuses an unpriced local model. This is not a model or environment
+failure. [`QUALIFICATION_MAINTENANCE.json`](QUALIFICATION_MAINTENANCE.json)
+freezes the sole correction before retry: set the dollar cap to zero while
+retaining the exact two-call and two-tool-step ceilings.
+
 Verify the frozen protocol with:
 
 ```bash

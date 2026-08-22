@@ -11,6 +11,7 @@ from typing import Any
 
 ROOT = Path(__file__).resolve().parents[1]
 PROTOCOL = ROOT / "integrations/tycho-local-qwen/QUALIFICATION_PROTOCOL.json"
+MAINTENANCE = ROOT / "integrations/tycho-local-qwen/QUALIFICATION_MAINTENANCE.json"
 
 
 def load_object(path: Path) -> dict[str, Any]:
@@ -92,16 +93,77 @@ def validate_protocol(path: Path = PROTOCOL) -> dict[str, Any]:
     return payload
 
 
+def validate_maintenance(path: Path = MAINTENANCE) -> dict[str, Any]:
+    payload = load_object(path)
+    if payload.get("schema_version") != (
+        "OIA-TYCHO-LOCAL-QWEN-QUALIFICATION-MAINTENANCE-0.1"
+    ):
+        raise ValueError("local-Qwen maintenance schema changed")
+    if (
+        payload.get("parent_protocol")
+        != "integrations/tycho-local-qwen/QUALIFICATION_PROTOCOL.json"
+        or payload.get("parent_freeze_commit")
+        != "ecedcc0f527181d8462986dae6121b9a7d3c0d19"
+    ):
+        raise ValueError("local-Qwen maintenance parent changed")
+    attempts = payload.get("premaintenance_attempts") or []
+    if len(attempts) != 2:
+        raise ValueError("premaintenance attempt accounting changed")
+    for attempt in attempts:
+        if (
+            attempt.get("tracked_source_clean") is not True
+            or attempt.get("model_calls") != 0
+            or attempt.get("resets") != 0
+            or attempt.get("committed_actions") != 0
+        ):
+            raise ValueError("maintenance followed qualification behavior")
+    correction = payload.get("single_correction") or {}
+    if correction != {
+        "environment_variable": "TYCHO_MAX_INFERENCE_COST_PER_GAME",
+        "old_value": "0.50",
+        "new_value": "0",
+        "meaning": (
+            "Disable only dollar accounting for the local backend; retain the "
+            "exact two-call and two-tool-step ceilings."
+        ),
+    }:
+        raise ValueError("local-Qwen maintenance correction changed")
+    boundaries = payload.get("unchanged_boundaries") or {}
+    expected = {
+        "transport_calls": 1,
+        "public_game_model_calls_maximum": 2,
+        "public_game_tool_steps_maximum": 2,
+        "public_game_committed_actions_maximum": 2,
+        "public_game_initial_resets_maximum": 1,
+        "game_base_id": "tr87",
+        "game_seed": 0,
+        "registered_arc_credentials": 0,
+        "paid_model_or_api_calls": 0,
+        "semi_private_or_private_games": 0,
+        "competition_submissions": 0,
+        "world_models_generated": 0,
+        "oia_runs": 0,
+        "project_reopening_effect": "none",
+    }
+    if boundaries != expected:
+        raise ValueError("local-Qwen maintenance boundary changed")
+    if payload.get("status") != "maintenance_frozen_unexecuted":
+        raise ValueError("local-Qwen maintenance status changed")
+    return payload
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--protocol", type=Path, default=PROTOCOL)
     args = parser.parse_args()
     payload = validate_protocol(args.protocol)
+    maintenance = validate_maintenance()
     print(
         json.dumps(
             {
                 "game": payload["authorized_execution"]["game_base_id"],
                 "project_reopening_effect": "none",
+                "maintenance_status": maintenance["status"],
                 "status": "tycho_local_qwen_qualification_protocol_verified",
             },
             sort_keys=True,

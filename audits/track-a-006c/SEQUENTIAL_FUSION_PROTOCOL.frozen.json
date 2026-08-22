@@ -1,0 +1,89 @@
+{
+  "audit_id": "OIA-1-TRACK-A-006c",
+  "baseline": {
+    "implementation": "OIA-1 v0.2.1 plus frozen Track A 006b runner",
+    "parent_runner": "scripts/run_track_a_006b_reject_aware.py",
+    "parent_runner_sha256": "4e6d49ff091fc38c337d45800e5ede9e4576d39b3c1c0e7ac98a1a1fefbe1860"
+  },
+  "benchmark": {
+    "action_count": 3,
+    "base_candidate_count": 4,
+    "case_count": 64,
+    "master_seed": "oia-track-a-006c-heldout-v1",
+    "max_beliefs": 100000,
+    "maximum_closed_depth": 6,
+    "maximum_generation_attempts_per_stage": 2000,
+    "maximum_reject_aware_depth": 8,
+    "minimum_closed_depth": 2,
+    "output_count": 3,
+    "sentinel_count": 2,
+    "state_count": 3
+  },
+  "claim_boundary": "Controlled deterministic Track A diagnostic of a frozen resettable sequential fusion. No external validation, learned ontology formation, necessary revision, semantic novelty, sealed transfer, population inference, comparative superiority, real ARC intervention, or Track B claim.",
+  "development": {
+    "artifact": "audits/track-a-006c/OPENED_SEQUENTIAL_DEVELOPMENT.json",
+    "data_status": "completed and fully opened Track A 006b outcome",
+    "role": "composition-rule development only; no 006c outcome evidence"
+  },
+  "execution": {
+    "component_policies": [
+      "closed_identity_native",
+      "reject_aware_native"
+    ],
+    "expected_record_count": 960,
+    "records_per_case": 15,
+    "reset_contract": "After a closed candidate result, restore the same target exactly to its initial state before reject-aware confirmation. Record one reset marker and reset_count=1; do not include reset in intervention step totals.",
+    "sequential_fusion": [
+      "closed outside_model -> outside_detected_closed and stop without reset",
+      "otherwise reset once and execute reject_aware_native",
+      "reject outside_model or outside_reject -> outside_detected_reject",
+      "two candidate identities disagree -> outside_detected_disagreement",
+      "two candidate identities agree -> identify that candidate"
+    ],
+    "target_information": "Neither component policy receives target transitions, hash, kind, seed, or future observations. Fusion receives only the two frozen component terminal records.",
+    "target_order": "H0, H1, H2, H3, OUTSIDE"
+  },
+  "generation": {
+    "inheritance": "Exact Track A 006b base, sentinel, outside-target, behavioral-distinctness, depth-filter, cap, attempt, and rejection rules under a new master seed.",
+    "namespace_separation": "base, sentinel, and outside generation stages are SHA-256 framed; fixture and held-out master seeds are distinct."
+  },
+  "outcomes": {
+    "primary": [
+      "sequential-fusion outside detection and false candidate identification counts",
+      "sequential-fusion in-family correctness",
+      "sequential-fusion intervention steps and separately counted resets"
+    ],
+    "required_soundness": "All three methods must correctly identify all 256 in-family targets. Any incorrect identification or outside decision is an instrument blocker.",
+    "secondary": [
+      "standalone closed and reject-aware outside outcomes",
+      "fusion detection breakdown by closed novelty, reject-aware novelty, and identity disagreement",
+      "paired component-to-fusion transitions, policy depths, attempts, rejections, hashes, and exact traces"
+    ],
+    "statistics": "Exact deterministic paired corpus counts only; no p-values, confidence intervals, population generalization, or superiority claim."
+  },
+  "prefreeze_fixture": {
+    "case_count": 3,
+    "evidence_sha256": "5dc19aa8b568fcd29126acacd4867277aea7f18f8782ea96219e8dbad566b2b2",
+    "record_count": 45,
+    "records_jsonl_sha256": "5789e01ec39c7046f59f2a822e5bb382a472ed2e4c63a97e7097bfbf7516574b",
+    "result_sha256": "6432dafa92304fe597e7a3d4cb0bbdedbe7cfee1862a96899b60a74bd76b10d6",
+    "seed": "oia-track-a-006c-fixture-v1",
+    "used_benchmark_seed": false
+  },
+  "prospective_ordering": [
+    "fusion rule fixed using only opened 006b traces",
+    "runner and disjoint fixture validated",
+    "held-out seed, inherited generation, reset contract, fusion, endpoints, stop rules, and evidence format frozen",
+    "freeze merged before held-out case generation",
+    "future single held-out execution and immutable outcome packaging",
+    "future independent deterministic regeneration"
+  ],
+  "schema_version": 1,
+  "status_at_freeze": "frozen_before_heldout_case_generation_or_target_execution",
+  "stop_rules": [
+    "Stop on any inherited 006b generation, cap, or exactness blocker.",
+    "Stop with an instrument blocker if any method incorrectly identifies or rejects an in-family target.",
+    "Stop with an applicability blocker if reset does not restore the exact initial target state.",
+    "Do not change seeds, inherited generator, policies, fusion, reset accounting, endpoints, or evidence format after held-out execution; defects require a new numbered slice."
+  ]
+}

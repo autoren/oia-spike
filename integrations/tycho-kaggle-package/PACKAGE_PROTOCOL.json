@@ -1,0 +1,127 @@
+{
+  "schema_version": "OIA-TYCHO-KAGGLE-PACKAGE-R0-0.1",
+  "date": "2026-08-22",
+  "purpose": "Qualify a credential-free, immutable Linux/CUDA llama.cpp runtime bundle for the pinned local Qwen model and localize the remaining evaluator-packaging blockers without running a model, ARC environment, Kaggle notebook, or submission.",
+  "parent_evidence": {
+    "standalone_merge_commit": "a2dfb40abbb3e2eea02cc10c49fe530ce8f91337",
+    "final_commit_result_sha256": "6ca7e88d5c76e15fa10ff8993be92575b151008693cc72f2ffe77fab17129b21",
+    "established": "The pinned local model can return one syntactically valid model-selected Tycho action on an opened public game; correctness and progress are unestablished."
+  },
+  "source_pins": {
+    "official_starter": {
+      "repository": "https://github.com/arcprize/ARC-AGI-3-Kaggle-Starter.git",
+      "commit": "eeb1535404f321d280a8f9194bbc1d7aca5f05fc",
+      "tree": "332ff438d9b092c95e58a07eace6194379de06b4"
+    },
+    "official_agent_framework": {
+      "repository": "https://github.com/arcprize/ARC-AGI-3-Agents.git",
+      "commit": "4743e7d0aaae0ded0d98a89a7e282e63564cd58b",
+      "tree": "6878fdfdd0156059323b541fc229b6329ad4fd28"
+    },
+    "tycho": {
+      "repository": "https://github.com/NIMI-research/Tycho.git",
+      "commit": "f68912a764372ead0a610db2e1c011d41ce5197e",
+      "tree": "d5ff6a4e142934ceb865e403e3aa92d80bfa245c"
+    },
+    "llama_cpp": {
+      "repository": "https://github.com/ggml-org/llama.cpp.git",
+      "release": "b10236",
+      "commit": "1464c62d88f699ec9700c8010bbfdbc603a9efd6",
+      "oci_reference": "ghcr.io/ggml-org/llama.cpp:server-cuda13-b10236",
+      "linux_amd64_manifest_digest": "sha256:faebc1dd2e96e4ab9708e786f16477162ef8f3330d4a4838c371220409870fed",
+      "config_digest": "sha256:ab11a04881d546069880d4b0a1c204e7146ae7bdcb9bd0340ab3ae498926bfc6",
+      "cuda_version": "13.3.0"
+    },
+    "clean_test_base": {
+      "reference": "ubuntu:24.04",
+      "linux_amd64_manifest_digest": "sha256:1e0a86e57d247923571b75e0aaf48a1449cf8c543d51fb3e07a4a7d7bfa79316"
+    },
+    "model": {
+      "repository_revision": "b869816e657114167518d41ef84c8ece43d102d7",
+      "gguf_sha256": "2fff409d4a22e0cb11fb0ecfafed1c669b9808f7e6bc499036c6e85297f14f4d",
+      "gguf_bytes": 29787701792,
+      "projector_sha256": "fdc443e974cad1f61c45af1cfd5580855855ddce0d6c14cc500a5714c486ac1d",
+      "projector_bytes": 1842940480
+    }
+  },
+  "pre_freeze_exploration": {
+    "runtime_pulls": 1,
+    "manual_bundle_exports": 1,
+    "clean_container_attempts": 2,
+    "first_attempt_blocker": "libgomp.so.1 was inherited from the OCI base instead of included in the extracted bundle.",
+    "second_attempt_observation": "After adding non-glibc system libraries, llama-server --version ran from a read-only bundle in a network-disabled clean Ubuntu container and ldd left only host-driver libcuda.so.1 unresolved.",
+    "qualification_evidence": false
+  },
+  "authorized_post_freeze_execution": {
+    "runtime_bundle_builds": 1,
+    "clean_container_portability_tests": 1,
+    "source_repository_clones": 0,
+    "model_copies": 0,
+    "model_loads": 0,
+    "model_inference_calls": 0,
+    "gpu_executions": 0,
+    "arc_environment_starts": 0,
+    "arc_actions": 0,
+    "registered_credentials": 0,
+    "network_model_or_api_calls": 0,
+    "kaggle_uploads": 0,
+    "kaggle_phase_a_runs": 0,
+    "competition_submissions": 0,
+    "hidden_games": 0,
+    "oia_runs": 0
+  },
+  "bundle_contract": {
+    "source": "Copy the complete /app directory plus the exact CUDA and non-glibc shared libraries named by the frozen builder from the pinned linux/amd64 OCI manifest.",
+    "output_is_untracked": true,
+    "portable_manifest_is_tracked": true,
+    "network_during_portability_test": false,
+    "bundle_mount_during_portability_test": "read_only",
+    "required_version_output": "version: 10236 (1464c62d8)",
+    "allowed_unresolved_shared_libraries": [
+      "libcuda.so.1"
+    ],
+    "maximum_bundle_bytes": 5000000000
+  },
+  "pass_condition": {
+    "exact_oci_identity_verified": true,
+    "deterministic_relative_file_manifest_required": true,
+    "clean_container_version_smoke_required": true,
+    "all_user_space_cuda_libraries_must_resolve_from_bundle": true,
+    "only_host_driver_libcuda_may_remain_unresolved": true,
+    "does_not_require_or_imply_target_gpu_load": true
+  },
+  "known_remaining_blockers": [
+    "Tycho's run_python currently requires Docker/Finch for isolation; host mode would expose evaluator and attached-input state.",
+    "No Docker-free isolated Python runner is qualified for the Kaggle notebook.",
+    "The Tycho-to-MyAgent lifecycle adapter is not yet package-qualified.",
+    "The pinned CUDA 13 bundle has not loaded the model on the target RTX PRO 6000 Blackwell evaluator.",
+    "Peak GPU/host memory and 110-game throughput remain unmeasured."
+  ],
+  "allowed_verdicts": [
+    "runtime_bundle_qualified_adapter_sandbox_and_throughput_unqualified",
+    "runtime_bundle_blocker",
+    "package_boundary_violation"
+  ],
+  "stopping_rule": "Stop after the single repeated bundle build and clean-container portability test. Do not load the model, start ARC, access Kaggle, weaken sandbox isolation, or call the package submission-ready.",
+  "claim_boundary": {
+    "can_support": [
+      "exact runtime-bundle reproducibility",
+      "Docker-free process portability at llama-server version/linkage level"
+    ],
+    "does_not_support": [
+      "target GPU compatibility",
+      "model load or inference",
+      "safe Tycho run_python execution",
+      "complete MyAgent integration",
+      "throughput feasibility",
+      "ARC correctness or progress",
+      "hidden-game transfer",
+      "ontology or mechanism discovery",
+      "Kaggle package readiness",
+      "competition submission",
+      "project reopening",
+      "Track B claims"
+    ]
+  },
+  "status": "frozen_unexecuted"
+}

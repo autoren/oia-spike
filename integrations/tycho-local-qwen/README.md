@@ -74,3 +74,10 @@ ceilings made that prompt unreachable. The explicit-action requirement was not
 too strict; the two ceilings should not have been equal. One separate freeze
 may therefore hold the four-tool ceiling fixed and permit a fifth call solely
 for Tycho's built-in commit-only pass. No broader allowance follows.
+
+That exact successor is frozen in
+[`FINAL_COMMIT_PROTOCOL.json`](FINAL_COMMIT_PROTOCOL.json). It changes only the
+total call ceiling from four to five, leaves the four analysis-tool ceiling
+fixed, requires the fifth call to be Tycho's unmodified commit-only prompt,
+and permits at most one non-`RESET` environment action. Its stopping rule
+forbids another ceiling increase after this run.

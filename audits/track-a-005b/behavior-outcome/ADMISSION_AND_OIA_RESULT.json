@@ -1,0 +1,167 @@
+{
+  "adapter_validation": null,
+  "adaptive_minimum_worst_case_depth": null,
+  "audit_id": "OIA-1-TRACK-A-005b",
+  "claim_boundary": "Opened Track A intervention-triggered calibration, revised frontier admission, and exact OIA next-action selection before step-2 access. Calibration is not prediction; no step-2 result, real ARC action, sealed transfer, or Track B claim.",
+  "cross_process_oia_report_sha256": null,
+  "epistemic_ordering": {
+    "revision_generation_rules_merged_before_inference": true,
+    "revision_package_merged_before_source_open": true,
+    "runner_adapter_and_oia_path_merged_before_candidate_source_open": true,
+    "selected_next_action_merged_before_step2_access_required": true,
+    "step_2_or_later_payloads_read": 0
+  },
+  "execution_accounting": {
+    "candidate_processes": 8,
+    "credential_uses": 0,
+    "model_or_api_calls": 0,
+    "network_or_service_calls": 0,
+    "oia_processes": 0,
+    "private_or_sealed_evaluations": 0,
+    "real_arc_actions": 0,
+    "step_2_or_later_payloads_read": 0
+  },
+  "gate_verdict": "revision_generation_or_calibration_blocker",
+  "oia_report_sha256": null,
+  "p1_persistence_baseline": {
+    "definition": "Predict the exact settled P1 raster and RUNNING status after every next action.",
+    "evaluated_against_step2": false,
+    "p1_sha256": "80a2fd9a8813b7ee5cd6d63a3199ffc247119b39ab60b90709696b47ec58c140"
+  },
+  "prepared_bundles_sha256": "8b6b583b2b74ee5592e6cf8c7e0c2d590906c34e98717cd1e756601b6631db2b",
+  "runtime_image_id": "sha256:32272ac8ae641808d6b6328bcdb7210746292ea12e4aeea8b69ef93cab49ee2b",
+  "schema_version": 1,
+  "selected_next_action": null,
+  "stages": {
+    "calibration": {
+      "records": [
+        {
+          "candidate_id": "R0001",
+          "pass": false,
+          "trace": {
+            "error_category": "exception:NameError",
+            "status": "error",
+            "word": []
+          }
+        },
+        {
+          "candidate_id": "R0002",
+          "pass": false,
+          "trace": {
+            "error_category": "exception:NameError",
+            "status": "error",
+            "word": []
+          }
+        },
+        {
+          "candidate_id": "R0003",
+          "pass": false,
+          "trace": {
+            "error_category": "exception:NameError",
+            "status": "error",
+            "word": []
+          }
+        },
+        {
+          "candidate_id": "R0004",
+          "pass": false,
+          "trace": {
+            "error_category": "exception:NameError",
+            "status": "error",
+            "word": []
+          }
+        },
+        {
+          "candidate_id": "R0005",
+          "pass": false,
+          "trace": {
+            "error_category": "exception:NameError",
+            "status": "error",
+            "word": []
+          }
+        },
+        {
+          "candidate_id": "R0006",
+          "pass": false,
+          "trace": {
+            "error_category": "exception:NameError",
+            "status": "error",
+            "word": []
+          }
+        },
+        {
+          "candidate_id": "R0007",
+          "pass": false,
+          "trace": {
+            "error_category": "exception:NameError",
+            "status": "error",
+            "word": []
+          }
+        },
+        {
+          "candidate_id": "R0008",
+          "pass": false,
+          "trace": {
+            "error_category": "exception:NameError",
+            "status": "error",
+            "word": []
+          }
+        }
+      ],
+      "stage": "exact_p0_p1_calibration"
+    },
+    "full": {
+      "admitted_candidates": [],
+      "records": [],
+      "repetitions_per_seed": 2,
+      "seeds": [
+        0,
+        1,
+        5,
+        10
+      ],
+      "stage": "full_post_p1",
+      "word_count": 14
+    },
+    "provisional": {
+      "provisionally_unique": [],
+      "records": [
+        {
+          "candidate_id": "R0001",
+          "status": "not_run_calibration_failed"
+        },
+        {
+          "candidate_id": "R0002",
+          "status": "not_run_calibration_failed"
+        },
+        {
+          "candidate_id": "R0003",
+          "status": "not_run_calibration_failed"
+        },
+        {
+          "candidate_id": "R0004",
+          "status": "not_run_calibration_failed"
+        },
+        {
+          "candidate_id": "R0005",
+          "status": "not_run_calibration_failed"
+        },
+        {
+          "candidate_id": "R0006",
+          "status": "not_run_calibration_failed"
+        },
+        {
+          "candidate_id": "R0007",
+          "status": "not_run_calibration_failed"
+        },
+        {
+          "candidate_id": "R0008",
+          "status": "not_run_calibration_failed"
+        }
+      ],
+      "seed": 0,
+      "stage": "provisional_post_p1",
+      "word_count": 14
+    }
+  }
+}

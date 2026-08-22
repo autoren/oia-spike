@@ -119,6 +119,9 @@ jobs:
       - name: Verify Tycho local-Qwen qualification and action attribution
         run: python scripts/verify_tycho_local_qwen_qualification.py
 
+      - name: Verify Tycho local-Qwen explicit-action smoke boundary
+        run: python scripts/verify_tycho_local_qwen_action_selection.py
+
       - name: Verify Track A 006b reject-aware outcome when present
         run: python scripts/verify_track_a_006b_outcome.py
 

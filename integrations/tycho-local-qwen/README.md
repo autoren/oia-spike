@@ -55,3 +55,11 @@ as `default (tool cap)`. See [`QUALIFICATION_REPORT.md`](QUALIFICATION_REPORT.md
 and [`QUALIFICATION_RESULT.json`](QUALIFICATION_RESULT.json). This qualifies
 local plumbing only, not model-selected action execution. A larger bounded
 action-selection smoke requires a new prospective freeze.
+
+That successor is now prospectively specified in
+[`ACTION_SELECTION_PROTOCOL.json`](ACTION_SELECTION_PROTOCOL.json). It retains
+the exact source, model, public game, zero-service, no-world-model, and claim
+boundaries, uses the already-cached source in offline mode, and raises only the
+hard model-call and per-turn tool ceilings from two to four. A pass requires an
+explicit non-`RESET` model-selected action; another Tycho default cannot pass.
+The protocol is frozen but unexecuted at this point.

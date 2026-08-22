@@ -1,0 +1,74 @@
+{
+  "allowed_verdicts": [
+    "separator_outcome_matches_one_candidate",
+    "separator_outcome_outside_candidate_frontier",
+    "recorded_outcome_inconsistent_across_runs",
+    "no_matching_recorded_p0_action"
+  ],
+  "animation_handling": {
+    "comparison_endpoint": "step_0001_final.txt only",
+    "intermediate_pairs_per_matching_run": 4,
+    "preservation": "Preserve all four step-1 intermediate PNG/TXT pairs and the final PNG/TXT pair for every matching run.",
+    "supported_claim": "Settled-frame comparison only; no animation-fidelity claim."
+  },
+  "archive": {
+    "license": "CC-BY-4.0",
+    "repository": "Zenodo record 21412274",
+    "sha256": "c3d85c4a75170de08837b9fc63cb7a7dde389b1205ca71b9f0fed16a9c09cf93",
+    "size_bytes": 797835543
+  },
+  "audit_id": "OIA-1-TRACK-A-005a",
+  "claim_boundary": "Public archival prospective outcome for the already merged ACTION6 separator only. This is not a live intervention, randomized trial, decision-value result, sealed transfer, or Track B claim.",
+  "comparison": {
+    "actual_observation": [
+      "canonical uppercase hexadecimal final-frame SHA-256",
+      "normalized public metadata state"
+    ],
+    "candidate_prediction_source": "The unique deterministic ACTION6 trace for each admitted candidate in the merged behavior/OIA result.",
+    "state_mapping": {
+      "GAME_OVER": "GAME_OVER",
+      "LEVEL_COMPLETED": "LEVEL_COMPLETED",
+      "NOT_FINISHED": "RUNNING",
+      "WON": "LEVEL_COMPLETED"
+    }
+  },
+  "epistemic_ordering": {
+    "behavior_result_commit": "08a7a70",
+    "behavior_result_sha256": "1fabd671dd0e396be5b493d27b7eac75313682ee3aef5cfb3fb03cdc580a4d77",
+    "headers_inspected_before_this_freeze": true,
+    "post_p0_payloads_read_before_this_freeze": 0,
+    "separator": [
+      "ACTION6"
+    ],
+    "separator_merged_before_outcome_payload_access": true
+  },
+  "exact_step1_files_per_run": [
+    "step_0001_final.png",
+    "step_0001_final.txt",
+    "step_0001_intermediate_00.png",
+    "step_0001_intermediate_00.txt",
+    "step_0001_intermediate_01.png",
+    "step_0001_intermediate_01.txt",
+    "step_0001_intermediate_02.png",
+    "step_0001_intermediate_02.txt",
+    "step_0001_intermediate_03.png",
+    "step_0001_intermediate_03.txt",
+    "step_0001_metadata.json"
+  ],
+  "extraction_order": {
+    "phase_1": "Scan names and safety properties for the complete archive; require exactly the frozen 11 step-1 files for each run.",
+    "phase_2": "Read exactly step_0001_metadata.json for all five runs and select every run whose action_input.id is exactly ACTION6.",
+    "phase_3": "Read the ten nonmetadata step-1 payloads only for matching runs; never read frames for nonmatching runs or any later step.",
+    "selection_uses_outcome_frame": false
+  },
+  "run_roots_in_order": [
+    "ewma_v1.5_sv_gpt-5.5_xhigh_run1",
+    "ewma_v1.6_sv_gpt-5.6-sol_max_run1",
+    "ewma_v1.6_sv_gpt-5.6-sol_xhigh_run1",
+    "twma_v1.6_gpt-5.6-sol_max_run1",
+    "twma_v1.6_gpt-5.6-sol_xhigh_run1"
+  ],
+  "schema_version": 1,
+  "status_at_freeze": "frozen_after_separator_merge_before_post_p0_payload_access",
+  "target_action": "ACTION6"
+}

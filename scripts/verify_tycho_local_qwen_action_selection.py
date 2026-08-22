@@ -10,6 +10,7 @@ from typing import Any
 
 ROOT = Path(__file__).resolve().parents[1]
 PROTOCOL = ROOT / "integrations/tycho-local-qwen/ACTION_SELECTION_PROTOCOL.json"
+RESULT = ROOT / "integrations/tycho-local-qwen/ACTION_SELECTION_RESULT.json"
 
 
 def load_object(path: Path) -> dict[str, Any]:
@@ -106,15 +107,93 @@ def validate_protocol(path: Path = PROTOCOL) -> dict[str, Any]:
     return payload
 
 
+def validate_result(path: Path = RESULT) -> dict[str, Any]:
+    payload = load_object(path)
+    if payload.get("schema_version") != (
+        "OIA-TYCHO-LOCAL-QWEN-ACTION-SELECTION-RESULT-0.1"
+    ):
+        raise ValueError("action-selection result schema changed")
+    if payload.get("protocol_commit") != (
+        "9d2310e054b62429ec2b43aa71ac9194032669ad"
+    ):
+        raise ValueError("action-selection result freeze changed")
+    source = payload.get("source") or {}
+    if (
+        source.get("tycho_commit")
+        != "f68912a764372ead0a610db2e1c011d41ce5197e"
+        or source.get("tycho_tree")
+        != "d5ff6a4e142934ceb865e403e3aa92d80bfa245c"
+        or source.get("agent_source_sha256")
+        != "38472ec280187305db3fd2325fb1197c28ac31b3e22c13d169b4aaa86daaf7dc"
+        or source.get("tracked_source_clean") is not True
+    ):
+        raise ValueError("action-selection result source changed")
+    execution = payload.get("execution") or {}
+    expected_exact = {
+        "runs": 1,
+        "operation_mode": "offline",
+        "game_id": "tr87-cd924810",
+        "seed": 0,
+        "run_spec_fingerprint": "d86f81da0f7740c8ee66963c946fe02f41127a4ab64626ae99c7155136cc683e",
+        "model_calls": 4,
+        "tool_steps": 4,
+        "environment_actions_recorded": 1,
+        "environment_action_sequence": ["ACTION1"],
+        "model_selected_non_reset_actions": 0,
+        "defaulted_actions": 1,
+        "default_reason": "default (tool cap)",
+        "explicit_action_selection_established": False,
+    }
+    for field, expected in expected_exact.items():
+        if execution.get(field) != expected:
+            raise ValueError(f"action-selection result changed: {field}")
+    zero_boundaries = [
+        "reset_actions",
+        "paid_model_or_api_calls",
+        "public_source_downloads",
+        "semi_private_or_private_games",
+        "competition_submissions",
+        "world_models_generated",
+        "oia_runs",
+    ]
+    if any(execution.get(field) != 0 for field in zero_boundaries):
+        raise ValueError("action-selection result crossed a zero boundary")
+    if payload.get("verdict") != (
+        "local_qwen_explicit_public_action_selection_blocker"
+    ):
+        raise ValueError("action-selection result verdict changed")
+    interpretation = payload.get("interpretation") or {}
+    if (
+        "max_calls equal to max_tool_steps"
+        not in interpretation.get("configuration_diagnosis", "")
+        or interpretation.get("project_reopening_effect") != "none"
+    ):
+        raise ValueError("action-selection diagnosis changed")
+    next_gate = payload.get("next_gate") or {}
+    if (
+        next_gate.get("name") != "local_qwen_final_commit_pass_smoke"
+        or next_gate.get("status") != "requires_separate_freeze"
+    ):
+        raise ValueError("action-selection next gate changed")
+    claims = payload.get("claim_boundary") or {}
+    if any(value is not False for value in claims.values()):
+        raise ValueError("action-selection result claim boundary broadened")
+    if payload.get("status") != "completed":
+        raise ValueError("action-selection result status changed")
+    return payload
+
+
 def main() -> None:
     payload = validate_protocol()
+    result = validate_result()
     print(
         json.dumps(
             {
                 "game": payload["unchanged_pins"]["resolved_game_id"],
                 "model_calls_maximum": 4,
                 "project_reopening_effect": "none",
-                "status": "tycho_local_qwen_action_selection_frozen",
+                "verdict": result["verdict"],
+                "status": "tycho_local_qwen_action_selection_verified",
             },
             sort_keys=True,
         )

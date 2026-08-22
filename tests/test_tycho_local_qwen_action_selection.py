@@ -52,6 +52,27 @@ class TychoLocalQwenActionSelectionTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, "pass condition changed"):
                 verifier.validate_protocol(path)
 
+    def test_result_attributes_only_action_to_tycho_default(self) -> None:
+        payload = verifier.validate_result()
+        execution = payload["execution"]
+        self.assertEqual(execution["tool_steps"], 4)
+        self.assertEqual(execution["model_selected_non_reset_actions"], 0)
+        self.assertEqual(execution["default_reason"], "default (tool cap)")
+        self.assertFalse(execution["explicit_action_selection_established"])
+        self.assertEqual(
+            payload["next_gate"]["status"], "requires_separate_freeze"
+        )
+
+    def test_result_fails_closed_if_default_is_recast_as_model_action(self) -> None:
+        payload = json.loads(verifier.RESULT.read_text(encoding="utf-8"))
+        payload["execution"]["model_selected_non_reset_actions"] = 1
+        payload["execution"]["explicit_action_selection_established"] = True
+        with tempfile.TemporaryDirectory() as temporary:
+            path = Path(temporary) / "tampered.json"
+            path.write_text(json.dumps(payload), encoding="utf-8")
+            with self.assertRaisesRegex(ValueError, "result changed"):
+                verifier.validate_result(path)
+
 
 if __name__ == "__main__":
     unittest.main()

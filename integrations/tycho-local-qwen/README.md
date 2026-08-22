@@ -63,3 +63,14 @@ boundaries, uses the already-cached source in offline mode, and raises only the
 hard model-call and per-turn tool ceilings from two to four. A pass requires an
 explicit non-`RESET` model-selected action; another Tycho default cannot pass.
 The protocol is frozen but unexecuted at this point.
+
+The four-call smoke is now complete with the blocker verdict recorded in
+[`ACTION_SELECTION_RESULT.json`](ACTION_SELECTION_RESULT.json). All four model
+responses requested `run_python`; the only environment action was again
+Tycho's `default (tool cap)`. Inspection also localized a configuration error:
+Tycho's existing final commit-only prompt runs only when `max_calls` remains
+greater than the exhausted per-turn tool count. The frozen equal four/four
+ceilings made that prompt unreachable. The explicit-action requirement was not
+too strict; the two ceilings should not have been equal. One separate freeze
+may therefore hold the four-tool ceiling fixed and permit a fifth call solely
+for Tycho's built-in commit-only pass. No broader allowance follows.

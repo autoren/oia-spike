@@ -19,11 +19,24 @@ SPEC.loader.exec_module(runner)
 
 class TrackA005eLocalOutcomeTests(unittest.TestCase):
     def test_source_structure_is_static_and_does_not_execute(self) -> None:
-        source = b"from typing import Any\nimport numpy as np\nfrom arcengine import ARCBaseGame\nclass cqrtilsbtt: pass\nclass Su15: pass\n"
+        source = b"from typing import Any\nimport numpy as np\nfrom arcengine import ARCBaseGame\nclass cqrtilsbtt: pass\nclass Su15:\n    def __init__(self): pass\n"
         structure = runner.source_structure(source)
         self.assertEqual(structure["imports"], ["arcengine", "numpy", "typing"])
         self.assertEqual(structure["top_level_classes"], ["cqrtilsbtt", "Su15"])
+        self.assertEqual(structure["su15_constructor_positional_arguments"], ["self"])
         self.assertIsInstance(ast.parse(source), ast.Module)
+
+    def test_constructor_seed_matches_official_wrapper_behavior(self) -> None:
+        class WithoutSeed:
+            def __init__(self) -> None:
+                pass
+
+        class WithSeed:
+            def __init__(self, seed: int = 0) -> None:
+                self.seed = seed
+
+        self.assertEqual(runner.constructor_kwargs(WithoutSeed, 0), {})
+        self.assertEqual(runner.constructor_kwargs(WithSeed, 0), {"seed": 0})
 
     def test_verdict_matches_exactly_one_candidate(self) -> None:
         protocol = {
@@ -51,4 +64,3 @@ class TrackA005eLocalOutcomeTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
-

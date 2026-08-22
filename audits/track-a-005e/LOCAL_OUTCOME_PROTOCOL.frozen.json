@@ -17,6 +17,7 @@
     ],
     "repetitions_per_coordinate": 2,
     "seed": 0,
+    "seed_delivery": "Match the official LocalEnvironmentWrapper: pass seed only when the game constructor declares it; otherwise use the ARCBaseGame default seed of 0.",
     "sequence": [
       "RESET",
       "ACTION6(x,y)",
@@ -81,6 +82,16 @@
     "track_a_005c_result_sha256": "e177ee9bbf86d0d88faee64915858beb22ff87518e7d83b32cb0f110b6e9a840",
     "track_a_005d_archive_blocker_result_sha256": "d09a71682086dd0871d1035948f7f0091f86139148086d2676321a850bb219c5"
   },
+  "maintenance_correction": {
+    "candidate_frontier_changed": false,
+    "detected_by": "post-merge AST-only constructor compatibility check",
+    "game_source_executions_before_correction": 0,
+    "oia_action_changed": false,
+    "predecessor_merge_commit": "f6bb1c41e4838c9f9a548b50b25654e555afa905",
+    "predecessor_runner_sha256": "f5fdaecdc8257fce4a8e008805d43f69626d4e6b2b206e7fc2bb3352547a5db4",
+    "real_arc_actions_before_correction": 0,
+    "scope": "Mirror official conditional seed delivery so the zero-argument Su15 constructor is valid."
+  },
   "prospective_ordering": [
     "maintenance-normalized candidates frozen and merged",
     "post-P1 behaviors measured",
@@ -88,8 +99,10 @@
     "public archive found to contain no ACTION7 step-2 outcome",
     "official su15 source acquired and hash-pinned without execution",
     "this local outcome protocol frozen",
+    "constructor compatibility corrected from AST only before source execution",
     "future local source import, reset, calibration replay, and ACTION7 outcome"
   ],
+  "protocol_revision": "1.0.1",
   "runtime": {
     "arcengine": "0.9.3",
     "lock_path": "audits/track-a-005e/RUNTIME_REQUIREMENTS.lock.txt",

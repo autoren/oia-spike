@@ -1,0 +1,198 @@
+{
+  "accounting": {
+    "candidate_behavior_steps": 0,
+    "candidate_imports": 0,
+    "candidate_processes": 0,
+    "hardened_static_pass": 8,
+    "hardened_static_rejected": 0,
+    "network_or_service_calls": 0,
+    "oia_processes": 0,
+    "real_arc_actions": 0,
+    "source_records_opened": 8,
+    "step_2_or_later_payloads_read": 0
+  },
+  "audit_id": "OIA-1-TRACK-A-005b",
+  "candidate_package_sha256": "a49a8012b0f7f130feb5c32bfb32825ad4426d7c2203fba6e532165c1fd884d4",
+  "candidate_records": [
+    {
+      "candidate_id": "R0001",
+      "candidate_sha256": "c4dae01abdd0c3ded5780ca2b8b1bf4e864ba23a5dd977f752935da5084bef82",
+      "candidate_size_bytes": 941,
+      "stance_id": "persistence_boundary_normalization",
+      "static_scan": {
+        "ast_node_count": 235,
+        "forbidden_attributes": [],
+        "forbidden_names": [],
+        "functions": [
+          "initial_state",
+          "render",
+          "step"
+        ],
+        "imports": [
+          "numpy",
+          "typing"
+        ],
+        "result": "pass"
+      },
+      "status": "prepared_not_imported_or_executed"
+    },
+    {
+      "candidate_id": "R0002",
+      "candidate_sha256": "fbf80e427b0e605d7cf85964f9bd5d882acf578f613c6e508f9f2a2fb4ccdf04",
+      "candidate_size_bytes": 960,
+      "stance_id": "transient_impact_restoration",
+      "static_scan": {
+        "ast_node_count": 242,
+        "forbidden_attributes": [],
+        "forbidden_names": [],
+        "functions": [
+          "initial_state",
+          "render",
+          "step"
+        ],
+        "imports": [
+          "numpy",
+          "typing"
+        ],
+        "result": "pass"
+      },
+      "status": "prepared_not_imported_or_executed"
+    },
+    {
+      "candidate_id": "R0003",
+      "candidate_sha256": "b8cb85e044ed90dcc148b2cf928cd62859a1f5f2c29a4211c973beb92ed687b2",
+      "candidate_size_bytes": 923,
+      "stance_id": "diagonal_projectile_ray",
+      "static_scan": {
+        "ast_node_count": 235,
+        "forbidden_attributes": [],
+        "forbidden_names": [],
+        "functions": [
+          "initial_state",
+          "render",
+          "step"
+        ],
+        "imports": [
+          "numpy",
+          "typing"
+        ],
+        "result": "pass"
+      },
+      "status": "prepared_not_imported_or_executed"
+    },
+    {
+      "candidate_id": "R0004",
+      "candidate_sha256": "942bf625300a7d79441845f74bb3c0125e467e63fe40ebe86f47da7bbdd3dd56",
+      "candidate_size_bytes": 1063,
+      "stance_id": "viewport_floor_boundary",
+      "static_scan": {
+        "ast_node_count": 185,
+        "forbidden_attributes": [],
+        "forbidden_names": [],
+        "functions": [
+          "initial_state",
+          "render",
+          "step"
+        ],
+        "imports": [
+          "numpy",
+          "typing"
+        ],
+        "result": "pass"
+      },
+      "status": "prepared_not_imported_or_executed"
+    },
+    {
+      "candidate_id": "R0005",
+      "candidate_sha256": "9c0422424518385457e55de382993e90ec939e19be83b79b599b625aa67d77b8",
+      "candidate_size_bytes": 1166,
+      "stance_id": "discrete_target_state",
+      "static_scan": {
+        "ast_node_count": 278,
+        "forbidden_attributes": [],
+        "forbidden_names": [],
+        "functions": [
+          "initial_state",
+          "render",
+          "step"
+        ],
+        "imports": [
+          "numpy",
+          "typing"
+        ],
+        "result": "pass"
+      },
+      "status": "prepared_not_imported_or_executed"
+    },
+    {
+      "candidate_id": "R0006",
+      "candidate_sha256": "e59800f349e94a19cddb0a53420ab9fad7a8177951921d5f675c9af58f383b1f",
+      "candidate_size_bytes": 3438,
+      "stance_id": "wraparound_clipped_motion",
+      "static_scan": {
+        "ast_node_count": 275,
+        "forbidden_attributes": [],
+        "forbidden_names": [],
+        "functions": [
+          "initial_state",
+          "render",
+          "step"
+        ],
+        "imports": [
+          "numpy",
+          "typing"
+        ],
+        "result": "pass"
+      },
+      "status": "prepared_not_imported_or_executed"
+    },
+    {
+      "candidate_id": "R0007",
+      "candidate_sha256": "153da1498c19fb59a51d1ff10b68e496afe0c4f6d3729e52c8d37d7060f34905",
+      "candidate_size_bytes": 947,
+      "stance_id": "action_latent_minimal_effect",
+      "static_scan": {
+        "ast_node_count": 235,
+        "forbidden_attributes": [],
+        "forbidden_names": [],
+        "functions": [
+          "initial_state",
+          "render",
+          "step"
+        ],
+        "imports": [
+          "numpy",
+          "typing"
+        ],
+        "result": "pass"
+      },
+      "status": "prepared_not_imported_or_executed"
+    },
+    {
+      "candidate_id": "R0008",
+      "candidate_sha256": "fbf80e427b0e605d7cf85964f9bd5d882acf578f613c6e508f9f2a2fb4ccdf04",
+      "candidate_size_bytes": 960,
+      "stance_id": "skeptical_minimal_countermodel",
+      "static_scan": {
+        "ast_node_count": 242,
+        "forbidden_attributes": [],
+        "forbidden_names": [],
+        "functions": [
+          "initial_state",
+          "render",
+          "step"
+        ],
+        "imports": [
+          "numpy",
+          "typing"
+        ],
+        "result": "pass"
+      },
+      "status": "prepared_not_imported_or_executed"
+    }
+  ],
+  "claim_boundary": "Opened revision-source static admission only; no candidate import, calibration, later behavior, OIA execution, or step-2 access.",
+  "generation_result_sha256": "ce1ae1a24b31f0f722574934798f4d23af2e8cdc108b3534ed9de43ac2bcafb0",
+  "schema_version": 1,
+  "status": "revision_bundles_prepared_behavior_not_run"
+}

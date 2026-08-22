@@ -1,0 +1,14 @@
+{
+  "action_input": {
+    "data": {},
+    "id": "RESET"
+  },
+  "available_actions": [
+    6,
+    7
+  ],
+  "levels_completed": 0,
+  "state": "NOT_FINISHED",
+  "step_index": 0,
+  "win_levels": 9
+}

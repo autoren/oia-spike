@@ -37,3 +37,11 @@ selection.
 level-1 reset files for `su15` in each of the five runs, and nothing else. It
 requires all five copies of each file to be byte-identical before creating a
 canonical P0.
+
+## P0 result
+
+The merged extractor subsequently read exactly 15 authorized payloads. All five
+copies of each `su15` reset file were byte-identical, so the canonical 64×64 P0
+is committed under [`p0/`](p0/). It exposes only actions `6` and `7`, carries a
+`RESET` action input, and has `step_index` zero. No candidate, later observation,
+trace, score, model, OIA, or real ARC action was accessed.

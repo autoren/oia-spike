@@ -1,0 +1,88 @@
+{
+  "schema_version": "OIA-TYCHO-LOCAL-QWEN-ACTION-SELECTION-0.1",
+  "date": "2026-08-22",
+  "evidence_class": "opened_local_offline_action_selection_engineering_smoke",
+  "parent_evidence": {
+    "merge_commit": "031d895f3cd229ac354871aaed10ab32246bb966",
+    "result": "integrations/tycho-local-qwen/QUALIFICATION_RESULT.json",
+    "result_sha256": "1cb018e92cc5a19e54abe735647d48ba9ff1586e6612a4fe2fc1a18fea87138f",
+    "established": "Local text-image-tool transport and the opened Tycho harness work through the pinned model.",
+    "unresolved": "The two-call run recorded only a Tycho default action after the model exhausted its allowance on analysis tools."
+  },
+  "unchanged_pins": {
+    "tycho_commit": "f68912a764372ead0a610db2e1c011d41ce5197e",
+    "tycho_tree": "d5ff6a4e142934ceb865e403e3aa92d80bfa245c",
+    "model_revision": "b869816e657114167518d41ef84c8ece43d102d7",
+    "model_sha256": "2fff409d4a22e0cb11fb0ecfafed1c669b9808f7e6bc499036c6e85297f14f4d",
+    "projector_sha256": "fdc443e974cad1f61c45af1cfd5580855855ddce0d6c14cc500a5714c486ac1d",
+    "runtime_identifier": "qwen3.6-27b-oia",
+    "endpoint": "http://127.0.0.1:1234/v1",
+    "game_base_id": "tr87",
+    "resolved_game_id": "tr87-cd924810",
+    "game_seed": 0,
+    "source_metadata_sha256": "ef53168a70367e3675ed7c9e938856b4345a02a2dc562836caf21a55c4ef0f03",
+    "source_program_sha256": "3274657a6499af5c7a52390d58a5c5441497ed70b84388e418fdfa6c9601e305",
+    "tycho_config": "configs/smoke/minimal.yaml",
+    "tycho_policy": "no_world_model",
+    "docker_image": "tycho-python-sandbox:0.2"
+  },
+  "sole_behavioral_relaxation": {
+    "public_game_model_calls_maximum": {
+      "old": 2,
+      "new": 4
+    },
+    "public_game_tool_steps_per_turn_maximum": {
+      "old": 2,
+      "new": 4
+    },
+    "reason": "The pinned model used both original calls for run_python analysis. Four calls preserve a small hard ceiling while allowing a separate explicit action response."
+  },
+  "authorized_execution": {
+    "runs": 1,
+    "operation_mode": "offline_use_exact_existing_public_source",
+    "public_game_model_calls_maximum": 4,
+    "public_game_tool_steps_per_turn_maximum": 4,
+    "public_game_environment_actions_maximum": 4,
+    "public_game_reset_actions_maximum": 1,
+    "max_tokens_per_model_call": 2048,
+    "animation_summary_calls": 0,
+    "registered_arc_credentials": 0,
+    "paid_model_or_api_calls": 0,
+    "public_source_downloads": 0,
+    "semi_private_or_private_games": 0,
+    "competition_submissions": 0,
+    "world_models_generated": 0,
+    "oia_runs": 0
+  },
+  "pass_condition": {
+    "required": "At least one non-RESET environment action is explicitly selected in a model response before a Tycho default is needed.",
+    "model_selected_action_rule": "The trace action must have reasoning.src other than a string beginning with 'default', and its associated model response must encode the same environment action.",
+    "default_actions_are_not_successes": true,
+    "level_completion_required": false,
+    "reward_or_score_improvement_required": false
+  },
+  "allowed_verdicts": [
+    "local_qwen_explicit_public_action_selection_pass",
+    "local_qwen_explicit_public_action_selection_blocker",
+    "action_selection_boundary_violation"
+  ],
+  "claim_boundary": {
+    "supports_if_pass": "Only that the pinned local model can explicitly select a public-game action through the pinned Tycho harness under this small allowance.",
+    "does_not_support": [
+      "correct action selection",
+      "level or game completion",
+      "constructive executable-world-model generation",
+      "ontology or mechanism discovery",
+      "prospective separator discovery",
+      "semi-private or private transfer",
+      "decision superiority",
+      "ARC-AGI-3 competition performance",
+      "project reopening",
+      "Track B claims"
+    ],
+    "project_reopening_effect": "none"
+  },
+  "next_step_if_pass": "Freeze a separate constructive public-game smoke before enabling world-model generation; do not infer private-evaluator readiness.",
+  "next_step_if_blocked": "Treat four calls as a bounded local-model limitation; do not increase the allowance without a new protocol and a concrete information-gain argument.",
+  "status": "frozen_unexecuted"
+}

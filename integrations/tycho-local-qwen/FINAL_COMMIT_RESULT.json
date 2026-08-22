@@ -1,0 +1,108 @@
+{
+  "schema_version": "OIA-TYCHO-LOCAL-QWEN-FINAL-COMMIT-RESULT-0.1",
+  "date": "2026-08-22",
+  "protocol_commit": "2bd9420088f66b460b6d39ed9dead4beb5964156",
+  "source": {
+    "tycho_commit": "f68912a764372ead0a610db2e1c011d41ce5197e",
+    "tycho_tree": "d5ff6a4e142934ceb865e403e3aa92d80bfa245c",
+    "agent_source_sha256": "38472ec280187305db3fd2325fb1197c28ac31b3e22c13d169b4aaa86daaf7dc",
+    "tracked_source_clean": true
+  },
+  "execution": {
+    "runs": 1,
+    "operation_mode": "offline",
+    "game_id": "tr87-cd924810",
+    "seed": 0,
+    "run_spec_fingerprint": "dc30a2fd379b2d3d7754c7d60b2d66edc2b6bbb36257f8bf9fd9bd6f67e12590",
+    "sources_sha256": "0a441ef8914e981863622e0061bf0d6107a2ce27b6b578e7ea4b2c549d49345d",
+    "model_calls": 5,
+    "open_ended_tool_steps": 4,
+    "open_ended_tool_names": [
+      "run_python",
+      "run_python",
+      "run_python",
+      "run_python"
+    ],
+    "final_call_type": "freeform_commit",
+    "final_call_response": {
+      "tool": "take_action",
+      "arguments": {
+        "action": "ACTION1"
+      }
+    },
+    "tokens_in": 94670,
+    "tokens_out": 3295,
+    "mean_call_latency_seconds": 120.9,
+    "wall_clock_seconds": 606.8,
+    "game_wall_clock_seconds": 605.7,
+    "decode_tokens_per_second": 5.4,
+    "peak_prompt_tokens": 22513,
+    "stop_reason": "llm_call_limit",
+    "levels_completed": 0,
+    "reset_actions": 0,
+    "environment_actions_recorded": 1,
+    "environment_action_sequence": [
+      "ACTION1"
+    ],
+    "model_selected_non_reset_actions": 1,
+    "defaulted_actions": 0,
+    "committed_final_commit_trace": {
+      "tool": "take_action",
+      "args": {
+        "action": "ACTION1"
+      },
+      "committed": true,
+      "final_commit": true
+    },
+    "explicit_action_selection_established": true,
+    "action_correctness_established": false,
+    "paid_model_or_api_calls": 0,
+    "public_source_downloads": 0,
+    "semi_private_or_private_games": 0,
+    "competition_submissions": 0,
+    "world_models_generated": 0,
+    "oia_runs": 0
+  },
+  "artifact_hashes": {
+    "manifest.json": {
+      "size": 8201,
+      "sha256": "7ba9b2e55181d6243b9371a224986bdc10b4e3cd64d441cf2493c8a5d5374d75"
+    },
+    "game_tr87.json": {
+      "size": 209384,
+      "sha256": "6c0a7e3a8288b48b990e38b2e8e9a8b75e69de3b6d20edf4f88a1a0ca2e11cfa"
+    },
+    "run_spec.json": {
+      "size": 2984,
+      "sha256": "5b69c31b7f2e61823874094896e090c86a7fa739cf11039c42bfbde50ce13cf4"
+    },
+    "attempt_0001_result.json": {
+      "size": 617,
+      "sha256": "0197253f6c8f09cbaa9202515b1896234b63e136ed3412369463b193e4b213c2"
+    }
+  },
+  "verdict": "local_qwen_final_commit_pass",
+  "interpretation": {
+    "established": "The pinned local model followed Tycho's unmodified final commit-only instruction and emitted one syntactically valid non-RESET take_action call that Tycho committed.",
+    "not_established": "ACTION1 correctness, progress, game competence, world-model construction, mechanism discovery, transfer, or competition readiness.",
+    "condition_assessment": "The earlier explicit-action condition was appropriate. Reserving a distinct final commit call, rather than raising the analysis-tool allowance, was the sufficient engineering correction.",
+    "project_reopening_effect": "none"
+  },
+  "stopping_rule_applied": "No further model-call or tool-step ceiling increase is authorized in this engineering sequence.",
+  "next_gate": {
+    "name": "static_offline_evaluator_packaging_feasibility",
+    "purpose": "Assess whether the pinned model, projector, Tycho runtime, and sandbox can be packaged within the official internet-disabled evaluator's documented storage, memory, accelerator, and execution limits without making a submission.",
+    "status": "documentation_and_static_resource_audit_only"
+  },
+  "claim_boundary": {
+    "syntactic_model_action_selection": true,
+    "correct_action_selection": false,
+    "constructive_world_model": false,
+    "ontology_or_mechanism_discovery": false,
+    "private_transfer": false,
+    "competition_performance": false,
+    "project_reopening": false,
+    "track_b": false
+  },
+  "status": "completed"
+}

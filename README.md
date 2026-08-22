@@ -37,10 +37,13 @@ It is intentionally separate from [`autoren/ontology-intervention-auditor`](http
   transport call and at most two local-model calls/two actions on one opened
   public ARC-AGI-3 game. The qualification passed for local transport and
   opened-harness compatibility. The sole recorded game action was Tycho's
-  default at the tool cap, not a model-selected action, so a larger bounded
-  action-selection smoke still requires its own freeze. This integration does
-  not authorize a private game, submission, executable-world-model generation,
-  or behavioral claim.
+  default at the original tool cap, not a model-selected action. A separately
+  frozen diagnostic then found that equal call/tool ceilings suppressed
+  Tycho's built-in final commit-only pass. Holding four analysis tools fixed
+  and reserving a fifth commit call produced one explicit, syntactically valid
+  model-selected `ACTION1`. Its correctness and progress are unestablished.
+  This integration does not authorize a private game, submission,
+  executable-world-model generation, or behavioral claim.
 
 ## Local baseline validation
 

@@ -55,3 +55,38 @@ as `default (tool cap)`. See [`QUALIFICATION_REPORT.md`](QUALIFICATION_REPORT.md
 and [`QUALIFICATION_RESULT.json`](QUALIFICATION_RESULT.json). This qualifies
 local plumbing only, not model-selected action execution. A larger bounded
 action-selection smoke requires a new prospective freeze.
+
+That successor is now prospectively specified in
+[`ACTION_SELECTION_PROTOCOL.json`](ACTION_SELECTION_PROTOCOL.json). It retains
+the exact source, model, public game, zero-service, no-world-model, and claim
+boundaries, uses the already-cached source in offline mode, and raises only the
+hard model-call and per-turn tool ceilings from two to four. A pass requires an
+explicit non-`RESET` model-selected action; another Tycho default cannot pass.
+The protocol is frozen but unexecuted at this point.
+
+The four-call smoke is now complete with the blocker verdict recorded in
+[`ACTION_SELECTION_RESULT.json`](ACTION_SELECTION_RESULT.json). All four model
+responses requested `run_python`; the only environment action was again
+Tycho's `default (tool cap)`. Inspection also localized a configuration error:
+Tycho's existing final commit-only prompt runs only when `max_calls` remains
+greater than the exhausted per-turn tool count. The frozen equal four/four
+ceilings made that prompt unreachable. The explicit-action requirement was not
+too strict; the two ceilings should not have been equal. One separate freeze
+may therefore hold the four-tool ceiling fixed and permit a fifth call solely
+for Tycho's built-in commit-only pass. No broader allowance follows.
+
+That exact successor is frozen in
+[`FINAL_COMMIT_PROTOCOL.json`](FINAL_COMMIT_PROTOCOL.json). It changes only the
+total call ceiling from four to five, leaves the four analysis-tool ceiling
+fixed, requires the fifth call to be Tycho's unmodified commit-only prompt,
+and permits at most one non-`RESET` environment action. Its stopping rule
+forbids another ceiling increase after this run.
+
+The final commit-only smoke passed. The fifth call was recorded as
+`freeform_commit`, returned `take_action({"action":"ACTION1"})`, and has a
+matching committed `final_commit` tool trace; no Tycho default was used. See
+[`FINAL_COMMIT_REPORT.md`](FINAL_COMMIT_REPORT.md) and
+[`FINAL_COMMIT_RESULT.json`](FINAL_COMMIT_RESULT.json). This establishes only
+syntactic model-selected action compatibility. `ACTION1` correctness, progress,
+world-model construction, discovery, and transfer remain unestablished. The
+engineering call/tool ceilings will not be raised again.

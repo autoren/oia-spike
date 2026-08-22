@@ -1,0 +1,11 @@
+# OIA-1 Track A 005e local outcome runtime
+# Python 3.12.12; macOS 26.5.2 arm64; CPython cache tag cpython-312
+# Exact wheels were downloaded from PyPI and verified before this freeze.
+annotated-types==0.7.0 --hash=sha256:1f02e8b43a8fbbc3f3e0d4f0f4bfc8131bcb4eebe8849b8e5c773f3a1c582a53
+arcengine==0.9.3 --hash=sha256:5f9739d6d0055780a4581fd6fe09066bb08775c4c8212c9adcca2eb008aef59c
+numpy==2.4.1 --hash=sha256:5adf01965456a664fc727ed69cc71848f28d063217c63e1a0e200a118d5eec9a
+pydantic==2.12.5 --hash=sha256:e561593fccf61e8a20fc46dfc2dfe075b8be7d0188df33f221ad1f0139180f9d
+pydantic-core==2.41.5 --hash=sha256:070259a8818988b9a84a449a2a7337c7f430a22acc0859c6b110aa7212a6d9c0
+typing-extensions==4.15.0 --hash=sha256:f0fa19c6845758ab08074a0cfa8b7aecb71c999ca73d62883bc25cc018c4e548
+typing-inspection==0.4.2 --hash=sha256:4ed1cacbdc298c220f1bd249ed5287caa16f34d44ef4e9c3d0cbad5b521545e7
+

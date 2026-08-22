@@ -1,0 +1,133 @@
+{
+  "action_schedule": {
+    "independent_process_per_run": true,
+    "ordered_coordinates": [
+      {
+        "opened_step1_metadata_multiplicity": 3,
+        "opened_step1_metadata_sha256": "523fee5f9c4205aefff92eb0ad395f9bd3c7d5e207b3fd08cd21201740ae8ee1",
+        "x": 4,
+        "y": 59
+      },
+      {
+        "opened_step1_metadata_multiplicity": 2,
+        "opened_step1_metadata_sha256": "2bce325b3a22f13605d8faeebeb9f44ae9832a871a3a27d16d24ddd12babaa15",
+        "x": 48,
+        "y": 15
+      }
+    ],
+    "repetitions_per_coordinate": 2,
+    "seed": 0,
+    "sequence": [
+      "RESET",
+      "ACTION6(x,y)",
+      "ACTION7"
+    ],
+    "target_action_data": {},
+    "target_action_id": "ACTION7"
+  },
+  "audit_id": "OIA-1-TRACK-A-005e",
+  "candidate_predictions": {
+    "R0001": {
+      "final_frame_sha256": "80a2fd9a8813b7ee5cd6d63a3199ffc247119b39ab60b90709696b47ec58c140",
+      "status": "RUNNING"
+    },
+    "R0005": {
+      "final_frame_sha256": "1e70d7b4ccd5c1ef1e03427d90f7295cdf461583efa978f285b55755e7a915a6",
+      "status": "RUNNING"
+    },
+    "R0006": {
+      "final_frame_sha256": "6d69385f5e081dfd29bfa3aa98f7b26a6d2a1b834e80809e6a9eab8539bba697",
+      "status": "RUNNING"
+    }
+  },
+  "claim_boundary": "Opened Track A local outcome for a previously merged, maintenance-repaired candidate frontier and ACTION7 decision only. No untouched-model, sealed-transfer, general decision-value, autonomous-ontology, or Track B claim.",
+  "environment": {
+    "class_name": "Su15",
+    "game_id": "su15-1944f8ab",
+    "metadata_sha256": "666da4c4a84cdee0c0b0a3f3b6b12d1aacecc14ddb1f4cb3be712b83aad63114",
+    "source_license": "MIT",
+    "source_sha256": "a5f91f7c963d6ca6447dae0ab21342b48a3f511601c40dfa8e972bdc59b4651e"
+  },
+  "exact_reproduction": {
+    "frame_encoding": "64 ASCII rows of 64 uppercase hexadecimal pixels, each followed by LF",
+    "normalized_states": {
+      "GAME_OVER": "FAIL",
+      "NOT_FINISHED": "RUNNING",
+      "WIN": "SUCCESS"
+    },
+    "p0_final_frame_sha256": "1e70d7b4ccd5c1ef1e03427d90f7295cdf461583efa978f285b55755e7a915a6",
+    "p1_final_frame_sha256": "80a2fd9a8813b7ee5cd6d63a3199ffc247119b39ab60b90709696b47ec58c140",
+    "required_available_actions": [
+      6,
+      7
+    ],
+    "required_status_at_p0_and_p1": "RUNNING"
+  },
+  "execution_boundary": {
+    "action7_only_after_exact_p0_and_p1_in_same_run": true,
+    "candidate_or_oia_reruns": 0,
+    "maximum_action6_interventions": 4,
+    "maximum_action7_interventions": 4,
+    "maximum_resets": 4,
+    "network_disabled_during_source_execution": true,
+    "no_actions_after_action7": true,
+    "source_semantics_may_not_be_used_to_modify_candidates_or_action": true
+  },
+  "frozen_parent": {
+    "maintenance_normalized_candidate_package_sha256": "bd28d94d3a22becd7e63cd19395a34124d4cd1ab8e546cc370615b55c8dffe45",
+    "oia_report_sha256": "3ee70e11fcf5f92640507631cbe72ba6620df23b31cafea9ab05c86462ac182a",
+    "opened_step1_evidence_sha256": "e6de7cd8db997c561cfb4be078cc3437347af90f9c59e402761c7d790e3ed3a4",
+    "selected_next_action": "ACTION7",
+    "track_a_005c_result_sha256": "e177ee9bbf86d0d88faee64915858beb22ff87518e7d83b32cb0f110b6e9a840",
+    "track_a_005d_archive_blocker_result_sha256": "d09a71682086dd0871d1035948f7f0091f86139148086d2676321a850bb219c5"
+  },
+  "prospective_ordering": [
+    "maintenance-normalized candidates frozen and merged",
+    "post-P1 behaviors measured",
+    "OIA ACTION7 decision frozen and merged",
+    "public archive found to contain no ACTION7 step-2 outcome",
+    "official su15 source acquired and hash-pinned without execution",
+    "this local outcome protocol frozen",
+    "future local source import, reset, calibration replay, and ACTION7 outcome"
+  ],
+  "runtime": {
+    "arcengine": "0.9.3",
+    "lock_path": "audits/track-a-005e/RUNTIME_REQUIREMENTS.lock.txt",
+    "observed_platform": "macOS-26.5.2-arm64-arm-64bit",
+    "python": "3.12.12"
+  },
+  "schema_version": 1,
+  "status_at_freeze": "frozen_after_source_acquisition_before_source_execution_reset_or_action",
+  "stop_and_verdict_rules": [
+    {
+      "condition": "preflight provenance, syntax, package, or isolation check fails",
+      "verdict": "local_runtime_preflight_blocker"
+    },
+    {
+      "condition": "any run does not reproduce exact P0 after RESET",
+      "rule": "do not send ACTION6 or ACTION7 in that run",
+      "verdict": "local_p0_reproduction_blocker"
+    },
+    {
+      "condition": "a P0-matching run does not reproduce exact P1 after its frozen ACTION6 coordinate",
+      "rule": "do not send ACTION7 in that run",
+      "verdict": "local_p1_reproduction_blocker"
+    },
+    {
+      "condition": "eligible repeated ACTION7 observations are not identical",
+      "verdict": "local_action7_nondeterminism_or_hidden_path_dependence"
+    },
+    {
+      "condition": "the common ACTION7 observation matches exactly one candidate",
+      "verdict": "local_action7_matches_one_candidate"
+    },
+    {
+      "condition": "the common ACTION7 observation matches more than one candidate",
+      "verdict": "local_action7_realized_outcome_not_discriminating"
+    },
+    {
+      "condition": "the common ACTION7 observation matches no candidate",
+      "verdict": "local_action7_outside_candidate_frontier"
+    }
+  ]
+}

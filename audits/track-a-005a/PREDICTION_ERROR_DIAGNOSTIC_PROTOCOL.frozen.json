@@ -1,0 +1,47 @@
+{
+  "audit_id": "OIA-1-TRACK-A-005a",
+  "candidate_boundary": {
+    "candidate_ids": [
+      "C0006",
+      "C0008"
+    ],
+    "prospective_behavior_result_sha256": "1fabd671dd0e396be5b493d27b7eac75313682ee3aef5cfb3fb03cdc580a4d77",
+    "raster_access_before_this_freeze": false
+  },
+  "classification": "post_outcome_retrospective_error_diagnostic",
+  "claim_boundary": "Retrospective error characterization after the archival outcome was opened. It cannot change or strengthen the prospective separator claim and makes no revision-success, decision-value, sealed-transfer, or Track B claim.",
+  "execution": {
+    "action": "ACTION6",
+    "candidate_process_count": 8,
+    "image_id": "sha256:caee0dd1041ab150662d25fae1f47109fcc9aaaa9f51214cf83449e1309b5254",
+    "isolation": "The existing pinned no-network, read-only, unprivileged Track A 005a image with a read-only diagnostic runner mount.",
+    "pythonhashseed_values": [
+      0,
+      1,
+      5,
+      10
+    ],
+    "require_exact_raster_bytes_across_seeds": true
+  },
+  "interpretation": {
+    "acceptance_threshold": null,
+    "allowed": "Descriptive comparison against both the actual frame and an unchanged-P0 persistence baseline.",
+    "forbidden": "Do not retroactively relabel an exact mismatch as a prospective match; any future tolerance or feature abstraction must be frozen in a new study."
+  },
+  "metrics": [
+    "pixel mismatch and match counts",
+    "exact pixel-accuracy fraction",
+    "absolute color-error numerator over 4096",
+    "16-bin color-histogram L1 distance",
+    "predicted and actual delta-support sizes relative to P0",
+    "delta-support intersection, union, and exact Jaccard fraction"
+  ],
+  "outcome_boundary": {
+    "actual_frame_sha256": "80a2fd9a8813b7ee5cd6d63a3199ffc247119b39ab60b90709696b47ec58c140",
+    "archive_evidence_sha256": "e6de7cd8db997c561cfb4be078cc3437347af90f9c59e402761c7d790e3ed3a4",
+    "archive_result_sha256": "06c2c44544545605de7955977702c03f23eaf1f52af1fd71d79b072cc8dac6d2",
+    "later_step_payloads_authorized": false
+  },
+  "schema_version": 1,
+  "status_at_freeze": "frozen_after_actual_outcome_before_candidate_raster_recovery"
+}

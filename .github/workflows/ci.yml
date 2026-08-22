@@ -55,6 +55,9 @@ jobs:
       - name: Verify Track A 005a source selection when present
         run: python scripts/verify_track_a_005a_selection.py
 
+      - name: Verify Track A 005a P0 freeze and extraction when present
+        run: python scripts/verify_track_a_005a_p0.py
+
       - name: Verify accepted v0.2.1 baseline bytes and provenance
         working-directory: baseline/oia-v0.2.1
         run: |

@@ -32,3 +32,8 @@ eligible games. `SOURCE_UNIVERSE_SELECTION.json` records the complete canonical
 game universe, selection-token ranking, five exact P0 member-path triplets, and
 zero payload access. P0 extraction remains a later step and did not occur during
 selection.
+
+`P0_EXTRACTION_PROTOCOL.frozen.json` defines the next narrow read: the three
+level-1 reset files for `su15` in each of the five runs, and nothing else. It
+requires all five copies of each file to be byte-identical before creating a
+canonical P0.

@@ -1,0 +1,76 @@
+{
+  "audit_id": "OIA-1-TRACK-A-006b",
+  "candidate_sentinel_counts": [
+    1,
+    2,
+    4,
+    8
+  ],
+  "case_source": "first 16 cases of the completed and fully opened Track A 006a corpus",
+  "interpretation": "Post-outcome exploratory method development only. These observations select a configuration and provide no 006b outcome evidence.",
+  "observations": [
+    {
+      "in_family_correct": 64,
+      "outside_detected": 6,
+      "outside_detection_breakdown": {
+        "outside_model": 2,
+        "outside_reject": 4
+      },
+      "outside_false_identification": 10,
+      "policy_depth_counts": {
+        "3": 14,
+        "4": 2
+      },
+      "sentinel_count": 1
+    },
+    {
+      "in_family_correct": 64,
+      "outside_detected": 9,
+      "outside_detection_breakdown": {
+        "outside_model": 4,
+        "outside_reject": 5
+      },
+      "outside_false_identification": 7,
+      "policy_depth_counts": {
+        "3": 11,
+        "4": 5
+      },
+      "sentinel_count": 2
+    },
+    {
+      "in_family_correct": 64,
+      "outside_detected": 9,
+      "outside_detection_breakdown": {
+        "outside_model": 2,
+        "outside_reject": 7
+      },
+      "outside_false_identification": 7,
+      "policy_depth_counts": {
+        "3": 5,
+        "4": 11
+      },
+      "sentinel_count": 4
+    },
+    {
+      "in_family_correct": 64,
+      "outside_detected": 9,
+      "outside_detection_breakdown": {
+        "outside_model": 3,
+        "outside_reject": 6
+      },
+      "outside_false_identification": 7,
+      "policy_depth_counts": {
+        "3": 3,
+        "4": 12,
+        "5": 1
+      },
+      "sentinel_count": 8
+    }
+  ],
+  "opened_case_count": 16,
+  "selection": {
+    "reason": "smallest sentinel count tied for the largest observed outside-detection count, with shallower policies than larger tied configurations",
+    "sentinel_count": 2
+  },
+  "status": "opened_development_selection_frozen_before_006b_heldout_generation"
+}

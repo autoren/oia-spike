@@ -1,0 +1,97 @@
+{
+  "audit_id": "OIA-1-TRACK-A-006b",
+  "baseline": {
+    "implementation": "OIA-1 v0.2.1",
+    "parent_runner": "scripts/run_track_a_006a_controlled_open_world.py",
+    "parent_runner_sha256": "ffa2c2916662225e06041a4346e8a255953a1addb62b480d412637f8851d1231"
+  },
+  "benchmark": {
+    "action_count": 3,
+    "base_candidate_count": 4,
+    "case_count": 64,
+    "master_seed": "oia-track-a-006b-heldout-v1",
+    "max_beliefs": 100000,
+    "maximum_closed_depth": 6,
+    "maximum_generation_attempts_per_stage": 2000,
+    "maximum_reject_aware_depth": 8,
+    "minimum_closed_depth": 2,
+    "output_count": 3,
+    "sentinel_count": 2,
+    "state_count": 3
+  },
+  "claim_boundary": "Controlled deterministic Track A comparison of a frozen reject-aware sentinel policy with the closed identity policy. No external validation, learned ontology formation, necessary revision, semantic novelty, sealed transfer, statistical population inference, comparative superiority, real ARC intervention, or Track B claim.",
+  "development_selection": {
+    "artifact": "audits/track-a-006b/OPENED_DEVELOPMENT_SELECTION.json",
+    "case_count": 16,
+    "data_status": "completed and fully opened Track A 006a outcome",
+    "rule": "Select the smallest tested sentinel count tied for the largest observed outside-detection count.",
+    "selected_sentinel_count": 2
+  },
+  "execution": {
+    "expected_record_count": 960,
+    "heldout_target_information": "Neither policy receives the target transitions, hash, kind, generation seed, or execution observations before action selection.",
+    "policies": {
+      "closed_identity_native": "Unchanged exact minimum-worst-case identity policy over four base candidates, executed at its own certified depth.",
+      "reject_aware_equal_closed_horizon": "The frozen reject-aware policy truncated at the closed identity policy's certified depth; nonterminal truncation is unresolved.",
+      "reject_aware_native": "Exact minimum-worst-case policy over four bases plus two sentinels under the frozen reject-aware terminal rule, executed at its own certified depth."
+    },
+    "records_per_case": 15,
+    "target_order": "H0, H1, H2, H3, OUTSIDE"
+  },
+  "generation": {
+    "acceptance": [
+      "four bases are globally behaviorally distinct and have an exact closed identity depth from 2 through 6",
+      "two sentinels are globally behaviorally distinct from every base and each other",
+      "reject-aware synthesis is exact and solved with certified depth no greater than 8",
+      "the held-out outside target is globally behaviorally distinct from all four bases and both sentinels"
+    ],
+    "first_observation_rule": "Every action from initial state s0 emits o0; information can appear only after a hidden state transition.",
+    "machine_family": "complete deterministic three-state Mealy machines",
+    "namespace_separation": "base, sentinel, and outside machines use distinct SHA-256-framed stage labels under the held-out master seed",
+    "rejection_accounting_required": true
+  },
+  "outcomes": {
+    "primary": [
+      "paired native-depth outside detection counts for closed identity and reject-aware policies",
+      "paired native-depth false candidate identification counts for closed identity and reject-aware policies",
+      "native-depth total intervention steps"
+    ],
+    "required_soundness": "Both native policies must correctly identify all 256 in-family targets. Any incorrect identification or reject is an instrument blocker.",
+    "secondary": [
+      "reject-aware equal-closed-horizon outside detection, false identification, and unresolved counts",
+      "reject-aware equal-closed-horizon in-family correct, incorrect, reject, and unresolved counts",
+      "policy depth, root-action, reachable-belief, generation-attempt, rejection, and trace accounting"
+    ],
+    "statistics": "Exact deterministic paired corpus counts only; no p-values, confidence intervals, population generalization, or superiority claim."
+  },
+  "prefreeze_fixture": {
+    "case_count": 3,
+    "evidence_sha256": "1bb2e90d5c38a0c6a2254ccbbf996340407f124a3f262b9a7dd3efc6e7729d81",
+    "record_count": 45,
+    "records_jsonl_sha256": "bd9525fc73a05346b1bd211eee593ce56578ec11fc819edf730206cf45b8015a",
+    "result_sha256": "82d0379fd2721de78e5b909e833daa694345ce9c4838ad394f5c1cce87651cd0",
+    "seed": "oia-track-a-006b-fixture-v1",
+    "used_benchmark_seed": false
+  },
+  "prospective_ordering": [
+    "two-sentinel configuration selected only from opened 006a development cases",
+    "runner and disjoint fixture validated",
+    "held-out generator, seed, filters, terminal rule, policies, horizons, endpoints, and evidence format frozen",
+    "freeze merged before held-out case generation",
+    "future single held-out execution and immutable outcome packaging",
+    "future independent deterministic regeneration"
+  ],
+  "reject_aware_terminal_rule": {
+    "identify": "exactly one base candidate and no sentinel survives",
+    "nonterminal": "one or more bases survive together with a sentinel, or two or more bases survive",
+    "reject": "no base candidate survives, regardless of how many sentinels survive"
+  },
+  "schema_version": 1,
+  "status_at_freeze": "frozen_before_heldout_case_generation_or_target_execution",
+  "stop_rules": [
+    "Stop with a generation blocker if any stage exhausts 2000 attempts.",
+    "Stop with an instrument blocker if either accepted native policy is not exact and solved.",
+    "Stop with an instrument blocker if either native policy incorrectly identifies or rejects any in-family target.",
+    "Do not change configuration, seed, filters, terminal rule, horizons, endpoints, or evidence format after held-out execution; defects require a new numbered slice."
+  ]
+}

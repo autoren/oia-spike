@@ -143,6 +143,12 @@ The next revision gate should preserve exact observation identity as the primary
 endpoint while adding persistence as a required baseline and delta-support
 overlap as a diagnostic, rather than introducing a post-hoc pixel tolerance.
 
+The bounded successor is specified in [`NEXT_REVISION_GATE.md`](NEXT_REVISION_GATE.md).
+It keeps step 2 sealed, treats first-transition replay as calibration, requires a
+new behaviorally plural frontier, and requires a second OIA-selected action to
+be merged before any matching step-2 archival outcome is opened. It is a plan,
+not an authorization or pre-run freeze.
+
 ## Behavior/OIA result
 
 The frozen path admitted both `C0006` and `C0008`. Each exactly replayed P0,

@@ -22,6 +22,8 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
@@ -108,14 +110,11 @@ jobs:
       - name: Verify Track A 005d step-2 outcome when present
         run: python scripts/verify_track_a_005d_outcome.py
 
-      - name: Verify Track A 006b reject-aware pre-outcome freeze
-        run: python scripts/verify_track_a_006b_freeze.py
+      - name: Verify historical freezes and current artifact continuity
+        run: python scripts/verify_historical_freeze_continuity.py
 
       - name: Verify Track A 006b reject-aware outcome when present
         run: python scripts/verify_track_a_006b_outcome.py
-
-      - name: Verify Track A 006c sequential-fusion pre-outcome freeze
-        run: python scripts/verify_track_a_006c_freeze.py
 
       - name: Verify Track A 006c sequential-fusion outcome when present
         run: python scripts/verify_track_a_006c_outcome.py

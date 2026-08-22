@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "maintenance_type": "historical_freeze_verifier_repair",
+  "defect": {
+    "description": "Four freeze manifests included the repository root README.md. Later index-only updates invalidated older working-tree verification and would invalidate newer verification after the next index change, even when every experiment-local artifact remained unchanged.",
+    "detected_by": "cross-repository successor reassessment verification",
+    "affected_claim": "current working-tree verification only"
+  },
+  "repair": {
+    "historical_manifests_and_verifiers_modified": false,
+    "historical_snapshots_reconstructed_from_git": true,
+    "current_continuity_checked_for_all_non_index_manifest_entries": true,
+    "explicit_mutable_index_exemptions": [
+      "README.md"
+    ],
+    "freezes": [
+      {
+        "audit_id": "OIA-1-TRACK-A-005e",
+        "historical_snapshot_commit": "aba0fab0a5d8da66eaf784cd2d8f9d13bec51de6",
+        "historical_manifest_sha256": "5d85f88e854f4d07ed94b95c41848927830316cef8edef08c71c6af48137e8e6"
+      },
+      {
+        "audit_id": "OIA-1-TRACK-A-006a",
+        "historical_snapshot_commit": "1eaa085def449312fb75fc9504b6a3bf500776b2",
+        "historical_manifest_sha256": "3b19a29569c01b20d1082fc2e6891b1afd8f49c3bd412d6e836599245a5859ea"
+      },
+      {
+        "audit_id": "OIA-1-TRACK-A-006b",
+        "historical_snapshot_commit": "057a152915fa52c67c897a8d24394d4f51b0eddf",
+        "historical_manifest_sha256": "6908566370cb4d1546140614dc95dea7f79ef67abf0f1f3bb59e09e40a2e5043"
+      },
+      {
+        "audit_id": "OIA-1-TRACK-A-006c",
+        "historical_snapshot_commit": "a8f3d84ad45bf84622bf703bfa7d80923559652b",
+        "historical_manifest_sha256": "295056f7783a4f8c2a2696d3072a10f93b9c69b7aaac611d8a4e517b621ec0e7"
+      }
+    ]
+  },
+  "empirical_boundary": {
+    "candidate_frontiers_changed": false,
+    "frozen_protocols_changed": false,
+    "game_source_executions": 0,
+    "oia_actions_changed": false,
+    "outcomes_created_or_rerun": false,
+    "real_arc_actions": 0,
+    "resets": 0
+  },
+  "claim_boundary": "Archival verifier maintenance only. This repair does not execute Track A 005e, retroactively refreeze any study, create or rerun an outcome, or broaden any opened claim."
+}

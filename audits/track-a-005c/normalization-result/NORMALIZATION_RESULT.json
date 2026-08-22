@@ -1,0 +1,141 @@
+{
+  "accounting": {
+    "candidate_imports": 0,
+    "candidate_processes": 0,
+    "model_or_repair_inferences": 0,
+    "network_or_service_calls": 0,
+    "normalization_rejections": 0,
+    "normalized_candidates": 8,
+    "oia_processes": 0,
+    "parent_sources_opened": 8,
+    "real_arc_actions": 0,
+    "source_edits": 8,
+    "step_2_or_later_payloads_read": 0
+  },
+  "audit_id": "OIA-1-TRACK-A-005c",
+  "candidate_records": [
+    {
+      "candidate_id": "R0001",
+      "normalization": {
+        "copy_deepcopy_use_count": 1,
+        "edit": "prepend_import_copy",
+        "inserted_bytes_hex": "696d706f727420636f70790a",
+        "other_source_bytes_changed": 0
+      },
+      "normalized_sha256": "b9c0d12bba51dfd9dbaec87ff277254ba5f56d6483c55c4fb8bfadcaaeeb705e",
+      "normalized_size_bytes": 953,
+      "parent_sha256": "c4dae01abdd0c3ded5780ca2b8b1bf4e864ba23a5dd977f752935da5084bef82",
+      "stance_id": "persistence_boundary_normalization",
+      "status": "normalized_not_executed"
+    },
+    {
+      "candidate_id": "R0002",
+      "normalization": {
+        "copy_deepcopy_use_count": 1,
+        "edit": "prepend_import_copy",
+        "inserted_bytes_hex": "696d706f727420636f70790a",
+        "other_source_bytes_changed": 0
+      },
+      "normalized_sha256": "7f05063df821ae8932646e82d298328c7784810c15c862fec8644bd86c128391",
+      "normalized_size_bytes": 972,
+      "parent_sha256": "fbf80e427b0e605d7cf85964f9bd5d882acf578f613c6e508f9f2a2fb4ccdf04",
+      "stance_id": "transient_impact_restoration",
+      "status": "normalized_not_executed"
+    },
+    {
+      "candidate_id": "R0003",
+      "normalization": {
+        "copy_deepcopy_use_count": 1,
+        "edit": "prepend_import_copy",
+        "inserted_bytes_hex": "696d706f727420636f70790a",
+        "other_source_bytes_changed": 0
+      },
+      "normalized_sha256": "73d0dfc2706dac384053ac656980d2dc0b4283030aec70f1d5be0408ee435946",
+      "normalized_size_bytes": 935,
+      "parent_sha256": "b8cb85e044ed90dcc148b2cf928cd62859a1f5f2c29a4211c973beb92ed687b2",
+      "stance_id": "diagonal_projectile_ray",
+      "status": "normalized_not_executed"
+    },
+    {
+      "candidate_id": "R0004",
+      "normalization": {
+        "copy_deepcopy_use_count": 1,
+        "edit": "prepend_import_copy",
+        "inserted_bytes_hex": "696d706f727420636f70790a",
+        "other_source_bytes_changed": 0
+      },
+      "normalized_sha256": "81c82eff97242590b3612bb2a192382e712b326ea8e4e054b93c0e1006bb6a59",
+      "normalized_size_bytes": 1075,
+      "parent_sha256": "942bf625300a7d79441845f74bb3c0125e467e63fe40ebe86f47da7bbdd3dd56",
+      "stance_id": "viewport_floor_boundary",
+      "status": "normalized_not_executed"
+    },
+    {
+      "candidate_id": "R0005",
+      "normalization": {
+        "copy_deepcopy_use_count": 1,
+        "edit": "prepend_import_copy",
+        "inserted_bytes_hex": "696d706f727420636f70790a",
+        "other_source_bytes_changed": 0
+      },
+      "normalized_sha256": "cc4e6317b4da2f0df11cba66d94fb323197e98985ec8636a07b1384caba61345",
+      "normalized_size_bytes": 1178,
+      "parent_sha256": "9c0422424518385457e55de382993e90ec939e19be83b79b599b625aa67d77b8",
+      "stance_id": "discrete_target_state",
+      "status": "normalized_not_executed"
+    },
+    {
+      "candidate_id": "R0006",
+      "normalization": {
+        "copy_deepcopy_use_count": 1,
+        "edit": "prepend_import_copy",
+        "inserted_bytes_hex": "696d706f727420636f70790a",
+        "other_source_bytes_changed": 0
+      },
+      "normalized_sha256": "86312da086ea3b0a82b915db65f2223f6a81321b120e59c2abc286a8551c06dd",
+      "normalized_size_bytes": 3450,
+      "parent_sha256": "e59800f349e94a19cddb0a53420ab9fad7a8177951921d5f675c9af58f383b1f",
+      "stance_id": "wraparound_clipped_motion",
+      "status": "normalized_not_executed"
+    },
+    {
+      "candidate_id": "R0007",
+      "normalization": {
+        "copy_deepcopy_use_count": 1,
+        "edit": "prepend_import_copy",
+        "inserted_bytes_hex": "696d706f727420636f70790a",
+        "other_source_bytes_changed": 0
+      },
+      "normalized_sha256": "d4a6f62178c11c42bcc59ffc54edfed2ddc8b1ab63498401ec2d87298df61e6d",
+      "normalized_size_bytes": 959,
+      "parent_sha256": "153da1498c19fb59a51d1ff10b68e496afe0c4f6d3729e52c8d37d7060f34905",
+      "stance_id": "action_latent_minimal_effect",
+      "status": "normalized_not_executed"
+    },
+    {
+      "candidate_id": "R0008",
+      "normalization": {
+        "copy_deepcopy_use_count": 1,
+        "edit": "prepend_import_copy",
+        "inserted_bytes_hex": "696d706f727420636f70790a",
+        "other_source_bytes_changed": 0
+      },
+      "normalized_sha256": "7f05063df821ae8932646e82d298328c7784810c15c862fec8644bd86c128391",
+      "normalized_size_bytes": 972,
+      "parent_sha256": "fbf80e427b0e605d7cf85964f9bd5d882acf578f613c6e508f9f2a2fb4ccdf04",
+      "stance_id": "skeptical_minimal_countermodel",
+      "status": "normalized_not_executed"
+    }
+  ],
+  "claim_boundary": "Deterministic missing-copy-import maintenance only; normalized sources have not been imported or executed.",
+  "package": {
+    "manifest_sha256": "0c9d1da4e5bc95479102e3d708cc41cd841f20db6f2b4ddff97a55c658d36dd5",
+    "path": "normalization-result/NORMALIZED_CANDIDATE_PACKAGE.zip",
+    "sha256": "bd28d94d3a22becd7e63cd19395a34124d4cd1ab8e546cc370615b55c8dffe45",
+    "size_bytes": 6640
+  },
+  "parent_package_sha256": "a49a8012b0f7f130feb5c32bfb32825ad4426d7c2203fba6e532165c1fd884d4",
+  "protocol_sha256": "79a8a90934d0de1f7b82f6006ca0f65d6493d92870cf8c86bbf71f95ccb6e908",
+  "schema_version": 1,
+  "status": "maintenance_normalization_feasible"
+}

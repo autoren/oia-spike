@@ -1,0 +1,89 @@
+{
+  "action_language": {
+    "actions": [
+      "ACTION6",
+      "ACTION7"
+    ],
+    "candidate_independent": true,
+    "horizon": 3,
+    "ordering": "Lexicographic Cartesian order over ACTION6 then ACTION7 at lengths 1, 2, and 3.",
+    "reset": "Every word begins from canonical P0 in a fresh isolated process.",
+    "word_count": 14
+  },
+  "adapter_and_oia": {
+    "accepted_engine": "OIA-1 v0.2.1",
+    "adapter": "Complete deterministic bounded prefix-tree Mealy compilation.",
+    "candidate_specific_logic_forbidden": true,
+    "caps": {
+      "max_beliefs": 100000,
+      "max_partitions": 100000,
+      "max_task_loss_frontier": 50000,
+      "value_depth": 3
+    },
+    "cross_process_pythonhashseed": [
+      0,
+      1,
+      5,
+      10
+    ],
+    "observation_fields": [
+      "final_frame_sha256",
+      "status"
+    ],
+    "post_horizon": "Candidate-independent OBS_BOUNDARY_EXHAUSTED sink.",
+    "primary_endpoint": "full_candidate_identification.adaptive",
+    "require_exact_bytes_across_processes": true,
+    "require_exact_minimum_and_serialized_policy_verification": true
+  },
+  "allowed_verdicts": [
+    "prospective_separator_selected_pre_outcome",
+    "static_admission_blocker",
+    "replay_failure",
+    "no_behavioral_divergence",
+    "nondeterministic_or_runtime_blocker",
+    "oia_blocker"
+  ],
+  "audit_id": "OIA-1-TRACK-A-005a",
+  "candidate_source": {
+    "accepted_candidate_ids_in_order": [
+      "C0006",
+      "C0008"
+    ],
+    "candidate_package_sha256": "9ae478a842b942bc80f3ff62063e4780d8097018384971d83db12fd6d87b167a",
+    "candidate_source_open_before_this_freeze": false,
+    "generation_result_sha256": "f2fcb08fbd2c163473bfab7905f40f6989a8ba9a91dde9011dbf610b3934b937"
+  },
+  "claim_boundary": "Opened Track A candidate admission and exact OIA separator selection before held-out post-P0 outcome access. No real ARC action, outcome-agreement, decision-value, private/sealed transfer, or Track B claim.",
+  "epistemic_ordering": {
+    "candidate_generation_rules_merged_before_inference": true,
+    "candidate_package_merged_before_source_open": true,
+    "candidate_source_or_behavior_inspected_before_this_freeze": false,
+    "held_out_post_p0_payloads_read": 0,
+    "next_outcome_gate": "If and only if at least two candidates pass and OIA selects an exact separator, merge that result before authorizing extraction of the matching public archive outcome.",
+    "separator_selected_before_held_out_outcome_required": true
+  },
+  "freeze_date": "2026-08-22",
+  "p0": {
+    "available_actions": [
+      6,
+      7
+    ],
+    "frame_sha256": "1e70d7b4ccd5c1ef1e03427d90f7295cdf461583efa978f285b55755e7a915a6",
+    "replay": "initial_state(copy of P0) followed by render must reproduce exact P0 bytes."
+  },
+  "runtime_isolation": {
+    "candidate_and_p0_mounts": "read-only; prepared P0 mount contains initial_frame.txt only",
+    "candidate_runtime_calls": "No ARC, model, OIA, browser, API, hosted service, or host archive access from candidate processes.",
+    "container": "Unprivileged UID/GID 65532, read-only root, no network, all capabilities dropped, no-new-privileges, bounded CPU/memory/PIDs/timeout, isolated noexec tmpfs.",
+    "image_provenance": "audits/track-a-005a/PREEXECUTION_RUNTIME.json"
+  },
+  "schema_version": 1,
+  "screening": {
+    "full_determinism": "For each provisional unique candidate and every word, run two repetitions under PYTHONHASHSEED 0, 1, 5, and 10. All projected traces must be byte-identical and successful.",
+    "hardened_static": "Reapply the frozen generation AST contract, then reject dangerous names and NumPy/file serialization attributes without importing candidate code.",
+    "p0": "Run empty-word exact replay for every static-pass candidate.",
+    "provisional": "Run every word once under PYTHONHASHSEED=0 and retain the first candidate in frozen order for each complete trace signature.",
+    "success": "At least two exact-P0, replay-consistent, deterministic, behaviorally non-equivalent candidates are required; exactly two is sufficient."
+  },
+  "status_at_freeze": "frozen_before_generated_candidate_source_open_or_execution"
+}

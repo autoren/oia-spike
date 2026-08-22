@@ -1,0 +1,107 @@
+{
+  "accepted_instrument": {
+    "accepted_package_sha256": "2653020afcbf636def260da1517c9e3ba41c2ba1175fc210d4847b303febc33b",
+    "current_source_manifest_sha256": "0160f1ef9e73a5b3e3d46c07f3207f5185a9282e13c0714baca2b7af2b973455",
+    "name": "OIA-1 v0.2.1",
+    "package_manifest_sha256": "127d04ede93f9ac0e30319ebcebeddb24f58e0e70bcff7d5d053dbc56d40bb2a"
+  },
+  "audit_id": "OIA-1-TRACK-A-005a",
+  "execution_boundary": {
+    "generated_candidate_processes": 0,
+    "generated_candidate_source_opened": 0,
+    "held_out_post_p0_payloads_read": 0,
+    "model_or_api_calls": 0,
+    "oia_processes": 0,
+    "real_arc_actions": 0
+  },
+  "isolation": {
+    "candidate_and_p0_mounts": "read_only",
+    "capabilities": "all_dropped",
+    "cpus": 1,
+    "memory": "512m",
+    "network": "none",
+    "no_new_privileges": true,
+    "pids_limit": 64,
+    "root_filesystem": "read_only",
+    "tmpfs": "/tmp:rw,noexec,nosuid,size=16777216",
+    "uid_gid": "65532:65532"
+  },
+  "runtime": {
+    "architecture": "arm64",
+    "base_image": "oia-track-a-003b-runtime:preoutcome",
+    "base_image_id": "sha256:644d899fa00c3a9fc16cc05f94ee5d078653891fe55659cd8e51fb1126027051",
+    "docker_client": "29.7.2",
+    "docker_server": "29.7.2",
+    "image_id": "sha256:caee0dd1041ab150662d25fae1f47109fcc9aaaa9f51214cf83449e1309b5254",
+    "image_tag": "oia-track-a-005a-runtime:preexecution",
+    "numpy": "2.2.6",
+    "os": "linux",
+    "python": "3.12.11"
+  },
+  "schema_version": 1,
+  "source_pins": [
+    {
+      "path": "runtime/track-a-005a/Dockerfile",
+      "sha256": "64b99fd940ba8a01d3dc0497bc921374a1baf1ed25f764dd010bfe74b5026724",
+      "size_bytes": 366
+    },
+    {
+      "path": "runtime/track-a-005a/requirements-aarch64.txt",
+      "sha256": "a53bf98f0bdb6cda09410a1ae477308702f39f47175436013c0f8a28e3d16d43",
+      "size_bytes": 92
+    },
+    {
+      "path": "runtime/track-a-005a/candidate_runner.py",
+      "sha256": "fb9023cdce7334d251b0175a3c304dd9e631422b624fc54e386e8ffb2de55b07",
+      "size_bytes": 8859
+    },
+    {
+      "path": "scripts/prepare_track_a_005a_admission.py",
+      "sha256": "acaa5dba0acc0efe13caf0e8f519c0717cf4c2ce8d33e10ff319f13c770124c6",
+      "size_bytes": 8026
+    },
+    {
+      "path": "scripts/run_track_a_005a_admission_and_oia.py",
+      "sha256": "866bfd5a3471976adb1c6c2bd75f14e0690d37d0be33464ae3ed9f6c0d19aba7",
+      "size_bytes": 22313
+    },
+    {
+      "path": "scripts/verify_track_a_005a_preexecution.py",
+      "sha256": "5408d51da4ef7894ede2482973e9dc98d6ddcd394ac021cf1b0f540d0917449b",
+      "size_bytes": 5384
+    },
+    {
+      "path": "scripts/verify_track_a_005a_behavior_outcome.py",
+      "sha256": "fa8e0eccf65c3756f35db451f86a65c1cb0300a4a6fbadfafbb565743096d283",
+      "size_bytes": 5744
+    },
+    {
+      "path": "tests/test_track_a_005a_admission.py",
+      "sha256": "8d07538fe4705245d7f128010a15f439e53dc82ff0c10d4225a4b5ee755f7b84",
+      "size_bytes": 3624
+    },
+    {
+      "path": "tests/fixtures/track-a-005a/synthetic_candidate/candidate.py",
+      "sha256": "6f547d6a49b9511b6510bd9cca6d00528896db20502b7722a1e1fa1981ee2845",
+      "size_bytes": 513
+    }
+  ],
+  "status": "frozen_before_generated_candidate_source_open_or_execution",
+  "synthetic_smoke_test": {
+    "candidate": "tests/fixtures/track-a-005a/synthetic_candidate/candidate.py",
+    "candidate_generated_by_005a": false,
+    "candidate_processes": 1,
+    "file_accesses": [
+      "p0/initial_frame.txt",
+      "p0/initial_frame.txt",
+      "candidate/candidate.py"
+    ],
+    "p0_replay_exact": true,
+    "status": "pass",
+    "trace_sha256": "287393e980de5bd8e55260161e209b78e72fdc5a57d63f105889160c9986c11a",
+    "word": [
+      "ACTION6",
+      "ACTION7"
+    ]
+  }
+}

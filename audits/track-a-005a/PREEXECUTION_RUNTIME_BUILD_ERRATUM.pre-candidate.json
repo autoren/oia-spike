@@ -1,0 +1,12 @@
+{
+  "audit_id": "OIA-1-TRACK-A-005a",
+  "candidate_package_opened": false,
+  "candidate_processes": 0,
+  "correction": "Derive the 005a runner image from the already pinned local Track A 003b runtime image and replace only the candidate-independent runner entrypoint.",
+  "failed_build_output_used_as_evidence": false,
+  "failure": "A network-disabled Docker build from the pinned Python base could not install the reduced NumPy-only requirement because that exact layer was not cached.",
+  "network_note": "Docker BuildKit contacted registry metadata/auth before the network-disabled RUN step; no candidate process, model call, ARC call, credential material, or held-out payload was involved.",
+  "real_arc_actions": 0,
+  "schema_version": 1,
+  "status": "pre_candidate_runtime_build_failure_preserved"
+}

@@ -10,6 +10,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 FREEZE_PATH = ROOT / "audits" / "track-a-003b" / "PRE_OUTCOME_RUNTIME.json"
+ERRATUM_PATH = ROOT / "audits" / "track-a-003b" / "ORCHESTRATOR_ERRATUM.pre-provisional.json"
 
 
 def sha256(path: Path) -> str:
@@ -37,11 +38,31 @@ def main() -> None:
     if any(freeze["execution_boundary"].values()):
         raise ValueError("pre-outcome execution boundary was crossed")
 
+    erratum = json.loads(ERRATUM_PATH.read_text(encoding="utf-8"))
+    if erratum["status"] != "frozen_after_p0_before_provisional_behavior":
+        raise ValueError("unexpected orchestrator erratum status")
+    for pin in (
+        erratum["preserved_pre_outcome_source"],
+        {
+            "path": erratum["corrected_orchestrator"]["path"],
+            "sha256": erratum["corrected_orchestrator"]["sha256"],
+        },
+        {
+            "path": erratum["corrected_orchestrator"]["test_path"],
+            "sha256": erratum["corrected_orchestrator"]["test_sha256"],
+        },
+    ):
+        if sha256(ROOT / pin["path"]) != pin["sha256"]:
+            raise ValueError(f"orchestrator erratum pin mismatch: {pin['path']}")
+    if any(erratum["execution_boundary"].values()):
+        raise ValueError("provisional execution boundary crossed before erratum freeze")
+
     print(
         json.dumps(
             {
                 "audit_id": freeze["audit_id"],
                 "candidate_manifests": len(manifests),
+                "orchestrator_revision": "v2-envelope-correction",
                 "runtime_image_id": freeze["runtime"]["runtime_image_id"],
                 "source_pins": len(freeze["source_pins"]),
                 "pass": True,

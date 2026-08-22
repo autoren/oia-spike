@@ -1,0 +1,213 @@
+{
+  "accounting": {
+    "candidate_imports": 0,
+    "candidate_processes": 0,
+    "hardened_static_pass": 8,
+    "hardened_static_rejected": 0,
+    "network_or_service_calls": 0,
+    "oia_processes": 0,
+    "real_arc_actions": 0,
+    "source_records_opened": 8,
+    "step_2_or_later_payloads_read": 0
+  },
+  "audit_id": "OIA-1-TRACK-A-005c",
+  "candidate_records": [
+    {
+      "candidate_id": "R0001",
+      "candidate_sha256": "b9c0d12bba51dfd9dbaec87ff277254ba5f56d6483c55c4fb8bfadcaaeeb705e",
+      "candidate_size_bytes": 953,
+      "parent_sha256": "c4dae01abdd0c3ded5780ca2b8b1bf4e864ba23a5dd977f752935da5084bef82",
+      "stance_id": "persistence_boundary_normalization",
+      "static_scan": {
+        "ast_node_count": 237,
+        "forbidden_attributes": [],
+        "forbidden_names": [],
+        "functions": [
+          "initial_state",
+          "render",
+          "step"
+        ],
+        "imports": [
+          "copy",
+          "numpy",
+          "typing"
+        ],
+        "result": "pass"
+      },
+      "status": "prepared_not_imported_or_executed"
+    },
+    {
+      "candidate_id": "R0002",
+      "candidate_sha256": "7f05063df821ae8932646e82d298328c7784810c15c862fec8644bd86c128391",
+      "candidate_size_bytes": 972,
+      "parent_sha256": "fbf80e427b0e605d7cf85964f9bd5d882acf578f613c6e508f9f2a2fb4ccdf04",
+      "stance_id": "transient_impact_restoration",
+      "static_scan": {
+        "ast_node_count": 244,
+        "forbidden_attributes": [],
+        "forbidden_names": [],
+        "functions": [
+          "initial_state",
+          "render",
+          "step"
+        ],
+        "imports": [
+          "copy",
+          "numpy",
+          "typing"
+        ],
+        "result": "pass"
+      },
+      "status": "prepared_not_imported_or_executed"
+    },
+    {
+      "candidate_id": "R0003",
+      "candidate_sha256": "73d0dfc2706dac384053ac656980d2dc0b4283030aec70f1d5be0408ee435946",
+      "candidate_size_bytes": 935,
+      "parent_sha256": "b8cb85e044ed90dcc148b2cf928cd62859a1f5f2c29a4211c973beb92ed687b2",
+      "stance_id": "diagonal_projectile_ray",
+      "static_scan": {
+        "ast_node_count": 237,
+        "forbidden_attributes": [],
+        "forbidden_names": [],
+        "functions": [
+          "initial_state",
+          "render",
+          "step"
+        ],
+        "imports": [
+          "copy",
+          "numpy",
+          "typing"
+        ],
+        "result": "pass"
+      },
+      "status": "prepared_not_imported_or_executed"
+    },
+    {
+      "candidate_id": "R0004",
+      "candidate_sha256": "81c82eff97242590b3612bb2a192382e712b326ea8e4e054b93c0e1006bb6a59",
+      "candidate_size_bytes": 1075,
+      "parent_sha256": "942bf625300a7d79441845f74bb3c0125e467e63fe40ebe86f47da7bbdd3dd56",
+      "stance_id": "viewport_floor_boundary",
+      "static_scan": {
+        "ast_node_count": 187,
+        "forbidden_attributes": [],
+        "forbidden_names": [],
+        "functions": [
+          "initial_state",
+          "render",
+          "step"
+        ],
+        "imports": [
+          "copy",
+          "numpy",
+          "typing"
+        ],
+        "result": "pass"
+      },
+      "status": "prepared_not_imported_or_executed"
+    },
+    {
+      "candidate_id": "R0005",
+      "candidate_sha256": "cc4e6317b4da2f0df11cba66d94fb323197e98985ec8636a07b1384caba61345",
+      "candidate_size_bytes": 1178,
+      "parent_sha256": "9c0422424518385457e55de382993e90ec939e19be83b79b599b625aa67d77b8",
+      "stance_id": "discrete_target_state",
+      "static_scan": {
+        "ast_node_count": 280,
+        "forbidden_attributes": [],
+        "forbidden_names": [],
+        "functions": [
+          "initial_state",
+          "render",
+          "step"
+        ],
+        "imports": [
+          "copy",
+          "numpy",
+          "typing"
+        ],
+        "result": "pass"
+      },
+      "status": "prepared_not_imported_or_executed"
+    },
+    {
+      "candidate_id": "R0006",
+      "candidate_sha256": "86312da086ea3b0a82b915db65f2223f6a81321b120e59c2abc286a8551c06dd",
+      "candidate_size_bytes": 3450,
+      "parent_sha256": "e59800f349e94a19cddb0a53420ab9fad7a8177951921d5f675c9af58f383b1f",
+      "stance_id": "wraparound_clipped_motion",
+      "static_scan": {
+        "ast_node_count": 277,
+        "forbidden_attributes": [],
+        "forbidden_names": [],
+        "functions": [
+          "initial_state",
+          "render",
+          "step"
+        ],
+        "imports": [
+          "copy",
+          "numpy",
+          "typing"
+        ],
+        "result": "pass"
+      },
+      "status": "prepared_not_imported_or_executed"
+    },
+    {
+      "candidate_id": "R0007",
+      "candidate_sha256": "d4a6f62178c11c42bcc59ffc54edfed2ddc8b1ab63498401ec2d87298df61e6d",
+      "candidate_size_bytes": 959,
+      "parent_sha256": "153da1498c19fb59a51d1ff10b68e496afe0c4f6d3729e52c8d37d7060f34905",
+      "stance_id": "action_latent_minimal_effect",
+      "static_scan": {
+        "ast_node_count": 237,
+        "forbidden_attributes": [],
+        "forbidden_names": [],
+        "functions": [
+          "initial_state",
+          "render",
+          "step"
+        ],
+        "imports": [
+          "copy",
+          "numpy",
+          "typing"
+        ],
+        "result": "pass"
+      },
+      "status": "prepared_not_imported_or_executed"
+    },
+    {
+      "candidate_id": "R0008",
+      "candidate_sha256": "7f05063df821ae8932646e82d298328c7784810c15c862fec8644bd86c128391",
+      "candidate_size_bytes": 972,
+      "parent_sha256": "fbf80e427b0e605d7cf85964f9bd5d882acf578f613c6e508f9f2a2fb4ccdf04",
+      "stance_id": "skeptical_minimal_countermodel",
+      "static_scan": {
+        "ast_node_count": 244,
+        "forbidden_attributes": [],
+        "forbidden_names": [],
+        "functions": [
+          "initial_state",
+          "render",
+          "step"
+        ],
+        "imports": [
+          "copy",
+          "numpy",
+          "typing"
+        ],
+        "result": "pass"
+      },
+      "status": "prepared_not_imported_or_executed"
+    }
+  ],
+  "claim_boundary": "Static preparation of deterministic maintenance-normalized sources only; no candidate import, execution, OIA, or step-2 access.",
+  "normalization_result_sha256": "afb6a9601965c90ac6fb9e96d2bd5b318394cded9116beeebacf822b9a29d0a1",
+  "normalized_candidate_package_sha256": "bd28d94d3a22becd7e63cd19395a34124d4cd1ab8e546cc370615b55c8dffe45",
+  "schema_version": 1,
+  "status": "revision_bundles_prepared_behavior_not_run"
+}

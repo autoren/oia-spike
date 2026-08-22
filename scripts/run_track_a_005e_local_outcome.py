@@ -7,6 +7,7 @@ import argparse
 import ast
 import hashlib
 import importlib.metadata
+import inspect
 import json
 import os
 from pathlib import Path
@@ -74,7 +75,25 @@ def source_structure(source: bytes) -> dict[str, Any]:
         elif isinstance(node, ast.ImportFrom):
             imports.add((node.module or "").split(".", 1)[0])
     classes = [node.name for node in tree.body if isinstance(node, ast.ClassDef)]
-    return {"imports": sorted(imports), "top_level_classes": classes}
+    su15 = next(
+        (node for node in tree.body if isinstance(node, ast.ClassDef) and node.name == "Su15"),
+        None,
+    )
+    init = None if su15 is None else next(
+        (
+            node
+            for node in su15.body
+            if isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef))
+            and node.name == "__init__"
+        ),
+        None,
+    )
+    init_args = [] if init is None else [argument.arg for argument in init.args.args]
+    return {
+        "imports": sorted(imports),
+        "su15_constructor_positional_arguments": init_args,
+        "top_level_classes": classes,
+    }
 
 
 def preflight(source_path: Path, metadata_path: Path, *, check_runtime: bool) -> dict[str, Any]:
@@ -119,7 +138,11 @@ def preflight(source_path: Path, metadata_path: Path, *, check_runtime: bool) ->
     if not source.startswith(b"# MIT License\n"):
         raise ValueError("005e source license header changed")
     structure = source_structure(source)
-    if set(structure["imports"]) != EXPECTED_IMPORTS or structure["top_level_classes"] != EXPECTED_CLASSES:
+    if (
+        set(structure["imports"]) != EXPECTED_IMPORTS
+        or structure["top_level_classes"] != EXPECTED_CLASSES
+        or structure["su15_constructor_positional_arguments"] != ["self"]
+    ):
         raise ValueError("005e source structure changed")
 
     observed_packages: dict[str, str] = {}
@@ -183,6 +206,11 @@ def disable_network() -> None:
     socket.create_connection = blocked  # type: ignore[assignment]
 
 
+def constructor_kwargs(game_class: type, seed: int) -> dict[str, int]:
+    """Mirror the official wrapper's conditional seed delivery."""
+    return {"seed": seed} if "seed" in inspect.signature(game_class).parameters else {}
+
+
 def worker(source_path: Path, metadata_path: Path, x: int, y: int, repetition: int) -> dict[str, Any]:
     protocol = read_protocol()
     preflight(source_path, metadata_path, check_runtime=True)
@@ -198,7 +226,7 @@ def worker(source_path: Path, metadata_path: Path, x: int, y: int, repetition: i
     game_class = namespace.get("Su15")
     if not isinstance(game_class, type):
         raise ValueError("official Su15 class missing after source execution")
-    game = game_class(seed=0)
+    game = game_class(**constructor_kwargs(game_class, seed=0))
     run: dict[str, Any] = {
         "coordinate": {"x": x, "y": y},
         "repetition": repetition,

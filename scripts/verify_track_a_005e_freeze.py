@@ -83,8 +83,22 @@ def main() -> None:
         raise ValueError("005e coordinate schedule changed")
     if protocol["action_schedule"]["repetitions_per_coordinate"] != 2:
         raise ValueError("005e repetition schedule changed")
+    if not protocol["action_schedule"]["seed_delivery"].startswith(
+        "Match the official LocalEnvironmentWrapper"
+    ):
+        raise ValueError("005e seed-delivery rule changed")
     if protocol["execution_boundary"]["maximum_action7_interventions"] != 4:
         raise ValueError("005e action cap changed")
+    correction = protocol["maintenance_correction"]
+    if (
+        correction["predecessor_merge_commit"]
+        != "f6bb1c41e4838c9f9a548b50b25654e555afa905"
+        or correction["game_source_executions_before_correction"] != 0
+        or correction["real_arc_actions_before_correction"] != 0
+        or correction["candidate_frontier_changed"]
+        or correction["oia_action_changed"]
+    ):
+        raise ValueError("005e constructor maintenance provenance changed")
     if protocol["environment"]["source_sha256"] != acquisition["source"]["sha256"]:
         raise ValueError("005e source provenance changed")
 

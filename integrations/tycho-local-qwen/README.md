@@ -1,0 +1,36 @@
+# Tycho local-Qwen qualification
+
+This integration freezes one opened engineering check for a genuinely useful
+fallback: running Tycho through a fully local multimodal tool-use model. The
+official ARC-AGI-3 Kaggle evaluator keeps its hidden games externally
+custodied, but competition notebooks have internet disabled. Tycho already
+supports an OpenAI-compatible local endpoint, so local-model compatibility is
+the concrete execution question.
+
+The exact Tycho source and Qwen model/projector bytes are pinned in
+[`QUALIFICATION_PROTOCOL.json`](QUALIFICATION_PROTOCOL.json). One exploratory
+transport call occurred before the freeze only to determine whether this route
+was technically plausible. It is recorded but is not qualification evidence.
+
+After this protocol is committed, it authorizes exactly:
+
+- one repeated local text, image, and structured-tool transport call; and
+- the upstream `configs/smoke/minimal.yaml` path on one opened public `tr87`
+  game, with at most two model calls, two tool steps, two committed actions,
+  and one initial reset.
+
+The ARC toolkit may anonymously acquire the current public game source and
+then executes it locally in normal mode. No registered credential, paid model
+service, private game, competition submission, executable world-model
+generation, or OIA run is allowed.
+
+A pass would establish local inference and opened harness plumbing only. It
+would not show that Qwen can construct or revise a useful world model, solve a
+game, transfer to private games, or improve decisions. Any constructive public
+smoke or externally scored evaluation needs its own later freeze.
+
+Verify the frozen protocol with:
+
+```bash
+python scripts/verify_tycho_local_qwen_qualification.py
+```

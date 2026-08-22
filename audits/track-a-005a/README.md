@@ -66,3 +66,20 @@ imported or behaviorally executed. Thus the result establishes fresh P0-only
 candidate-generation feasibility, not a behaviorally non-equivalent frontier.
 An isolated runner and behavioral-admission protocol must be frozen and merged
 before opening or executing either candidate.
+
+## Behavior/OIA preexecution gate
+
+`BEHAVIOR_AND_OIA_PROTOCOL.frozen.json` and `PREEXECUTION_RUNTIME.json` now pin
+that next gate before either generated source is opened. The candidate-independent
+boundary contains all 14 action words of lengths one through three over
+`ACTION6` and `ACTION7`. Every word starts in a fresh no-network, read-only,
+unprivileged container; promoted candidates must reproduce P0 and match across
+two repetitions under four hash seeds.
+
+If two candidates survive, the already accepted OIA-1 v0.2.1 implementation will
+automatically receive a complete prefix-tree adapter and must return an exact,
+verified separator with byte-identical reports across processes. The adapter
+exposes only rendered-frame hashes and declared status. The generated sources
+remain unopened and unexecuted at this freeze, and no post-P0 archive payload has
+been read. A selected separator must be committed before a separately authorized
+public-outcome extraction.

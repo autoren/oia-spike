@@ -35,8 +35,12 @@ It is intentionally separate from [`autoren/ontology-intervention-auditor`](http
 - [`integrations/tycho-local-qwen/`](integrations/tycho-local-qwen/) freezes a
   separately bounded local-model engineering qualification: one repeated
   transport call and at most two local-model calls/two actions on one opened
-  public ARC-AGI-3 game. It does not authorize a private game, submission,
-  executable-world-model generation, or behavioral claim.
+  public ARC-AGI-3 game. The qualification passed for local transport and
+  opened-harness compatibility. The sole recorded game action was Tycho's
+  default at the tool cap, not a model-selected action, so a larger bounded
+  action-selection smoke still requires its own freeze. This integration does
+  not authorize a private game, submission, executable-world-model generation,
+  or behavioral claim.
 
 ## Local baseline validation
 

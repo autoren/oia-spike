@@ -73,6 +73,36 @@ class TychoLocalQwenQualificationTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, "followed qualification behavior"):
                 verifier.validate_maintenance(path)
 
+    def test_result_preserves_default_action_attribution(self) -> None:
+        payload = verifier.validate_result()
+        result = payload["public_harness_result"]
+        self.assertEqual(result["model_calls"], 2)
+        self.assertEqual(result["tool_steps"], 2)
+        self.assertEqual(result["environment_action_sequence"], ["ACTION1"])
+        self.assertEqual(result["default_reason"], "default (tool cap)")
+        self.assertFalse(result["action_selection_by_model_established"])
+        self.assertEqual(payload["next_gate"]["status"], "not_authorized_by_this_result")
+
+    def test_result_fails_closed_if_default_action_is_recast_as_model_choice(self) -> None:
+        payload = json.loads(verifier.RESULT.read_text(encoding="utf-8"))
+        payload["public_harness_result"][
+            "action_selection_by_model_established"
+        ] = True
+        with tempfile.TemporaryDirectory() as temporary:
+            path = Path(temporary) / "tampered.json"
+            path.write_text(json.dumps(payload), encoding="utf-8")
+            with self.assertRaisesRegex(ValueError, "action attribution changed"):
+                verifier.validate_result(path)
+
+    def test_result_fails_closed_if_private_evaluation_is_added(self) -> None:
+        payload = json.loads(verifier.RESULT.read_text(encoding="utf-8"))
+        payload["public_harness_result"]["semi_private_or_private_games"] = 1
+        with tempfile.TemporaryDirectory() as temporary:
+            path = Path(temporary) / "tampered.json"
+            path.write_text(json.dumps(payload), encoding="utf-8")
+            with self.assertRaisesRegex(ValueError, "zero boundary"):
+                verifier.validate_result(path)
+
 
 if __name__ == "__main__":
     unittest.main()

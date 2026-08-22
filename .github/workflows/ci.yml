@@ -116,6 +116,9 @@ jobs:
       - name: Verify Tycho trace integration pins and boundaries
         run: python scripts/verify_tycho_trace_integration.py
 
+      - name: Verify Tycho local-Qwen qualification and action attribution
+        run: python scripts/verify_tycho_local_qwen_qualification.py
+
       - name: Verify Track A 006b reject-aware outcome when present
         run: python scripts/verify_track_a_006b_outcome.py
 

@@ -47,3 +47,11 @@ The post-freeze transport driver is
 endpoint, changed model identifier, non-placeholder API key, or registered
 OpenAI, Anthropic, or ARC credential before importing Tycho or making the one
 model call.
+
+The maintained qualification is now complete. The local transport and opened
+Tycho harness passed within the frozen limits, but the model used both public
+game calls for `run_python`; Tycho therefore supplied the one recorded action
+as `default (tool cap)`. See [`QUALIFICATION_REPORT.md`](QUALIFICATION_REPORT.md)
+and [`QUALIFICATION_RESULT.json`](QUALIFICATION_RESULT.json). This qualifies
+local plumbing only, not model-selected action execution. A larger bounded
+action-selection smoke requires a new prospective freeze.

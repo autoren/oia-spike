@@ -29,3 +29,5 @@ The importer fails if the destination already exists. A successful import is rea
 Acquisition and read-only inventory are complete. [`CHECKPOINT_INVENTORY.json`](CHECKPOINT_INVENTORY.json) records two exact-but-dirty final worktrees, eleven intact retained Git checkpoints, and one byte-identical P0 packet across all thirteen records. Candidate admission and behavior inspection have not run.
 
 The next opened step is the isolated offline admission procedure in [`NEXT_LOCAL_ADMISSION_GATE.md`](NEXT_LOCAL_ADMISSION_GATE.md), governed by [`LOCAL_ADMISSION_PROTOCOL.frozen.json`](LOCAL_ADMISSION_PROTOCOL.frozen.json). It excludes released session credentials and later observations, executes no real ARC action, and preserves the Track A boundary.
+
+The candidate-independent adapter, exact dependency image, isolation settings, and thirteen minimal bundle hashes are prospectively pinned in [`PRE_OUTCOME_RUNTIME.json`](PRE_OUTCOME_RUNTIME.json). Only its synthetic smoke test has executed; acquired-candidate P0 replay remains the next operation.

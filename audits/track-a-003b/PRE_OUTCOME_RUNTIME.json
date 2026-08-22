@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "audit_id": "OIA-1-TRACK-A-003b",
+  "status": "frozen_before_acquired_candidate_execution",
+  "runtime": {
+    "architecture": "arm64",
+    "os": "linux",
+    "docker_client_version": "29.7.2",
+    "docker_server_version": "29.7.2",
+    "base_image": "python@sha256:519591d6871b7bc437060736b9f7456b8731f1499a57e22e6c285135ae657bf7",
+    "runtime_image_tag": "oia-track-a-003b-runtime:preoutcome",
+    "runtime_image_id": "sha256:644d899fa00c3a9fc16cc05f94ee5d078653891fe55659cd8e51fb1126027051",
+    "python": "3.12.11",
+    "numpy": "2.2.6",
+    "scipy": "1.15.3"
+  },
+  "source_pins": [
+    {
+      "path": "runtime/track-a-003b/Dockerfile",
+      "sha256": "1170c2e3d5b653581eec63ee26943f5c9924367d334b375a55744717ca015de7"
+    },
+    {
+      "path": "runtime/track-a-003b/requirements-aarch64.txt",
+      "sha256": "85ac72f9dddac5e24061c253fae2c75c0954c5c6e0bb8a7b23d35b6bfe3cb5da"
+    },
+    {
+      "path": "runtime/track-a-003b/candidate_runner.py",
+      "sha256": "3ad1c477e96b64130436cdd7aa428e0da624677f8fa159b4fbe67e0c2f82b83e"
+    },
+    {
+      "path": "scripts/prepare_track_a_003b_admission.py",
+      "sha256": "4352eb448cbd0350e8e482996829c3de7cf46ff8b4044579e8e555d1547a029f"
+    },
+    {
+      "path": "scripts/run_track_a_003b_admission.py",
+      "sha256": "56893b5573b0595ae536e87f39c299d2a691edde4daccc78956ee70eb33779fe"
+    },
+    {
+      "path": "tests/test_track_a_003b_admission.py",
+      "sha256": "cc713b6c0893d3600d515423fe47d4e1b2b66efbe8459bccb47465df36bdd8b2"
+    }
+  ],
+  "prepared_bundles": {
+    "local_path": "local-work/track-a-003b/admission-preoutcome/PREPARED_BUNDLES.json",
+    "sha256": "e4b1de5e4141c2f37e60b668ec616efcf9c506ad663a7811150d762cf9d611d1",
+    "candidate_count": 13,
+    "candidate_code_executed_while_preparing": false,
+    "session_or_post_p0_state_included": false,
+    "candidate_manifests_in_frozen_order": [
+      {"candidate_id": "max/final", "sha256": "46c442f67fbde7523c5087d339c47d1bac60529fd7312defbdaddc2852e6ca44"},
+      {"candidate_id": "xhigh/final", "sha256": "ec4e3a1ce7db1f225818767ad8d3173a654caa8eaf54fdd3ab9c6fa09dada22f"},
+      {"candidate_id": "max/iteration_1", "sha256": "39e068c5d4157b94aa48c1c77f3d6f61f40f5d8283e9c3a44a5f337aa2c25488"},
+      {"candidate_id": "xhigh/iteration_1", "sha256": "a820708f3886b2150dc5122943f49a49bf84fb73343b550e458dc779725b3b55"},
+      {"candidate_id": "max/iteration_2", "sha256": "94cdba8d82612eb993457b3efc17718dea44f2585dabbe76d0fe0ae8d8764db3"},
+      {"candidate_id": "xhigh/iteration_2", "sha256": "f3d878e57966da4b0ea529c0a11fa6c9426060da4b59ebaf16f6bd5bb547eff6"},
+      {"candidate_id": "max/iteration_3", "sha256": "c0f5574962eddfdc50ea53218e406f647044a4762568ccb9e7cf5fd6e4c39045"},
+      {"candidate_id": "xhigh/iteration_3", "sha256": "f07833e362b5bbfa506a7a79cac6464dacfe9cf8b2e096cabd3d6144b204b707"},
+      {"candidate_id": "max/iteration_4", "sha256": "33d36259aa6cfabed5db775ebec4ebcb0f85e5fe7493c4f852ad7866bf3db76e"},
+      {"candidate_id": "xhigh/iteration_4", "sha256": "21a2e9e9e170b7706a023731a7fa4625296b81e46328fa71c50a1dfad7634f21"},
+      {"candidate_id": "max/iteration_5", "sha256": "149d054f79af9f78118b5aa477881475c5ff01a354f401ad3058da52691a6ba8"},
+      {"candidate_id": "xhigh/iteration_5", "sha256": "9979b17ed6ff5cf784b7719401f281813333026e1a6d5f0a1d9a47c1ccf92050"},
+      {"candidate_id": "max/iteration_6", "sha256": "15bada20809c996f8ff4c03c50f1d6d53bdf46e62ca0a0a27c21eccba29f5978"}
+    ]
+  },
+  "isolation_contract": {
+    "network": "none",
+    "root_filesystem": "read_only",
+    "candidate_and_p0_mounts": "read_only",
+    "capabilities": "all_dropped",
+    "no_new_privileges": true,
+    "uid_gid": "65532:65532",
+    "memory": "512m",
+    "cpus": 1,
+    "pids_limit": 64,
+    "tmpfs": "/tmp:rw,noexec,nosuid,size=16777216"
+  },
+  "synthetic_smoke_test": {
+    "candidate": "tests/fixtures/track-a-003b/synthetic_candidate",
+    "p0": "tests/fixtures/track-a-003b/synthetic_p0",
+    "word": ["ACTION1", "ACTION4"],
+    "status": "pass",
+    "p0_replay_exact": true,
+    "candidate_file_access_limited_to_bundle": true,
+    "network": "none"
+  },
+  "execution_boundary": {
+    "acquired_candidate_execution": false,
+    "arc_execution": false,
+    "credential_use": false,
+    "model_or_api_call": false,
+    "network_or_service_call": false,
+    "oia_separability": false,
+    "track_b_claim": false
+  },
+  "next_operation": "After this pre-outcome freeze is merged, run isolated P0 replay for all thirteen acquired candidates.",
+  "claim_boundary": "Pre-outcome runtime and adapter freeze only. The synthetic smoke test is not acquired candidate evidence. No candidate admission, behavioral divergence, ARC, OIA separator, ontology-revision, sealed, decision-value, or Track B claim."
+}

@@ -1,0 +1,93 @@
+{
+  "schema_version": "OIA-TYCHO-TRACE-INTEGRATION-RESULT-0.1",
+  "date": "2026-08-22",
+  "protocol_freeze_commit": "20f40caacad89b5518f8b92a59cb083ce5841b2e",
+  "source": {
+    "origin": "https://github.com/NIMI-research/Tycho.git",
+    "commit": "f68912a764372ead0a610db2e1c011d41ce5197e",
+    "tree": "d5ff6a4e142934ceb865e403e3aa92d80bfa245c"
+  },
+  "patch": {
+    "sha256": "804db588cce430242035c1d26e4f8f19bc214a3cacdfae277153dbeac5cdc27c",
+    "applicability_check": "pass",
+    "disposable_application": "pass",
+    "changed_paths": [
+      "tests/harness/test_action_availability.py",
+      "tycho/harness/harness.py"
+    ],
+    "diff_check": "pass"
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "stage": "post_freeze_validation",
+      "command_scope": "incorrectly launched Tycho pytest interpreter from oia-spike root",
+      "outcome": "collection_blocker_unrelated_oia_and_ignored_local_work_tests",
+      "tycho_tests_executed": 0,
+      "boundary_crossed": false,
+      "setup_correction": "rerun each suite from its own repository root"
+    },
+    {
+      "attempt": 2,
+      "stage": "post_freeze_validation",
+      "command_scope": "patched disposable Tycho checkout",
+      "tycho_tests_passed": 164,
+      "tycho_tests_failed": 0,
+      "exit_code": 0,
+      "boundary_crossed": false
+    }
+  ],
+  "standalone_validation": {
+    "oia_spike_utility_tests_passed": 72,
+    "oia_spike_utility_tests_failed": 0,
+    "baseline_unit_tests_passed": 23,
+    "baseline_unit_tests_failed": 0,
+    "baseline_provenance_verifier": "pass",
+    "randomized_static_systems": 200,
+    "randomized_dynamic_pair_systems": 100,
+    "randomized_pairwise_checks": 1027,
+    "randomized_adaptive_checks": 200,
+    "randomized_preset_checks": 200,
+    "task_loss_cases": 250,
+    "scaling_probe": "pass",
+    "hash_seed_values": [
+      0,
+      1,
+      2,
+      5,
+      10,
+      42,
+      123
+    ],
+    "hash_seed_reproducibility": "pass",
+    "tracked_files_mutated_by_validation": false
+  },
+  "execution_accounting": {
+    "model_calls": 0,
+    "service_calls": 0,
+    "arc_actions": 0,
+    "environment_resets": 0,
+    "arc_environment_instantiations": 0,
+    "private_or_semi_private_payloads": 0,
+    "world_models_generated": 0,
+    "credentials_used": 0
+  },
+  "verdict": "credential_free_logging_integration_pass",
+  "established": [
+    "the exact pinned Tycho source accepts the logging-only patch without conflict",
+    "the patch changes exactly the harness and its existing action-availability test",
+    "the patched exact source preserves all 164 upstream test results",
+    "the exporter losslessly emits full pre-action and returned-frame observation streams and rejects legacy or partial records"
+  ],
+  "not_established": [
+    "constructive learner behavior",
+    "a complete historical Tycho raw bundle",
+    "evaluator custody",
+    "prospective external transfer",
+    "necessary semantic revision",
+    "decision-value attribution",
+    "project-level ontology formation"
+  ],
+  "next_required_evidence": "raw_patched_trace_or_evaluator_arrangement",
+  "project_reopening_effect": "none"
+}

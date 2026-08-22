@@ -118,6 +118,15 @@ next useful slice is a separately frozen, outcome-conditioned revision gate that
 adds new hypotheses without rewriting this failed frontier or reusing later
 archive steps as if they were still held out.
 
+Before choosing that revision strategy,
+`PREDICTION_ERROR_DIAGNOSTIC_PROTOCOL.frozen.json` preregisters a descriptive
+post-outcome error analysis. It will recover both candidate `ACTION6` rasters in
+the existing isolated runtime and compare them with the actual frame and an
+unchanged-P0 persistence baseline using exact pixel, color, and delta-support
+counts. It defines no tolerance or pass threshold and cannot change the merged
+outside-frontier verdict. Its purpose is only to distinguish a seriously wrong
+model frontier from a near miss exposed by brittle whole-frame equality.
+
 ## Behavior/OIA result
 
 The frozen path admitted both `C0006` and `C0008`. Each exactly replayed P0,

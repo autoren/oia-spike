@@ -1,0 +1,63 @@
+{
+  "accepted_baseline": "OIA-1 v0.2.1",
+  "accepted_package_sha256": "2653020afcbf636def260da1517c9e3ba41c2ba1175fc210d4847b303febc33b",
+  "audit_id": "OIA-1-TRACK-A-004a",
+  "files": [
+    {
+      "path": "baseline/oia-v0.2.1/SHA256SUMS",
+      "sha256": "127d04ede93f9ac0e30319ebcebeddb24f58e0e70bcff7d5d053dbc56d40bb2a",
+      "size_bytes": 11271
+    },
+    {
+      "path": "baseline/oia-v0.2.1/maintenance/CURRENT_SOURCE_SHA256SUMS",
+      "sha256": "0160f1ef9e73a5b3e3d46c07f3207f5185a9282e13c0714baca2b7af2b973455",
+      "size_bytes": 2385
+    },
+    {
+      "path": "baseline/oia-v0.2.1/maintenance/PROVENANCE_LAYERS.json",
+      "sha256": "57a37c6011931f3b8c4e36f6ee3906710cd815aac54c8e1718f16a989f95a2b3",
+      "size_bytes": 1600
+    },
+    {
+      "path": "baseline/oia-v0.2.1/src/ontology_auditor/__init__.py",
+      "sha256": "321863cc19ba7b6bb22593aa3f20f991cbbd12930afbff4dc9dccf4cc7b15a3b",
+      "size_bytes": 2291
+    },
+    {
+      "path": "baseline/oia-v0.2.1/src/ontology_auditor/audit.py",
+      "sha256": "a396aa577c7490b4ca96031a543d09557956f68eb2276cb08dbfd7c495b62393",
+      "size_bytes": 5861
+    },
+    {
+      "path": "baseline/oia-v0.2.1/src/ontology_auditor/decision.py",
+      "sha256": "978a333681702eb6b93947c15df4fcd92b220808d208c794a3afd9854029922f",
+      "size_bytes": 10642
+    },
+    {
+      "path": "baseline/oia-v0.2.1/src/ontology_auditor/equivalence.py",
+      "sha256": "55dd827b43197c8c145431a5f55f899ac6a3631fedaff84e0f548e1d8b732b0d",
+      "size_bytes": 5472
+    },
+    {
+      "path": "baseline/oia-v0.2.1/src/ontology_auditor/io.py",
+      "sha256": "ad9fa0ccb090d97ae52bf11abf0063a675cad7ccf5c7d7a970c82eae5784c02f",
+      "size_bytes": 3800
+    },
+    {
+      "path": "baseline/oia-v0.2.1/src/ontology_auditor/model.py",
+      "sha256": "9d622641f267e7dc1e99302060ac0a3a7ecd654e46f3162c9605c9ba602eca24",
+      "size_bytes": 11021
+    },
+    {
+      "path": "baseline/oia-v0.2.1/src/ontology_auditor/synthesis.py",
+      "sha256": "7df543e8af759a26ea2d5c256de4a66fb60a33dc3a42b2fea0d720c430f21f07",
+      "size_bytes": 29559
+    },
+    {
+      "path": "baseline/oia-v0.2.1/src/ontology_auditor/task_loss.py",
+      "sha256": "1aa6563c7f104d8ed3b932221659b776a73400c074b744ba3973fbe984849e00",
+      "size_bytes": 13087
+    }
+  ],
+  "source_import": "executable-ontology-lab commit 3ca35d4"
+}

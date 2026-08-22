@@ -1,0 +1,91 @@
+{
+  "adapter_contract": {
+    "all_84_words_replayed_per_candidate": true,
+    "all_observed_prefixes_required": true,
+    "kind": "complete deterministic bounded prefix-tree Mealy compilation",
+    "observation_fields": [
+      "status",
+      "error_category",
+      "final_frame_sha256",
+      "modeled_progress"
+    ],
+    "post_horizon_behavior": "candidate-independent out-of-scope sink",
+    "separator_specific_logic_forbidden": true
+  },
+  "allowed_success_claim": "The unchanged accepted OIA v0.2.1 retrospectively reconstructs and certifies a minimum separator for the two admitted predictive programs within the frozen opened depth-3 trace envelope.",
+  "audit_id": "OIA-1-TRACK-A-004a",
+  "candidate_mapping": [
+    {
+      "bundle_manifest_sha256": "46c442f67fbde7523c5087d339c47d1bac60529fd7312defbdaddc2852e6ca44",
+      "machine_id": "C0001",
+      "source_candidate_id": "max/final"
+    },
+    {
+      "bundle_manifest_sha256": "94cdba8d82612eb993457b3efc17718dea44f2585dabbe76d0fe0ae8d8764db3",
+      "machine_id": "C0002",
+      "source_candidate_id": "max/iteration_2"
+    }
+  ],
+  "epistemic_ordering": {
+    "adapter_and_oia_input_frozen_before_full_audit_run": true,
+    "classification": "retrospective_external_instrument_validation",
+    "complete_candidate_traces_already_known": true,
+    "engineering_pairwise_precheck_already_run": true,
+    "first_divergence_already_known": true,
+    "prospective_separator_discovery_claim_allowed": false
+  },
+  "execution_plan": {
+    "engine": "unchanged accepted OIA-1 v0.2.1",
+    "entry_point": "ontology_auditor.io.audit_payload",
+    "exact_report_bytes_required_across_processes": true,
+    "independent_checks": [
+      "serialized adaptive witness verification",
+      "minimum pairwise separator comparison against frozen source traces",
+      "policy black-box replay against frozen source traces"
+    ],
+    "primary_endpoint": "full_candidate_identification.adaptive",
+    "pythonhashseed_values": [
+      0,
+      1,
+      5,
+      10
+    ]
+  },
+  "freeze_date": "2026-08-21",
+  "intervention_boundary": {
+    "actions": [
+      "ACTION1",
+      "ACTION2",
+      "ACTION3",
+      "ACTION4"
+    ],
+    "candidate_execution_authorized": false,
+    "maximum_observed_depth": 3,
+    "real_arc_actions_authorized": false,
+    "source": "deterministic predictions archived by Track A 003b",
+    "word_count_per_candidate": 84
+  },
+  "not_supported": [
+    "prospective discovery of an unknown separator",
+    "correctness of either predictive program",
+    "a real ARC outcome or intervention benefit",
+    "ontology revision necessity or planning superiority",
+    "sealed transfer or Track B claims"
+  ],
+  "predecessor": {
+    "audit_id": "OIA-1-TRACK-A-003b",
+    "full_results_sha256": "d11529d4281746d4a2d89d075d23ac1bbdc12d4deb3c2de2dc9c10de18bec039",
+    "gate_verdict": "candidate_frontier_feasible"
+  },
+  "prohibited_during_gate": [
+    "real ARC actions",
+    "candidate execution",
+    "model or API calls",
+    "credentials or hosted services",
+    "private or sealed evaluation",
+    "changes to accepted OIA v0.2.1"
+  ],
+  "schema_version": 1,
+  "status_at_freeze": "frozen_before_full_track_a_004a_audit_execution",
+  "track": "A_opened_retrospective_adapter_integration"
+}

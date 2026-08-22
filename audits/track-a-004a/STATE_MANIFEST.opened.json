@@ -1,0 +1,661 @@
+{
+  "audit_id": "OIA-1-TRACK-A-004a",
+  "states": {
+    "S000": {
+      "access_word": [],
+      "kind": "observed_prefix"
+    },
+    "S001": {
+      "access_word": [
+        "ACTION1"
+      ],
+      "kind": "observed_prefix"
+    },
+    "S002": {
+      "access_word": [
+        "ACTION2"
+      ],
+      "kind": "observed_prefix"
+    },
+    "S003": {
+      "access_word": [
+        "ACTION3"
+      ],
+      "kind": "observed_prefix"
+    },
+    "S004": {
+      "access_word": [
+        "ACTION4"
+      ],
+      "kind": "observed_prefix"
+    },
+    "S005": {
+      "access_word": [
+        "ACTION1",
+        "ACTION1"
+      ],
+      "kind": "observed_prefix"
+    },
+    "S006": {
+      "access_word": [
+        "ACTION1",
+        "ACTION2"
+      ],
+      "kind": "observed_prefix"
+    },
+    "S007": {
+      "access_word": [
+        "ACTION1",
+        "ACTION3"
+      ],
+      "kind": "observed_prefix"
+    },
+    "S008": {
+      "access_word": [
+        "ACTION1",
+        "ACTION4"
+      ],
+      "kind": "observed_prefix"
+    },
+    "S009": {
+      "access_word": [
+        "ACTION2",
+        "ACTION1"
+      ],
+      "kind": "observed_prefix"
+    },
+    "S010": {
+      "access_word": [
+        "ACTION2",
+        "ACTION2"
+      ],
+      "kind": "observed_prefix"
+    },
+    "S011": {
+      "access_word": [
+        "ACTION2",
+        "ACTION3"
+      ],
+      "kind": "observed_prefix"
+    },
+    "S012": {
+      "access_word": [
+        "ACTION2",
+        "ACTION4"
+      ],
+      "kind": "observed_prefix"
+    },
+    "S013": {
+      "access_word": [
+        "ACTION3",
+        "ACTION1"
+      ],
+      "kind": "observed_prefix"
+    },
+    "S014": {
+      "access_word": [
+        "ACTION3",
+        "ACTION2"
+      ],
+      "kind": "observed_prefix"
+    },
+    "S015": {
+      "access_word": [
+        "ACTION3",
+        "ACTION3"
+      ],
+      "kind": "observed_prefix"
+    },
+    "S016": {
+      "access_word": [
+        "ACTION3",
+        "ACTION4"
+      ],
+      "kind": "observed_prefix"
+    },
+    "S017": {
+      "access_word": [
+        "ACTION4",
+        "ACTION1"
+      ],
+      "kind": "observed_prefix"
+    },
+    "S018": {
+      "access_word": [
+        "ACTION4",
+        "ACTION2"
+      ],
+      "kind": "observed_prefix"
+    },
+    "S019": {
+      "access_word": [
+        "ACTION4",
+        "ACTION3"
+      ],
+      "kind": "observed_prefix"
+    },
+    "S020": {
+      "access_word": [
+        "ACTION4",
+        "ACTION4"
+      ],
+      "kind": "observed_prefix"
+    },
+    "S021": {
+      "access_word": [
+        "ACTION1",
+        "ACTION1",
+        "ACTION1"
+      ],
+      "kind": "observed_prefix"
+    },
+    "S022": {
+      "access_word": [
+        "ACTION1",
+        "ACTION1",
+        "ACTION2"
+      ],
+      "kind": "observed_prefix"
+    },
+    "S023": {
+      "access_word": [
+        "ACTION1",
+        "ACTION1",
+        "ACTION3"
+      ],
+      "kind": "observed_prefix"
+    },
+    "S024": {
+      "access_word": [
+        "ACTION1",
+        "ACTION1",
+        "ACTION4"
+      ],
+      "kind": "observed_prefix"
+    },
+    "S025": {
+      "access_word": [
+        "ACTION1",
+        "ACTION2",
+        "ACTION1"
+      ],
+      "kind": "observed_prefix"
+    },
+    "S026": {
+      "access_word": [
+        "ACTION1",
+        "ACTION2",
+        "ACTION2"
+      ],
+      "kind": "observed_prefix"
+    },
+    "S027": {
+      "access_word": [
+        "ACTION1",
+        "ACTION2",
+        "ACTION3"
+      ],
+      "kind": "observed_prefix"
+    },
+    "S028": {
+      "access_word": [
+        "ACTION1",
+        "ACTION2",
+        "ACTION4"
+      ],
+      "kind": "observed_prefix"
+    },
+    "S029": {
+      "access_word": [
+        "ACTION1",
+        "ACTION3",
+        "ACTION1"
+      ],
+      "kind": "observed_prefix"
+    },
+    "S030": {
+      "access_word": [
+        "ACTION1",
+        "ACTION3",
+        "ACTION2"
+      ],
+      "kind": "observed_prefix"
+    },
+    "S031": {
+      "access_word": [
+        "ACTION1",
+        "ACTION3",
+        "ACTION3"
+      ],
+      "kind": "observed_prefix"
+    },
+    "S032": {
+      "access_word": [
+        "ACTION1",
+        "ACTION3",
+        "ACTION4"
+      ],
+      "kind": "observed_prefix"
+    },
+    "S033": {
+      "access_word": [
+        "ACTION1",
+        "ACTION4",
+        "ACTION1"
+      ],
+      "kind": "observed_prefix"
+    },
+    "S034": {
+      "access_word": [
+        "ACTION1",
+        "ACTION4",
+        "ACTION2"
+      ],
+      "kind": "observed_prefix"
+    },
+    "S035": {
+      "access_word": [
+        "ACTION1",
+        "ACTION4",
+        "ACTION3"
+      ],
+      "kind": "observed_prefix"
+    },
+    "S036": {
+      "access_word": [
+        "ACTION1",
+        "ACTION4",
+        "ACTION4"
+      ],
+      "kind": "observed_prefix"
+    },
+    "S037": {
+      "access_word": [
+        "ACTION2",
+        "ACTION1",
+        "ACTION1"
+      ],
+      "kind": "observed_prefix"
+    },
+    "S038": {
+      "access_word": [
+        "ACTION2",
+        "ACTION1",
+        "ACTION2"
+      ],
+      "kind": "observed_prefix"
+    },
+    "S039": {
+      "access_word": [
+        "ACTION2",
+        "ACTION1",
+        "ACTION3"
+      ],
+      "kind": "observed_prefix"
+    },
+    "S040": {
+      "access_word": [
+        "ACTION2",
+        "ACTION1",
+        "ACTION4"
+      ],
+      "kind": "observed_prefix"
+    },
+    "S041": {
+      "access_word": [
+        "ACTION2",
+        "ACTION2",
+        "ACTION1"
+      ],
+      "kind": "observed_prefix"
+    },
+    "S042": {
+      "access_word": [
+        "ACTION2",
+        "ACTION2",
+        "ACTION2"
+      ],
+      "kind": "observed_prefix"
+    },
+    "S043": {
+      "access_word": [
+        "ACTION2",
+        "ACTION2",
+        "ACTION3"
+      ],
+      "kind": "observed_prefix"
+    },
+    "S044": {
+      "access_word": [
+        "ACTION2",
+        "ACTION2",
+        "ACTION4"
+      ],
+      "kind": "observed_prefix"
+    },
+    "S045": {
+      "access_word": [
+        "ACTION2",
+        "ACTION3",
+        "ACTION1"
+      ],
+      "kind": "observed_prefix"
+    },
+    "S046": {
+      "access_word": [
+        "ACTION2",
+        "ACTION3",
+        "ACTION2"
+      ],
+      "kind": "observed_prefix"
+    },
+    "S047": {
+      "access_word": [
+        "ACTION2",
+        "ACTION3",
+        "ACTION3"
+      ],
+      "kind": "observed_prefix"
+    },
+    "S048": {
+      "access_word": [
+        "ACTION2",
+        "ACTION3",
+        "ACTION4"
+      ],
+      "kind": "observed_prefix"
+    },
+    "S049": {
+      "access_word": [
+        "ACTION2",
+        "ACTION4",
+        "ACTION1"
+      ],
+      "kind": "observed_prefix"
+    },
+    "S050": {
+      "access_word": [
+        "ACTION2",
+        "ACTION4",
+        "ACTION2"
+      ],
+      "kind": "observed_prefix"
+    },
+    "S051": {
+      "access_word": [
+        "ACTION2",
+        "ACTION4",
+        "ACTION3"
+      ],
+      "kind": "observed_prefix"
+    },
+    "S052": {
+      "access_word": [
+        "ACTION2",
+        "ACTION4",
+        "ACTION4"
+      ],
+      "kind": "observed_prefix"
+    },
+    "S053": {
+      "access_word": [
+        "ACTION3",
+        "ACTION1",
+        "ACTION1"
+      ],
+      "kind": "observed_prefix"
+    },
+    "S054": {
+      "access_word": [
+        "ACTION3",
+        "ACTION1",
+        "ACTION2"
+      ],
+      "kind": "observed_prefix"
+    },
+    "S055": {
+      "access_word": [
+        "ACTION3",
+        "ACTION1",
+        "ACTION3"
+      ],
+      "kind": "observed_prefix"
+    },
+    "S056": {
+      "access_word": [
+        "ACTION3",
+        "ACTION1",
+        "ACTION4"
+      ],
+      "kind": "observed_prefix"
+    },
+    "S057": {
+      "access_word": [
+        "ACTION3",
+        "ACTION2",
+        "ACTION1"
+      ],
+      "kind": "observed_prefix"
+    },
+    "S058": {
+      "access_word": [
+        "ACTION3",
+        "ACTION2",
+        "ACTION2"
+      ],
+      "kind": "observed_prefix"
+    },
+    "S059": {
+      "access_word": [
+        "ACTION3",
+        "ACTION2",
+        "ACTION3"
+      ],
+      "kind": "observed_prefix"
+    },
+    "S060": {
+      "access_word": [
+        "ACTION3",
+        "ACTION2",
+        "ACTION4"
+      ],
+      "kind": "observed_prefix"
+    },
+    "S061": {
+      "access_word": [
+        "ACTION3",
+        "ACTION3",
+        "ACTION1"
+      ],
+      "kind": "observed_prefix"
+    },
+    "S062": {
+      "access_word": [
+        "ACTION3",
+        "ACTION3",
+        "ACTION2"
+      ],
+      "kind": "observed_prefix"
+    },
+    "S063": {
+      "access_word": [
+        "ACTION3",
+        "ACTION3",
+        "ACTION3"
+      ],
+      "kind": "observed_prefix"
+    },
+    "S064": {
+      "access_word": [
+        "ACTION3",
+        "ACTION3",
+        "ACTION4"
+      ],
+      "kind": "observed_prefix"
+    },
+    "S065": {
+      "access_word": [
+        "ACTION3",
+        "ACTION4",
+        "ACTION1"
+      ],
+      "kind": "observed_prefix"
+    },
+    "S066": {
+      "access_word": [
+        "ACTION3",
+        "ACTION4",
+        "ACTION2"
+      ],
+      "kind": "observed_prefix"
+    },
+    "S067": {
+      "access_word": [
+        "ACTION3",
+        "ACTION4",
+        "ACTION3"
+      ],
+      "kind": "observed_prefix"
+    },
+    "S068": {
+      "access_word": [
+        "ACTION3",
+        "ACTION4",
+        "ACTION4"
+      ],
+      "kind": "observed_prefix"
+    },
+    "S069": {
+      "access_word": [
+        "ACTION4",
+        "ACTION1",
+        "ACTION1"
+      ],
+      "kind": "observed_prefix"
+    },
+    "S070": {
+      "access_word": [
+        "ACTION4",
+        "ACTION1",
+        "ACTION2"
+      ],
+      "kind": "observed_prefix"
+    },
+    "S071": {
+      "access_word": [
+        "ACTION4",
+        "ACTION1",
+        "ACTION3"
+      ],
+      "kind": "observed_prefix"
+    },
+    "S072": {
+      "access_word": [
+        "ACTION4",
+        "ACTION1",
+        "ACTION4"
+      ],
+      "kind": "observed_prefix"
+    },
+    "S073": {
+      "access_word": [
+        "ACTION4",
+        "ACTION2",
+        "ACTION1"
+      ],
+      "kind": "observed_prefix"
+    },
+    "S074": {
+      "access_word": [
+        "ACTION4",
+        "ACTION2",
+        "ACTION2"
+      ],
+      "kind": "observed_prefix"
+    },
+    "S075": {
+      "access_word": [
+        "ACTION4",
+        "ACTION2",
+        "ACTION3"
+      ],
+      "kind": "observed_prefix"
+    },
+    "S076": {
+      "access_word": [
+        "ACTION4",
+        "ACTION2",
+        "ACTION4"
+      ],
+      "kind": "observed_prefix"
+    },
+    "S077": {
+      "access_word": [
+        "ACTION4",
+        "ACTION3",
+        "ACTION1"
+      ],
+      "kind": "observed_prefix"
+    },
+    "S078": {
+      "access_word": [
+        "ACTION4",
+        "ACTION3",
+        "ACTION2"
+      ],
+      "kind": "observed_prefix"
+    },
+    "S079": {
+      "access_word": [
+        "ACTION4",
+        "ACTION3",
+        "ACTION3"
+      ],
+      "kind": "observed_prefix"
+    },
+    "S080": {
+      "access_word": [
+        "ACTION4",
+        "ACTION3",
+        "ACTION4"
+      ],
+      "kind": "observed_prefix"
+    },
+    "S081": {
+      "access_word": [
+        "ACTION4",
+        "ACTION4",
+        "ACTION1"
+      ],
+      "kind": "observed_prefix"
+    },
+    "S082": {
+      "access_word": [
+        "ACTION4",
+        "ACTION4",
+        "ACTION2"
+      ],
+      "kind": "observed_prefix"
+    },
+    "S083": {
+      "access_word": [
+        "ACTION4",
+        "ACTION4",
+        "ACTION3"
+      ],
+      "kind": "observed_prefix"
+    },
+    "S084": {
+      "access_word": [
+        "ACTION4",
+        "ACTION4",
+        "ACTION4"
+      ],
+      "kind": "observed_prefix"
+    },
+    "S085": {
+      "access_word": null,
+      "kind": "out_of_scope_sink"
+    }
+  }
+}

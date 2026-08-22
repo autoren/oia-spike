@@ -1,0 +1,22 @@
+{
+  "audit_id": "OIA-1-TRACK-A-004a",
+  "candidate_processes": 0,
+  "correction": "Preserve this event and refreeze the complete package before any full audit_payload/CLI execution; make no prospective claim.",
+  "full_audit_executed": false,
+  "model_or_api_calls": 0,
+  "network_or_service_calls": 0,
+  "observed_result": {
+    "distinguishable": true,
+    "left": "C0001",
+    "right": "C0002",
+    "sequence": [
+      "ACTION2"
+    ]
+  },
+  "occurred_after_initial_generation_before_main_merge": true,
+  "operation": "Loaded the generated CandidateSystem and called the accepted shortest_pairwise_separator routine once.",
+  "prior_knowledge": "Track A 003b had already published ACTION2 as the first divergence, so the precheck added no new epistemic access.",
+  "real_arc_actions": 0,
+  "schema_version": 1,
+  "status": "preserved_engineering_precheck"
+}

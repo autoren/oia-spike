@@ -1,0 +1,520 @@
+{
+  "machines": [
+    {
+      "initial_state": "S000",
+      "metadata": {
+        "adapter": "bounded_prefix_tree_v1",
+        "candidate_id_sha256": "c7fb497b37afad1b19143cd3870b3f6da84ef032ad973d564fbc06e82450c998"
+      },
+      "name": "M0001",
+      "transitions": {
+        "S000": {
+          "ACTION6": {
+            "next_state": "S001",
+            "output": "OBS_5a97da5d8ff86bdddf80aac4fc8c8950ed7b578e2e20c26993778daf776449ec"
+          },
+          "ACTION7": {
+            "next_state": "S002",
+            "output": "OBS_5a97da5d8ff86bdddf80aac4fc8c8950ed7b578e2e20c26993778daf776449ec"
+          }
+        },
+        "S001": {
+          "ACTION6": {
+            "next_state": "S003",
+            "output": "OBS_5a97da5d8ff86bdddf80aac4fc8c8950ed7b578e2e20c26993778daf776449ec"
+          },
+          "ACTION7": {
+            "next_state": "S004",
+            "output": "OBS_5a97da5d8ff86bdddf80aac4fc8c8950ed7b578e2e20c26993778daf776449ec"
+          }
+        },
+        "S002": {
+          "ACTION6": {
+            "next_state": "S005",
+            "output": "OBS_5a97da5d8ff86bdddf80aac4fc8c8950ed7b578e2e20c26993778daf776449ec"
+          },
+          "ACTION7": {
+            "next_state": "S006",
+            "output": "OBS_5a97da5d8ff86bdddf80aac4fc8c8950ed7b578e2e20c26993778daf776449ec"
+          }
+        },
+        "S003": {
+          "ACTION6": {
+            "next_state": "S007",
+            "output": "OBS_5a97da5d8ff86bdddf80aac4fc8c8950ed7b578e2e20c26993778daf776449ec"
+          },
+          "ACTION7": {
+            "next_state": "S008",
+            "output": "OBS_5a97da5d8ff86bdddf80aac4fc8c8950ed7b578e2e20c26993778daf776449ec"
+          }
+        },
+        "S004": {
+          "ACTION6": {
+            "next_state": "S009",
+            "output": "OBS_5a97da5d8ff86bdddf80aac4fc8c8950ed7b578e2e20c26993778daf776449ec"
+          },
+          "ACTION7": {
+            "next_state": "S010",
+            "output": "OBS_5a97da5d8ff86bdddf80aac4fc8c8950ed7b578e2e20c26993778daf776449ec"
+          }
+        },
+        "S005": {
+          "ACTION6": {
+            "next_state": "S011",
+            "output": "OBS_5a97da5d8ff86bdddf80aac4fc8c8950ed7b578e2e20c26993778daf776449ec"
+          },
+          "ACTION7": {
+            "next_state": "S012",
+            "output": "OBS_5a97da5d8ff86bdddf80aac4fc8c8950ed7b578e2e20c26993778daf776449ec"
+          }
+        },
+        "S006": {
+          "ACTION6": {
+            "next_state": "S013",
+            "output": "OBS_5a97da5d8ff86bdddf80aac4fc8c8950ed7b578e2e20c26993778daf776449ec"
+          },
+          "ACTION7": {
+            "next_state": "S014",
+            "output": "OBS_5a97da5d8ff86bdddf80aac4fc8c8950ed7b578e2e20c26993778daf776449ec"
+          }
+        },
+        "S007": {
+          "ACTION6": {
+            "next_state": "S015",
+            "output": "OBS_BOUNDARY_EXHAUSTED"
+          },
+          "ACTION7": {
+            "next_state": "S015",
+            "output": "OBS_BOUNDARY_EXHAUSTED"
+          }
+        },
+        "S008": {
+          "ACTION6": {
+            "next_state": "S015",
+            "output": "OBS_BOUNDARY_EXHAUSTED"
+          },
+          "ACTION7": {
+            "next_state": "S015",
+            "output": "OBS_BOUNDARY_EXHAUSTED"
+          }
+        },
+        "S009": {
+          "ACTION6": {
+            "next_state": "S015",
+            "output": "OBS_BOUNDARY_EXHAUSTED"
+          },
+          "ACTION7": {
+            "next_state": "S015",
+            "output": "OBS_BOUNDARY_EXHAUSTED"
+          }
+        },
+        "S010": {
+          "ACTION6": {
+            "next_state": "S015",
+            "output": "OBS_BOUNDARY_EXHAUSTED"
+          },
+          "ACTION7": {
+            "next_state": "S015",
+            "output": "OBS_BOUNDARY_EXHAUSTED"
+          }
+        },
+        "S011": {
+          "ACTION6": {
+            "next_state": "S015",
+            "output": "OBS_BOUNDARY_EXHAUSTED"
+          },
+          "ACTION7": {
+            "next_state": "S015",
+            "output": "OBS_BOUNDARY_EXHAUSTED"
+          }
+        },
+        "S012": {
+          "ACTION6": {
+            "next_state": "S015",
+            "output": "OBS_BOUNDARY_EXHAUSTED"
+          },
+          "ACTION7": {
+            "next_state": "S015",
+            "output": "OBS_BOUNDARY_EXHAUSTED"
+          }
+        },
+        "S013": {
+          "ACTION6": {
+            "next_state": "S015",
+            "output": "OBS_BOUNDARY_EXHAUSTED"
+          },
+          "ACTION7": {
+            "next_state": "S015",
+            "output": "OBS_BOUNDARY_EXHAUSTED"
+          }
+        },
+        "S014": {
+          "ACTION6": {
+            "next_state": "S015",
+            "output": "OBS_BOUNDARY_EXHAUSTED"
+          },
+          "ACTION7": {
+            "next_state": "S015",
+            "output": "OBS_BOUNDARY_EXHAUSTED"
+          }
+        },
+        "S015": {
+          "ACTION6": {
+            "next_state": "S015",
+            "output": "OBS_BOUNDARY_EXHAUSTED"
+          },
+          "ACTION7": {
+            "next_state": "S015",
+            "output": "OBS_BOUNDARY_EXHAUSTED"
+          }
+        }
+      }
+    },
+    {
+      "initial_state": "S000",
+      "metadata": {
+        "adapter": "bounded_prefix_tree_v1",
+        "candidate_id_sha256": "e646ab6b3ab272f86e966ca96d0e9b08fb58eff68513abfcbf9acbfbae8f83f9"
+      },
+      "name": "M0002",
+      "transitions": {
+        "S000": {
+          "ACTION6": {
+            "next_state": "S001",
+            "output": "OBS_5a97da5d8ff86bdddf80aac4fc8c8950ed7b578e2e20c26993778daf776449ec"
+          },
+          "ACTION7": {
+            "next_state": "S002",
+            "output": "OBS_32cc6cbaaee746cbd5bf12bed190315fd18f41cb432f4e0187e0bbbbf4422193"
+          }
+        },
+        "S001": {
+          "ACTION6": {
+            "next_state": "S003",
+            "output": "OBS_5a97da5d8ff86bdddf80aac4fc8c8950ed7b578e2e20c26993778daf776449ec"
+          },
+          "ACTION7": {
+            "next_state": "S004",
+            "output": "OBS_32cc6cbaaee746cbd5bf12bed190315fd18f41cb432f4e0187e0bbbbf4422193"
+          }
+        },
+        "S002": {
+          "ACTION6": {
+            "next_state": "S005",
+            "output": "OBS_5a97da5d8ff86bdddf80aac4fc8c8950ed7b578e2e20c26993778daf776449ec"
+          },
+          "ACTION7": {
+            "next_state": "S006",
+            "output": "OBS_32cc6cbaaee746cbd5bf12bed190315fd18f41cb432f4e0187e0bbbbf4422193"
+          }
+        },
+        "S003": {
+          "ACTION6": {
+            "next_state": "S007",
+            "output": "OBS_5a97da5d8ff86bdddf80aac4fc8c8950ed7b578e2e20c26993778daf776449ec"
+          },
+          "ACTION7": {
+            "next_state": "S008",
+            "output": "OBS_32cc6cbaaee746cbd5bf12bed190315fd18f41cb432f4e0187e0bbbbf4422193"
+          }
+        },
+        "S004": {
+          "ACTION6": {
+            "next_state": "S009",
+            "output": "OBS_5a97da5d8ff86bdddf80aac4fc8c8950ed7b578e2e20c26993778daf776449ec"
+          },
+          "ACTION7": {
+            "next_state": "S010",
+            "output": "OBS_32cc6cbaaee746cbd5bf12bed190315fd18f41cb432f4e0187e0bbbbf4422193"
+          }
+        },
+        "S005": {
+          "ACTION6": {
+            "next_state": "S011",
+            "output": "OBS_5a97da5d8ff86bdddf80aac4fc8c8950ed7b578e2e20c26993778daf776449ec"
+          },
+          "ACTION7": {
+            "next_state": "S012",
+            "output": "OBS_32cc6cbaaee746cbd5bf12bed190315fd18f41cb432f4e0187e0bbbbf4422193"
+          }
+        },
+        "S006": {
+          "ACTION6": {
+            "next_state": "S013",
+            "output": "OBS_5a97da5d8ff86bdddf80aac4fc8c8950ed7b578e2e20c26993778daf776449ec"
+          },
+          "ACTION7": {
+            "next_state": "S014",
+            "output": "OBS_32cc6cbaaee746cbd5bf12bed190315fd18f41cb432f4e0187e0bbbbf4422193"
+          }
+        },
+        "S007": {
+          "ACTION6": {
+            "next_state": "S015",
+            "output": "OBS_BOUNDARY_EXHAUSTED"
+          },
+          "ACTION7": {
+            "next_state": "S015",
+            "output": "OBS_BOUNDARY_EXHAUSTED"
+          }
+        },
+        "S008": {
+          "ACTION6": {
+            "next_state": "S015",
+            "output": "OBS_BOUNDARY_EXHAUSTED"
+          },
+          "ACTION7": {
+            "next_state": "S015",
+            "output": "OBS_BOUNDARY_EXHAUSTED"
+          }
+        },
+        "S009": {
+          "ACTION6": {
+            "next_state": "S015",
+            "output": "OBS_BOUNDARY_EXHAUSTED"
+          },
+          "ACTION7": {
+            "next_state": "S015",
+            "output": "OBS_BOUNDARY_EXHAUSTED"
+          }
+        },
+        "S010": {
+          "ACTION6": {
+            "next_state": "S015",
+            "output": "OBS_BOUNDARY_EXHAUSTED"
+          },
+          "ACTION7": {
+            "next_state": "S015",
+            "output": "OBS_BOUNDARY_EXHAUSTED"
+          }
+        },
+        "S011": {
+          "ACTION6": {
+            "next_state": "S015",
+            "output": "OBS_BOUNDARY_EXHAUSTED"
+          },
+          "ACTION7": {
+            "next_state": "S015",
+            "output": "OBS_BOUNDARY_EXHAUSTED"
+          }
+        },
+        "S012": {
+          "ACTION6": {
+            "next_state": "S015",
+            "output": "OBS_BOUNDARY_EXHAUSTED"
+          },
+          "ACTION7": {
+            "next_state": "S015",
+            "output": "OBS_BOUNDARY_EXHAUSTED"
+          }
+        },
+        "S013": {
+          "ACTION6": {
+            "next_state": "S015",
+            "output": "OBS_BOUNDARY_EXHAUSTED"
+          },
+          "ACTION7": {
+            "next_state": "S015",
+            "output": "OBS_BOUNDARY_EXHAUSTED"
+          }
+        },
+        "S014": {
+          "ACTION6": {
+            "next_state": "S015",
+            "output": "OBS_BOUNDARY_EXHAUSTED"
+          },
+          "ACTION7": {
+            "next_state": "S015",
+            "output": "OBS_BOUNDARY_EXHAUSTED"
+          }
+        },
+        "S015": {
+          "ACTION6": {
+            "next_state": "S015",
+            "output": "OBS_BOUNDARY_EXHAUSTED"
+          },
+          "ACTION7": {
+            "next_state": "S015",
+            "output": "OBS_BOUNDARY_EXHAUSTED"
+          }
+        }
+      }
+    },
+    {
+      "initial_state": "S000",
+      "metadata": {
+        "adapter": "bounded_prefix_tree_v1",
+        "candidate_id_sha256": "b0623a4532444da827d129ebf067d77f9fbcc6f704f1959150c7ac575429d4fc"
+      },
+      "name": "M0003",
+      "transitions": {
+        "S000": {
+          "ACTION6": {
+            "next_state": "S001",
+            "output": "OBS_2e7898cd425111e1212cb51814a0eccad6a1eb9c15df2073f060cf7073e863a7"
+          },
+          "ACTION7": {
+            "next_state": "S002",
+            "output": "OBS_60d44d5ba32206cdc5941c82225669ac44b492f43db436a51b539723354a9d71"
+          }
+        },
+        "S001": {
+          "ACTION6": {
+            "next_state": "S003",
+            "output": "OBS_c1632e37358d239e23e43742696adcd637d7515b984bf614b135a2dbeae84305"
+          },
+          "ACTION7": {
+            "next_state": "S004",
+            "output": "OBS_887e02108dfe286f65f9d87fb3e357f44a664d8cd01234208b9f3a547239ea2c"
+          }
+        },
+        "S002": {
+          "ACTION6": {
+            "next_state": "S005",
+            "output": "OBS_f7f1d907758ce5533859df49a4f7f1662c77d2719dfa361cc73fbf3d7d9dcbd2"
+          },
+          "ACTION7": {
+            "next_state": "S006",
+            "output": "OBS_ed4160414fc0fdedbdb8436e06b083297df4fcae6572a806af4326004ac83315"
+          }
+        },
+        "S003": {
+          "ACTION6": {
+            "next_state": "S007",
+            "output": "OBS_c093f8be7f079c889bf3cc36bf57284774b3b508c3c8af1be5ea5cf12940cae0"
+          },
+          "ACTION7": {
+            "next_state": "S008",
+            "output": "OBS_2e7898cd425111e1212cb51814a0eccad6a1eb9c15df2073f060cf7073e863a7"
+          }
+        },
+        "S004": {
+          "ACTION6": {
+            "next_state": "S009",
+            "output": "OBS_2e7898cd425111e1212cb51814a0eccad6a1eb9c15df2073f060cf7073e863a7"
+          },
+          "ACTION7": {
+            "next_state": "S010",
+            "output": "OBS_c5c8ed50081c21612a35d8e6278753632e571a062a3e83e4b62a2e4e4413da9a"
+          }
+        },
+        "S005": {
+          "ACTION6": {
+            "next_state": "S011",
+            "output": "OBS_5ffeaeb85e55d90a000b82abbbc19118927a3bb0118bac5f8b3d6b1dc1004f55"
+          },
+          "ACTION7": {
+            "next_state": "S012",
+            "output": "OBS_60d44d5ba32206cdc5941c82225669ac44b492f43db436a51b539723354a9d71"
+          }
+        },
+        "S006": {
+          "ACTION6": {
+            "next_state": "S013",
+            "output": "OBS_60d44d5ba32206cdc5941c82225669ac44b492f43db436a51b539723354a9d71"
+          },
+          "ACTION7": {
+            "next_state": "S014",
+            "output": "OBS_1b59d373896aab74c9091c5a387551b4ea24e31c331d0f3a245714ac9add2137"
+          }
+        },
+        "S007": {
+          "ACTION6": {
+            "next_state": "S015",
+            "output": "OBS_BOUNDARY_EXHAUSTED"
+          },
+          "ACTION7": {
+            "next_state": "S015",
+            "output": "OBS_BOUNDARY_EXHAUSTED"
+          }
+        },
+        "S008": {
+          "ACTION6": {
+            "next_state": "S015",
+            "output": "OBS_BOUNDARY_EXHAUSTED"
+          },
+          "ACTION7": {
+            "next_state": "S015",
+            "output": "OBS_BOUNDARY_EXHAUSTED"
+          }
+        },
+        "S009": {
+          "ACTION6": {
+            "next_state": "S015",
+            "output": "OBS_BOUNDARY_EXHAUSTED"
+          },
+          "ACTION7": {
+            "next_state": "S015",
+            "output": "OBS_BOUNDARY_EXHAUSTED"
+          }
+        },
+        "S010": {
+          "ACTION6": {
+            "next_state": "S015",
+            "output": "OBS_BOUNDARY_EXHAUSTED"
+          },
+          "ACTION7": {
+            "next_state": "S015",
+            "output": "OBS_BOUNDARY_EXHAUSTED"
+          }
+        },
+        "S011": {
+          "ACTION6": {
+            "next_state": "S015",
+            "output": "OBS_BOUNDARY_EXHAUSTED"
+          },
+          "ACTION7": {
+            "next_state": "S015",
+            "output": "OBS_BOUNDARY_EXHAUSTED"
+          }
+        },
+        "S012": {
+          "ACTION6": {
+            "next_state": "S015",
+            "output": "OBS_BOUNDARY_EXHAUSTED"
+          },
+          "ACTION7": {
+            "next_state": "S015",
+            "output": "OBS_BOUNDARY_EXHAUSTED"
+          }
+        },
+        "S013": {
+          "ACTION6": {
+            "next_state": "S015",
+            "output": "OBS_BOUNDARY_EXHAUSTED"
+          },
+          "ACTION7": {
+            "next_state": "S015",
+            "output": "OBS_BOUNDARY_EXHAUSTED"
+          }
+        },
+        "S014": {
+          "ACTION6": {
+            "next_state": "S015",
+            "output": "OBS_BOUNDARY_EXHAUSTED"
+          },
+          "ACTION7": {
+            "next_state": "S015",
+            "output": "OBS_BOUNDARY_EXHAUSTED"
+          }
+        },
+        "S015": {
+          "ACTION6": {
+            "next_state": "S015",
+            "output": "OBS_BOUNDARY_EXHAUSTED"
+          },
+          "ACTION7": {
+            "next_state": "S015",
+            "output": "OBS_BOUNDARY_EXHAUSTED"
+          }
+        }
+      }
+    }
+  ],
+  "options": {
+    "max_beliefs": 100000,
+    "max_partitions": 100000,
+    "max_task_loss_frontier": 50000,
+    "value_depth": 3
+  }
+}

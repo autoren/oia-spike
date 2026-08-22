@@ -1,0 +1,99 @@
+{
+  "behavioral_equivalence_classes": [
+    [
+      "M0003"
+    ],
+    [
+      "M0002"
+    ],
+    [
+      "M0001"
+    ]
+  ],
+  "full_candidate_identification": {
+    "adaptive": {
+      "depth_claim": "minimum",
+      "enumeration_complete": true,
+      "exact": true,
+      "impossibility_certificate": null,
+      "optimality_certified": true,
+      "policy": {
+        "action": "ACTION7",
+        "branches": {
+          "OBS_32cc6cbaaee746cbd5bf12bed190315fd18f41cb432f4e0187e0bbbbf4422193": {
+            "candidates": [
+              "M0002"
+            ],
+            "conclusion": "identified candidate M0002",
+            "type": "leaf"
+          },
+          "OBS_5a97da5d8ff86bdddf80aac4fc8c8950ed7b578e2e20c26993778daf776449ec": {
+            "candidates": [
+              "M0001"
+            ],
+            "conclusion": "identified candidate M0001",
+            "type": "leaf"
+          },
+          "OBS_60d44d5ba32206cdc5941c82225669ac44b492f43db436a51b539723354a9d71": {
+            "candidates": [
+              "M0003"
+            ],
+            "conclusion": "identified candidate M0003",
+            "type": "leaf"
+          }
+        },
+        "type": "action"
+      },
+      "reachable_beliefs": 13,
+      "reason": "minimum worst-case policy over the complete reachable belief graph",
+      "status": "solved",
+      "worst_case_steps": 1
+    },
+    "adaptive_expected_steps": 1.0,
+    "preset": {
+      "exact": true,
+      "explored_partitions": 2,
+      "length": 1,
+      "reason": "shortest fixed action sequence",
+      "sequence": [
+        "ACTION7"
+      ],
+      "status": "solved"
+    }
+  },
+  "pairwise_separation": [
+    {
+      "distinguishable": true,
+      "left": "M0001",
+      "right": "M0002",
+      "sequence": [
+        "ACTION7"
+      ]
+    },
+    {
+      "distinguishable": true,
+      "left": "M0001",
+      "right": "M0003",
+      "sequence": [
+        "ACTION6"
+      ]
+    },
+    {
+      "distinguishable": true,
+      "left": "M0002",
+      "right": "M0003",
+      "sequence": [
+        "ACTION6"
+      ]
+    }
+  ],
+  "scope": {
+    "actions": [
+      "ACTION6",
+      "ACTION7"
+    ],
+    "candidate_count": 3,
+    "semantics": "deterministic complete finite Mealy candidates",
+    "state_count": 48
+  }
+}

@@ -9,6 +9,7 @@ It is intentionally separate from [`autoren/ontology-intervention-auditor`](http
 - [`baseline/oia-v0.2.1/`](baseline/oia-v0.2.1/) is an exact import of the accepted executable OIA-1 v0.2.1 tree from `executable-ontology-lab` commit `3ca35d4`. It includes the core implementation, tests, CPython Track A 002 evidence, maintenance provenance, and Track A/Track B claim boundaries.
 - [`audits/track-a-003a/`](audits/track-a-003a/) is the closed candidate-acquisition feasibility audit. Its frozen artifacts and package manifest are unchanged.
 - [`audits/track-a-003b/`](audits/track-a-003b/) records the authorized public-archive acquisition and independent local import. The obsolete GitHub-only acquisition workflow has been replaced by a hash-pinned local importer.
+- [`audits/track-a-004a/`](audits/track-a-004a/) is the bounded retrospective OIA adapter-integration gate for the two candidates admitted by 003b.
 - [`docs/context/`](docs/context/) contains curated parent-project decision records needed to interpret the spike. These copies are contextual and are not part of the frozen 003a package.
 
 ## Local baseline validation
@@ -38,6 +39,10 @@ python research/hash_seed_reproducibility.py
 Downloaded archives, extracted candidate trees, virtual environments, and run outputs belong under `local-work/` or `artifacts/`; both are ignored. Do not commit credentials, private ARC material, service state, or acquired bulk artifacts. Commit only compact manifests, hashes, protocols, and reviewed evidence that the applicable gate authorizes.
 
 The corrected Track A 003b Actions artifact can be verified and materialized read-only with `scripts/import_track_a_003b.py`; see [`audits/track-a-003b/README.md`](audits/track-a-003b/README.md). The importer does not execute candidates or ARC.
+
+Track A 004a compiles the already-known deterministic 003b traces into the
+accepted finite OIA interface. Its pre-run package must be merged before the OIA
+runner is used; see [`audits/track-a-004a/README.md`](audits/track-a-004a/README.md).
 
 ## Claim boundary
 

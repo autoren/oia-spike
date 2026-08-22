@@ -35,3 +35,8 @@ The candidate-independent adapter, exact dependency image, isolation settings, a
 All thirteen acquired candidates subsequently passed exact isolated P0 replay. The original host orchestrator then stopped before provisional behavior because it read the saved P0 evidence at the wrong envelope level. [`ORCHESTRATOR_ERRATUM.pre-provisional.json`](ORCHESTRATOR_ERRATUM.pre-provisional.json) preserves that negative and pins the envelope-only v2 correction before any action-word trace.
 
 The completed admission result is in [`outcome/TRACK_A_003B_REPORT.md`](outcome/TRACK_A_003B_REPORT.md), with compact machine-readable accounting in [`outcome/ADMISSION_SUMMARY.json`](outcome/ADMISSION_SUMMARY.json). The allowed verdict is `candidate_frontier_feasible`: two candidates passed exact P0 replay, bounded behavioral non-equivalence, and the full seed/repetition matrix. This remains an opened predictive-model result; no real ARC action or OIA separator ran.
+
+The successor gate is [`../track-a-004a/`](../track-a-004a/), which mechanically
+compiles these already-known traces for retrospective validation of unchanged
+accepted OIA-1 v0.2.1. Because the 003b traces were inspected first, that successor
+cannot support a prospective separator-discovery claim.

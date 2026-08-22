@@ -1,0 +1,50 @@
+{
+  "adapter_validation": {
+    "actions": [
+      "ACTION1",
+      "ACTION2",
+      "ACTION3",
+      "ACTION4"
+    ],
+    "adapter": "bounded_prefix_tree_v1",
+    "audit_id": "OIA-1-TRACK-A-004a",
+    "boundary_output_candidate_independent": true,
+    "candidate_checks": [
+      {
+        "machine_id": "C0001",
+        "result": "pass",
+        "source_candidate_id": "max/final",
+        "transition_steps_replayed": 228,
+        "words_replayed": 84
+      },
+      {
+        "machine_id": "C0002",
+        "result": "pass",
+        "source_candidate_id": "max/iteration_2",
+        "transition_steps_replayed": 228,
+        "words_replayed": 84
+      }
+    ],
+    "candidate_count": 2,
+    "complete_machine_edges_per_candidate": 344,
+    "complete_machine_states_per_candidate": 86,
+    "horizon": 3,
+    "observed_prefix_states_per_candidate": 85,
+    "out_of_scope_sink_states_per_candidate": 1,
+    "result": "pass",
+    "transition_steps_replayed_total": 456,
+    "validation": "complete_frozen_word_replay",
+    "words_replayed_total": 168
+  },
+  "audit_id": "OIA-1-TRACK-A-004a",
+  "result": "pass",
+  "schema_version": 1,
+  "source_validation": {
+    "all_repetitions_exact": true,
+    "one_identical_p0": true,
+    "source_candidate_count": 2,
+    "source_repetitions_checked": 1344,
+    "source_transition_steps_checked": 3648,
+    "source_word_count_per_candidate": 84
+  }
+}

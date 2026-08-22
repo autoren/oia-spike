@@ -1,0 +1,28 @@
+{
+  "schema_version": "OIA-TYCHO-TARGET-PREFLIGHT-PACKAGE-IMPLEMENTATION-FREEZE-0.1",
+  "gate_id": "tycho-target-preflight-r2a",
+  "frozen_on": "2026-08-22",
+  "protocol": {
+    "path": "integrations/tycho-target-preflight/PREFLIGHT_PACKAGE_PROTOCOL.json",
+    "sha256": "36bfe64a55b2f9025e2b36eccfa116466f5d9492f5983631398334576c31b387"
+  },
+  "implementation": [
+    {
+      "path": "scripts/build_tycho_target_preflight.py",
+      "sha256": "7cea3d205ddb791146db909f6f2c351f7c57ff1dbddd0a1bd50ddd8945062fb8"
+    },
+    {
+      "path": "scripts/verify_offline_tycho_target_preflight.py",
+      "sha256": "5550d9dcab22c1f45bd9152163ebd3d36acd5a0103d28e4174ea67f2d7c3bfca"
+    },
+    {
+      "path": "scripts/run_tycho_target_preflight.py",
+      "sha256": "17cd5e08622b8d89182e4e8b6cec8466e0744941dbe98f21730a864c51112a00"
+    },
+    {
+      "path": "integrations/tycho-target-preflight/TARGET_README.md",
+      "sha256": "250822e84ab766650fe202af9a56e5ea0d6509e31f6817a76428e92aff1681b2"
+    }
+  ],
+  "post_freeze_rule": "Do not edit the builder, verifier, target runner, or target instructions after observing the single qualifying package build. A failure yields the allowed blocked verdict."
+}

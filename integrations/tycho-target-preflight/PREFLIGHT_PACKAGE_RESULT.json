@@ -1,0 +1,84 @@
+{
+  "schema_version": "OIA-TYCHO-TARGET-PREFLIGHT-PACKAGE-RESULT-0.1",
+  "gate_id": "tycho-target-preflight-r2a",
+  "completed_on": "2026-08-22",
+  "verdict": "offline_target_preflight_bundle_ready_target_execution_pending",
+  "freeze_commits": {
+    "protocol": "916fff15c06f74ff9494fc00bb8a096381abd8de",
+    "implementation": "69d143bae634e977d0e8d76c283da30ed58d55b4"
+  },
+  "artifact_hashes": {
+    "protocol_sha256": "36bfe64a55b2f9025e2b36eccfa116466f5d9492f5983631398334576c31b387",
+    "implementation_freeze_sha256": "166cd498b1f0b0de1ab6d0b49a623dd28b6561923fc2c70f5a636a8990982172",
+    "tracked_bundle_manifest_sha256": "cbb677e0942adf13f650273dc663ea4be3e939582cfb7d326167cf38fc03b7d4",
+    "builder_sha256": "7cea3d205ddb791146db909f6f2c351f7c57ff1dbddd0a1bd50ddd8945062fb8",
+    "offline_verifier_sha256": "5550d9dcab22c1f45bd9152163ebd3d36acd5a0103d28e4174ea67f2d7c3bfca",
+    "target_runner_sha256": "17cd5e08622b8d89182e4e8b6cec8466e0744941dbe98f21730a864c51112a00"
+  },
+  "build": {
+    "untracked_local_directory": "local-work/tycho-target-preflight-r2a",
+    "zip_name": "tycho-target-preflight-r2a.zip",
+    "zip_bytes": 16300425,
+    "zip_sha256": "21f530d5262858583224f9c0ee1638765da547e521875b8a31bfe446143f731e",
+    "entry_count": 76,
+    "total_file_bytes": 25059407,
+    "entries_sha256": "cac135dace6772d041b539a589baf65377a74893f2494654a0b91794f90bf1b4",
+    "sandlock_elf": "ELF64 little-endian x86-64",
+    "sandlock_binary_sha256": "86f80d68afe0146287ee9b950ca0223945fe49e8722f6c80ffb89eb623e53b27"
+  },
+  "execution_accounting": {
+    "bundle_builds": 1,
+    "independent_manifest_verifications": 1,
+    "static_elf_inspections": 1,
+    "x86_64_sandlock_executions": 0,
+    "target_notebook_runs": 0,
+    "kaggle_uploads": 0,
+    "credentials": 0,
+    "model_loads": 0,
+    "model_calls": 0,
+    "gpu_runs": 0,
+    "arc_actions": 0,
+    "oia_runs": 0,
+    "submissions": 0,
+    "hidden_games": 0
+  },
+  "observations": {
+    "all_frozen_input_hashes_match": true,
+    "exact_patch_applied_to_exact_tycho_archive": true,
+    "zip_paths_unique_and_sorted": true,
+    "zip_timestamps_fixed": true,
+    "zip_modes_normalized": true,
+    "relative_file_hashes_verified": true,
+    "zip_below_20_mb_cap": true,
+    "target_runner_has_host_fallback": false,
+    "target_runner_requires_network_or_credentials": false,
+    "target_runner_loads_model_or_uses_gpu": false,
+    "target_runner_starts_arc_or_oia": false
+  },
+  "claim_boundary": {
+    "offline_preflight_bundle_reproducible": true,
+    "target_kernel_support": false,
+    "x86_64_sandlock_execution": false,
+    "kaggle_upload_or_notebook_run": false,
+    "myagent_adapter": false,
+    "model_gpu_load": false,
+    "throughput": false,
+    "arc_behavior_or_progress": false,
+    "oia_discovery_or_transfer": false,
+    "submission_or_hidden_evaluation": false
+  },
+  "next_gate": {
+    "id": "tycho-target-preflight-r2b",
+    "requires": "A prospectively frozen, explicitly authorized single internet-disabled target notebook run with this exact ZIP attached as input.",
+    "allowed_execution": "Bundle verification plus one feature/filesystem/network/process/timeout/memory preflight only.",
+    "forbidden": [
+      "host-mode fallback",
+      "model loading or inference",
+      "GPU use",
+      "ARC initialization or actions",
+      "OIA execution",
+      "submission",
+      "hidden-game access"
+    ]
+  }
+}

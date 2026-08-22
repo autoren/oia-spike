@@ -131,6 +131,9 @@ jobs:
       - name: Verify Tycho Docker-free Sandlock R1 boundary
         run: python scripts/verify_tycho_sandlock.py
 
+      - name: Verify Tycho target-preflight R2a package boundary
+        run: python scripts/verify_tycho_target_preflight_package.py
+
       - name: Verify Track A 006b reject-aware outcome when present
         run: python scripts/verify_track_a_006b_outcome.py
 

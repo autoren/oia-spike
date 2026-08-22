@@ -1,0 +1,100 @@
+{
+  "schema_version": "OIA-TYCHO-TARGET-PREFLIGHT-PACKAGE-PROTOCOL-0.1",
+  "gate_id": "tycho-target-preflight-r2a",
+  "frozen_on": "2026-08-22",
+  "research_question": "Can the exact x86_64 Sandlock asset, exact Tycho source and patch, licenses, and credential-free isolation probe be assembled into a compact deterministic offline input bundle suitable for a later internet-disabled target-kernel preflight?",
+  "parent_evidence": {
+    "oia_spike_merge_commit": "4d8b11b60d23bfcc59d986fbe3bc4ce5c6ec204a",
+    "r1_result": "integrations/tycho-sandlock/SANDBOX_RESULT.json",
+    "established": "Sandlock v0.8.6 and the exact Tycho patch passed filesystem, network, process, timeout, memory, and unit checks on one pinned Ubuntu 26.04/aarch64 VM.",
+    "unresolved": "The target evaluator kernel and x86_64 asset have not executed."
+  },
+  "frozen_inputs": {
+    "sandlock_release_asset": {
+      "url": "https://github.com/multikernel/sandlock/releases/download/v0.8.6/sandlock-x86_64-unknown-linux-gnu.tar.gz",
+      "bytes": 11424640,
+      "sha256": "86e89e5bdb2da748e683cda6908a95504ae6751f73d9dadf79cf0fc6843873fb",
+      "binary_sha256": "86f80d68afe0146287ee9b950ca0223945fe49e8722f6c80ffb89eb623e53b27"
+    },
+    "sandlock_license": {
+      "url": "https://raw.githubusercontent.com/multikernel/sandlock/033f7e24e29047a17aeb6f2f0e8fd77c69978abb/LICENSE",
+      "bytes": 10776,
+      "sha256": "acd4c12f36e0da77644436747d76bf58d44f807869f3f79623086d03b7688702"
+    },
+    "tycho_source": {
+      "repository": "https://github.com/NIMI-research/Tycho.git",
+      "commit": "f68912a764372ead0a610db2e1c011d41ce5197e",
+      "archive_url": "https://codeload.github.com/NIMI-research/Tycho/tar.gz/f68912a764372ead0a610db2e1c011d41ce5197e",
+      "archive_sha256": "c82c8dde62109ead0c67716a54b107bd060791ce5fd00d9123067e07d0ef6018",
+      "license": "Apache-2.0"
+    },
+    "tycho_patch": {
+      "path": "integrations/tycho-sandlock/sandlock-python-sandbox-v0.1.patch",
+      "sha256": "a4f657e3e5cb0759bcab527d834eae169f5f704063109967d06acb5473aa78c8"
+    }
+  },
+  "bundle_contract": {
+    "format": "deterministic ZIP with fixed timestamps, sorted paths, and normalized modes",
+    "maximum_bytes": 20000000,
+    "required_payload": [
+      "x86_64 Sandlock executable",
+      "patched Tycho runtime package",
+      "original Tycho source archive and exact patch",
+      "Sandlock and Tycho licenses",
+      "target runner and verifier",
+      "relative SHA-256 manifest"
+    ],
+    "target_runner": {
+      "requires_credentials": false,
+      "requires_network": false,
+      "uses_gpu": false,
+      "loads_model": false,
+      "starts_arc": false,
+      "runs_oia": false,
+      "host_fallback": false,
+      "expected_protected_root": "/kaggle/input"
+    }
+  },
+  "authorized_post_freeze_execution": {
+    "bundle_builds": 1,
+    "independent_manifest_verifications": 1,
+    "static_elf_inspections": 1,
+    "x86_64_sandlock_executions": 0,
+    "target_notebook_runs": 0,
+    "kaggle_uploads": 0,
+    "credentials": 0,
+    "model_loads": 0,
+    "model_calls": 0,
+    "gpu_runs": 0,
+    "arc_actions": 0,
+    "oia_runs": 0,
+    "submissions": 0,
+    "hidden_games": 0
+  },
+  "pass_criteria": {
+    "input_hashes": "Every frozen source, release, patch, and license hash matches before packaging.",
+    "patch": "The exact R1 patch applies cleanly to the exact Tycho source archive before the runtime package is copied.",
+    "architecture": "Static ELF inspection identifies the packaged Sandlock executable as x86-64 Linux.",
+    "determinism": "The builder emits a sorted relative manifest and fixed-metadata ZIP whose bytes are independently verified.",
+    "size": "The ZIP is no more than 20,000,000 bytes.",
+    "runner": "Static verification confirms fail-closed feature checking, protected-root denial, reachable TCP/UDP controls, child-process denial, timeout and memory probes, and no host fallback."
+  },
+  "allowed_verdicts": [
+    "offline_target_preflight_bundle_ready_target_execution_pending",
+    "offline_target_preflight_bundle_blocked"
+  ],
+  "claim_boundary": {
+    "supports_if_pass": "Only that the exact target-preflight inputs can be assembled reproducibly into a compact offline x86_64 bundle.",
+    "does_not_support": [
+      "target kernel or Landlock compatibility",
+      "x86_64 Sandlock execution",
+      "Kaggle notebook execution or upload",
+      "MyAgent lifecycle integration",
+      "model loading, inference, GPU fit, or throughput",
+      "ARC behavior or progress",
+      "OIA discovery or transfer",
+      "submission, hidden, or sealed evaluation"
+    ]
+  },
+  "stopping_rule": "Stop after one bundle build, one independent manifest verification, and one static ELF inspection. Do not upload, run the target notebook, execute x86_64 Sandlock, use credentials, load a model, access ARC, run OIA, or submit."
+}

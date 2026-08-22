@@ -1,0 +1,204 @@
+{
+  "audit_id": "OIA-1-TRACK-A-003b",
+  "candidate_accounting": [
+    {
+      "bundle_manifest_sha256": "46c442f67fbde7523c5087d339c47d1bac60529fd7312defbdaddc2852e6ca44",
+      "candidate_id": "max/final",
+      "duplicate_of": null,
+      "full_determinism": "pass",
+      "p0_replay": "pass",
+      "provisional_status": "provisionally_unique",
+      "trace_signature_sha256": "f88878cf224dd90aa938d911b10cf66f921e0af8525f88f19db43f7a7f132f01"
+    },
+    {
+      "bundle_manifest_sha256": "ec4e3a1ce7db1f225818767ad8d3173a654caa8eaf54fdd3ab9c6fa09dada22f",
+      "candidate_id": "xhigh/final",
+      "duplicate_of": "max/final",
+      "full_determinism": "not_run_behavioral_duplicate",
+      "p0_replay": "pass",
+      "provisional_status": "behavioral_duplicate",
+      "trace_signature_sha256": "f88878cf224dd90aa938d911b10cf66f921e0af8525f88f19db43f7a7f132f01"
+    },
+    {
+      "bundle_manifest_sha256": "39e068c5d4157b94aa48c1c77f3d6f61f40f5d8283e9c3a44a5f337aa2c25488",
+      "candidate_id": "max/iteration_1",
+      "duplicate_of": "max/final",
+      "full_determinism": "not_run_behavioral_duplicate",
+      "p0_replay": "pass",
+      "provisional_status": "behavioral_duplicate",
+      "trace_signature_sha256": "f88878cf224dd90aa938d911b10cf66f921e0af8525f88f19db43f7a7f132f01"
+    },
+    {
+      "bundle_manifest_sha256": "a820708f3886b2150dc5122943f49a49bf84fb73343b550e458dc779725b3b55",
+      "candidate_id": "xhigh/iteration_1",
+      "duplicate_of": "max/final",
+      "full_determinism": "not_run_behavioral_duplicate",
+      "p0_replay": "pass",
+      "provisional_status": "behavioral_duplicate",
+      "trace_signature_sha256": "f88878cf224dd90aa938d911b10cf66f921e0af8525f88f19db43f7a7f132f01"
+    },
+    {
+      "bundle_manifest_sha256": "94cdba8d82612eb993457b3efc17718dea44f2585dabbe76d0fe0ae8d8764db3",
+      "candidate_id": "max/iteration_2",
+      "duplicate_of": null,
+      "full_determinism": "pass",
+      "p0_replay": "pass",
+      "provisional_status": "provisionally_unique",
+      "trace_signature_sha256": "c45ef446b324b02835f0f8fab854107f7cef7b879f969da800b9b69ac74719f9"
+    },
+    {
+      "bundle_manifest_sha256": "f3d878e57966da4b0ea529c0a11fa6c9426060da4b59ebaf16f6bd5bb547eff6",
+      "candidate_id": "xhigh/iteration_2",
+      "duplicate_of": "max/final",
+      "full_determinism": "not_run_behavioral_duplicate",
+      "p0_replay": "pass",
+      "provisional_status": "behavioral_duplicate",
+      "trace_signature_sha256": "f88878cf224dd90aa938d911b10cf66f921e0af8525f88f19db43f7a7f132f01"
+    },
+    {
+      "bundle_manifest_sha256": "c0f5574962eddfdc50ea53218e406f647044a4762568ccb9e7cf5fd6e4c39045",
+      "candidate_id": "max/iteration_3",
+      "duplicate_of": "max/final",
+      "full_determinism": "not_run_behavioral_duplicate",
+      "p0_replay": "pass",
+      "provisional_status": "behavioral_duplicate",
+      "trace_signature_sha256": "f88878cf224dd90aa938d911b10cf66f921e0af8525f88f19db43f7a7f132f01"
+    },
+    {
+      "bundle_manifest_sha256": "f07833e362b5bbfa506a7a79cac6464dacfe9cf8b2e096cabd3d6144b204b707",
+      "candidate_id": "xhigh/iteration_3",
+      "duplicate_of": "max/final",
+      "full_determinism": "not_run_behavioral_duplicate",
+      "p0_replay": "pass",
+      "provisional_status": "behavioral_duplicate",
+      "trace_signature_sha256": "f88878cf224dd90aa938d911b10cf66f921e0af8525f88f19db43f7a7f132f01"
+    },
+    {
+      "bundle_manifest_sha256": "33d36259aa6cfabed5db775ebec4ebcb0f85e5fe7493c4f852ad7866bf3db76e",
+      "candidate_id": "max/iteration_4",
+      "duplicate_of": "max/final",
+      "full_determinism": "not_run_behavioral_duplicate",
+      "p0_replay": "pass",
+      "provisional_status": "behavioral_duplicate",
+      "trace_signature_sha256": "f88878cf224dd90aa938d911b10cf66f921e0af8525f88f19db43f7a7f132f01"
+    },
+    {
+      "bundle_manifest_sha256": "21a2e9e9e170b7706a023731a7fa4625296b81e46328fa71c50a1dfad7634f21",
+      "candidate_id": "xhigh/iteration_4",
+      "duplicate_of": "max/final",
+      "full_determinism": "not_run_behavioral_duplicate",
+      "p0_replay": "pass",
+      "provisional_status": "behavioral_duplicate",
+      "trace_signature_sha256": "f88878cf224dd90aa938d911b10cf66f921e0af8525f88f19db43f7a7f132f01"
+    },
+    {
+      "bundle_manifest_sha256": "149d054f79af9f78118b5aa477881475c5ff01a354f401ad3058da52691a6ba8",
+      "candidate_id": "max/iteration_5",
+      "duplicate_of": "max/final",
+      "full_determinism": "not_run_behavioral_duplicate",
+      "p0_replay": "pass",
+      "provisional_status": "behavioral_duplicate",
+      "trace_signature_sha256": "f88878cf224dd90aa938d911b10cf66f921e0af8525f88f19db43f7a7f132f01"
+    },
+    {
+      "bundle_manifest_sha256": "9979b17ed6ff5cf784b7719401f281813333026e1a6d5f0a1d9a47c1ccf92050",
+      "candidate_id": "xhigh/iteration_5",
+      "duplicate_of": "max/final",
+      "full_determinism": "not_run_behavioral_duplicate",
+      "p0_replay": "pass",
+      "provisional_status": "behavioral_duplicate",
+      "trace_signature_sha256": "f88878cf224dd90aa938d911b10cf66f921e0af8525f88f19db43f7a7f132f01"
+    },
+    {
+      "bundle_manifest_sha256": "15bada20809c996f8ff4c03c50f1d6d53bdf46e62ca0a0a27c21eccba29f5978",
+      "candidate_id": "max/iteration_6",
+      "duplicate_of": "max/final",
+      "full_determinism": "not_run_behavioral_duplicate",
+      "p0_replay": "pass",
+      "provisional_status": "behavioral_duplicate",
+      "trace_signature_sha256": "f88878cf224dd90aa938d911b10cf66f921e0af8525f88f19db43f7a7f132f01"
+    }
+  ],
+  "claim_boundary": "Opened Track A candidate-frontier feasibility only; no real ARC action or broader scientific claim.",
+  "execution_accounting": {
+    "credential_uses": 0,
+    "fresh_candidate_processes_total": 2449,
+    "fresh_full_processes": 1344,
+    "fresh_p0_processes": 13,
+    "fresh_provisional_processes": 1092,
+    "model_or_api_calls": 0,
+    "network_or_service_calls": 0,
+    "oia_separator_runs": 0,
+    "predicted_transition_steps": 6612,
+    "real_arc_actions": 0
+  },
+  "gate_verdict": "candidate_frontier_feasible",
+  "integrity": {
+    "all_candidate_bundles_hash_verified": true,
+    "all_full_repetitions_pass": true,
+    "all_p0_replays_exact": true,
+    "all_provisional_results_pass": true,
+    "candidate_or_p0_output_emitted_during_p0": false,
+    "full_and_provisional_signatures_match": true,
+    "network_disabled": true,
+    "session_and_post_p0_state_excluded": true,
+    "unexpected_candidate_or_p0_file_access_during_p0": false
+  },
+  "interpretation": {
+    "not_supported": "No global non-equivalence, model correctness, real-environment outcome, OIA separator, ontology-revision necessity, planning value, decision superiority, sealed transfer, or Track B conclusion follows.",
+    "sampling": "The admitted programs are checkpoints from one learner/run family, not independently authored learners.",
+    "supported": "At least two fixed released programs exactly replay one opened P0 and produce deterministic, behaviorally different predictions within the frozen 84-word level-1 boundary."
+  },
+  "pinned_inputs": {
+    "environment_id": "ls20-9607627b",
+    "finite_actions": [
+      "ACTION1",
+      "ACTION2",
+      "ACTION3",
+      "ACTION4"
+    ],
+    "p0_frame_sha256": "0fc0241eb2d3c992a2af68643f36e3878f5140fc85aed38410dd66ef5486afc7",
+    "prepared_bundles_sha256": "e4b1de5e4141c2f37e60b668ec616efcf9c506ad663a7811150d762cf9d611d1",
+    "runtime_image_id": "sha256:644d899fa00c3a9fc16cc05f94ee5d078653891fe55659cd8e51fb1126027051",
+    "word_count": 84
+  },
+  "raw_evidence": {
+    "full_results": {
+      "local_path": "local-work/track-a-003b/admission-results/FULL_RESULTS.json",
+      "sha256": "d11529d4281746d4a2d89d075d23ac1bbdc12d4deb3c2de2dc9c10de18bec039"
+    },
+    "p0_results": {
+      "local_path": "local-work/track-a-003b/admission-results/P0_RESULTS.json",
+      "sha256": "100fd65cf2bbd7bb314f98c6d918dfa04140a8380f6ad32f4807ac5ecd74a260"
+    },
+    "provisional_results": {
+      "local_path": "local-work/track-a-003b/admission-results/PROVISIONAL_RESULTS.json",
+      "sha256": "e68b0d13663cf91d06fd2d2bcb5edb2e83b668049c2e23e127bfd8258a09ed2a"
+    }
+  },
+  "result": {
+    "admitted_candidate_count": 2,
+    "admitted_candidates": [
+      "max/final",
+      "max/iteration_2"
+    ],
+    "all_promoted_words_deterministic": true,
+    "behavioral_duplicate_count": 11,
+    "first_divergence": {
+      "max_final_frame_sha256": "5e5b28124c21e10f3ffb686006ed454aef743f399e219ffc25d81f7acdec7002",
+      "max_final_status": "RUNNING",
+      "max_iteration_2_frame_sha256": "0fc0241eb2d3c992a2af68643f36e3878f5140fc85aed38410dd66ef5486afc7",
+      "max_iteration_2_status": "RUNNING",
+      "word": [
+        "ACTION2"
+      ],
+      "word_index": 1
+    },
+    "nondeterministic_word_count": 0,
+    "p0_replay_pass_count": 13,
+    "provisional_behavior_classes": 2,
+    "source_records_screened": 13
+  },
+  "schema_version": 1,
+  "status": "complete"
+}

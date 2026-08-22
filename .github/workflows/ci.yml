@@ -40,6 +40,9 @@ jobs:
       - name: Verify Track A 003b pre-outcome runtime freeze
         run: python scripts/verify_track_a_003b_preoutcome.py
 
+      - name: Verify Track A 003b candidate-admission outcome
+        run: python scripts/verify_track_a_003b_outcome.py
+
       - name: Verify accepted v0.2.1 baseline bytes and provenance
         working-directory: baseline/oia-v0.2.1
         run: |

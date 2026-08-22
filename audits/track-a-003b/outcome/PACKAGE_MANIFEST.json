@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "audit_id": "OIA-1-TRACK-A-003b",
+  "package_id": "track-a-003b-local-candidate-admission-outcome",
+  "gate_verdict": "candidate_frontier_feasible",
+  "files": [
+    {
+      "path": "ADMISSION_SUMMARY.json",
+      "size_bytes": 8956,
+      "sha256": "8f0975c58df1cf405a67c0ffb16c4a58cfc2c4ed2719a5734a4da03d8daa1ed8"
+    },
+    {
+      "path": "SHA256SUMS.txt",
+      "size_bytes": 178,
+      "sha256": "b660a2232685b27250271958cff107f310760d41f2637c89a59fc95063260935"
+    },
+    {
+      "path": "TRACK_A_003B_REPORT.md",
+      "size_bytes": 6504,
+      "sha256": "4d894c71b49ff3fb3920642fa557f1375fa3a5a74057edf0243468674fbf26be"
+    }
+  ],
+  "independent_summarizer": {
+    "path": "scripts/summarize_track_a_003b_outcome.py",
+    "sha256": "90241271bf8cb2ad81a08ed15f35ab6d37eaf950f5b048dd5a81194b4b78e384"
+  },
+  "raw_evidence": {
+    "committed": false,
+    "reason": "The complete 5.4 MB stage evidence remains under ignored local-work; exact hashes and complete attempt accounting are committed in ADMISSION_SUMMARY.json."
+  },
+  "claim_boundary": "Opened Track A candidate-frontier feasibility only; no real ARC action, OIA separator, sealed evaluation, or Track B claim."
+}

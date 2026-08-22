@@ -117,6 +117,9 @@ jobs:
       - name: Verify Track A 006c sequential-fusion pre-outcome freeze
         run: python scripts/verify_track_a_006c_freeze.py
 
+      - name: Verify Track A 006c sequential-fusion outcome when present
+        run: python scripts/verify_track_a_006c_outcome.py
+
       - name: Verify accepted v0.2.1 baseline bytes and provenance
         working-directory: baseline/oia-v0.2.1
         run: |

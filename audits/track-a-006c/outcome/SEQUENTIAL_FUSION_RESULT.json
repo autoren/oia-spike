@@ -1,0 +1,84 @@
+{
+  "audit_id": "OIA-1-TRACK-A-006c",
+  "benchmark": {
+    "action_count": 3,
+    "base_candidate_count": 4,
+    "case_count": 64,
+    "master_seed": "oia-track-a-006c-heldout-v1",
+    "max_beliefs": 100000,
+    "maximum_closed_depth": 6,
+    "maximum_generation_attempts_per_stage": 2000,
+    "maximum_reject_aware_depth": 8,
+    "minimum_closed_depth": 2,
+    "output_count": 3,
+    "sentinel_count": 2,
+    "state_count": 3
+  },
+  "case_count": 64,
+  "case_manifest_sha256": "06e29472c77c5f1d0542b6eeb6843bb0a802d8198fdc43bb4cfd8e9a389c7bc7",
+  "claim_boundary": "Controlled deterministic Track A diagnostic of a frozen resettable sequential fusion. This is not external validation, learned ontology formation, necessary revision, sealed transfer, population inference, real ARC evidence, or decision superiority.",
+  "evidence_package": {
+    "path": "SEQUENTIAL_FUSION_EVIDENCE.zip",
+    "sha256": "bbe1df7f1925a1db503fde0909984c0372eb6e997b70c175127c5d21742f5111",
+    "size_bytes": 34646
+  },
+  "record_count": 960,
+  "records_jsonl_sha256": "b28feda465b923979821297524d174a916684d741bd298f9062df6b83776e90f",
+  "schema_version": 1,
+  "summary": [
+    {
+      "policy": "closed_identity_native",
+      "records": 256,
+      "status:correct_candidate_identification": 256,
+      "target_kind": "in_family",
+      "total_resets": 0,
+      "total_steps": 700
+    },
+    {
+      "policy": "closed_identity_native",
+      "records": 64,
+      "status:false_candidate_identification": 47,
+      "status:outside_model": 17,
+      "target_kind": "outside",
+      "total_resets": 0,
+      "total_steps": 160
+    },
+    {
+      "policy": "reject_aware_native",
+      "records": 256,
+      "status:correct_candidate_identification": 256,
+      "target_kind": "in_family",
+      "total_resets": 0,
+      "total_steps": 771
+    },
+    {
+      "policy": "reject_aware_native",
+      "records": 64,
+      "status:false_candidate_identification": 30,
+      "status:outside_model": 15,
+      "status:outside_reject": 19,
+      "target_kind": "outside",
+      "total_resets": 0,
+      "total_steps": 177
+    },
+    {
+      "policy": "sequential_fusion",
+      "records": 256,
+      "status:correct_candidate_identification": 256,
+      "target_kind": "in_family",
+      "total_resets": 256,
+      "total_steps": 1471
+    },
+    {
+      "policy": "sequential_fusion",
+      "records": 64,
+      "status:false_candidate_identification": 21,
+      "status:outside_detected_closed": 17,
+      "status:outside_detected_disagreement": 6,
+      "status:outside_detected_reject": 20,
+      "target_kind": "outside",
+      "total_resets": 47,
+      "total_steps": 289
+    }
+  ]
+}

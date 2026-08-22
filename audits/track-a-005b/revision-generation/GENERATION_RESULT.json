@@ -1,0 +1,285 @@
+{
+  "accounting": {
+    "candidate_behavior_steps": 0,
+    "candidate_processes": 0,
+    "hosted_or_api_model_calls": 0,
+    "local_model_inferences": 8,
+    "network_or_service_calls": 0,
+    "oia_processes": 0,
+    "output_tokens_recorded": 3155,
+    "real_arc_actions": 0,
+    "repair_inferences": 0,
+    "requested_candidates": 8,
+    "step_2_or_later_payloads_read": 0,
+    "structurally_accepted_candidates": 8,
+    "structurally_rejected_candidates": 0
+  },
+  "audit_id": "OIA-1-TRACK-A-005b",
+  "candidate_records": [
+    {
+      "candidate_id": "R0001",
+      "candidate_sha256": "c4dae01abdd0c3ded5780ca2b8b1bf4e864ba23a5dd977f752935da5084bef82",
+      "candidate_size_bytes": 941,
+      "generation": {
+        "decode": "greedy",
+        "max_tokens": 2200,
+        "repairs": 0,
+        "temperature": 0.0
+      },
+      "output_token_count": 310,
+      "prompt_sha256": "c089156e16cd96e6f2d0aa5992ddd48a8e840be2b61085f5dc99966628e490dd",
+      "raw_response_bytes": 954,
+      "raw_response_sha256": "8552f9190672707ed3eb40eb2ea497db9b7be39f38f82ff8ae9b43e36339c3d9",
+      "source_representation": "single_python_or_plain_fence",
+      "stance_id": "persistence_boundary_normalization",
+      "status": "structurally_accepted_not_executed",
+      "structural_validation": {
+        "ast_node_count": 235,
+        "functions": [
+          "initial_state",
+          "render",
+          "step"
+        ],
+        "imports": [
+          "numpy",
+          "typing"
+        ],
+        "result": "pass"
+      }
+    },
+    {
+      "candidate_id": "R0002",
+      "candidate_sha256": "fbf80e427b0e605d7cf85964f9bd5d882acf578f613c6e508f9f2a2fb4ccdf04",
+      "candidate_size_bytes": 960,
+      "generation": {
+        "decode": "greedy",
+        "max_tokens": 2200,
+        "repairs": 0,
+        "temperature": 0.0
+      },
+      "output_token_count": 316,
+      "prompt_sha256": "9301fb8d7838714ef63dade025e460dd8b636c517a9bc83741df0f593f93be29",
+      "raw_response_bytes": 973,
+      "raw_response_sha256": "628e4fb88cd94ad265984d72041c2ebb22908c14ab1b56115fb241478982863f",
+      "source_representation": "single_python_or_plain_fence",
+      "stance_id": "transient_impact_restoration",
+      "status": "structurally_accepted_not_executed",
+      "structural_validation": {
+        "ast_node_count": 242,
+        "functions": [
+          "initial_state",
+          "render",
+          "step"
+        ],
+        "imports": [
+          "numpy",
+          "typing"
+        ],
+        "result": "pass"
+      }
+    },
+    {
+      "candidate_id": "R0003",
+      "candidate_sha256": "b8cb85e044ed90dcc148b2cf928cd62859a1f5f2c29a4211c973beb92ed687b2",
+      "candidate_size_bytes": 923,
+      "generation": {
+        "decode": "greedy",
+        "max_tokens": 2200,
+        "repairs": 0,
+        "temperature": 0.0
+      },
+      "output_token_count": 307,
+      "prompt_sha256": "345161785137bb2f079a69b0d458f77ca8e80b3e6b75119e90b9895d0342f0a6",
+      "raw_response_bytes": 936,
+      "raw_response_sha256": "869a9ef54635b1a671e95d5facec84e766e1942ae3c77e361520d6993ef64833",
+      "source_representation": "single_python_or_plain_fence",
+      "stance_id": "diagonal_projectile_ray",
+      "status": "structurally_accepted_not_executed",
+      "structural_validation": {
+        "ast_node_count": 235,
+        "functions": [
+          "initial_state",
+          "render",
+          "step"
+        ],
+        "imports": [
+          "numpy",
+          "typing"
+        ],
+        "result": "pass"
+      }
+    },
+    {
+      "candidate_id": "R0004",
+      "candidate_sha256": "942bf625300a7d79441845f74bb3c0125e467e63fe40ebe86f47da7bbdd3dd56",
+      "candidate_size_bytes": 1063,
+      "generation": {
+        "decode": "greedy",
+        "max_tokens": 2200,
+        "repairs": 0,
+        "temperature": 0.0
+      },
+      "output_token_count": 291,
+      "prompt_sha256": "809f6769455694f53ddc03f6a89a650d3a686ba1d5c95705588744a2eb70fbbb",
+      "raw_response_bytes": 1076,
+      "raw_response_sha256": "95aeb1509728568f1c7c27aabdc4a0ebeadcc950640c34c7d510286d1b624c5c",
+      "source_representation": "single_python_or_plain_fence",
+      "stance_id": "viewport_floor_boundary",
+      "status": "structurally_accepted_not_executed",
+      "structural_validation": {
+        "ast_node_count": 185,
+        "functions": [
+          "initial_state",
+          "render",
+          "step"
+        ],
+        "imports": [
+          "numpy",
+          "typing"
+        ],
+        "result": "pass"
+      }
+    },
+    {
+      "candidate_id": "R0005",
+      "candidate_sha256": "9c0422424518385457e55de382993e90ec939e19be83b79b599b625aa67d77b8",
+      "candidate_size_bytes": 1166,
+      "generation": {
+        "decode": "greedy",
+        "max_tokens": 2200,
+        "repairs": 0,
+        "temperature": 0.0
+      },
+      "output_token_count": 375,
+      "prompt_sha256": "d160a55ee18b821f1035ac882485a0700c0bf3d87bd090f2f5d0d273519c567e",
+      "raw_response_bytes": 1179,
+      "raw_response_sha256": "c999a7aaaa79dae33ad095c7c21a6bc38966c7b117a6617882fd76e7c74c3c9e",
+      "source_representation": "single_python_or_plain_fence",
+      "stance_id": "discrete_target_state",
+      "status": "structurally_accepted_not_executed",
+      "structural_validation": {
+        "ast_node_count": 278,
+        "functions": [
+          "initial_state",
+          "render",
+          "step"
+        ],
+        "imports": [
+          "numpy",
+          "typing"
+        ],
+        "result": "pass"
+      }
+    },
+    {
+      "candidate_id": "R0006",
+      "candidate_sha256": "e59800f349e94a19cddb0a53420ab9fad7a8177951921d5f675c9af58f383b1f",
+      "candidate_size_bytes": 3438,
+      "generation": {
+        "decode": "greedy",
+        "max_tokens": 2200,
+        "repairs": 0,
+        "temperature": 0.0
+      },
+      "output_token_count": 930,
+      "prompt_sha256": "6b5c7aed82dc8fba6a701995183797ed550f6ac7aeca5ca0f7c8682e22a2a794",
+      "raw_response_bytes": 3451,
+      "raw_response_sha256": "50575abd069f4cfd17b5cabdd34aedfe2dd2d95319ea064db120098e648ac7e5",
+      "source_representation": "single_python_or_plain_fence",
+      "stance_id": "wraparound_clipped_motion",
+      "status": "structurally_accepted_not_executed",
+      "structural_validation": {
+        "ast_node_count": 275,
+        "functions": [
+          "initial_state",
+          "render",
+          "step"
+        ],
+        "imports": [
+          "numpy",
+          "typing"
+        ],
+        "result": "pass"
+      }
+    },
+    {
+      "candidate_id": "R0007",
+      "candidate_sha256": "153da1498c19fb59a51d1ff10b68e496afe0c4f6d3729e52c8d37d7060f34905",
+      "candidate_size_bytes": 947,
+      "generation": {
+        "decode": "greedy",
+        "max_tokens": 2200,
+        "repairs": 0,
+        "temperature": 0.0
+      },
+      "output_token_count": 310,
+      "prompt_sha256": "c07c0d287781034cf27abe79749ad7a913d772ed0b91f7fc2db56bd4d7d2f4ed",
+      "raw_response_bytes": 960,
+      "raw_response_sha256": "820d152317465d245662e2fa4d50a80afac9ac65148d6e8e7ac073ed7ed3eb5e",
+      "source_representation": "single_python_or_plain_fence",
+      "stance_id": "action_latent_minimal_effect",
+      "status": "structurally_accepted_not_executed",
+      "structural_validation": {
+        "ast_node_count": 235,
+        "functions": [
+          "initial_state",
+          "render",
+          "step"
+        ],
+        "imports": [
+          "numpy",
+          "typing"
+        ],
+        "result": "pass"
+      }
+    },
+    {
+      "candidate_id": "R0008",
+      "candidate_sha256": "fbf80e427b0e605d7cf85964f9bd5d882acf578f613c6e508f9f2a2fb4ccdf04",
+      "candidate_size_bytes": 960,
+      "generation": {
+        "decode": "greedy",
+        "max_tokens": 2200,
+        "repairs": 0,
+        "temperature": 0.0
+      },
+      "output_token_count": 316,
+      "prompt_sha256": "0a1d28aa8ed834892a528ee4b6a4a29a65d9488e3360d8b50b3091f396d15a71",
+      "raw_response_bytes": 973,
+      "raw_response_sha256": "628e4fb88cd94ad265984d72041c2ebb22908c14ab1b56115fb241478982863f",
+      "source_representation": "single_python_or_plain_fence",
+      "stance_id": "skeptical_minimal_countermodel",
+      "status": "structurally_accepted_not_executed",
+      "structural_validation": {
+        "ast_node_count": 242,
+        "functions": [
+          "initial_state",
+          "render",
+          "step"
+        ],
+        "imports": [
+          "numpy",
+          "typing"
+        ],
+        "result": "pass"
+      }
+    }
+  ],
+  "claim_boundary": "Opened Track A outcome-conditioned local revision and static validation only; no generated candidate was imported, calibrated, or behaviorally executed.",
+  "model": {
+    "provenance_sha256": "e601a6c24ded33e923ffcf79b2440452957ef2e6febd90faec333fb3a03a86de",
+    "repository": "mlx-community/Qwen3.8-27B-4bit",
+    "revision": "3e6447f082e89cc7f0bc6e5441afd38dfce760ff"
+  },
+  "package": {
+    "manifest_sha256": "f5cf029d68427b48083f39a90b92c096922cc6739e05fa2205a9ced43e61d180",
+    "path": "revision-generation/CANDIDATE_PACKAGE.zip",
+    "sha256": "a49a8012b0f7f130feb5c32bfb32825ad4426d7c2203fba6e532165c1fd884d4",
+    "size_bytes": 6986
+  },
+  "prompt_template_sha256": "f6999e65ba3760ca82250b6e029f4533800ec5ed165dfcdaf66b32c5f1e1df51",
+  "revision_input_manifest_sha256": "081dc9c27669cabec6bd0d464ee0aa9fc616baa34f90cfa187745880c4ef8dc1",
+  "schema_version": 1,
+  "stances_sha256": "114613e8be554976e5a5fb4e66c9e8ba6cc69e2699ecbb3f4bea750250681871",
+  "status": "revision_generation_feasible"
+}

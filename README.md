@@ -23,6 +23,13 @@ It is intentionally separate from [`autoren/ontology-intervention-auditor`](http
   logging-only patch and credential-free exporter for producing lossless Tycho
   observation streams under the parent project's external trace-bundle
   contract. It does not authorize a model or ARC run.
+- [`integrations/discoverphysics/`](integrations/discoverphysics/) contains a
+  source-pinned, execution-free context adapter for a possible prospective
+  DiscoverPhysics-style study. It rejects the current time-blind submitted-law
+  signature, requires `start_time` to reach the artifact and evaluator, binds
+  evaluator-held matched pairs by opaque commitment, and validates complete
+  ordered traces. It does not authorize a learner, simulator, candidate, or
+  private-world run.
 
 ## Local baseline validation
 

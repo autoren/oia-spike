@@ -1,0 +1,32 @@
+{
+  "schema_version": "OIA-TYCHO-SANDLOCK-IMPLEMENTATION-FREEZE-0.1",
+  "gate_id": "tycho-sandlock-r1",
+  "frozen_on": "2026-08-22",
+  "protocol": {
+    "path": "integrations/tycho-sandlock/SANDBOX_PROTOCOL.json",
+    "sha256": "0ab9e4e3e79768de9863c177cda912c9f269bddd779af9adb1c269b6d587da4b"
+  },
+  "tycho_source": {
+    "repository": "https://github.com/NIMI-research/Tycho.git",
+    "commit": "f68912a764372ead0a610db2e1c011d41ce5197e"
+  },
+  "patch": {
+    "path": "integrations/tycho-sandlock/sandlock-python-sandbox-v0.1.patch",
+    "sha256": "a4f657e3e5cb0759bcab527d834eae169f5f704063109967d06acb5473aa78c8",
+    "permitted_source_files": [
+      "README.md",
+      "tests/workspace/test_sandbox_runtime.py",
+      "tycho/config/run_config.py",
+      "tycho/workspace/sandbox.py"
+    ],
+    "logging_or_trace_semantics_changed": false,
+    "prompt_or_agent_policy_changed": false,
+    "auto_runtime_selection_changed_to_sandlock": false
+  },
+  "live_probe": {
+    "path": "scripts/qualify_tycho_sandlock.py",
+    "sha256": "e7d6e68daf9e0e51cc39d70a18d5665d187975419982c124396f135c9b896477",
+    "sandlock_binary_sha256": "346cd6c5c7773384f9803794a3ab6946aeb7f05e1d272c9d6fb7e01a2b4b5c98"
+  },
+  "post_freeze_rule": "Do not edit the patch or probe after observing the bounded qualifying executions. A failure yields an allowed failure verdict rather than an outcome-driven repair."
+}

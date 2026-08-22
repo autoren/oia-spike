@@ -62,7 +62,9 @@ jobs:
         run: python scripts/verify_track_a_005a_generation_freeze.py
 
       - name: Verify Track A 005a candidate-generation result when present
-        run: python scripts/verify_track_a_005a_generation_result.py
+        run: |
+          sha256sum -c audits/track-a-005a/GENERATION_RESULT_SHA256SUMS.txt
+          python scripts/verify_track_a_005a_generation_result.py
 
       - name: Verify accepted v0.2.1 baseline bytes and provenance
         working-directory: baseline/oia-v0.2.1

@@ -1,0 +1,193 @@
+{
+  "accounting": {
+    "candidate_behavior_steps": 0,
+    "candidate_processes": 0,
+    "hosted_or_api_model_calls": 0,
+    "local_model_inferences": 8,
+    "network_or_service_calls": 0,
+    "oia_processes": 0,
+    "output_tokens_recorded": 8158,
+    "real_arc_actions": 0,
+    "repair_inferences": 0,
+    "requested_candidates": 8,
+    "structurally_accepted_candidates": 2,
+    "structurally_rejected_candidates": 6
+  },
+  "audit_id": "OIA-1-TRACK-A-005a",
+  "candidate_records": [
+    {
+      "candidate_id": "C0001",
+      "generation": {
+        "decode": "greedy",
+        "max_tokens": 1800,
+        "repairs": 0,
+        "temperature": 0.0
+      },
+      "output_token_count": 665,
+      "prompt_sha256": "fa2c0f2fd89ae0ca1283d9a8581e535ccc5ffaf0d951731fc613fab5cfbd4b06",
+      "raw_response_bytes": 2223,
+      "raw_response_sha256": "3694618ae9ec3b96481b84d97c640f62bc43fbf7a516c7fd6a928275b3bbc690",
+      "reason": "delimiter_count",
+      "stance_id": "minimal_local_control",
+      "status": "rejected_structural"
+    },
+    {
+      "candidate_id": "C0002",
+      "generation": {
+        "decode": "greedy",
+        "max_tokens": 1800,
+        "repairs": 0,
+        "temperature": 0.0
+      },
+      "output_token_count": 1731,
+      "prompt_sha256": "cc1fb697d4b97ddcb91911290c8d90535c9b913c74fd7e62b9e368afe56a137e",
+      "raw_response_bytes": 5067,
+      "raw_response_sha256": "cff386af24e2a42aa127a5ff83580cbf597ff536928eee05f1de6591677ed851",
+      "reason": "delimiter_count",
+      "stance_id": "object_kinematics",
+      "status": "rejected_structural"
+    },
+    {
+      "candidate_id": "C0003",
+      "generation": {
+        "decode": "greedy",
+        "max_tokens": 1800,
+        "repairs": 0,
+        "temperature": 0.0
+      },
+      "output_token_count": 1312,
+      "prompt_sha256": "04ae121870e2a45b5391a434660676f319b6927079d46721aad07fd0b74df862",
+      "raw_response_bytes": 4185,
+      "raw_response_sha256": "5b393f04852fb2f38a7c713d2d1190f642d437e75aa0373893470d249700c007",
+      "reason": "delimiter_count",
+      "stance_id": "projectile_dynamics",
+      "status": "rejected_structural"
+    },
+    {
+      "candidate_id": "C0004",
+      "generation": {
+        "decode": "greedy",
+        "max_tokens": 1800,
+        "repairs": 0,
+        "temperature": 0.0
+      },
+      "output_token_count": 1001,
+      "prompt_sha256": "7e58288f26022d0c609e658b8a6d851d1fd603d1faae4ae20becfffbe258f6ac",
+      "raw_response_bytes": 3187,
+      "raw_response_sha256": "9911f0b12b5c76b7a19b0cb59df12202ab8a1f12bac7cee12c7e2f982f13183c",
+      "reason": "delimiter_count",
+      "stance_id": "goal_inverse_planning",
+      "status": "rejected_structural"
+    },
+    {
+      "candidate_id": "C0005",
+      "generation": {
+        "decode": "greedy",
+        "max_tokens": 1800,
+        "repairs": 0,
+        "temperature": 0.0
+      },
+      "output_token_count": 440,
+      "prompt_sha256": "a7e8cda56fe7d74cd8cb2f2040905a0e827bf03080cc0ee6dbd2145206b7b6f7",
+      "raw_response_bytes": 1478,
+      "raw_response_sha256": "70f574744e928ddf6fb2cb9c35044b52e6f6a25b2d8f7a5633b6cf9cb3b0f438",
+      "reason": "delimiter_count",
+      "stance_id": "control_mapping_ambiguity",
+      "status": "rejected_structural"
+    },
+    {
+      "candidate_id": "C0006",
+      "candidate_sha256": "10c719ea32e5871703d3f7dd1ba86bc36374f89c1e143f6f8e0009c2c970542d",
+      "candidate_size_bytes": 1176,
+      "generation": {
+        "decode": "greedy",
+        "max_tokens": 1800,
+        "repairs": 0,
+        "temperature": 0.0
+      },
+      "output_token_count": 383,
+      "prompt_sha256": "ba274addb3ba857f0ec540f1d41d232c83337323d55e3d9917e12e9ae2c96822",
+      "raw_response_bytes": 1215,
+      "raw_response_sha256": "81db5ef680c35e26c5f3b05815df3de101e733747f69f715d4cfc7759366f12e",
+      "stance_id": "discrete_mode_machine",
+      "status": "structurally_accepted_not_executed",
+      "structural_validation": {
+        "ast_node_count": 218,
+        "functions": [
+          "initial_state",
+          "render",
+          "step"
+        ],
+        "imports": [
+          "copy",
+          "numpy",
+          "typing"
+        ],
+        "result": "pass"
+      }
+    },
+    {
+      "candidate_id": "C0007",
+      "generation": {
+        "decode": "greedy",
+        "max_tokens": 1800,
+        "repairs": 0,
+        "temperature": 0.0
+      },
+      "output_token_count": 1800,
+      "prompt_sha256": "03c51e94cb9ea144d66ebbacfafa2b64c43b6cc36fa955730a58a3baab62751d",
+      "raw_response_bytes": 5832,
+      "raw_response_sha256": "78d13d2a7d412b2b8492abf19142b6806dda47054c5ae3779c806804e6195cb7",
+      "reason": "delimiter_count",
+      "stance_id": "geometric_transformation",
+      "status": "rejected_structural"
+    },
+    {
+      "candidate_id": "C0008",
+      "candidate_sha256": "65c2a7811721cf8df7b9799d71d026d574b57dbfb7c451c79f0a42e2dfc2c365",
+      "candidate_size_bytes": 2969,
+      "generation": {
+        "decode": "greedy",
+        "max_tokens": 1800,
+        "repairs": 0,
+        "temperature": 0.0
+      },
+      "output_token_count": 826,
+      "prompt_sha256": "1f3c002bb8c41e6eec999ba7a30fa2838e436297b0cb6f46ce6262d30b3097c2",
+      "raw_response_bytes": 3008,
+      "raw_response_sha256": "8c24673e00cfeeb0d223b0a01e529820e1ce22ca46c2fd5a576b54c226df7cba",
+      "stance_id": "skeptical_countermodel",
+      "status": "structurally_accepted_not_executed",
+      "structural_validation": {
+        "ast_node_count": 383,
+        "functions": [
+          "initial_state",
+          "render",
+          "step"
+        ],
+        "imports": [
+          "copy",
+          "numpy",
+          "typing"
+        ],
+        "result": "pass"
+      }
+    }
+  ],
+  "claim_boundary": "Fresh local P0-only candidate generation and static structural validation only; no generated candidate was imported or behaviorally executed.",
+  "model": {
+    "provenance_sha256": "e601a6c24ded33e923ffcf79b2440452957ef2e6febd90faec333fb3a03a86de",
+    "repository": "mlx-community/Qwen3.8-27B-4bit",
+    "revision": "3e6447f082e89cc7f0bc6e5441afd38dfce760ff"
+  },
+  "package": {
+    "manifest_sha256": "3a5a273797ff557cf92f5f82285d91534b7d075fb4611d0cc2ab84a3f58a143d",
+    "path": "candidate-generation/CANDIDATE_PACKAGE.zip",
+    "sha256": "9ae478a842b942bc80f3ff62063e4780d8097018384971d83db12fd6d87b167a",
+    "size_bytes": 2722
+  },
+  "prompt_template_sha256": "8cb02b757626d090f7c6b1b68c47de99c171c6719c958ffc299ae1723564e0ae",
+  "schema_version": 1,
+  "stances_sha256": "88edba1349e8466e5774f00eb260c2a6cbf44fc66b0ffe148d5a7a44def86e9f",
+  "status": "fresh_candidate_generation_feasible"
+}

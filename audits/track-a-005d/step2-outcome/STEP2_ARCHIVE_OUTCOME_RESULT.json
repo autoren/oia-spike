@@ -1,0 +1,150 @@
+{
+  "access_accounting": {
+    "candidate_processes": 0,
+    "matching_action_nonmetadata_payloads_read": 0,
+    "model_or_api_calls": 0,
+    "nonmatching_run_frame_payloads_read": 0,
+    "oia_processes": 0,
+    "real_arc_actions": 0,
+    "step2_metadata_payloads_read": 5,
+    "step3_or_later_payloads_read": 0
+  },
+  "audit_id": "OIA-1-TRACK-A-005d",
+  "candidate_predictions": {
+    "R0001": {
+      "final_frame_sha256": "80a2fd9a8813b7ee5cd6d63a3199ffc247119b39ab60b90709696b47ec58c140",
+      "status": "RUNNING"
+    },
+    "R0005": {
+      "final_frame_sha256": "1e70d7b4ccd5c1ef1e03427d90f7295cdf461583efa978f285b55755e7a915a6",
+      "status": "RUNNING"
+    },
+    "R0006": {
+      "final_frame_sha256": "6d69385f5e081dfd29bfa3aa98f7b26a6d2a1b834e80809e6a9eab8539bba697",
+      "status": "RUNNING"
+    }
+  },
+  "claim_boundary": "Public archival prospective step-2 outcome for merged maintenance-repaired ACTION7 only; no live action, untouched-model, sealed-transfer, decision-value, or Track B claim.",
+  "classification": "public_archival_prospective_step2_outcome",
+  "evidence_package": {
+    "file_count": 5,
+    "path": "STEP2_ARCHIVE_OUTCOME_EVIDENCE.zip",
+    "sha256": "7f55c43d0ae1d5ea05f74d81f27eaece64a53aabe20ef89dbe92840128e6bd66",
+    "size_bytes": 1803
+  },
+  "gate_verdict": "no_matching_recorded_step2_action",
+  "header_inventory": {
+    "archive_member_headers_scanned": 916132,
+    "headers": {
+      "ewma_v1.5_sv_gpt-5.5_xhigh_run1": [
+        "runs_additional/ewma_v1.5_sv_gpt-5.5_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0002_final.txt",
+        "runs_additional/ewma_v1.5_sv_gpt-5.5_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0002_intermediate_01.txt",
+        "runs_additional/ewma_v1.5_sv_gpt-5.5_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0002_final.png",
+        "runs_additional/ewma_v1.5_sv_gpt-5.5_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0002_intermediate_03.txt",
+        "runs_additional/ewma_v1.5_sv_gpt-5.5_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0002_metadata.json",
+        "runs_additional/ewma_v1.5_sv_gpt-5.5_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0002_intermediate_03.png",
+        "runs_additional/ewma_v1.5_sv_gpt-5.5_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0002_intermediate_01.png",
+        "runs_additional/ewma_v1.5_sv_gpt-5.5_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0002_intermediate_02.txt",
+        "runs_additional/ewma_v1.5_sv_gpt-5.5_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0002_intermediate_02.png",
+        "runs_additional/ewma_v1.5_sv_gpt-5.5_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0002_intermediate_00.txt",
+        "runs_additional/ewma_v1.5_sv_gpt-5.5_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0002_intermediate_00.png"
+      ],
+      "ewma_v1.6_sv_gpt-5.6-sol_max_run1": [
+        "runs_additional/ewma_v1.6_sv_gpt-5.6-sol_max_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0002_final.txt",
+        "runs_additional/ewma_v1.6_sv_gpt-5.6-sol_max_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0002_intermediate_01.txt",
+        "runs_additional/ewma_v1.6_sv_gpt-5.6-sol_max_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0002_final.png",
+        "runs_additional/ewma_v1.6_sv_gpt-5.6-sol_max_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0002_intermediate_03.txt",
+        "runs_additional/ewma_v1.6_sv_gpt-5.6-sol_max_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0002_metadata.json",
+        "runs_additional/ewma_v1.6_sv_gpt-5.6-sol_max_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0002_intermediate_03.png",
+        "runs_additional/ewma_v1.6_sv_gpt-5.6-sol_max_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0002_intermediate_01.png",
+        "runs_additional/ewma_v1.6_sv_gpt-5.6-sol_max_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0002_intermediate_02.txt",
+        "runs_additional/ewma_v1.6_sv_gpt-5.6-sol_max_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0002_intermediate_02.png",
+        "runs_additional/ewma_v1.6_sv_gpt-5.6-sol_max_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0002_intermediate_00.txt",
+        "runs_additional/ewma_v1.6_sv_gpt-5.6-sol_max_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0002_intermediate_00.png"
+      ],
+      "ewma_v1.6_sv_gpt-5.6-sol_xhigh_run1": [
+        "runs_additional/ewma_v1.6_sv_gpt-5.6-sol_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0002_final.txt",
+        "runs_additional/ewma_v1.6_sv_gpt-5.6-sol_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0002_final.png",
+        "runs_additional/ewma_v1.6_sv_gpt-5.6-sol_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0002_metadata.json"
+      ],
+      "twma_v1.6_gpt-5.6-sol_max_run1": [
+        "runs_additional/twma_v1.6_gpt-5.6-sol_max_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0002_final.txt",
+        "runs_additional/twma_v1.6_gpt-5.6-sol_max_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0002_intermediate_01.txt",
+        "runs_additional/twma_v1.6_gpt-5.6-sol_max_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0002_final.png",
+        "runs_additional/twma_v1.6_gpt-5.6-sol_max_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0002_intermediate_03.txt",
+        "runs_additional/twma_v1.6_gpt-5.6-sol_max_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0002_metadata.json",
+        "runs_additional/twma_v1.6_gpt-5.6-sol_max_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0002_intermediate_03.png",
+        "runs_additional/twma_v1.6_gpt-5.6-sol_max_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0002_intermediate_01.png",
+        "runs_additional/twma_v1.6_gpt-5.6-sol_max_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0002_intermediate_02.txt",
+        "runs_additional/twma_v1.6_gpt-5.6-sol_max_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0002_intermediate_02.png",
+        "runs_additional/twma_v1.6_gpt-5.6-sol_max_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0002_intermediate_00.txt",
+        "runs_additional/twma_v1.6_gpt-5.6-sol_max_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0002_intermediate_00.png"
+      ],
+      "twma_v1.6_gpt-5.6-sol_xhigh_run1": [
+        "runs_additional/twma_v1.6_gpt-5.6-sol_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0002_final.txt",
+        "runs_additional/twma_v1.6_gpt-5.6-sol_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0002_intermediate_01.txt",
+        "runs_additional/twma_v1.6_gpt-5.6-sol_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0002_final.png",
+        "runs_additional/twma_v1.6_gpt-5.6-sol_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0002_intermediate_03.txt",
+        "runs_additional/twma_v1.6_gpt-5.6-sol_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0002_metadata.json",
+        "runs_additional/twma_v1.6_gpt-5.6-sol_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0002_intermediate_03.png",
+        "runs_additional/twma_v1.6_gpt-5.6-sol_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0002_intermediate_01.png",
+        "runs_additional/twma_v1.6_gpt-5.6-sol_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0002_intermediate_02.txt",
+        "runs_additional/twma_v1.6_gpt-5.6-sol_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0002_intermediate_02.png",
+        "runs_additional/twma_v1.6_gpt-5.6-sol_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0002_intermediate_00.txt",
+        "runs_additional/twma_v1.6_gpt-5.6-sol_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0002_intermediate_00.png"
+      ]
+    },
+    "run_roots": [
+      "ewma_v1.5_sv_gpt-5.5_xhigh_run1",
+      "ewma_v1.6_sv_gpt-5.6-sol_max_run1",
+      "ewma_v1.6_sv_gpt-5.6-sol_xhigh_run1",
+      "twma_v1.6_gpt-5.6-sol_max_run1",
+      "twma_v1.6_gpt-5.6-sol_xhigh_run1"
+    ]
+  },
+  "matching_run_roots": [],
+  "metadata_records": [
+    {
+      "action_id": "ACTION6",
+      "member": "runs_additional/ewma_v1.5_sv_gpt-5.5_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0002_metadata.json",
+      "run_root": "ewma_v1.5_sv_gpt-5.5_xhigh_run1",
+      "sha256": "adaeb0d6fee188b081290a77fbac5dd52e62ed446e77ae0db38859e169fe8318",
+      "size_bytes": 230
+    },
+    {
+      "action_id": "ACTION6",
+      "member": "runs_additional/ewma_v1.6_sv_gpt-5.6-sol_max_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0002_metadata.json",
+      "run_root": "ewma_v1.6_sv_gpt-5.6-sol_max_run1",
+      "sha256": "481debbc4653b63d4dc2eeb12df76841c4a3565ec51c432f1819fea3d1a06aee",
+      "size_bytes": 230
+    },
+    {
+      "action_id": "ACTION6",
+      "member": "runs_additional/ewma_v1.6_sv_gpt-5.6-sol_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0002_metadata.json",
+      "run_root": "ewma_v1.6_sv_gpt-5.6-sol_xhigh_run1",
+      "sha256": "9999662c6ebf8f329af16bf8c36b697dfb42361e4466a5b5898a87b5abead416",
+      "size_bytes": 229
+    },
+    {
+      "action_id": "ACTION6",
+      "member": "runs_additional/twma_v1.6_gpt-5.6-sol_max_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0002_metadata.json",
+      "run_root": "twma_v1.6_gpt-5.6-sol_max_run1",
+      "sha256": "c7bb6c160363feb433fc5b94c3a597bd12d8599751234533cb045c41545f0cfa",
+      "size_bytes": 230
+    },
+    {
+      "action_id": "ACTION6",
+      "member": "runs_additional/twma_v1.6_gpt-5.6-sol_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0002_metadata.json",
+      "run_root": "twma_v1.6_gpt-5.6-sol_xhigh_run1",
+      "sha256": "c7bb6c160363feb433fc5b94c3a597bd12d8599751234533cb045c41545f0cfa",
+      "size_bytes": 230
+    }
+  ],
+  "outcomes": [],
+  "persistence_baseline": {
+    "final_frame_sha256": "80a2fd9a8813b7ee5cd6d63a3199ffc247119b39ab60b90709696b47ec58c140",
+    "status": "RUNNING"
+  },
+  "schema_version": 1,
+  "target_action": "ACTION7"
+}

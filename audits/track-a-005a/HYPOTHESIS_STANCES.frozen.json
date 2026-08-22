@@ -1,0 +1,47 @@
+{
+  "audit_id": "OIA-1-TRACK-A-005a",
+  "schema_version": 1,
+  "stances": [
+    {
+      "candidate_id": "C0001",
+      "stance_id": "minimal_local_control",
+      "instruction": "Prefer the smallest local controllable-object hypothesis consistent with the reset image. Infer action meaning independently and avoid adding unobserved global mechanics."
+    },
+    {
+      "candidate_id": "C0002",
+      "stance_id": "object_kinematics",
+      "instruction": "Use an object-centric kinematic hypothesis with positions and velocities. Treat the visible objects as persistent entities and infer how the two actions perturb their motion."
+    },
+    {
+      "candidate_id": "C0003",
+      "stance_id": "projectile_dynamics",
+      "instruction": "Focus on the dotted diagonal structure as evidence of projectile or trajectory dynamics. Propose a deterministic action-conditioned continuation without assuming hidden observations."
+    },
+    {
+      "candidate_id": "C0004",
+      "stance_id": "goal_inverse_planning",
+      "instruction": "Infer a plausible goal and controls from spatial layout, then implement the simplest dynamics under which the two actions could support that goal. Do not encode a preferred action."
+    },
+    {
+      "candidate_id": "C0005",
+      "stance_id": "control_mapping_ambiguity",
+      "instruction": "Emphasize uncertainty in which visible entity is controlled and in the polarity of the two actions. Choose one coherent mapping that is meaningfully different from a default lateral-control reading."
+    },
+    {
+      "candidate_id": "C0006",
+      "stance_id": "discrete_mode_machine",
+      "instruction": "Model the scene as a small discrete mode machine rather than continuous physics. Infer action-triggered phases or toggles while keeping rendering deterministic and local."
+    },
+    {
+      "candidate_id": "C0007",
+      "stance_id": "geometric_transformation",
+      "instruction": "Seek a geometric transformation interpretation of the two actions, such as rotation, reflection, or structured translation of a subset of the scene. Preserve object shapes and color identities."
+    },
+    {
+      "candidate_id": "C0008",
+      "stance_id": "skeptical_countermodel",
+      "instruction": "Construct a conservative but nontrivial countermodel that challenges the most obvious control interpretation. It must remain plausible from P0 alone and make deterministic action-conditioned predictions."
+    }
+  ],
+  "status": "frozen_before_local_model_inference"
+}

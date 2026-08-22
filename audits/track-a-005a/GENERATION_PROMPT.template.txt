@@ -1,0 +1,30 @@
+You are proposing one bounded executable world-model hypothesis from a single reset observation. This is an uncertainty-generation task, not a request to identify the true game.
+
+Epistemic stance: {{STANCE_ID}}
+Stance instruction: {{STANCE_INSTRUCTION}}
+Opaque candidate id: {{CANDIDATE_ID}}
+
+The only permitted evidence is this 64x64 hexadecimal raster and reset metadata. Do not assume access to a game name, archive, later observation, score, action result, or external service.
+
+Available action names: {{ACTION_NAMES}}
+
+Reset raster:
+{{P0_FRAME}}
+
+Return exactly one Python source block between the literal delimiter lines below, with no Markdown fences, prose, or text outside the delimiters:
+
+<BEGIN_CANDIDATE_PY>
+<END_CANDIDATE_PY>
+
+The source must:
+
+1. import only `numpy`, `math`, `copy`, or `typing`;
+2. define string constants `RUNNING`, `LEVEL_COMPLETED`, and `GAME_OVER`;
+3. define `initial_state(initial_frame)`, returning a dictionary whose rendered frame exactly equals the supplied frame;
+4. define `step(state, action)`, accepting only {{ACTION_NAMES}}, returning `(new_state, status)`, and supporting at least three sequential steps;
+5. define `render(state)`, returning a fresh 64x64 two-dimensional integer NumPy array with values 0 through 15;
+6. be deterministic, concise, and self-contained, with no file, network, process, environment, clock, randomness, dynamic import, reflection, printing, or user input;
+7. avoid hard-coding any future observation or claiming that this hypothesis is correct; and
+8. implement the stance as a coherent, nontrivial action-conditioned prediction. At least one permitted action should normally change the rendered frame.
+
+Use only P0-visible structures when choosing objects, colors, locations, and geometry. Keep all motion and drawing within the 64x64 boundary.

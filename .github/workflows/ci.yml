@@ -58,6 +58,12 @@ jobs:
       - name: Verify Track A 005a P0 freeze and extraction when present
         run: python scripts/verify_track_a_005a_p0.py
 
+      - name: Verify Track A 005a candidate-generation freeze
+        run: python scripts/verify_track_a_005a_generation_freeze.py
+
+      - name: Verify Track A 005a candidate-generation result when present
+        run: python scripts/verify_track_a_005a_generation_result.py
+
       - name: Verify accepted v0.2.1 baseline bytes and provenance
         working-directory: baseline/oia-v0.2.1
         run: |

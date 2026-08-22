@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "audit_id": "OIA-1-TRACK-A-003b",
+  "status": "frozen_after_p0_before_provisional_behavior",
+  "defect": {
+    "category": "evidence_envelope_read_error",
+    "description": "The original orchestrator passed the complete saved P0 evidence envelope to provisional_stage, which expects the nested stage_result object.",
+    "observed_error": "KeyError: results",
+    "timing": "The error occurred while reading P0 evidence, before the provisional candidate loop and before any action-word container launch."
+  },
+  "preserved_pre_outcome_source": {
+    "path": "scripts/run_track_a_003b_admission.py",
+    "sha256": "56893b5573b0595ae536e87f39c299d2a691edde4daccc78956ee70eb33779fe",
+    "mutated": false
+  },
+  "corrected_orchestrator": {
+    "path": "scripts/run_track_a_003b_admission_v2.py",
+    "sha256": "fba0fa5cdc24f19028a5e614b112be3d0791d1f68be6cc80cd8f2b80a8de2c27",
+    "test_path": "tests/test_track_a_003b_orchestrator_v2.py",
+    "test_sha256": "ca58130f560cbfc866fbd629f7a37732779a0b59014ecce0891e3db53c1f52d7",
+    "semantic_change": "Unwrap and validate the standard outer evidence envelope before passing a prior stage to provisional_stage or full_stage. Candidate order, bundles, runner, runtime image, isolation, action words, trace projection, hashes, seeds, repetitions, and admission rules are unchanged."
+  },
+  "completed_p0_stage": {
+    "local_path": "local-work/track-a-003b/admission-results/P0_RESULTS.json",
+    "sha256": "100fd65cf2bbd7bb314f98c6d918dfa04140a8380f6ad32f4807ac5ecd74a260",
+    "candidate_count": 13,
+    "pass_count": 13,
+    "exact_frame_replay_count": 13,
+    "candidate_action_words_executed": 0,
+    "real_arc_actions_executed": 0
+  },
+  "unchanged_pins": {
+    "runtime_image_id": "sha256:644d899fa00c3a9fc16cc05f94ee5d078653891fe55659cd8e51fb1126027051",
+    "prepared_bundles_sha256": "e4b1de5e4141c2f37e60b668ec616efcf9c506ad663a7811150d762cf9d611d1",
+    "candidate_runner_sha256": "3ad1c477e96b64130436cdd7aa428e0da624677f8fa159b4fbe67e0c2f82b83e",
+    "word_count": 84,
+    "candidate_count": 13
+  },
+  "execution_boundary": {
+    "provisional_behavior_executed": false,
+    "arc_execution": false,
+    "credential_use": false,
+    "model_or_api_call": false,
+    "network_or_service_call": false,
+    "oia_separability": false,
+    "track_b_claim": false
+  },
+  "next_operation": "After this erratum is merged, run the seed-0 provisional 84-word screen with the corrected orchestrator.",
+  "claim_boundary": "Opened Track A maintenance between P0 and provisional screening only. The P0 result admits no candidate and makes no behavioral-divergence, ARC, OIA separator, ontology-revision, sealed, decision-value, or Track B claim."
+}

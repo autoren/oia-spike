@@ -31,3 +31,5 @@ Acquisition and read-only inventory are complete. [`CHECKPOINT_INVENTORY.json`](
 The next opened step is the isolated offline admission procedure in [`NEXT_LOCAL_ADMISSION_GATE.md`](NEXT_LOCAL_ADMISSION_GATE.md), governed by [`LOCAL_ADMISSION_PROTOCOL.frozen.json`](LOCAL_ADMISSION_PROTOCOL.frozen.json). It excludes released session credentials and later observations, executes no real ARC action, and preserves the Track A boundary.
 
 The candidate-independent adapter, exact dependency image, isolation settings, and thirteen minimal bundle hashes are prospectively pinned in [`PRE_OUTCOME_RUNTIME.json`](PRE_OUTCOME_RUNTIME.json). Only its synthetic smoke test has executed; acquired-candidate P0 replay remains the next operation.
+
+All thirteen acquired candidates subsequently passed exact isolated P0 replay. The original host orchestrator then stopped before provisional behavior because it read the saved P0 evidence at the wrong envelope level. [`ORCHESTRATOR_ERRATUM.pre-provisional.json`](ORCHESTRATOR_ERRATUM.pre-provisional.json) preserves that negative and pins the envelope-only v2 correction before any action-word trace.

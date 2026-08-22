@@ -1,0 +1,79 @@
+{
+  "audit_id": "OIA-1-TRACK-A-006b",
+  "benchmark": {
+    "action_count": 3,
+    "base_candidate_count": 4,
+    "case_count": 64,
+    "master_seed": "oia-track-a-006b-heldout-v1",
+    "max_beliefs": 100000,
+    "maximum_closed_depth": 6,
+    "maximum_generation_attempts_per_stage": 2000,
+    "maximum_reject_aware_depth": 8,
+    "minimum_closed_depth": 2,
+    "output_count": 3,
+    "sentinel_count": 2,
+    "state_count": 3
+  },
+  "case_count": 64,
+  "case_manifest_sha256": "a8f56e7b15482d7091d8d6869462027ca050add066404b288c2f490b7454cef6",
+  "claim_boundary": "Controlled deterministic Track A comparison of a frozen reject-aware sentinel policy with the closed identity policy. This is not external validation, learned ontology formation, necessary revision, sealed transfer, population inference, or decision superiority.",
+  "evidence_package": {
+    "path": "REJECT_AWARE_EVIDENCE.zip",
+    "sha256": "c49fe7cc4212b70c6bba9c050295915209c16c1e3ad4cfb4bbb4244b177541c7",
+    "size_bytes": 32122
+  },
+  "record_count": 960,
+  "records_jsonl_sha256": "d99b32fe5c4fd9ad61d048eef52e20eec81a8452f1e558ee1217953da2211af2",
+  "schema_version": 1,
+  "summary": [
+    {
+      "policy": "closed_identity_native",
+      "records": 256,
+      "status:correct_candidate_identification": 256,
+      "target_kind": "in_family",
+      "total_steps": 699
+    },
+    {
+      "policy": "closed_identity_native",
+      "records": 64,
+      "status:false_candidate_identification": 48,
+      "status:outside_model": 16,
+      "target_kind": "outside",
+      "total_steps": 168
+    },
+    {
+      "policy": "reject_aware_equal_closed_horizon",
+      "records": 256,
+      "status:correct_candidate_identification": 222,
+      "status:unresolved": 34,
+      "target_kind": "in_family",
+      "total_steps": 743
+    },
+    {
+      "policy": "reject_aware_equal_closed_horizon",
+      "records": 64,
+      "status:false_candidate_identification": 32,
+      "status:outside_model": 13,
+      "status:outside_reject": 13,
+      "status:unresolved": 6,
+      "target_kind": "outside",
+      "total_steps": 179
+    },
+    {
+      "policy": "reject_aware_native",
+      "records": 256,
+      "status:correct_candidate_identification": 256,
+      "target_kind": "in_family",
+      "total_steps": 777
+    },
+    {
+      "policy": "reject_aware_native",
+      "records": 64,
+      "status:false_candidate_identification": 35,
+      "status:outside_model": 14,
+      "status:outside_reject": 15,
+      "target_kind": "outside",
+      "total_steps": 185
+    }
+  ]
+}

@@ -47,6 +47,19 @@ After an outcome exists, `python scripts/verify_track_a_004a_outcome.py` verifie
 its package, serialized adaptive witness, source-trace replay, cross-process
 hash record, and a fresh `PYTHONHASHSEED=23` OIA execution.
 
+## Result
+
+The frozen gate passed. Accepted OIA-1 v0.2.1 returned an exact,
+enumeration-complete, globally minimum one-step identification policy selecting
+`ACTION2`. Report bytes were identical under `PYTHONHASHSEED` 0, 1, 5, and 10;
+the independent outcome verifier reproduced them under seed 23. Both policy
+branches replayed against the committed source traces.
+
+See [`outcome/RETROSPECTIVE_RESULT.md`](outcome/RETROSPECTIVE_RESULT.md) and the
+machine-readable [`outcome/EXECUTION_RECORD.json`](outcome/EXECUTION_RECORD.json).
+[`NEXT_GATE.md`](NEXT_GATE.md) distinguishes the recommended new held-out slice
+from a lower-cost real-outcome check on this already-known frontier.
+
 ## Boundary
 
 This gate executes only the accepted OIA over committed finite machines. It does

@@ -1,0 +1,47 @@
+{
+  "accepted_engine": "OIA-1 v0.2.1",
+  "adaptive_status": "solved",
+  "audit_id": "OIA-1-TRACK-A-004a",
+  "claim_boundary": "Retrospective opened Track A instrument validation only; complete candidate traces were known before freeze, so prospective discovery, real-outcome, decision-value, sealed-transfer, and Track B claims are excluded.",
+  "classification": "retrospective_external_instrument_validation",
+  "cross_process_serialization": {
+    "exact_bytes_equal": true,
+    "pythonhashseed_values": [
+      0,
+      1,
+      5,
+      10
+    ],
+    "report_sha256_by_seed": {
+      "0": "759efc1eab31fbf5c1f2c5b8ca0a5409e969859ff81cf99018cafcd9ab0ee545",
+      "1": "759efc1eab31fbf5c1f2c5b8ca0a5409e969859ff81cf99018cafcd9ab0ee545",
+      "10": "759efc1eab31fbf5c1f2c5b8ca0a5409e969859ff81cf99018cafcd9ab0ee545",
+      "5": "759efc1eab31fbf5c1f2c5b8ca0a5409e969859ff81cf99018cafcd9ab0ee545"
+    }
+  },
+  "depth_claim": "minimum",
+  "enumeration_complete": true,
+  "exact": true,
+  "execution_accounting": {
+    "candidate_processes": 0,
+    "credential_uses": 0,
+    "model_or_api_calls": 0,
+    "network_or_service_calls": 0,
+    "oia_processes": 4,
+    "private_or_sealed_evaluations": 0,
+    "real_arc_actions": 0
+  },
+  "freeze_manifest_verified_entries": 13,
+  "gate_verdict": "retrospective_instrument_validation_pass",
+  "minimum_separator": [
+    "ACTION2"
+  ],
+  "oia_input_sha256": "a35f47df605005492c2858fcc4a544e70e9028ee82f29ee7564e55e98a6afe4c",
+  "oia_report_sha256": "759efc1eab31fbf5c1f2c5b8ca0a5409e969859ff81cf99018cafcd9ab0ee545",
+  "optimality_certified": true,
+  "policy_source_trace_replay_all_paths_valid": true,
+  "primary_endpoint": "full_candidate_identification.adaptive",
+  "schema_version": 1,
+  "status": "complete",
+  "verified_worst_case_steps": 1
+}

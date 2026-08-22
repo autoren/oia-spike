@@ -1,0 +1,121 @@
+{
+  "schema_version": 1,
+  "audit_id": "OIA-1-TRACK-A-003b",
+  "protocol_id": "track-a-003b-local-offline-admission-v1",
+  "freeze_status": "frozen_after_byte_inventory_before_candidate_execution",
+  "source_inventory": {
+    "path": "audits/track-a-003b/CHECKPOINT_INVENTORY.json",
+    "sha256": "5930c02db066bf2a5a5bb4d56272b9847b727912bafdfb06fa779f53bb13c4a5"
+  },
+  "inherited_rules": {
+    "track_a_003a_protocol": {
+      "path": "audits/track-a-003a/OIA-1-Track-A-003a-Frozen-Protocol.json",
+      "sha256": "47c18e32ea64a19d45842fd13d2a80ab59161992aaef7c13cf501459de75ea59"
+    },
+    "track_a_003b_checkpoint_order": {
+      "path": "audits/track-a-003b/evidence/agent02-attempt02/checkpoint_enumeration_rule.frozen.json",
+      "sha256": "2802384b0dc5750ae5cfa47287174754c631f5b5b86d803e1ef7680cfd1efe5a"
+    },
+    "mutation_rule": "This protocol operationalizes but does not modify either inherited frozen rule."
+  },
+  "candidate_order": {
+    "final_worktrees_first": [
+      "max/final",
+      "xhigh/final"
+    ],
+    "then": "Use source_inventory.candidate_order.retained_checkpoints_round_robin in exact listed order.",
+    "stop": "Stop after eight behaviorally unique admitted candidates or after all thirteen inventoried attempts are accounted for."
+  },
+  "candidate_bundle": {
+    "included_candidate_files": [
+      "game_status.py",
+      "world_model_engine.py",
+      "world_model_state_io.py"
+    ],
+    "candidate_identity": "For a final worktree, use the exact acquired file hashes recorded in the source inventory. For a checkpoint, read the three files from the exact recorded commit/tree object.",
+    "prefix_input": [
+      "client/session/level_01_attempt_01/initial_frame.png",
+      "client/session/level_01_attempt_01/initial_frame.txt",
+      "client/session/level_01_attempt_01/initial_metadata.json"
+    ],
+    "allowed_literal_artifacts": "Only a candidate-local literal artifact that static inspection proves is read while reconstructing or rendering level 1; record its path and SHA-256 before execution.",
+    "excluded": [
+      ".git",
+      ".client_session.json",
+      "all post-P0 frames and metadata",
+      "reasoning logs and reports",
+      "planner outputs",
+      "scorecards and action histories",
+      "credentials, service URLs, and hidden state"
+    ],
+    "no_reconstruction": "Do not repair, rewrite, infer, or complete candidate code. Adapter code may normalize only the public fixed interface and must be byte-identical for every attempt."
+  },
+  "runtime_isolation": {
+    "network": "none",
+    "filesystem": "read-only candidate and P0 mounts, read-only root filesystem, isolated writable tmpfs only",
+    "process": "unprivileged user, all Linux capabilities dropped, no-new-privileges, bounded memory, CPU, PID count, and timeout",
+    "secrets": "No host credentials, environment secrets, released session token, or service URL may be mounted or copied.",
+    "dependencies": "Build and hash one local runtime image before behavior execution. Candidate-time dependency installation and network access are forbidden.",
+    "candidate_runtime_calls": "No ARC, LLM, hosted service, API, browser, external memory, or OIA call."
+  },
+  "opened_prefix": {
+    "prefix_id": "ls20_P0_reset_observation",
+    "environment_id": "ls20-9607627b",
+    "initial_frame_png_sha256": "ca24f8cbd952dffec96c9e132b0de42e35975e3b66beb921895513c468ed5b53",
+    "initial_frame_txt_sha256": "0fc0241eb2d3c992a2af68643f36e3878f5140fc85aed38410dd66ef5486afc7",
+    "initial_metadata_sha256": "0f1dfbd539066cba7373dcce2004196480db34dc2f8c01477e66e711b0c74347",
+    "required_metadata": {
+      "action_input": {
+        "data": {},
+        "id": "RESET"
+      },
+      "available_actions": [1, 2, 3, 4],
+      "levels_completed": 0,
+      "state": "NOT_FINISHED",
+      "step_index": 0,
+      "win_levels": 7
+    },
+    "replay_requirement": "initial_state_reconstruction(1, P0) followed by state_renderer must reproduce the exact settled P0 frame; declared status is RUNNING at level 1 with zero levels completed."
+  },
+  "finite_boundary": {
+    "action_encoding": [
+      {"name": "ACTION1"},
+      {"name": "ACTION2"},
+      {"name": "ACTION3"},
+      {"name": "ACTION4"}
+    ],
+    "words": "Lexicographic Cartesian order over ACTION1 through ACTION4 at lengths 1, then 2, then 3.",
+    "word_count": 84,
+    "reset": "Every word begins in a fresh process reconstructed only from the immutable P0 input.",
+    "frame_encoding": "Uppercase hexadecimal raster rows joined by LF with one final LF; SHA-256 is computed over those bytes.",
+    "trace_envelope": "Canonical JSON UTF-8 with sorted object keys, compact separators, exact integers, and no NaN. Each step records final settled frame SHA-256, predicted status, modeled level/progress integer fields when present, and deterministic error category.",
+    "intermediate_frames": "Preserve candidate-emitted intermediate frames if any; absence is not a rejection and no animation-fidelity claim is made."
+  },
+  "screening": {
+    "static": "Record source hashes, local imports, external dependencies, literal file reads, and forbidden-call scan without importing candidate code.",
+    "p0": "Reject a candidate whose isolated reconstruction/render does not exactly replay P0.",
+    "provisional": "For each remaining candidate, run all 84 words once with PYTHONHASHSEED=0. Record the complete trace signature. Retain the first candidate in frozen order for each distinct signature.",
+    "promotion": "For each provisionally unique candidate, run every word twice in fresh processes for PYTHONHASHSEED 0, 1, 5, and 10. All canonical traces for a word must be byte-identical.",
+    "accounting": "Record every admitted, duplicate, replay-failed, nondeterministic, dependency-blocked, timeout, and forbidden-runtime attempt."
+  },
+  "success_condition": "candidate_frontier_feasible requires at least two replay-consistent, deterministic, behaviorally non-equivalent candidates. Two is sufficient; three through eight is preferred.",
+  "allowed_verdicts": [
+    "candidate_frontier_feasible",
+    "single_model_only",
+    "no_behavioral_divergence",
+    "replay_failure",
+    "nondeterministic_candidate",
+    "state_initialization_blocker",
+    "action_boundary_blocker",
+    "provenance_or_license_blocker",
+    "resource_authorization_required",
+    "unknown"
+  ],
+  "stop_conditions": [
+    "Any candidate process attempts network, service, credential, ARC, LLM/API, or non-allowlisted host-file access.",
+    "Runtime isolation cannot be demonstrated before candidate import.",
+    "The exact candidate or P0 hashes do not match the source inventory.",
+    "Eight behaviorally unique candidates are admitted or all attempts are accounted for."
+  ],
+  "claim_boundary": "Opened Track A candidate admission and bounded behavioral deduplication only. No real ARC intervention, full ARC adapter, OIA separator synthesis, ontology-revision claim, global equivalence, planning or decision superiority, sealed evaluation, or Track B claim."
+}

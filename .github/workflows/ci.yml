@@ -31,6 +31,12 @@ jobs:
       - name: Verify frozen Track A 003a package
         run: python scripts/verify_track_a_003a.py
 
+      - name: Verify imported Track A 003b evidence
+        run: python scripts/verify_track_a_003b_evidence.py
+
+      - name: Verify Track A 003b inventory and next-gate pins
+        run: python scripts/verify_track_a_003b_inventory.py
+
       - name: Verify accepted v0.2.1 baseline bytes and provenance
         working-directory: baseline/oia-v0.2.1
         run: |
@@ -41,6 +47,9 @@ jobs:
         env:
           PYTHONPATH: baseline/oia-v0.2.1/src
         run: python -m unittest discover -s baseline/oia-v0.2.1/tests -v
+
+      - name: Run repository utility tests
+        run: python -m unittest discover -s tests -v
 
       - name: Run randomized and serialization validation
         working-directory: baseline/oia-v0.2.1

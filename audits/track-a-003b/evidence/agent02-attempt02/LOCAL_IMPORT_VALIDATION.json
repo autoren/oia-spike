@@ -1,0 +1,49 @@
+{
+  "artifact": {
+    "artifact_id": 9465881649,
+    "package_name": "track-a-003b-attempt-02-selected-ls20.tar.gz",
+    "package_sha256": "de141756be11b7d54730584ce16d3d0979a9bbd8aef707a73d50ab8a112c2cbf",
+    "package_size": 8534786,
+    "zip_sha256": "1b239318741872a339e4a1a31aa3f6876ee298fdb17db328075a343d56a52a1a",
+    "zip_size": 8535286
+  },
+  "audit_id": "OIA-1-TRACK-A-003b",
+  "execution_boundary": {
+    "arc_execution": false,
+    "candidate_execution": false,
+    "credentials_used": false,
+    "oia_separability": false,
+    "paid_or_model_api_calls": false,
+    "track_b_claim": false
+  },
+  "integrity": {
+    "inner_package_verified": true,
+    "materialized_read_only": true,
+    "outer_zip_verified": true,
+    "payload_manifest_verified": true,
+    "safe_regular_files_only": true,
+    "selected_file_manifest_verified": true
+  },
+  "payload": {
+    "payload_checksum_entries": 10691,
+    "selected_file_count": 10683,
+    "selected_total_bytes": 28897676,
+    "tar_directories": 729,
+    "tar_file_bytes": 36603329,
+    "tar_files": 10692,
+    "tar_members": 11421
+  },
+  "schema_version": 1,
+  "source": {
+    "head_commit": "f5a88d41fb6c4abf34bbd5210ceedd4584ac3416",
+    "job_id": 96940609408,
+    "repository": "autoren/ontology-intervention-auditor",
+    "workflow_run_id": 32537337394
+  },
+  "source_archive": {
+    "md5": "4dd279f099609392c30cffa468801316",
+    "sha256": "c3d85c4a75170de08837b9fc63cb7a7dde389b1205ca71b9f0fed16a9c09cf93",
+    "size": 797835543
+  },
+  "status": "verified_read_only_import"
+}

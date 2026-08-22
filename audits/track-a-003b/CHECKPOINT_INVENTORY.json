@@ -1,0 +1,1165 @@
+{
+  "audit_id": "OIA-1-TRACK-A-003b",
+  "candidate_order": {
+    "behavior_executed": false,
+    "final_worktrees_first": [
+      "max/final",
+      "xhigh/final"
+    ],
+    "maximum_admitted_candidates": 8,
+    "retained_checkpoints_round_robin": [
+      {
+        "candidate_id": "max/iteration_1",
+        "commit": "d00e83e746fb6b54b08307037523deabb8d8ba85",
+        "published_run_id": "ewma_sv_v1.6_gpt-5.6-sol_max_run1",
+        "tag": "iteration_1",
+        "tree": "d52cb63b95d1a0bb38b82014c283e6fc3478b163"
+      },
+      {
+        "candidate_id": "xhigh/iteration_1",
+        "commit": "a268f906dbbcb4fc81b4c3e8194399c946615cca",
+        "published_run_id": "ewma_sv_v1.6_gpt-5.6-sol_xhigh_run1",
+        "tag": "iteration_1",
+        "tree": "305513727864d101bc750e7cbb3145ec1fef04db"
+      },
+      {
+        "candidate_id": "max/iteration_2",
+        "commit": "93d546b7e1f2991f297949edf10c8fa8c5a225ea",
+        "published_run_id": "ewma_sv_v1.6_gpt-5.6-sol_max_run1",
+        "tag": "iteration_2",
+        "tree": "3dd00b365e9d6309d94b8397c94d7fd27dfeba8c"
+      },
+      {
+        "candidate_id": "xhigh/iteration_2",
+        "commit": "27603948ef3a5d3f649698a58e68883d980fb174",
+        "published_run_id": "ewma_sv_v1.6_gpt-5.6-sol_xhigh_run1",
+        "tag": "iteration_2",
+        "tree": "4670573e167f2ca7d3dfd5929918532fd7aedada"
+      },
+      {
+        "candidate_id": "max/iteration_3",
+        "commit": "c01487dcef23de0a15dc042ffe34f54bcaee11c9",
+        "published_run_id": "ewma_sv_v1.6_gpt-5.6-sol_max_run1",
+        "tag": "iteration_3",
+        "tree": "d8784ecc2622536d55a69cf83156d998875e09c1"
+      },
+      {
+        "candidate_id": "xhigh/iteration_3",
+        "commit": "af45f2f88590e24400aa271570c7803ead77f15f",
+        "published_run_id": "ewma_sv_v1.6_gpt-5.6-sol_xhigh_run1",
+        "tag": "iteration_3",
+        "tree": "968069d82b26fd2ca64697174437a2e80169b20c"
+      },
+      {
+        "candidate_id": "max/iteration_4",
+        "commit": "024cc3951084bca3cd3a75cdd81ace1d52aeccbd",
+        "published_run_id": "ewma_sv_v1.6_gpt-5.6-sol_max_run1",
+        "tag": "iteration_4",
+        "tree": "0294963167dd9822e988473c4552e7e349209fd8"
+      },
+      {
+        "candidate_id": "xhigh/iteration_4",
+        "commit": "74d48803bc79682167e2f5297c1f32819f3eb332",
+        "published_run_id": "ewma_sv_v1.6_gpt-5.6-sol_xhigh_run1",
+        "tag": "iteration_4",
+        "tree": "8956867094931752e4a2a834152565725c9de769"
+      },
+      {
+        "candidate_id": "max/iteration_5",
+        "commit": "1c77d48c63b4cde6b049d96807dc5a1a170a8f30",
+        "published_run_id": "ewma_sv_v1.6_gpt-5.6-sol_max_run1",
+        "tag": "iteration_5",
+        "tree": "d4b6530d39607c09f092a4388728a2f1a8eb122d"
+      },
+      {
+        "candidate_id": "xhigh/iteration_5",
+        "commit": "2d739b029ee1068838df238252738ff65f262250",
+        "published_run_id": "ewma_sv_v1.6_gpt-5.6-sol_xhigh_run1",
+        "tag": "iteration_5",
+        "tree": "98d3046c692e6ea018af96f6ebd2e90f75697b7b"
+      },
+      {
+        "candidate_id": "max/iteration_6",
+        "commit": "13618acd13f10eb351e2fa580b41cf62ba6a08b4",
+        "published_run_id": "ewma_sv_v1.6_gpt-5.6-sol_max_run1",
+        "tag": "iteration_6",
+        "tree": "57e7d3991fe37cdba9dcc03891574681d95fc867"
+      }
+    ],
+    "total_exact_retained_checkpoint_commits": 11
+  },
+  "claim_boundary": "Opened Track A byte/provenance inventory only; no replay, determinism, behavioral divergence, OIA separator, ontology-revision, decision-value, sealed, or Track B claim.",
+  "execution_boundary": {
+    "arc_execution": false,
+    "candidate_execution": false,
+    "credential_use": false,
+    "model_or_api_call": false,
+    "network_or_service_call": false,
+    "oia_separability": false
+  },
+  "inventory_finding": {
+    "candidate_frontier_admitted": false,
+    "exact_retained_git_checkpoints_available": 11,
+    "final_worktrees_are_dirty": true,
+    "final_worktrees_require_manifest_identity_not_head": true,
+    "next_gate": "isolated offline P0 replay and finite-boundary admission",
+    "p0_identity_precondition_pass": true
+  },
+  "inventory_id": "agent02-attempt02-local-read-only-inventory",
+  "opened_prefix": {
+    "all_candidate_metadata_exact": true,
+    "all_candidate_p0_bytes_identical": true,
+    "candidate_record_count": 13,
+    "canonical_p0": {
+      "hashes": {
+        "client/session/level_01_attempt_01/initial_frame.png": "ca24f8cbd952dffec96c9e132b0de42e35975e3b66beb921895513c468ed5b53",
+        "client/session/level_01_attempt_01/initial_frame.txt": "0fc0241eb2d3c992a2af68643f36e3878f5140fc85aed38410dd66ef5486afc7",
+        "client/session/level_01_attempt_01/initial_metadata.json": "0f1dfbd539066cba7373dcce2004196480db34dc2f8c01477e66e711b0c74347"
+      },
+      "metadata": {
+        "action_input": {
+          "data": {},
+          "id": "RESET"
+        },
+        "available_actions": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "levels_completed": 0,
+        "state": "NOT_FINISHED",
+        "step_index": 0,
+        "win_levels": 7
+      },
+      "metadata_matches_frozen_reset": true
+    },
+    "finite_actions": [
+      "ACTION1",
+      "ACTION2",
+      "ACTION3",
+      "ACTION4"
+    ],
+    "prefix_id": "ls20_P0_reset_observation",
+    "released_environment_ids": [
+      "ls20-9607627b",
+      "ls20-9607627b"
+    ],
+    "released_environment_ids_identical": true
+  },
+  "runs": [
+    {
+      "archive_run_root": "ewma_v1.6_sv_gpt-5.6-sol_max_run1",
+      "final_worktree": {
+        "core": {
+          "core_file_sha256": {
+            "game_status.py": "ecfecc108be8ff706f28ba3c1e90366563426b810df55b70807929e1f5828901",
+            "session_tools.py": "2938defa458e4593521d8922ad76715009b2d243c1164f3015753e883df159d5",
+            "state_reconstruction_tools.py": "06074f9a022130cab3a5eaf190e1c3ff42dee8e6c63f360302500260b091433f",
+            "world_model_engine.py": "63fa55d2a493888e531aec10cec0bf6e62585eb8a3cc6fd8ce296ff73410c014",
+            "world_model_state_io.py": "399b9b0f469f190fb2f71c944c083a47d2fd10230e44b8f68448b854def9c732"
+          },
+          "required_core_files_present": true,
+          "static_top_level_imports": {
+            "game_status.py": [],
+            "session_tools.py": [
+              "__future__",
+              "copy",
+              "game_status",
+              "json",
+              "numpy",
+              "pathlib",
+              "re",
+              "typing"
+            ],
+            "state_reconstruction_tools.py": [
+              "__future__",
+              "game_status",
+              "session_tools",
+              "world_model_engine",
+              "world_model_state_io"
+            ],
+            "world_model_engine.py": [
+              "__future__",
+              "game_status"
+            ],
+            "world_model_state_io.py": [
+              "__future__",
+              "json",
+              "numpy",
+              "pathlib",
+              "scipy",
+              "world_model_engine"
+            ]
+          }
+        },
+        "identity": "selected-file-manifest paths plus acquired bytes; not HEAD",
+        "p0": {
+          "hashes": {
+            "client/session/level_01_attempt_01/initial_frame.png": "ca24f8cbd952dffec96c9e132b0de42e35975e3b66beb921895513c468ed5b53",
+            "client/session/level_01_attempt_01/initial_frame.txt": "0fc0241eb2d3c992a2af68643f36e3878f5140fc85aed38410dd66ef5486afc7",
+            "client/session/level_01_attempt_01/initial_metadata.json": "0f1dfbd539066cba7373dcce2004196480db34dc2f8c01477e66e711b0c74347"
+          },
+          "metadata": {
+            "action_input": {
+              "data": {},
+              "id": "RESET"
+            },
+            "available_actions": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "levels_completed": 0,
+            "state": "NOT_FINISHED",
+            "step_index": 0,
+            "win_levels": 7
+          },
+          "metadata_matches_frozen_reset": true
+        },
+        "regular_file_count_excluding_dot_git": 2768,
+        "status": {
+          "candidate_relevant_tracked_changes": [
+            "world_model.md",
+            "world_model_engine.py",
+            "world_model_main_planner.py",
+            "world_model_state_io.py"
+          ],
+          "clean": false,
+          "tracked_change_count": 12,
+          "untracked_path_count": 611
+        },
+        "total_bytes_excluding_dot_git": 7706301,
+        "tree_sha256_excluding_dot_git": "91083f145ae231c28c4aeb701337517104590d1bd4160c8b4fb657160cec4856"
+      },
+      "git": {
+        "fsck_full_no_reflogs_unreachable_pass": true,
+        "head_commit": "13618acd13f10eb351e2fa580b41cf62ba6a08b4",
+        "head_tree": "57e7d3991fe37cdba9dcc03891574681d95fc867",
+        "retained_tag_count": 6
+      },
+      "published_run_id": "ewma_sv_v1.6_gpt-5.6-sol_max_run1",
+      "released_sidecars": {
+        "actions_count": 461,
+        "environment_id": "ls20-9607627b",
+        "files": {
+          "ls20_actions.json": {
+            "sha256": "f88c41827904d0da3d92fe7868128edc3fa1a95defda2229f60f7798395ed1b6",
+            "size_bytes": 5996
+          },
+          "ls20_cost_estimation.json": {
+            "sha256": "041dcbfe08337e2285cbed004a26d6dd258e7159bbc15d02aee0ac7edadc41a8",
+            "size_bytes": 742
+          },
+          "ls20_scorecard.json": {
+            "sha256": "8d690befd14d0284f63755b10c410ffbbc3e140ddcd8cf378de82409cee52df9",
+            "size_bytes": 1809
+          }
+        },
+        "level_count": 7,
+        "levels_completed": 7
+      },
+      "retained_checkpoints": [
+        {
+          "commit": "d00e83e746fb6b54b08307037523deabb8d8ba85",
+          "core": {
+            "core_file_sha256": {
+              "game_status.py": "ecfecc108be8ff706f28ba3c1e90366563426b810df55b70807929e1f5828901",
+              "session_tools.py": "2938defa458e4593521d8922ad76715009b2d243c1164f3015753e883df159d5",
+              "state_reconstruction_tools.py": "06074f9a022130cab3a5eaf190e1c3ff42dee8e6c63f360302500260b091433f",
+              "world_model_engine.py": "74b4aa75ad05fd73c2bfd9739be5f4783c8d987b0235429d5429ee04ec82241c",
+              "world_model_state_io.py": "c9397b6f461f78d07453224adbc3db8b39e00e4c70ff89a1d7d2012232aa7ba2"
+            },
+            "required_core_files_present": true,
+            "static_top_level_imports": {
+              "game_status.py": [],
+              "session_tools.py": [
+                "__future__",
+                "copy",
+                "game_status",
+                "json",
+                "numpy",
+                "pathlib",
+                "re",
+                "typing"
+              ],
+              "state_reconstruction_tools.py": [
+                "__future__",
+                "game_status",
+                "session_tools",
+                "world_model_engine",
+                "world_model_state_io"
+              ],
+              "world_model_engine.py": [
+                "__future__",
+                "game_status"
+              ],
+              "world_model_state_io.py": [
+                "__future__",
+                "collections",
+                "numpy"
+              ]
+            }
+          },
+          "iteration": 1,
+          "p0": {
+            "hashes": {
+              "client/session/level_01_attempt_01/initial_frame.png": "ca24f8cbd952dffec96c9e132b0de42e35975e3b66beb921895513c468ed5b53",
+              "client/session/level_01_attempt_01/initial_frame.txt": "0fc0241eb2d3c992a2af68643f36e3878f5140fc85aed38410dd66ef5486afc7",
+              "client/session/level_01_attempt_01/initial_metadata.json": "0f1dfbd539066cba7373dcce2004196480db34dc2f8c01477e66e711b0c74347"
+            },
+            "metadata": {
+              "action_input": {
+                "data": {},
+                "id": "RESET"
+              },
+              "available_actions": [
+                1,
+                2,
+                3,
+                4
+              ],
+              "levels_completed": 0,
+              "state": "NOT_FINISHED",
+              "step_index": 0,
+              "win_levels": 7
+            },
+            "metadata_matches_frozen_reset": true
+          },
+          "tag": "iteration_1",
+          "tree": "d52cb63b95d1a0bb38b82014c283e6fc3478b163"
+        },
+        {
+          "commit": "93d546b7e1f2991f297949edf10c8fa8c5a225ea",
+          "core": {
+            "core_file_sha256": {
+              "game_status.py": "ecfecc108be8ff706f28ba3c1e90366563426b810df55b70807929e1f5828901",
+              "session_tools.py": "2938defa458e4593521d8922ad76715009b2d243c1164f3015753e883df159d5",
+              "state_reconstruction_tools.py": "06074f9a022130cab3a5eaf190e1c3ff42dee8e6c63f360302500260b091433f",
+              "world_model_engine.py": "6f82cc74b487c72dd78a188792930729ebf58ea868eb95f7de7f137310bf95e6",
+              "world_model_state_io.py": "6e60c3877ab4c6914a198759165962a85fae02124cf7b442913afd1fe4802e7b"
+            },
+            "required_core_files_present": true,
+            "static_top_level_imports": {
+              "game_status.py": [],
+              "session_tools.py": [
+                "__future__",
+                "copy",
+                "game_status",
+                "json",
+                "numpy",
+                "pathlib",
+                "re",
+                "typing"
+              ],
+              "state_reconstruction_tools.py": [
+                "__future__",
+                "game_status",
+                "session_tools",
+                "world_model_engine",
+                "world_model_state_io"
+              ],
+              "world_model_engine.py": [
+                "__future__",
+                "game_status"
+              ],
+              "world_model_state_io.py": [
+                "__future__",
+                "numpy",
+                "scipy"
+              ]
+            }
+          },
+          "iteration": 2,
+          "p0": {
+            "hashes": {
+              "client/session/level_01_attempt_01/initial_frame.png": "ca24f8cbd952dffec96c9e132b0de42e35975e3b66beb921895513c468ed5b53",
+              "client/session/level_01_attempt_01/initial_frame.txt": "0fc0241eb2d3c992a2af68643f36e3878f5140fc85aed38410dd66ef5486afc7",
+              "client/session/level_01_attempt_01/initial_metadata.json": "0f1dfbd539066cba7373dcce2004196480db34dc2f8c01477e66e711b0c74347"
+            },
+            "metadata": {
+              "action_input": {
+                "data": {},
+                "id": "RESET"
+              },
+              "available_actions": [
+                1,
+                2,
+                3,
+                4
+              ],
+              "levels_completed": 0,
+              "state": "NOT_FINISHED",
+              "step_index": 0,
+              "win_levels": 7
+            },
+            "metadata_matches_frozen_reset": true
+          },
+          "tag": "iteration_2",
+          "tree": "3dd00b365e9d6309d94b8397c94d7fd27dfeba8c"
+        },
+        {
+          "commit": "c01487dcef23de0a15dc042ffe34f54bcaee11c9",
+          "core": {
+            "core_file_sha256": {
+              "game_status.py": "ecfecc108be8ff706f28ba3c1e90366563426b810df55b70807929e1f5828901",
+              "session_tools.py": "2938defa458e4593521d8922ad76715009b2d243c1164f3015753e883df159d5",
+              "state_reconstruction_tools.py": "06074f9a022130cab3a5eaf190e1c3ff42dee8e6c63f360302500260b091433f",
+              "world_model_engine.py": "83647878b548948329a53dd64fe4fbe07bfb3cb75d98625a6efb777de0dde97a",
+              "world_model_state_io.py": "c71ebf58760d29bc2fc9892447bbed30c704a2bb3a3b2f20155479ee1a9ee938"
+            },
+            "required_core_files_present": true,
+            "static_top_level_imports": {
+              "game_status.py": [],
+              "session_tools.py": [
+                "__future__",
+                "copy",
+                "game_status",
+                "json",
+                "numpy",
+                "pathlib",
+                "re",
+                "typing"
+              ],
+              "state_reconstruction_tools.py": [
+                "__future__",
+                "game_status",
+                "session_tools",
+                "world_model_engine",
+                "world_model_state_io"
+              ],
+              "world_model_engine.py": [
+                "__future__",
+                "game_status"
+              ],
+              "world_model_state_io.py": [
+                "__future__",
+                "numpy",
+                "scipy"
+              ]
+            }
+          },
+          "iteration": 3,
+          "p0": {
+            "hashes": {
+              "client/session/level_01_attempt_01/initial_frame.png": "ca24f8cbd952dffec96c9e132b0de42e35975e3b66beb921895513c468ed5b53",
+              "client/session/level_01_attempt_01/initial_frame.txt": "0fc0241eb2d3c992a2af68643f36e3878f5140fc85aed38410dd66ef5486afc7",
+              "client/session/level_01_attempt_01/initial_metadata.json": "0f1dfbd539066cba7373dcce2004196480db34dc2f8c01477e66e711b0c74347"
+            },
+            "metadata": {
+              "action_input": {
+                "data": {},
+                "id": "RESET"
+              },
+              "available_actions": [
+                1,
+                2,
+                3,
+                4
+              ],
+              "levels_completed": 0,
+              "state": "NOT_FINISHED",
+              "step_index": 0,
+              "win_levels": 7
+            },
+            "metadata_matches_frozen_reset": true
+          },
+          "tag": "iteration_3",
+          "tree": "d8784ecc2622536d55a69cf83156d998875e09c1"
+        },
+        {
+          "commit": "024cc3951084bca3cd3a75cdd81ace1d52aeccbd",
+          "core": {
+            "core_file_sha256": {
+              "game_status.py": "ecfecc108be8ff706f28ba3c1e90366563426b810df55b70807929e1f5828901",
+              "session_tools.py": "2938defa458e4593521d8922ad76715009b2d243c1164f3015753e883df159d5",
+              "state_reconstruction_tools.py": "06074f9a022130cab3a5eaf190e1c3ff42dee8e6c63f360302500260b091433f",
+              "world_model_engine.py": "6be52ebb3262ecce82649926a55c42d44d7e5067feae77e76e1f23e432fffdaf",
+              "world_model_state_io.py": "193b2f140730c1f64c81ba714def130bfbac652f5960ecf3bc9b371c983530da"
+            },
+            "required_core_files_present": true,
+            "static_top_level_imports": {
+              "game_status.py": [],
+              "session_tools.py": [
+                "__future__",
+                "copy",
+                "game_status",
+                "json",
+                "numpy",
+                "pathlib",
+                "re",
+                "typing"
+              ],
+              "state_reconstruction_tools.py": [
+                "__future__",
+                "game_status",
+                "session_tools",
+                "world_model_engine",
+                "world_model_state_io"
+              ],
+              "world_model_engine.py": [
+                "__future__",
+                "game_status"
+              ],
+              "world_model_state_io.py": [
+                "__future__",
+                "numpy",
+                "scipy"
+              ]
+            }
+          },
+          "iteration": 4,
+          "p0": {
+            "hashes": {
+              "client/session/level_01_attempt_01/initial_frame.png": "ca24f8cbd952dffec96c9e132b0de42e35975e3b66beb921895513c468ed5b53",
+              "client/session/level_01_attempt_01/initial_frame.txt": "0fc0241eb2d3c992a2af68643f36e3878f5140fc85aed38410dd66ef5486afc7",
+              "client/session/level_01_attempt_01/initial_metadata.json": "0f1dfbd539066cba7373dcce2004196480db34dc2f8c01477e66e711b0c74347"
+            },
+            "metadata": {
+              "action_input": {
+                "data": {},
+                "id": "RESET"
+              },
+              "available_actions": [
+                1,
+                2,
+                3,
+                4
+              ],
+              "levels_completed": 0,
+              "state": "NOT_FINISHED",
+              "step_index": 0,
+              "win_levels": 7
+            },
+            "metadata_matches_frozen_reset": true
+          },
+          "tag": "iteration_4",
+          "tree": "0294963167dd9822e988473c4552e7e349209fd8"
+        },
+        {
+          "commit": "1c77d48c63b4cde6b049d96807dc5a1a170a8f30",
+          "core": {
+            "core_file_sha256": {
+              "game_status.py": "ecfecc108be8ff706f28ba3c1e90366563426b810df55b70807929e1f5828901",
+              "session_tools.py": "2938defa458e4593521d8922ad76715009b2d243c1164f3015753e883df159d5",
+              "state_reconstruction_tools.py": "06074f9a022130cab3a5eaf190e1c3ff42dee8e6c63f360302500260b091433f",
+              "world_model_engine.py": "dd69522da5f24bf95ac31e19fab09ca2c37799bf84a5056b1384771d5a22975b",
+              "world_model_state_io.py": "f959c2d723e39d23ba638144bb02d854ebe49cd7a8622a2ae00afba423758bde"
+            },
+            "required_core_files_present": true,
+            "static_top_level_imports": {
+              "game_status.py": [],
+              "session_tools.py": [
+                "__future__",
+                "copy",
+                "game_status",
+                "json",
+                "numpy",
+                "pathlib",
+                "re",
+                "typing"
+              ],
+              "state_reconstruction_tools.py": [
+                "__future__",
+                "game_status",
+                "session_tools",
+                "world_model_engine",
+                "world_model_state_io"
+              ],
+              "world_model_engine.py": [
+                "__future__",
+                "game_status"
+              ],
+              "world_model_state_io.py": [
+                "__future__",
+                "numpy",
+                "scipy"
+              ]
+            }
+          },
+          "iteration": 5,
+          "p0": {
+            "hashes": {
+              "client/session/level_01_attempt_01/initial_frame.png": "ca24f8cbd952dffec96c9e132b0de42e35975e3b66beb921895513c468ed5b53",
+              "client/session/level_01_attempt_01/initial_frame.txt": "0fc0241eb2d3c992a2af68643f36e3878f5140fc85aed38410dd66ef5486afc7",
+              "client/session/level_01_attempt_01/initial_metadata.json": "0f1dfbd539066cba7373dcce2004196480db34dc2f8c01477e66e711b0c74347"
+            },
+            "metadata": {
+              "action_input": {
+                "data": {},
+                "id": "RESET"
+              },
+              "available_actions": [
+                1,
+                2,
+                3,
+                4
+              ],
+              "levels_completed": 0,
+              "state": "NOT_FINISHED",
+              "step_index": 0,
+              "win_levels": 7
+            },
+            "metadata_matches_frozen_reset": true
+          },
+          "tag": "iteration_5",
+          "tree": "d4b6530d39607c09f092a4388728a2f1a8eb122d"
+        },
+        {
+          "commit": "13618acd13f10eb351e2fa580b41cf62ba6a08b4",
+          "core": {
+            "core_file_sha256": {
+              "game_status.py": "ecfecc108be8ff706f28ba3c1e90366563426b810df55b70807929e1f5828901",
+              "session_tools.py": "2938defa458e4593521d8922ad76715009b2d243c1164f3015753e883df159d5",
+              "state_reconstruction_tools.py": "06074f9a022130cab3a5eaf190e1c3ff42dee8e6c63f360302500260b091433f",
+              "world_model_engine.py": "e59b51be56f0697b818cde9c5afd3a512fffb75af7681ef75660fc825c9d9f3e",
+              "world_model_state_io.py": "a0f1ea3ac9851433bee7d2354517cdc8d0c3aa5c32a2bd6d246750c50bd881f5"
+            },
+            "required_core_files_present": true,
+            "static_top_level_imports": {
+              "game_status.py": [],
+              "session_tools.py": [
+                "__future__",
+                "copy",
+                "game_status",
+                "json",
+                "numpy",
+                "pathlib",
+                "re",
+                "typing"
+              ],
+              "state_reconstruction_tools.py": [
+                "__future__",
+                "game_status",
+                "session_tools",
+                "world_model_engine",
+                "world_model_state_io"
+              ],
+              "world_model_engine.py": [
+                "__future__",
+                "game_status",
+                "math"
+              ],
+              "world_model_state_io.py": [
+                "__future__",
+                "numpy",
+                "scipy",
+                "world_model_engine"
+              ]
+            }
+          },
+          "iteration": 6,
+          "p0": {
+            "hashes": {
+              "client/session/level_01_attempt_01/initial_frame.png": "ca24f8cbd952dffec96c9e132b0de42e35975e3b66beb921895513c468ed5b53",
+              "client/session/level_01_attempt_01/initial_frame.txt": "0fc0241eb2d3c992a2af68643f36e3878f5140fc85aed38410dd66ef5486afc7",
+              "client/session/level_01_attempt_01/initial_metadata.json": "0f1dfbd539066cba7373dcce2004196480db34dc2f8c01477e66e711b0c74347"
+            },
+            "metadata": {
+              "action_input": {
+                "data": {},
+                "id": "RESET"
+              },
+              "available_actions": [
+                1,
+                2,
+                3,
+                4
+              ],
+              "levels_completed": 0,
+              "state": "NOT_FINISHED",
+              "step_index": 0,
+              "win_levels": 7
+            },
+            "metadata_matches_frozen_reset": true
+          },
+          "tag": "iteration_6",
+          "tree": "57e7d3991fe37cdba9dcc03891574681d95fc867"
+        }
+      ],
+      "session_state_risk": {
+        "admission_rule": "exclude session state and deny network; never use released credential/service values",
+        "credential_field_present": true,
+        "service_url_field_present": true,
+        "session_file_present": true,
+        "values_recorded": false
+      },
+      "short_id": "max"
+    },
+    {
+      "archive_run_root": "ewma_v1.6_sv_gpt-5.6-sol_xhigh_run1",
+      "final_worktree": {
+        "core": {
+          "core_file_sha256": {
+            "game_status.py": "ecfecc108be8ff706f28ba3c1e90366563426b810df55b70807929e1f5828901",
+            "session_tools.py": "2938defa458e4593521d8922ad76715009b2d243c1164f3015753e883df159d5",
+            "state_reconstruction_tools.py": "06074f9a022130cab3a5eaf190e1c3ff42dee8e6c63f360302500260b091433f",
+            "world_model_engine.py": "3632e13bd7c42942846ff4a789b433de810ecfc9888c6cde0805ba1fd4ce313d",
+            "world_model_state_io.py": "c5cffd50545c17c457e02ea6ddcc9159943806a96cb2819b6b597a004415f48a"
+          },
+          "required_core_files_present": true,
+          "static_top_level_imports": {
+            "game_status.py": [],
+            "session_tools.py": [
+              "__future__",
+              "copy",
+              "game_status",
+              "json",
+              "numpy",
+              "pathlib",
+              "re",
+              "typing"
+            ],
+            "state_reconstruction_tools.py": [
+              "__future__",
+              "game_status",
+              "session_tools",
+              "world_model_engine",
+              "world_model_state_io"
+            ],
+            "world_model_engine.py": [
+              "__future__",
+              "game_status",
+              "numpy"
+            ],
+            "world_model_state_io.py": [
+              "__future__",
+              "numpy",
+              "pathlib"
+            ]
+          }
+        },
+        "identity": "selected-file-manifest paths plus acquired bytes; not HEAD",
+        "p0": {
+          "hashes": {
+            "client/session/level_01_attempt_01/initial_frame.png": "ca24f8cbd952dffec96c9e132b0de42e35975e3b66beb921895513c468ed5b53",
+            "client/session/level_01_attempt_01/initial_frame.txt": "0fc0241eb2d3c992a2af68643f36e3878f5140fc85aed38410dd66ef5486afc7",
+            "client/session/level_01_attempt_01/initial_metadata.json": "0f1dfbd539066cba7373dcce2004196480db34dc2f8c01477e66e711b0c74347"
+          },
+          "metadata": {
+            "action_input": {
+              "data": {},
+              "id": "RESET"
+            },
+            "available_actions": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "levels_completed": 0,
+            "state": "NOT_FINISHED",
+            "step_index": 0,
+            "win_levels": 7
+          },
+          "metadata_matches_frozen_reset": true
+        },
+        "regular_file_count_excluding_dot_git": 3727,
+        "status": {
+          "candidate_relevant_tracked_changes": [
+            "world_model.md",
+            "world_model_engine.py",
+            "world_model_guided_search.py",
+            "world_model_main_planner.py",
+            "world_model_state_io.py"
+          ],
+          "clean": false,
+          "tracked_change_count": 22,
+          "untracked_path_count": 525
+        },
+        "total_bytes_excluding_dot_git": 10835889,
+        "tree_sha256_excluding_dot_git": "3c505f0f6a8baa37978d033c2d95cb47b578a82b6d9a315ba0e9636501f63df9"
+      },
+      "git": {
+        "fsck_full_no_reflogs_unreachable_pass": true,
+        "head_commit": "2d739b029ee1068838df238252738ff65f262250",
+        "head_tree": "98d3046c692e6ea018af96f6ebd2e90f75697b7b",
+        "retained_tag_count": 5
+      },
+      "published_run_id": "ewma_sv_v1.6_gpt-5.6-sol_xhigh_run1",
+      "released_sidecars": {
+        "actions_count": 465,
+        "environment_id": "ls20-9607627b",
+        "files": {
+          "ls20_actions.json": {
+            "sha256": "3f44a015463774038b74b4bbc90eda1e20ed59702f0d27e70289634148aa227f",
+            "size_bytes": 6048
+          },
+          "ls20_cost_estimation.json": {
+            "sha256": "e19a4baf4dda25cc213048c31921a6d6311c3529c0de252cb9679472212d0936",
+            "size_bytes": 738
+          },
+          "ls20_scorecard.json": {
+            "sha256": "1e107251a5ef0daef29e887cc99ed2e9140266599cec4de9851e947cef3a8634",
+            "size_bytes": 1808
+          }
+        },
+        "level_count": 7,
+        "levels_completed": 7
+      },
+      "retained_checkpoints": [
+        {
+          "commit": "a268f906dbbcb4fc81b4c3e8194399c946615cca",
+          "core": {
+            "core_file_sha256": {
+              "game_status.py": "ecfecc108be8ff706f28ba3c1e90366563426b810df55b70807929e1f5828901",
+              "session_tools.py": "2938defa458e4593521d8922ad76715009b2d243c1164f3015753e883df159d5",
+              "state_reconstruction_tools.py": "06074f9a022130cab3a5eaf190e1c3ff42dee8e6c63f360302500260b091433f",
+              "world_model_engine.py": "b43ff5751c613f2e425ed2d6f767e8b3935750b31d6db635635aa0db15e3b9fd",
+              "world_model_state_io.py": "806cc331bc226a02c2fecae1675b26d7f28e33343c0a3ad7a47d8495e0cf7681"
+            },
+            "required_core_files_present": true,
+            "static_top_level_imports": {
+              "game_status.py": [],
+              "session_tools.py": [
+                "__future__",
+                "copy",
+                "game_status",
+                "json",
+                "numpy",
+                "pathlib",
+                "re",
+                "typing"
+              ],
+              "state_reconstruction_tools.py": [
+                "__future__",
+                "game_status",
+                "session_tools",
+                "world_model_engine",
+                "world_model_state_io"
+              ],
+              "world_model_engine.py": [
+                "__future__",
+                "game_status",
+                "numpy"
+              ],
+              "world_model_state_io.py": [
+                "__future__",
+                "numpy"
+              ]
+            }
+          },
+          "iteration": 1,
+          "p0": {
+            "hashes": {
+              "client/session/level_01_attempt_01/initial_frame.png": "ca24f8cbd952dffec96c9e132b0de42e35975e3b66beb921895513c468ed5b53",
+              "client/session/level_01_attempt_01/initial_frame.txt": "0fc0241eb2d3c992a2af68643f36e3878f5140fc85aed38410dd66ef5486afc7",
+              "client/session/level_01_attempt_01/initial_metadata.json": "0f1dfbd539066cba7373dcce2004196480db34dc2f8c01477e66e711b0c74347"
+            },
+            "metadata": {
+              "action_input": {
+                "data": {},
+                "id": "RESET"
+              },
+              "available_actions": [
+                1,
+                2,
+                3,
+                4
+              ],
+              "levels_completed": 0,
+              "state": "NOT_FINISHED",
+              "step_index": 0,
+              "win_levels": 7
+            },
+            "metadata_matches_frozen_reset": true
+          },
+          "tag": "iteration_1",
+          "tree": "305513727864d101bc750e7cbb3145ec1fef04db"
+        },
+        {
+          "commit": "27603948ef3a5d3f649698a58e68883d980fb174",
+          "core": {
+            "core_file_sha256": {
+              "game_status.py": "ecfecc108be8ff706f28ba3c1e90366563426b810df55b70807929e1f5828901",
+              "session_tools.py": "2938defa458e4593521d8922ad76715009b2d243c1164f3015753e883df159d5",
+              "state_reconstruction_tools.py": "06074f9a022130cab3a5eaf190e1c3ff42dee8e6c63f360302500260b091433f",
+              "world_model_engine.py": "4923cef9b572c1bc417109638a8e6a165e2a33dce3b882bfeea6151e8e11f058",
+              "world_model_state_io.py": "c1a50667aad50e3dd878b3c940f4f8d4e6ff949bfc791571548a190a131d104c"
+            },
+            "required_core_files_present": true,
+            "static_top_level_imports": {
+              "game_status.py": [],
+              "session_tools.py": [
+                "__future__",
+                "copy",
+                "game_status",
+                "json",
+                "numpy",
+                "pathlib",
+                "re",
+                "typing"
+              ],
+              "state_reconstruction_tools.py": [
+                "__future__",
+                "game_status",
+                "session_tools",
+                "world_model_engine",
+                "world_model_state_io"
+              ],
+              "world_model_engine.py": [
+                "__future__",
+                "game_status",
+                "numpy"
+              ],
+              "world_model_state_io.py": [
+                "__future__",
+                "numpy"
+              ]
+            }
+          },
+          "iteration": 2,
+          "p0": {
+            "hashes": {
+              "client/session/level_01_attempt_01/initial_frame.png": "ca24f8cbd952dffec96c9e132b0de42e35975e3b66beb921895513c468ed5b53",
+              "client/session/level_01_attempt_01/initial_frame.txt": "0fc0241eb2d3c992a2af68643f36e3878f5140fc85aed38410dd66ef5486afc7",
+              "client/session/level_01_attempt_01/initial_metadata.json": "0f1dfbd539066cba7373dcce2004196480db34dc2f8c01477e66e711b0c74347"
+            },
+            "metadata": {
+              "action_input": {
+                "data": {},
+                "id": "RESET"
+              },
+              "available_actions": [
+                1,
+                2,
+                3,
+                4
+              ],
+              "levels_completed": 0,
+              "state": "NOT_FINISHED",
+              "step_index": 0,
+              "win_levels": 7
+            },
+            "metadata_matches_frozen_reset": true
+          },
+          "tag": "iteration_2",
+          "tree": "4670573e167f2ca7d3dfd5929918532fd7aedada"
+        },
+        {
+          "commit": "af45f2f88590e24400aa271570c7803ead77f15f",
+          "core": {
+            "core_file_sha256": {
+              "game_status.py": "ecfecc108be8ff706f28ba3c1e90366563426b810df55b70807929e1f5828901",
+              "session_tools.py": "2938defa458e4593521d8922ad76715009b2d243c1164f3015753e883df159d5",
+              "state_reconstruction_tools.py": "06074f9a022130cab3a5eaf190e1c3ff42dee8e6c63f360302500260b091433f",
+              "world_model_engine.py": "74c86113412445a2d6a7e4166b62cdfcd122ac7810ad18f00663ae428cbce0e6",
+              "world_model_state_io.py": "3a44a5361f9eceb03ada7f2db66d8abd41fa9728aa269d06d67f9d3650bc4889"
+            },
+            "required_core_files_present": true,
+            "static_top_level_imports": {
+              "game_status.py": [],
+              "session_tools.py": [
+                "__future__",
+                "copy",
+                "game_status",
+                "json",
+                "numpy",
+                "pathlib",
+                "re",
+                "typing"
+              ],
+              "state_reconstruction_tools.py": [
+                "__future__",
+                "game_status",
+                "session_tools",
+                "world_model_engine",
+                "world_model_state_io"
+              ],
+              "world_model_engine.py": [
+                "__future__",
+                "game_status",
+                "numpy"
+              ],
+              "world_model_state_io.py": [
+                "__future__",
+                "numpy"
+              ]
+            }
+          },
+          "iteration": 3,
+          "p0": {
+            "hashes": {
+              "client/session/level_01_attempt_01/initial_frame.png": "ca24f8cbd952dffec96c9e132b0de42e35975e3b66beb921895513c468ed5b53",
+              "client/session/level_01_attempt_01/initial_frame.txt": "0fc0241eb2d3c992a2af68643f36e3878f5140fc85aed38410dd66ef5486afc7",
+              "client/session/level_01_attempt_01/initial_metadata.json": "0f1dfbd539066cba7373dcce2004196480db34dc2f8c01477e66e711b0c74347"
+            },
+            "metadata": {
+              "action_input": {
+                "data": {},
+                "id": "RESET"
+              },
+              "available_actions": [
+                1,
+                2,
+                3,
+                4
+              ],
+              "levels_completed": 0,
+              "state": "NOT_FINISHED",
+              "step_index": 0,
+              "win_levels": 7
+            },
+            "metadata_matches_frozen_reset": true
+          },
+          "tag": "iteration_3",
+          "tree": "968069d82b26fd2ca64697174437a2e80169b20c"
+        },
+        {
+          "commit": "74d48803bc79682167e2f5297c1f32819f3eb332",
+          "core": {
+            "core_file_sha256": {
+              "game_status.py": "ecfecc108be8ff706f28ba3c1e90366563426b810df55b70807929e1f5828901",
+              "session_tools.py": "2938defa458e4593521d8922ad76715009b2d243c1164f3015753e883df159d5",
+              "state_reconstruction_tools.py": "06074f9a022130cab3a5eaf190e1c3ff42dee8e6c63f360302500260b091433f",
+              "world_model_engine.py": "54660a445c4e2eea7028b77240152331f96dfb93e783f087641fcf2d233de3e4",
+              "world_model_state_io.py": "42ea84204ce5ab8e5b07364d8f20cb19a4fc7dfa7589240544070e57694dcc24"
+            },
+            "required_core_files_present": true,
+            "static_top_level_imports": {
+              "game_status.py": [],
+              "session_tools.py": [
+                "__future__",
+                "copy",
+                "game_status",
+                "json",
+                "numpy",
+                "pathlib",
+                "re",
+                "typing"
+              ],
+              "state_reconstruction_tools.py": [
+                "__future__",
+                "game_status",
+                "session_tools",
+                "world_model_engine",
+                "world_model_state_io"
+              ],
+              "world_model_engine.py": [
+                "__future__",
+                "game_status",
+                "numpy"
+              ],
+              "world_model_state_io.py": [
+                "__future__",
+                "numpy"
+              ]
+            }
+          },
+          "iteration": 4,
+          "p0": {
+            "hashes": {
+              "client/session/level_01_attempt_01/initial_frame.png": "ca24f8cbd952dffec96c9e132b0de42e35975e3b66beb921895513c468ed5b53",
+              "client/session/level_01_attempt_01/initial_frame.txt": "0fc0241eb2d3c992a2af68643f36e3878f5140fc85aed38410dd66ef5486afc7",
+              "client/session/level_01_attempt_01/initial_metadata.json": "0f1dfbd539066cba7373dcce2004196480db34dc2f8c01477e66e711b0c74347"
+            },
+            "metadata": {
+              "action_input": {
+                "data": {},
+                "id": "RESET"
+              },
+              "available_actions": [
+                1,
+                2,
+                3,
+                4
+              ],
+              "levels_completed": 0,
+              "state": "NOT_FINISHED",
+              "step_index": 0,
+              "win_levels": 7
+            },
+            "metadata_matches_frozen_reset": true
+          },
+          "tag": "iteration_4",
+          "tree": "8956867094931752e4a2a834152565725c9de769"
+        },
+        {
+          "commit": "2d739b029ee1068838df238252738ff65f262250",
+          "core": {
+            "core_file_sha256": {
+              "game_status.py": "ecfecc108be8ff706f28ba3c1e90366563426b810df55b70807929e1f5828901",
+              "session_tools.py": "2938defa458e4593521d8922ad76715009b2d243c1164f3015753e883df159d5",
+              "state_reconstruction_tools.py": "06074f9a022130cab3a5eaf190e1c3ff42dee8e6c63f360302500260b091433f",
+              "world_model_engine.py": "ef37e016fb91dd0fa00d6195fb6d5ba60b020d0b5cce4e585c09360aa073f04c",
+              "world_model_state_io.py": "9e13b21c423eaeb2b4239e145fcae314d5c9928b9f974efdb8f9ab263993a96d"
+            },
+            "required_core_files_present": true,
+            "static_top_level_imports": {
+              "game_status.py": [],
+              "session_tools.py": [
+                "__future__",
+                "copy",
+                "game_status",
+                "json",
+                "numpy",
+                "pathlib",
+                "re",
+                "typing"
+              ],
+              "state_reconstruction_tools.py": [
+                "__future__",
+                "game_status",
+                "session_tools",
+                "world_model_engine",
+                "world_model_state_io"
+              ],
+              "world_model_engine.py": [
+                "__future__",
+                "game_status",
+                "numpy"
+              ],
+              "world_model_state_io.py": [
+                "__future__",
+                "numpy"
+              ]
+            }
+          },
+          "iteration": 5,
+          "p0": {
+            "hashes": {
+              "client/session/level_01_attempt_01/initial_frame.png": "ca24f8cbd952dffec96c9e132b0de42e35975e3b66beb921895513c468ed5b53",
+              "client/session/level_01_attempt_01/initial_frame.txt": "0fc0241eb2d3c992a2af68643f36e3878f5140fc85aed38410dd66ef5486afc7",
+              "client/session/level_01_attempt_01/initial_metadata.json": "0f1dfbd539066cba7373dcce2004196480db34dc2f8c01477e66e711b0c74347"
+            },
+            "metadata": {
+              "action_input": {
+                "data": {},
+                "id": "RESET"
+              },
+              "available_actions": [
+                1,
+                2,
+                3,
+                4
+              ],
+              "levels_completed": 0,
+              "state": "NOT_FINISHED",
+              "step_index": 0,
+              "win_levels": 7
+            },
+            "metadata_matches_frozen_reset": true
+          },
+          "tag": "iteration_5",
+          "tree": "98d3046c692e6ea018af96f6ebd2e90f75697b7b"
+        }
+      ],
+      "session_state_risk": {
+        "admission_rule": "exclude session state and deny network; never use released credential/service values",
+        "credential_field_present": true,
+        "service_url_field_present": true,
+        "session_file_present": true,
+        "values_recorded": false
+      },
+      "short_id": "xhigh"
+    }
+  ],
+  "schema_version": 1,
+  "source_artifact": {
+    "artifact_zip_sha256": "1b239318741872a339e4a1a31aa3f6876ee298fdb17db328075a343d56a52a1a",
+    "github_actions_artifact_id": 9465881649,
+    "inner_package_sha256": "de141756be11b7d54730584ce16d3d0979a9bbd8aef707a73d50ab8a112c2cbf"
+  },
+  "status": "inventory_complete_admission_not_run"
+}

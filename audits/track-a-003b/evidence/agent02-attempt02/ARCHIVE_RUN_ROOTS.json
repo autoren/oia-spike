@@ -1,0 +1,7 @@
+[
+  "runs_additional/ewma_v1.5_sv_gpt-5.5_xhigh_run1",
+  "runs_additional/ewma_v1.6_sv_gpt-5.6-sol_max_run1",
+  "runs_additional/ewma_v1.6_sv_gpt-5.6-sol_xhigh_run1",
+  "runs_additional/twma_v1.6_gpt-5.6-sol_max_run1",
+  "runs_additional/twma_v1.6_gpt-5.6-sol_xhigh_run1"
+]

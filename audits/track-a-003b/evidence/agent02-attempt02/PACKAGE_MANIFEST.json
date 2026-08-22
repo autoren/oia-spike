@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "audit_id": "OIA-1-TRACK-A-003b",
+  "evidence_id": "agent02-attempt02-independent-import",
+  "files": [
+    {
+      "path": "ACQUISITION_PATH_ALIAS_ERRATUM.md",
+      "size_bytes": 872,
+      "sha256": "b048584597df07077d82cf405cd165dbf5ac4bd361ad9f40c8ede3c80622ab69"
+    },
+    {
+      "path": "ACQUISITION_SUMMARY.json",
+      "size_bytes": 975,
+      "sha256": "b46d603b0937ca70a3445c5d94cb4421df3c7e61e1fa4c15027996c713efc3f0"
+    },
+    {
+      "path": "ARCHIVE_RUN_ROOTS.json",
+      "size_bytes": 274,
+      "sha256": "6a5838d75d29c2cd7d934ba5e44a4a3e2a31dcc0ff514959f00f139f0ec8aeef"
+    },
+    {
+      "path": "LOCAL_IMPORT_VALIDATION.json",
+      "size_bytes": 1539,
+      "sha256": "8506f866bfcfd1711066fed7a8503ec8ca89621fbd633edea30b9e2eef4fcb4c"
+    },
+    {
+      "path": "README.md",
+      "size_bytes": 1176,
+      "sha256": "0bc371a92d79d4e5f0fb8ccd097a3ca6b19c7d6e0ac960b400796c07d51cb8a0"
+    },
+    {
+      "path": "RUN_LABEL_MAPPING.json",
+      "size_bytes": 339,
+      "sha256": "4277def6e0f4a60588fc67d71ccc09277f471e26821f980059605baf98205101"
+    },
+    {
+      "path": "SHA256SUMS.txt",
+      "size_bytes": 832,
+      "sha256": "5056bd9b564511f74474fcfa1dd15251fb2256805c2dd5066eb237e02fb336ca"
+    },
+    {
+      "path": "SOURCE_PROVENANCE.json",
+      "size_bytes": 2764,
+      "sha256": "ae8706f65fdc23364ccaf2fb44edafda569ef674f053f1ad113eb056dc4b763b"
+    },
+    {
+      "path": "attempt_01_zero_selection.json",
+      "size_bytes": 2312,
+      "sha256": "d9785e62c1990450d53505e2ba6312ebdf1d3b00d7b0b3ce02eec45ddfeaf3f8"
+    },
+    {
+      "path": "checkpoint_enumeration_rule.frozen.json",
+      "size_bytes": 2253,
+      "sha256": "2802384b0dc5750ae5cfa47287174754c631f5b5b86d803e1ef7680cfd1efe5a"
+    }
+  ]
+}

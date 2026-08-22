@@ -99,6 +99,25 @@ recorded P0 action. Because this uses an existing public trajectory rather than
 a newly randomized live action, the classification is archival prospective—not
 a live intervention or decision-value experiment.
 
+## Archival outcome result
+
+All five independently recorded run roots used `ACTION6` as their first P0
+action, and all five produced the same settled observable result: status
+`RUNNING` and frame SHA-256
+`80a2fd9a8813b7ee5cd6d63a3199ffc247119b39ab60b90709696b47ec58c140`.
+The two frozen predictions were different from one another and from that actual
+hash, so the preregistered verdict is
+`separator_outcome_outside_candidate_frontier`.
+
+This is a scientifically useful negative result. OIA prospectively selected an
+available real separator, and the outcome rejected both current hypotheses.
+Because the candidate set was generated from P0 alone, the mismatch is evidence
+that this frontier omitted an important transition mechanism. It is not by
+itself proof of a particular ontology revision or of intervention value. The
+next useful slice is a separately frozen, outcome-conditioned revision gate that
+adds new hypotheses without rewriting this failed frontier or reusing later
+archive steps as if they were still held out.
+
 ## Behavior/OIA result
 
 The frozen path admitted both `C0006` and `C0008`. Each exactly replayed P0,

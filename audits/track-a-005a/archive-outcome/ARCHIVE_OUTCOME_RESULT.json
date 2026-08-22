@@ -1,0 +1,548 @@
+{
+  "access_accounting": {
+    "candidate_processes": 0,
+    "later_step_payloads_read": 0,
+    "matching_action_nonmetadata_payloads_read": 50,
+    "model_or_api_calls": 0,
+    "nonmatching_run_frame_payloads_read": 0,
+    "oia_processes": 0,
+    "real_arc_actions": 0,
+    "step1_metadata_payloads_read": 5
+  },
+  "audit_id": "OIA-1-TRACK-A-005a",
+  "candidate_predictions": {
+    "C0006": {
+      "final_frame_sha256": "9a70f549f35909c1da7539e7f65b5eb490e1c2297d0bd2c67ef85e70d468b531",
+      "status": "RUNNING"
+    },
+    "C0008": {
+      "final_frame_sha256": "01307698d529da3fc700ad79deda766517b1b074a386e55ce57656fae3342475",
+      "status": "RUNNING"
+    }
+  },
+  "claim_boundary": "Public archival prospective outcome for the already merged ACTION6 separator only. This is not a live intervention, randomized trial, decision-value result, sealed transfer, or Track B claim.",
+  "classification": "public_archival_prospective_outcome",
+  "evidence_package": {
+    "file_count": 55,
+    "path": "ARCHIVE_OUTCOME_EVIDENCE.zip",
+    "sha256": "e6de7cd8db997c561cfb4be078cc3437347af90f9c59e402761c7d790e3ed3a4",
+    "size_bytes": 35164
+  },
+  "gate_verdict": "separator_outcome_outside_candidate_frontier",
+  "header_inventory": {
+    "archive_member_headers_scanned": 916132,
+    "exact_step1_files_per_run": 11,
+    "headers": {
+      "ewma_v1.5_sv_gpt-5.5_xhigh_run1": [
+        "runs_additional/ewma_v1.5_sv_gpt-5.5_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_final.png",
+        "runs_additional/ewma_v1.5_sv_gpt-5.5_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_intermediate_00.txt",
+        "runs_additional/ewma_v1.5_sv_gpt-5.5_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_intermediate_03.png",
+        "runs_additional/ewma_v1.5_sv_gpt-5.5_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_intermediate_01.png",
+        "runs_additional/ewma_v1.5_sv_gpt-5.5_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_metadata.json",
+        "runs_additional/ewma_v1.5_sv_gpt-5.5_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_intermediate_01.txt",
+        "runs_additional/ewma_v1.5_sv_gpt-5.5_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_intermediate_03.txt",
+        "runs_additional/ewma_v1.5_sv_gpt-5.5_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_final.txt",
+        "runs_additional/ewma_v1.5_sv_gpt-5.5_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_intermediate_02.txt",
+        "runs_additional/ewma_v1.5_sv_gpt-5.5_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_intermediate_02.png",
+        "runs_additional/ewma_v1.5_sv_gpt-5.5_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_intermediate_00.png"
+      ],
+      "ewma_v1.6_sv_gpt-5.6-sol_max_run1": [
+        "runs_additional/ewma_v1.6_sv_gpt-5.6-sol_max_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_final.png",
+        "runs_additional/ewma_v1.6_sv_gpt-5.6-sol_max_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_intermediate_00.txt",
+        "runs_additional/ewma_v1.6_sv_gpt-5.6-sol_max_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_intermediate_03.png",
+        "runs_additional/ewma_v1.6_sv_gpt-5.6-sol_max_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_intermediate_01.png",
+        "runs_additional/ewma_v1.6_sv_gpt-5.6-sol_max_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_metadata.json",
+        "runs_additional/ewma_v1.6_sv_gpt-5.6-sol_max_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_intermediate_01.txt",
+        "runs_additional/ewma_v1.6_sv_gpt-5.6-sol_max_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_intermediate_03.txt",
+        "runs_additional/ewma_v1.6_sv_gpt-5.6-sol_max_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_final.txt",
+        "runs_additional/ewma_v1.6_sv_gpt-5.6-sol_max_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_intermediate_02.txt",
+        "runs_additional/ewma_v1.6_sv_gpt-5.6-sol_max_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_intermediate_02.png",
+        "runs_additional/ewma_v1.6_sv_gpt-5.6-sol_max_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_intermediate_00.png"
+      ],
+      "ewma_v1.6_sv_gpt-5.6-sol_xhigh_run1": [
+        "runs_additional/ewma_v1.6_sv_gpt-5.6-sol_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_final.png",
+        "runs_additional/ewma_v1.6_sv_gpt-5.6-sol_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_intermediate_00.txt",
+        "runs_additional/ewma_v1.6_sv_gpt-5.6-sol_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_intermediate_03.png",
+        "runs_additional/ewma_v1.6_sv_gpt-5.6-sol_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_intermediate_01.png",
+        "runs_additional/ewma_v1.6_sv_gpt-5.6-sol_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_metadata.json",
+        "runs_additional/ewma_v1.6_sv_gpt-5.6-sol_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_intermediate_01.txt",
+        "runs_additional/ewma_v1.6_sv_gpt-5.6-sol_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_intermediate_03.txt",
+        "runs_additional/ewma_v1.6_sv_gpt-5.6-sol_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_final.txt",
+        "runs_additional/ewma_v1.6_sv_gpt-5.6-sol_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_intermediate_02.txt",
+        "runs_additional/ewma_v1.6_sv_gpt-5.6-sol_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_intermediate_02.png",
+        "runs_additional/ewma_v1.6_sv_gpt-5.6-sol_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_intermediate_00.png"
+      ],
+      "twma_v1.6_gpt-5.6-sol_max_run1": [
+        "runs_additional/twma_v1.6_gpt-5.6-sol_max_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_final.png",
+        "runs_additional/twma_v1.6_gpt-5.6-sol_max_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_intermediate_00.txt",
+        "runs_additional/twma_v1.6_gpt-5.6-sol_max_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_intermediate_03.png",
+        "runs_additional/twma_v1.6_gpt-5.6-sol_max_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_intermediate_01.png",
+        "runs_additional/twma_v1.6_gpt-5.6-sol_max_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_metadata.json",
+        "runs_additional/twma_v1.6_gpt-5.6-sol_max_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_intermediate_01.txt",
+        "runs_additional/twma_v1.6_gpt-5.6-sol_max_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_intermediate_03.txt",
+        "runs_additional/twma_v1.6_gpt-5.6-sol_max_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_final.txt",
+        "runs_additional/twma_v1.6_gpt-5.6-sol_max_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_intermediate_02.txt",
+        "runs_additional/twma_v1.6_gpt-5.6-sol_max_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_intermediate_02.png",
+        "runs_additional/twma_v1.6_gpt-5.6-sol_max_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_intermediate_00.png"
+      ],
+      "twma_v1.6_gpt-5.6-sol_xhigh_run1": [
+        "runs_additional/twma_v1.6_gpt-5.6-sol_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_final.png",
+        "runs_additional/twma_v1.6_gpt-5.6-sol_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_intermediate_00.txt",
+        "runs_additional/twma_v1.6_gpt-5.6-sol_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_intermediate_03.png",
+        "runs_additional/twma_v1.6_gpt-5.6-sol_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_intermediate_01.png",
+        "runs_additional/twma_v1.6_gpt-5.6-sol_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_metadata.json",
+        "runs_additional/twma_v1.6_gpt-5.6-sol_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_intermediate_01.txt",
+        "runs_additional/twma_v1.6_gpt-5.6-sol_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_intermediate_03.txt",
+        "runs_additional/twma_v1.6_gpt-5.6-sol_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_final.txt",
+        "runs_additional/twma_v1.6_gpt-5.6-sol_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_intermediate_02.txt",
+        "runs_additional/twma_v1.6_gpt-5.6-sol_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_intermediate_02.png",
+        "runs_additional/twma_v1.6_gpt-5.6-sol_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_intermediate_00.png"
+      ]
+    },
+    "run_roots": [
+      "ewma_v1.5_sv_gpt-5.5_xhigh_run1",
+      "ewma_v1.6_sv_gpt-5.6-sol_max_run1",
+      "ewma_v1.6_sv_gpt-5.6-sol_xhigh_run1",
+      "twma_v1.6_gpt-5.6-sol_max_run1",
+      "twma_v1.6_gpt-5.6-sol_xhigh_run1"
+    ]
+  },
+  "matching_run_roots": [
+    "ewma_v1.5_sv_gpt-5.5_xhigh_run1",
+    "ewma_v1.6_sv_gpt-5.6-sol_max_run1",
+    "ewma_v1.6_sv_gpt-5.6-sol_xhigh_run1",
+    "twma_v1.6_gpt-5.6-sol_max_run1",
+    "twma_v1.6_gpt-5.6-sol_xhigh_run1"
+  ],
+  "metadata_records": [
+    {
+      "action_id": "ACTION6",
+      "member": "runs_additional/ewma_v1.5_sv_gpt-5.5_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_metadata.json",
+      "run_root": "ewma_v1.5_sv_gpt-5.5_xhigh_run1",
+      "sha256": "2bce325b3a22f13605d8faeebeb9f44ae9832a871a3a27d16d24ddd12babaa15",
+      "size_bytes": 230
+    },
+    {
+      "action_id": "ACTION6",
+      "member": "runs_additional/ewma_v1.6_sv_gpt-5.6-sol_max_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_metadata.json",
+      "run_root": "ewma_v1.6_sv_gpt-5.6-sol_max_run1",
+      "sha256": "523fee5f9c4205aefff92eb0ad395f9bd3c7d5e207b3fd08cd21201740ae8ee1",
+      "size_bytes": 229
+    },
+    {
+      "action_id": "ACTION6",
+      "member": "runs_additional/ewma_v1.6_sv_gpt-5.6-sol_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_metadata.json",
+      "run_root": "ewma_v1.6_sv_gpt-5.6-sol_xhigh_run1",
+      "sha256": "523fee5f9c4205aefff92eb0ad395f9bd3c7d5e207b3fd08cd21201740ae8ee1",
+      "size_bytes": 229
+    },
+    {
+      "action_id": "ACTION6",
+      "member": "runs_additional/twma_v1.6_gpt-5.6-sol_max_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_metadata.json",
+      "run_root": "twma_v1.6_gpt-5.6-sol_max_run1",
+      "sha256": "523fee5f9c4205aefff92eb0ad395f9bd3c7d5e207b3fd08cd21201740ae8ee1",
+      "size_bytes": 229
+    },
+    {
+      "action_id": "ACTION6",
+      "member": "runs_additional/twma_v1.6_gpt-5.6-sol_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_metadata.json",
+      "run_root": "twma_v1.6_gpt-5.6-sol_xhigh_run1",
+      "sha256": "2bce325b3a22f13605d8faeebeb9f44ae9832a871a3a27d16d24ddd12babaa15",
+      "size_bytes": 230
+    }
+  ],
+  "outcomes": [
+    {
+      "files": [
+        {
+          "basename": "step_0001_final.png",
+          "member": "runs_additional/ewma_v1.5_sv_gpt-5.5_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_final.png",
+          "sha256": "075134d2a4707fb98821b3308c945f036d7d067bdc31ce88f382addf10dee5d5",
+          "size_bytes": 1893
+        },
+        {
+          "basename": "step_0001_final.txt",
+          "member": "runs_additional/ewma_v1.5_sv_gpt-5.5_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_final.txt",
+          "sha256": "80a2fd9a8813b7ee5cd6d63a3199ffc247119b39ab60b90709696b47ec58c140",
+          "size_bytes": 4160
+        },
+        {
+          "basename": "step_0001_intermediate_00.png",
+          "member": "runs_additional/ewma_v1.5_sv_gpt-5.5_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_intermediate_00.png",
+          "sha256": "f04beec073ffd2cb135efed94cda3f9fd4e0d850866a56505659c1061663d243",
+          "size_bytes": 2047
+        },
+        {
+          "basename": "step_0001_intermediate_00.txt",
+          "member": "runs_additional/ewma_v1.5_sv_gpt-5.5_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_intermediate_00.txt",
+          "sha256": "c26571649351df0abd55866cc6bea9664cc49a8f80ddc0ae91487c96ba31ff14",
+          "size_bytes": 4160
+        },
+        {
+          "basename": "step_0001_intermediate_01.png",
+          "member": "runs_additional/ewma_v1.5_sv_gpt-5.5_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_intermediate_01.png",
+          "sha256": "37656bb7900a0bbecfa3a52d7efc2d99f519c9630a77724e156d0c7cf79aafca",
+          "size_bytes": 1955
+        },
+        {
+          "basename": "step_0001_intermediate_01.txt",
+          "member": "runs_additional/ewma_v1.5_sv_gpt-5.5_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_intermediate_01.txt",
+          "sha256": "b4cd77a6aceebea4ca1b3d0ae2f0e43585dd2ac918c60c20dbc07fb4bba19cb8",
+          "size_bytes": 4160
+        },
+        {
+          "basename": "step_0001_intermediate_02.png",
+          "member": "runs_additional/ewma_v1.5_sv_gpt-5.5_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_intermediate_02.png",
+          "sha256": "41ef9ba1dd883ba56de53dac366925f7e34e90e357df8b1059db19ec5a67e508",
+          "size_bytes": 1940
+        },
+        {
+          "basename": "step_0001_intermediate_02.txt",
+          "member": "runs_additional/ewma_v1.5_sv_gpt-5.5_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_intermediate_02.txt",
+          "sha256": "b7599f78d9aa61b83d268552a0a4a9f03d6bdacb92c6ebf4ca734ade0dab761d",
+          "size_bytes": 4160
+        },
+        {
+          "basename": "step_0001_intermediate_03.png",
+          "member": "runs_additional/ewma_v1.5_sv_gpt-5.5_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_intermediate_03.png",
+          "sha256": "7a65cb87e38d065c68d5ba74df8725f90a054085f2140ae5845be67d524f98ea",
+          "size_bytes": 1902
+        },
+        {
+          "basename": "step_0001_intermediate_03.txt",
+          "member": "runs_additional/ewma_v1.5_sv_gpt-5.5_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_intermediate_03.txt",
+          "sha256": "f24b1f7d324b5378ca5b30409c1b30e1cce61606b48e0421c6c232bf61945d7c",
+          "size_bytes": 4160
+        },
+        {
+          "basename": "step_0001_metadata.json",
+          "member": "runs_additional/ewma_v1.5_sv_gpt-5.5_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_metadata.json",
+          "sha256": "2bce325b3a22f13605d8faeebeb9f44ae9832a871a3a27d16d24ddd12babaa15",
+          "size_bytes": 230
+        }
+      ],
+      "intermediate_frame_pairs_preserved": 4,
+      "matching_candidates": [],
+      "observation": {
+        "final_frame_sha256": "80a2fd9a8813b7ee5cd6d63a3199ffc247119b39ab60b90709696b47ec58c140",
+        "status": "RUNNING"
+      },
+      "recorded_state": "NOT_FINISHED",
+      "run_root": "ewma_v1.5_sv_gpt-5.5_xhigh_run1"
+    },
+    {
+      "files": [
+        {
+          "basename": "step_0001_final.png",
+          "member": "runs_additional/ewma_v1.6_sv_gpt-5.6-sol_max_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_final.png",
+          "sha256": "075134d2a4707fb98821b3308c945f036d7d067bdc31ce88f382addf10dee5d5",
+          "size_bytes": 1893
+        },
+        {
+          "basename": "step_0001_final.txt",
+          "member": "runs_additional/ewma_v1.6_sv_gpt-5.6-sol_max_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_final.txt",
+          "sha256": "80a2fd9a8813b7ee5cd6d63a3199ffc247119b39ab60b90709696b47ec58c140",
+          "size_bytes": 4160
+        },
+        {
+          "basename": "step_0001_intermediate_00.png",
+          "member": "runs_additional/ewma_v1.6_sv_gpt-5.6-sol_max_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_intermediate_00.png",
+          "sha256": "4260e4deaeee819792b12db5614c753745f61f78d147df133a423d3245bab626",
+          "size_bytes": 1976
+        },
+        {
+          "basename": "step_0001_intermediate_00.txt",
+          "member": "runs_additional/ewma_v1.6_sv_gpt-5.6-sol_max_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_intermediate_00.txt",
+          "sha256": "9caa7f985c33731991e4e9094d5ac6b9e66e81fd200161b0cac21248fa961c5b",
+          "size_bytes": 4160
+        },
+        {
+          "basename": "step_0001_intermediate_01.png",
+          "member": "runs_additional/ewma_v1.6_sv_gpt-5.6-sol_max_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_intermediate_01.png",
+          "sha256": "749525b43c6f2a3974df99d075c900245b4399a1801b587a09eb873bc860538e",
+          "size_bytes": 1980
+        },
+        {
+          "basename": "step_0001_intermediate_01.txt",
+          "member": "runs_additional/ewma_v1.6_sv_gpt-5.6-sol_max_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_intermediate_01.txt",
+          "sha256": "7198b9cdcff6d504072b204dd400fe53eea0d722c08e5242f394bd830b73a25b",
+          "size_bytes": 4160
+        },
+        {
+          "basename": "step_0001_intermediate_02.png",
+          "member": "runs_additional/ewma_v1.6_sv_gpt-5.6-sol_max_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_intermediate_02.png",
+          "sha256": "2901b9a9ed818fe478391cae6c38f3fbaab4c521f43c47057cfb2d7e07d36e6f",
+          "size_bytes": 2002
+        },
+        {
+          "basename": "step_0001_intermediate_02.txt",
+          "member": "runs_additional/ewma_v1.6_sv_gpt-5.6-sol_max_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_intermediate_02.txt",
+          "sha256": "7f7859c7433fb4726aeb2919b72a9bc173119a03d7d8f2c293cebb0c6325b4b4",
+          "size_bytes": 4160
+        },
+        {
+          "basename": "step_0001_intermediate_03.png",
+          "member": "runs_additional/ewma_v1.6_sv_gpt-5.6-sol_max_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_intermediate_03.png",
+          "sha256": "1683a2b14e9e37770e73ab8163eb00092c7556d4620217bd87ef75f90af7ff13",
+          "size_bytes": 1914
+        },
+        {
+          "basename": "step_0001_intermediate_03.txt",
+          "member": "runs_additional/ewma_v1.6_sv_gpt-5.6-sol_max_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_intermediate_03.txt",
+          "sha256": "500ae55977013099e6771104838b6d9104b3569cf82ba4bc509c752c61572867",
+          "size_bytes": 4160
+        },
+        {
+          "basename": "step_0001_metadata.json",
+          "member": "runs_additional/ewma_v1.6_sv_gpt-5.6-sol_max_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_metadata.json",
+          "sha256": "523fee5f9c4205aefff92eb0ad395f9bd3c7d5e207b3fd08cd21201740ae8ee1",
+          "size_bytes": 229
+        }
+      ],
+      "intermediate_frame_pairs_preserved": 4,
+      "matching_candidates": [],
+      "observation": {
+        "final_frame_sha256": "80a2fd9a8813b7ee5cd6d63a3199ffc247119b39ab60b90709696b47ec58c140",
+        "status": "RUNNING"
+      },
+      "recorded_state": "NOT_FINISHED",
+      "run_root": "ewma_v1.6_sv_gpt-5.6-sol_max_run1"
+    },
+    {
+      "files": [
+        {
+          "basename": "step_0001_final.png",
+          "member": "runs_additional/ewma_v1.6_sv_gpt-5.6-sol_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_final.png",
+          "sha256": "075134d2a4707fb98821b3308c945f036d7d067bdc31ce88f382addf10dee5d5",
+          "size_bytes": 1893
+        },
+        {
+          "basename": "step_0001_final.txt",
+          "member": "runs_additional/ewma_v1.6_sv_gpt-5.6-sol_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_final.txt",
+          "sha256": "80a2fd9a8813b7ee5cd6d63a3199ffc247119b39ab60b90709696b47ec58c140",
+          "size_bytes": 4160
+        },
+        {
+          "basename": "step_0001_intermediate_00.png",
+          "member": "runs_additional/ewma_v1.6_sv_gpt-5.6-sol_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_intermediate_00.png",
+          "sha256": "4260e4deaeee819792b12db5614c753745f61f78d147df133a423d3245bab626",
+          "size_bytes": 1976
+        },
+        {
+          "basename": "step_0001_intermediate_00.txt",
+          "member": "runs_additional/ewma_v1.6_sv_gpt-5.6-sol_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_intermediate_00.txt",
+          "sha256": "9caa7f985c33731991e4e9094d5ac6b9e66e81fd200161b0cac21248fa961c5b",
+          "size_bytes": 4160
+        },
+        {
+          "basename": "step_0001_intermediate_01.png",
+          "member": "runs_additional/ewma_v1.6_sv_gpt-5.6-sol_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_intermediate_01.png",
+          "sha256": "749525b43c6f2a3974df99d075c900245b4399a1801b587a09eb873bc860538e",
+          "size_bytes": 1980
+        },
+        {
+          "basename": "step_0001_intermediate_01.txt",
+          "member": "runs_additional/ewma_v1.6_sv_gpt-5.6-sol_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_intermediate_01.txt",
+          "sha256": "7198b9cdcff6d504072b204dd400fe53eea0d722c08e5242f394bd830b73a25b",
+          "size_bytes": 4160
+        },
+        {
+          "basename": "step_0001_intermediate_02.png",
+          "member": "runs_additional/ewma_v1.6_sv_gpt-5.6-sol_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_intermediate_02.png",
+          "sha256": "2901b9a9ed818fe478391cae6c38f3fbaab4c521f43c47057cfb2d7e07d36e6f",
+          "size_bytes": 2002
+        },
+        {
+          "basename": "step_0001_intermediate_02.txt",
+          "member": "runs_additional/ewma_v1.6_sv_gpt-5.6-sol_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_intermediate_02.txt",
+          "sha256": "7f7859c7433fb4726aeb2919b72a9bc173119a03d7d8f2c293cebb0c6325b4b4",
+          "size_bytes": 4160
+        },
+        {
+          "basename": "step_0001_intermediate_03.png",
+          "member": "runs_additional/ewma_v1.6_sv_gpt-5.6-sol_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_intermediate_03.png",
+          "sha256": "1683a2b14e9e37770e73ab8163eb00092c7556d4620217bd87ef75f90af7ff13",
+          "size_bytes": 1914
+        },
+        {
+          "basename": "step_0001_intermediate_03.txt",
+          "member": "runs_additional/ewma_v1.6_sv_gpt-5.6-sol_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_intermediate_03.txt",
+          "sha256": "500ae55977013099e6771104838b6d9104b3569cf82ba4bc509c752c61572867",
+          "size_bytes": 4160
+        },
+        {
+          "basename": "step_0001_metadata.json",
+          "member": "runs_additional/ewma_v1.6_sv_gpt-5.6-sol_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_metadata.json",
+          "sha256": "523fee5f9c4205aefff92eb0ad395f9bd3c7d5e207b3fd08cd21201740ae8ee1",
+          "size_bytes": 229
+        }
+      ],
+      "intermediate_frame_pairs_preserved": 4,
+      "matching_candidates": [],
+      "observation": {
+        "final_frame_sha256": "80a2fd9a8813b7ee5cd6d63a3199ffc247119b39ab60b90709696b47ec58c140",
+        "status": "RUNNING"
+      },
+      "recorded_state": "NOT_FINISHED",
+      "run_root": "ewma_v1.6_sv_gpt-5.6-sol_xhigh_run1"
+    },
+    {
+      "files": [
+        {
+          "basename": "step_0001_final.png",
+          "member": "runs_additional/twma_v1.6_gpt-5.6-sol_max_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_final.png",
+          "sha256": "075134d2a4707fb98821b3308c945f036d7d067bdc31ce88f382addf10dee5d5",
+          "size_bytes": 1893
+        },
+        {
+          "basename": "step_0001_final.txt",
+          "member": "runs_additional/twma_v1.6_gpt-5.6-sol_max_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_final.txt",
+          "sha256": "80a2fd9a8813b7ee5cd6d63a3199ffc247119b39ab60b90709696b47ec58c140",
+          "size_bytes": 4160
+        },
+        {
+          "basename": "step_0001_intermediate_00.png",
+          "member": "runs_additional/twma_v1.6_gpt-5.6-sol_max_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_intermediate_00.png",
+          "sha256": "4260e4deaeee819792b12db5614c753745f61f78d147df133a423d3245bab626",
+          "size_bytes": 1976
+        },
+        {
+          "basename": "step_0001_intermediate_00.txt",
+          "member": "runs_additional/twma_v1.6_gpt-5.6-sol_max_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_intermediate_00.txt",
+          "sha256": "9caa7f985c33731991e4e9094d5ac6b9e66e81fd200161b0cac21248fa961c5b",
+          "size_bytes": 4160
+        },
+        {
+          "basename": "step_0001_intermediate_01.png",
+          "member": "runs_additional/twma_v1.6_gpt-5.6-sol_max_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_intermediate_01.png",
+          "sha256": "749525b43c6f2a3974df99d075c900245b4399a1801b587a09eb873bc860538e",
+          "size_bytes": 1980
+        },
+        {
+          "basename": "step_0001_intermediate_01.txt",
+          "member": "runs_additional/twma_v1.6_gpt-5.6-sol_max_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_intermediate_01.txt",
+          "sha256": "7198b9cdcff6d504072b204dd400fe53eea0d722c08e5242f394bd830b73a25b",
+          "size_bytes": 4160
+        },
+        {
+          "basename": "step_0001_intermediate_02.png",
+          "member": "runs_additional/twma_v1.6_gpt-5.6-sol_max_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_intermediate_02.png",
+          "sha256": "2901b9a9ed818fe478391cae6c38f3fbaab4c521f43c47057cfb2d7e07d36e6f",
+          "size_bytes": 2002
+        },
+        {
+          "basename": "step_0001_intermediate_02.txt",
+          "member": "runs_additional/twma_v1.6_gpt-5.6-sol_max_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_intermediate_02.txt",
+          "sha256": "7f7859c7433fb4726aeb2919b72a9bc173119a03d7d8f2c293cebb0c6325b4b4",
+          "size_bytes": 4160
+        },
+        {
+          "basename": "step_0001_intermediate_03.png",
+          "member": "runs_additional/twma_v1.6_gpt-5.6-sol_max_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_intermediate_03.png",
+          "sha256": "1683a2b14e9e37770e73ab8163eb00092c7556d4620217bd87ef75f90af7ff13",
+          "size_bytes": 1914
+        },
+        {
+          "basename": "step_0001_intermediate_03.txt",
+          "member": "runs_additional/twma_v1.6_gpt-5.6-sol_max_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_intermediate_03.txt",
+          "sha256": "500ae55977013099e6771104838b6d9104b3569cf82ba4bc509c752c61572867",
+          "size_bytes": 4160
+        },
+        {
+          "basename": "step_0001_metadata.json",
+          "member": "runs_additional/twma_v1.6_gpt-5.6-sol_max_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_metadata.json",
+          "sha256": "523fee5f9c4205aefff92eb0ad395f9bd3c7d5e207b3fd08cd21201740ae8ee1",
+          "size_bytes": 229
+        }
+      ],
+      "intermediate_frame_pairs_preserved": 4,
+      "matching_candidates": [],
+      "observation": {
+        "final_frame_sha256": "80a2fd9a8813b7ee5cd6d63a3199ffc247119b39ab60b90709696b47ec58c140",
+        "status": "RUNNING"
+      },
+      "recorded_state": "NOT_FINISHED",
+      "run_root": "twma_v1.6_gpt-5.6-sol_max_run1"
+    },
+    {
+      "files": [
+        {
+          "basename": "step_0001_final.png",
+          "member": "runs_additional/twma_v1.6_gpt-5.6-sol_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_final.png",
+          "sha256": "075134d2a4707fb98821b3308c945f036d7d067bdc31ce88f382addf10dee5d5",
+          "size_bytes": 1893
+        },
+        {
+          "basename": "step_0001_final.txt",
+          "member": "runs_additional/twma_v1.6_gpt-5.6-sol_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_final.txt",
+          "sha256": "80a2fd9a8813b7ee5cd6d63a3199ffc247119b39ab60b90709696b47ec58c140",
+          "size_bytes": 4160
+        },
+        {
+          "basename": "step_0001_intermediate_00.png",
+          "member": "runs_additional/twma_v1.6_gpt-5.6-sol_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_intermediate_00.png",
+          "sha256": "f04beec073ffd2cb135efed94cda3f9fd4e0d850866a56505659c1061663d243",
+          "size_bytes": 2047
+        },
+        {
+          "basename": "step_0001_intermediate_00.txt",
+          "member": "runs_additional/twma_v1.6_gpt-5.6-sol_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_intermediate_00.txt",
+          "sha256": "c26571649351df0abd55866cc6bea9664cc49a8f80ddc0ae91487c96ba31ff14",
+          "size_bytes": 4160
+        },
+        {
+          "basename": "step_0001_intermediate_01.png",
+          "member": "runs_additional/twma_v1.6_gpt-5.6-sol_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_intermediate_01.png",
+          "sha256": "37656bb7900a0bbecfa3a52d7efc2d99f519c9630a77724e156d0c7cf79aafca",
+          "size_bytes": 1955
+        },
+        {
+          "basename": "step_0001_intermediate_01.txt",
+          "member": "runs_additional/twma_v1.6_gpt-5.6-sol_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_intermediate_01.txt",
+          "sha256": "b4cd77a6aceebea4ca1b3d0ae2f0e43585dd2ac918c60c20dbc07fb4bba19cb8",
+          "size_bytes": 4160
+        },
+        {
+          "basename": "step_0001_intermediate_02.png",
+          "member": "runs_additional/twma_v1.6_gpt-5.6-sol_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_intermediate_02.png",
+          "sha256": "41ef9ba1dd883ba56de53dac366925f7e34e90e357df8b1059db19ec5a67e508",
+          "size_bytes": 1940
+        },
+        {
+          "basename": "step_0001_intermediate_02.txt",
+          "member": "runs_additional/twma_v1.6_gpt-5.6-sol_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_intermediate_02.txt",
+          "sha256": "b7599f78d9aa61b83d268552a0a4a9f03d6bdacb92c6ebf4ca734ade0dab761d",
+          "size_bytes": 4160
+        },
+        {
+          "basename": "step_0001_intermediate_03.png",
+          "member": "runs_additional/twma_v1.6_gpt-5.6-sol_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_intermediate_03.png",
+          "sha256": "7a65cb87e38d065c68d5ba74df8725f90a054085f2140ae5845be67d524f98ea",
+          "size_bytes": 1902
+        },
+        {
+          "basename": "step_0001_intermediate_03.txt",
+          "member": "runs_additional/twma_v1.6_gpt-5.6-sol_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_intermediate_03.txt",
+          "sha256": "f24b1f7d324b5378ca5b30409c1b30e1cce61606b48e0421c6c232bf61945d7c",
+          "size_bytes": 4160
+        },
+        {
+          "basename": "step_0001_metadata.json",
+          "member": "runs_additional/twma_v1.6_gpt-5.6-sol_xhigh_run1/su15/run/agent_run/client/session/level_01_attempt_01/step_0001_metadata.json",
+          "sha256": "2bce325b3a22f13605d8faeebeb9f44ae9832a871a3a27d16d24ddd12babaa15",
+          "size_bytes": 230
+        }
+      ],
+      "intermediate_frame_pairs_preserved": 4,
+      "matching_candidates": [],
+      "observation": {
+        "final_frame_sha256": "80a2fd9a8813b7ee5cd6d63a3199ffc247119b39ab60b90709696b47ec58c140",
+        "status": "RUNNING"
+      },
+      "recorded_state": "NOT_FINISHED",
+      "run_root": "twma_v1.6_gpt-5.6-sol_xhigh_run1"
+    }
+  ],
+  "schema_version": 1,
+  "target_action": "ACTION6"
+}

@@ -72,6 +72,12 @@ jobs:
       - name: Verify Track A 005a behavior/OIA outcome when present
         run: python scripts/verify_track_a_005a_behavior_outcome.py
 
+      - name: Verify Track A 005a archival-outcome freeze
+        run: python scripts/verify_track_a_005a_archive_outcome_freeze.py
+
+      - name: Verify Track A 005a archival outcome when present
+        run: python scripts/verify_track_a_005a_archive_outcome.py
+
       - name: Verify accepted v0.2.1 baseline bytes and provenance
         working-directory: baseline/oia-v0.2.1
         run: |

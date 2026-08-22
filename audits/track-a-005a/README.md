@@ -84,6 +84,21 @@ remain unopened and unexecuted at this freeze, and no post-P0 archive payload ha
 been read. A selected separator must be committed before a separately authorized
 public-outcome extraction.
 
+`ARCHIVE_OUTCOME_PROTOCOL.frozen.json` defines that extraction without opening
+payloads. Archive headers show the same exact 11 step-1 files in each of five
+run roots. After this freeze merges, the extractor will first read only the five
+step-1 metadata payloads, retain every run whose recorded P0 action is exactly
+`ACTION6`, and then read only those matching runs' four intermediate frame pairs
+and settled frame pair. Nonmatching frames and every later step remain closed.
+
+The primary comparison is the settled text-raster hash plus a preregistered
+normalization of public state. Intermediate frames are preserved but make no
+animation-fidelity claim. Allowed outcomes include a unique candidate match, an
+outside-frontier result, inconsistent independent recordings, or no matching
+recorded P0 action. Because this uses an existing public trajectory rather than
+a newly randomized live action, the classification is archival prospective—not
+a live intervention or decision-value experiment.
+
 ## Behavior/OIA result
 
 The frozen path admitted both `C0006` and `C0008`. Each exactly replayed P0,

@@ -1,0 +1,30 @@
+{
+  "audit_id": "OIA-1-TRACK-A-006c",
+  "case_source": "completed and fully opened Track A 006b outcome",
+  "component_outside_detection": {
+    "closed_identity_native": 16,
+    "reject_aware_native": 29
+  },
+  "fusion_rule": [
+    "Run the closed identity policy from initial state.",
+    "If it observes an unsupported output, reject without reset.",
+    "Otherwise reset once to the verified initial state and run the native reject-aware policy.",
+    "Reject on any reject-aware novelty result or on disagreement between candidate identities; identify only on agreement."
+  ],
+  "interpretation": "Retrospective method development only. These counts select and justify the fixed composition rule; they provide no 006c outcome evidence.",
+  "opened_case_count": 64,
+  "retrospective_fusion": {
+    "in_family_correct": 256,
+    "in_family_steps": 1476,
+    "outside_detected": 42,
+    "outside_detection_breakdown": {
+      "closed_unsupported_output": 16,
+      "identity_disagreement": 6,
+      "reject_aware_novelty": 20
+    },
+    "outside_false_identification": 22,
+    "outside_resets": 48,
+    "outside_steps": 309
+  },
+  "status": "opened_development_frozen_before_006c_heldout_generation"
+}

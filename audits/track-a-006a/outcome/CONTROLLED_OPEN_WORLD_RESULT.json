@@ -1,0 +1,78 @@
+{
+  "audit_id": "OIA-1-TRACK-A-006a",
+  "benchmark": {
+    "action_count": 3,
+    "candidate_count": 4,
+    "case_count": 64,
+    "master_seed": "oia-track-a-006a-benchmark-v1",
+    "max_beliefs": 100000,
+    "maximum_generation_attempts_per_case": 2000,
+    "maximum_oia_depth": 6,
+    "minimum_oia_depth": 2,
+    "output_count": 3,
+    "random_trials_per_target": 32,
+    "state_count": 3
+  },
+  "case_count": 64,
+  "case_manifest_sha256": "5427cc5709f4a9f944464ef1d683062c8bc892e18509ffa1658704d92df43457",
+  "claim_boundary": "Controlled deterministic simulation of within-frontier identification and outside-frontier detection under frozen finite candidate sets. This is not external validation, learned ontology formation, necessary revision, sealed transfer, or decision superiority.",
+  "evidence_package": {
+    "path": "CONTROLLED_OPEN_WORLD_EVIDENCE.zip",
+    "sha256": "57b18c6a17e6d879b13e08a8fcad9e942f17672d813eb152e707a50db397efdb",
+    "size_bytes": 92533
+  },
+  "record_count": 10880,
+  "records_jsonl_sha256": "9c9470f2c98e12f8f80c594c8755b0b301f8f73f579ec1a4f8e9dc620c364e0f",
+  "schema_version": 1,
+  "summary": [
+    {
+      "policy": "greedy_one_step",
+      "records": 256,
+      "status:correct_candidate_identification": 182,
+      "status:unresolved": 74,
+      "target_kind": "in_family",
+      "total_steps": 682
+    },
+    {
+      "policy": "greedy_one_step",
+      "records": 64,
+      "status:false_candidate_identification": 37,
+      "status:outside_model": 9,
+      "status:unresolved": 18,
+      "target_kind": "outside",
+      "total_steps": 170
+    },
+    {
+      "policy": "oia_adaptive",
+      "records": 256,
+      "status:correct_candidate_identification": 256,
+      "target_kind": "in_family",
+      "total_steps": 701
+    },
+    {
+      "policy": "oia_adaptive",
+      "records": 64,
+      "status:false_candidate_identification": 47,
+      "status:outside_model": 17,
+      "target_kind": "outside",
+      "total_steps": 175
+    },
+    {
+      "policy": "uniform_random",
+      "records": 8192,
+      "status:correct_candidate_identification": 4272,
+      "status:unresolved": 3920,
+      "target_kind": "in_family",
+      "total_steps": 22673
+    },
+    {
+      "policy": "uniform_random",
+      "records": 2048,
+      "status:false_candidate_identification": 890,
+      "status:outside_model": 689,
+      "status:unresolved": 469,
+      "target_kind": "outside",
+      "total_steps": 5178
+    }
+  ]
+}

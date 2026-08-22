@@ -1,0 +1,96 @@
+{
+  "audit_id": "OIA-1-TRACK-A-006a",
+  "baseline": {
+    "archive_sha256": "2653020afcbf636def260da1517c9e3ba41c2ba1175fc210d4847b303febc33b",
+    "implementation": "OIA-1 v0.2.1",
+    "source_sha256": {
+      "baseline/oia-v0.2.1/src/ontology_auditor/__init__.py": "321863cc19ba7b6bb22593aa3f20f991cbbd12930afbff4dc9dccf4cc7b15a3b",
+      "baseline/oia-v0.2.1/src/ontology_auditor/model.py": "9d622641f267e7dc1e99302060ac0a3a7ecd654e46f3162c9605c9ba602eca24",
+      "baseline/oia-v0.2.1/src/ontology_auditor/synthesis.py": "7df543e8af759a26ea2d5c256de4a66fb60a33dc3a42b2fea0d720c430f21f07"
+    }
+  },
+  "benchmark": {
+    "action_count": 3,
+    "candidate_count": 4,
+    "case_count": 64,
+    "master_seed": "oia-track-a-006a-benchmark-v1",
+    "max_beliefs": 100000,
+    "maximum_generation_attempts_per_case": 2000,
+    "maximum_oia_depth": 6,
+    "minimum_oia_depth": 2,
+    "output_count": 3,
+    "random_trials_per_target": 32,
+    "state_count": 3
+  },
+  "candidate_generation": {
+    "acceptance": [
+      "four candidates are globally behaviorally distinct",
+      "OIA adaptive identity synthesis returns exact solved",
+      "minimum worst-case depth is between 2 and 6 inclusive"
+    ],
+    "first_observation_rule": "Every action from initial state s0 emits o0; candidate information can appear only after hidden state transition.",
+    "machine_family": "complete deterministic three-state Mealy machines",
+    "rejection_accounting_required": true,
+    "seed_derivation": "first 64 bits of SHA-256 over NUL-framed master seed and generation coordinates"
+  },
+  "claim_boundary": "Controlled deterministic Track A simulation of within-frontier identification and outside-frontier detection under frozen finite candidate sets. No external validation, learned ontology formation, necessary revision, sealed transfer, statistical population inference, comparative superiority, or Track B claim.",
+  "comparators": {
+    "greedy_one_step": "At each surviving belief choose the lexicographically tie-broken action minimizing maximum immediate branch size, then sum of squared branch sizes.",
+    "oia_adaptive": "Unchanged exact minimum-worst-case full-identity policy synthesized from candidates only.",
+    "uniform_random": "Uniform random action at each step from a target-independent SHA-256-derived trial seed; belief updates and outside-branch checks remain exact."
+  },
+  "execution": {
+    "evidence": [
+      "candidate and outside-target machine hashes",
+      "exact OIA policy hashes, depths, roots, and reachable-belief counts",
+      "generation attempts and rejection accounting",
+      "every action/output trace, terminal classification, and step count",
+      "deterministic case manifest and JSONL record hashes"
+    ],
+    "expected_record_count": 10880,
+    "horizon": "Each policy receives that case's exact OIA minimum worst-case depth.",
+    "in_family_targets_per_case": 4,
+    "outside_targets_per_case": 1,
+    "policy_target_information": "No policy receives target transitions, target hash, or target kind.",
+    "target_order": "H0, H1, H2, H3, OUTSIDE"
+  },
+  "outcomes": {
+    "primary": [
+      "OIA outside_model count among 64 outside-target executions",
+      "OIA false_candidate_identification count among 64 outside-target executions"
+    ],
+    "required_soundness": "All 256 in-family OIA executions must correctly identify their candidate; otherwise the benchmark is an instrument blocker.",
+    "secondary": [
+      "equal-horizon greedy outside detection, false identification, and unresolved counts",
+      "equal-horizon uniform-random outside detection, false identification, and unresolved counts",
+      "per-policy in-family correct and unresolved counts",
+      "total intervention steps"
+    ],
+    "statistics": "Exact deterministic counts only; no p-values, confidence intervals, or population generalization."
+  },
+  "prefreeze_fixture": {
+    "case_count": 3,
+    "evidence_sha256": "8d0d2af6d1f6b189c3eeb93aa241e9d7f8c8de67e0a3f605f68807bc5bc9d53e",
+    "record_count": 90,
+    "records_jsonl_sha256": "3de56b979443d2781520550f49b66035d15d04394ac74d2c3a954f64cdf315f7",
+    "result_sha256": "d83f8e0598b6b9c7e68fcc2e459f3495dc043c756b753376da23ed7f97498b3d",
+    "seed": "oia-track-a-006a-fixture-v1",
+    "used_benchmark_seed": false
+  },
+  "prospective_ordering": [
+    "runner and disjoint fixture validated",
+    "benchmark generator, seeds, filters, policies, horizons, endpoints, and evidence format frozen",
+    "freeze merged",
+    "future benchmark case generation and target execution",
+    "future immutable outcome packaging and verification"
+  ],
+  "schema_version": 1,
+  "status_at_freeze": "frozen_before_benchmark_case_generation_or_target_execution",
+  "stop_rules": [
+    "Stop with a generation blocker if any case exhausts 2000 attempts.",
+    "Stop with an instrument blocker if any accepted OIA policy is not exact and solved.",
+    "Stop with an instrument blocker if any in-family OIA execution is not a correct candidate identification.",
+    "Do not change generator, filters, seeds, horizon, comparator, or endpoint definitions after benchmark execution; defects require a new numbered slice."
+  ]
+}
+

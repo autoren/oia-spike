@@ -1,0 +1,73 @@
+{
+  "behavioral_equivalence_classes": [
+    [
+      "M0001"
+    ],
+    [
+      "M0002"
+    ]
+  ],
+  "full_candidate_identification": {
+    "adaptive": {
+      "depth_claim": "minimum",
+      "enumeration_complete": true,
+      "exact": true,
+      "impossibility_certificate": null,
+      "optimality_certified": true,
+      "policy": {
+        "action": "ACTION6",
+        "branches": {
+          "OBS_17e28053ea0f713b48e0ca30e8973dfdec771984be95ffea6c90c05745371b1b": {
+            "candidates": [
+              "M0001"
+            ],
+            "conclusion": "identified candidate M0001",
+            "type": "leaf"
+          },
+          "OBS_a81d07005def63dd045cde9ace1516f59081c15ad27160035db761600502e37c": {
+            "candidates": [
+              "M0002"
+            ],
+            "conclusion": "identified candidate M0002",
+            "type": "leaf"
+          }
+        },
+        "type": "action"
+      },
+      "reachable_beliefs": 5,
+      "reason": "minimum worst-case policy over the complete reachable belief graph",
+      "status": "solved",
+      "worst_case_steps": 1
+    },
+    "adaptive_expected_steps": 1.0,
+    "preset": {
+      "exact": true,
+      "explored_partitions": 1,
+      "length": 1,
+      "reason": "shortest fixed action sequence",
+      "sequence": [
+        "ACTION6"
+      ],
+      "status": "solved"
+    }
+  },
+  "pairwise_separation": [
+    {
+      "distinguishable": true,
+      "left": "M0001",
+      "right": "M0002",
+      "sequence": [
+        "ACTION6"
+      ]
+    }
+  ],
+  "scope": {
+    "actions": [
+      "ACTION6",
+      "ACTION7"
+    ],
+    "candidate_count": 2,
+    "semantics": "deterministic complete finite Mealy candidates",
+    "state_count": 32
+  }
+}

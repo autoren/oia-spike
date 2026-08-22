@@ -1,0 +1,69 @@
+{
+  "accounting": {
+    "candidate_behavior_steps": 0,
+    "candidate_imports": 0,
+    "candidate_processes": 0,
+    "hardened_static_pass": 2,
+    "hardened_static_rejected": 0,
+    "held_out_post_p0_payloads_read": 0,
+    "network_or_service_calls": 0,
+    "oia_processes": 0,
+    "real_arc_actions": 0,
+    "source_records_opened": 2
+  },
+  "audit_id": "OIA-1-TRACK-A-005a",
+  "candidate_package_sha256": "9ae478a842b942bc80f3ff62063e4780d8097018384971d83db12fd6d87b167a",
+  "candidate_records": [
+    {
+      "candidate_id": "C0006",
+      "candidate_sha256": "10c719ea32e5871703d3f7dd1ba86bc36374f89c1e143f6f8e0009c2c970542d",
+      "candidate_size_bytes": 1176,
+      "stance_id": "discrete_mode_machine",
+      "static_scan": {
+        "ast_node_count": 218,
+        "forbidden_attributes": [],
+        "forbidden_names": [],
+        "functions": [
+          "initial_state",
+          "render",
+          "step"
+        ],
+        "imports": [
+          "copy",
+          "numpy",
+          "typing"
+        ],
+        "result": "pass"
+      },
+      "status": "prepared_not_imported_or_executed"
+    },
+    {
+      "candidate_id": "C0008",
+      "candidate_sha256": "65c2a7811721cf8df7b9799d71d026d574b57dbfb7c451c79f0a42e2dfc2c365",
+      "candidate_size_bytes": 2969,
+      "stance_id": "skeptical_countermodel",
+      "static_scan": {
+        "ast_node_count": 383,
+        "forbidden_attributes": [],
+        "forbidden_names": [],
+        "functions": [
+          "initial_state",
+          "render",
+          "step"
+        ],
+        "imports": [
+          "copy",
+          "numpy",
+          "typing"
+        ],
+        "result": "pass"
+      },
+      "status": "prepared_not_imported_or_executed"
+    }
+  ],
+  "claim_boundary": "Opened candidate-source static admission only; no candidate import, behavior, OIA execution, or post-P0 held-out outcome access.",
+  "generation_result_sha256": "f2fcb08fbd2c163473bfab7905f40f6989a8ba9a91dde9011dbf610b3934b937",
+  "p0_frame_sha256": "1e70d7b4ccd5c1ef1e03427d90f7295cdf461583efa978f285b55755e7a915a6",
+  "schema_version": 1,
+  "status": "candidate_bundles_prepared_behavior_not_run"
+}

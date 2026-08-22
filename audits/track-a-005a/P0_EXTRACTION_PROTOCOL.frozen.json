@@ -1,0 +1,29 @@
+{
+  "archive_sha256": "c3d85c4a75170de08837b9fc63cb7a7dde389b1205ca71b9f0fed16a9c09cf93",
+  "audit_id": "OIA-1-TRACK-A-005a",
+  "canonical_destination": "audits/track-a-005a/p0",
+  "claim_boundary": "Selected common reset P0 extraction and validation only; no candidate, behavior, score, model, OIA, or real environment action.",
+  "content_validation": {
+    "frame_png": "nonempty regular file with PNG signature",
+    "frame_text": "nonempty rectangular UTF-8 raster",
+    "metadata": "UTF-8 JSON object with RESET action_input, unique integer available_actions, and step_index zero"
+  },
+  "failure_verdicts": [
+    "archive_identity_mismatch",
+    "selection_identity_mismatch",
+    "selected_member_missing_duplicate_nonregular_or_oversized",
+    "selected_p0_differs_across_runs",
+    "invalid_reset_metadata_or_frame_format"
+  ],
+  "freeze_date": "2026-08-21",
+  "read_boundary": {
+    "allowed_payloads": "Exactly initial_frame.png, initial_frame.txt, and initial_metadata.json for level_01_attempt_01 under su15 in each of the five frozen run roots.",
+    "expected_payload_count": 15,
+    "forbidden_payloads": "Every nonselected archive member, including candidate programs, later observations, traces, logs, reasoning, session state, and scores."
+  },
+  "required_result": "All five copies of each filename are byte-identical; otherwise stop without choosing a canonical P0.",
+  "schema_version": 1,
+  "selected_game": "su15",
+  "selection_sha256": "c7d6b17f0ed24811fef433899d3806afd4e22b1ba103c6ace5bbcae5080dbc3b",
+  "status_at_freeze": "frozen_before_selected_p0_payload_access"
+}

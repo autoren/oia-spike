@@ -127,6 +127,22 @@ counts. It defines no tolerance or pass threshold and cannot change the merged
 outside-frontier verdict. Its purpose is only to distinguish a seriously wrong
 model frontier from a near miss exposed by brittle whole-frame equality.
 
+## Prediction-error diagnostic result
+
+The unchanged-P0 persistence baseline missed 2 of 4,096 pixels. `C0006` missed
+11 pixels after changing 9 relative to P0; `C0008` missed 6 after changing 4.
+Neither candidate changed either of the two pixels that actually changed, so
+both delta-support intersections were zero. Both did predict the correct
+`RUNNING` status.
+
+Whole-frame exactness is therefore strict, but it did not manufacture the
+outside-frontier result: persistence beat both models, and their predicted
+change locations had no overlap with reality. `C0008` is a near-static visual
+near miss (4,090 matching pixels), not a mechanistically correct prediction.
+The next revision gate should preserve exact observation identity as the primary
+endpoint while adding persistence as a required baseline and delta-support
+overlap as a diagnostic, rather than introducing a post-hoc pixel tolerance.
+
 ## Behavior/OIA result
 
 The frozen path admitted both `C0006` and `C0008`. Each exactly replayed P0,

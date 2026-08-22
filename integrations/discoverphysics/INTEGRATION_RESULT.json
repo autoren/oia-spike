@@ -1,0 +1,99 @@
+{
+  "schema_version": "OIA-DISCOVERPHYSICS-INTEGRATION-RESULT-0.1",
+  "date": "2026-08-22",
+  "protocol_freeze_commit": "567ea6760881d940b150dcb66e1052648d15d69a",
+  "protocol_manifest": {
+    "path": "integrations/discoverphysics/INTEGRATION_MANIFEST.json",
+    "sha256": "6477421c61c4b44965172edeff575c2c5abc234ebc70e516b7a894cf27e711a8"
+  },
+  "qualification_report": {
+    "path": "integrations/discoverphysics/QUALIFICATION_REPORT.md",
+    "sha256": "c22a46bb7909549cc7bea76ffca5196ceb4dd9459e0206d615d1999179e99cba",
+    "size": 2623
+  },
+  "source": {
+    "origin": "https://github.com/SampsonML/DiscoverPhysics.git",
+    "commit": "33b7fa9df96de9c35744efd181ca7e5a8dd60ad5",
+    "tree": "68cb921b1c7347e78161622fb44194c7fa6d16b3"
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "stage": "post_freeze_qualification",
+      "integration_verifier": "pass",
+      "standalone_tests_passed": 84,
+      "standalone_tests_failed": 0,
+      "historical_freeze_continuity": "pass",
+      "baseline_tests_passed": 1,
+      "baseline_test_import_errors": 2,
+      "exit_code": 1,
+      "failure_class": "test_environment_import_path_missing",
+      "boundary_crossed": false,
+      "correction": "set_PYTHONPATH_to_frozen_baseline_src"
+    },
+    {
+      "attempt": 2,
+      "stage": "corrected_baseline_qualification",
+      "baseline_tests_passed": 23,
+      "baseline_tests_failed": 0,
+      "baseline_test_import_errors": 0,
+      "baseline_provenance_verifier": "pass",
+      "exit_code": 0,
+      "boundary_crossed": false
+    },
+    {
+      "attempt": 3,
+      "stage": "parent_cross_repository_qualification",
+      "standalone_head": "567ea6760881d940b150dcb66e1052648d15d69a",
+      "verified_files": 9,
+      "external_verifiers_passed": 4,
+      "exit_code": 0,
+      "boundary_crossed": false
+    }
+  ],
+  "validated_capabilities": {
+    "frozen_artifacts_verified": 4,
+    "standalone_tests_passed": 84,
+    "maintained_historical_freezes_verified": 4,
+    "baseline_tests_passed": 23,
+    "baseline_provenance_verifier": "pass",
+    "parent_cross_repository_verifier": "pass",
+    "context_complete_candidate_call": "pass",
+    "time_blind_upstream_signature_rejected": "pass",
+    "single_change_matched_pair_validation": "pass",
+    "nonce_hardened_hiding_commitment": "pass",
+    "private_truth_rejection": "pass",
+    "strict_trace_order_and_context_linkage": "pass"
+  },
+  "execution_accounting": {
+    "model_calls": 0,
+    "service_calls": 0,
+    "simulator_calls": 0,
+    "interactive_discovery_episodes": 0,
+    "private_world_accesses": 0,
+    "candidate_executions": 0,
+    "outcome_scoring_calls": 0,
+    "credentials_used": 0,
+    "external_messages_sent": 0
+  },
+  "verdict": "credential_free_context_adapter_qualification_pass",
+  "established": [
+    "the_frozen_adapter_preserves_explicit_start_time_through_candidate_and_trace_interfaces",
+    "the_frozen_adapter_rejects_the_current_time_blind_upstream_artifact_signature",
+    "matched_pair_commitments_are_nonce_hardened_and_do_not_return_pair_values_or_nonce",
+    "private_truth_and_incomplete_trace_order_fail_closed",
+    "existing_standalone_and_baseline_freezes_remain_valid"
+  ],
+  "not_established": [
+    "private_world_or_evaluator_route_exists",
+    "custodian_accepts_the_context_complete_interface",
+    "private_matched_pair_has_been_selected_or_committed",
+    "learner_discovery_or_revision_behavior",
+    "prospective_transfer",
+    "planning_or_safety_value",
+    "broad_or_unique_ontology_identification"
+  ],
+  "next_required_evidence": "discoverphysics_custodian_confirmation_and_private_matched_pair_contract",
+  "next_empirical_gate": null,
+  "project_reopening_effect": "none"
+}

@@ -1,0 +1,113 @@
+{
+  "schema_version": "OIA-DISCOVERPHYSICS-CONTEXT-ADAPTER-0.1",
+  "date": "2026-08-22",
+  "source": {
+    "origin": "https://github.com/SampsonML/DiscoverPhysics.git",
+    "commit": "33b7fa9df96de9c35744efd181ca7e5a8dd60ad5",
+    "tree": "68cb921b1c7347e78161622fb44194c7fa6d16b3",
+    "license": "MIT"
+  },
+  "parent_analysis": {
+    "repository_commit": "863ea9bd23e029539acb38bedb414a5d9cc8bba2",
+    "document": "docs/synthesis/51-discoverphysics-outcome-free-distinguishability-audit.md",
+    "document_sha256": "64db93c90e52c4e443d68846b17a77393a190416037b58fd0a9a9f5a94d542e1",
+    "panel": "docs/synthesis/discoverphysics-outcome-free-distinguishability-panel-v0.1.json",
+    "panel_sha256": "122acdbb51f7c6e2f121f165155c0973b10645012c1e77b277597e07ec3d409b"
+  },
+  "artifact_interface": {
+    "experiment_context_fields": [
+      "p1",
+      "p2",
+      "pos2",
+      "velocity2",
+      "start_time"
+    ],
+    "candidate_input_fields": [
+      "pos1",
+      "pos2",
+      "p1",
+      "p2",
+      "velocity2",
+      "start_time",
+      "duration"
+    ],
+    "evaluator_forwarded_fields": [
+      "pos1",
+      "pos2",
+      "p1",
+      "p2",
+      "velocity2",
+      "start_time",
+      "duration"
+    ],
+    "serialization": "canonical_json_utf8_sorted_keys_no_nan",
+    "current_upstream_signature_compatible": false,
+    "incompatibility": "upstream_artifact_and_generic_evaluator_omit_start_time"
+  },
+  "candidate_language_boundary": {
+    "L0": "deterministic_executable_without_episode_start_time",
+    "L0_invariance": "identical_state_property_and_duration_inputs_imply_identical_prediction",
+    "L1": "L0_plus_explicit_start_time_or_equivalent_frozen_context",
+    "claim_scope": "dependency_revision_relative_to_frozen_L0_and_L1_only"
+  },
+  "matched_pair": {
+    "comparison_fields": [
+      "p1",
+      "p2",
+      "pos2",
+      "velocity2",
+      "measurement_times",
+      "start_time",
+      "duration"
+    ],
+    "changed_field": "start_time",
+    "pair_values": null,
+    "outcomes": null,
+    "thresholds": null,
+    "custodian_commitment_required": true,
+    "commitment_algorithm": "sha256_of_canonical_json_pair_source_commit_and_custodian_nonce",
+    "custodian_nonce_minimum_bits": 128,
+    "custodian_nonce_hidden_until_commitment_opening": true,
+    "commitment_public_before_episode": true,
+    "pair_values_learner_hidden_until_allowed_by_protocol": true
+  },
+  "trace_contract": {
+    "event_kinds": [
+      "artifact_submission",
+      "experiment_observation",
+      "experiment_request",
+      "hypothesis_revision",
+      "resource_snapshot"
+    ],
+    "strictly_contiguous_sequence": true,
+    "context_preserved_exactly": true,
+    "experiment_observation_links_request_sequence": true,
+    "artifact_interface_recorded": true,
+    "canonical_trace_hash_required": true
+  },
+  "custody_boundary": {
+    "private_world_source_learner_hidden": true,
+    "true_law_learner_hidden": true,
+    "held_out_pair_learner_hidden": true,
+    "outcomes_and_thresholds_learner_hidden_until_submission": true,
+    "same_pair_scores_L0_and_L1": true
+  },
+  "execution_boundary": {
+    "model_calls_authorized": 0,
+    "service_calls_authorized": 0,
+    "simulator_calls_authorized": 0,
+    "interactive_discovery_episodes_authorized": 0,
+    "private_world_accesses_authorized": 0,
+    "candidate_executions_authorized": 0,
+    "outcome_scoring_authorized": 0
+  },
+  "claim_boundary": {
+    "maximum_pre_outcome_claim": "context_complete_adapter_engineering_qualification",
+    "learner_discovery_established": false,
+    "private_reserve_established": false,
+    "prospective_transfer_established": false,
+    "broad_ontology_formation_claim_reopened": false,
+    "project_reopening_effect": "none"
+  },
+  "status": "context_adapter_frozen_unexecuted"
+}

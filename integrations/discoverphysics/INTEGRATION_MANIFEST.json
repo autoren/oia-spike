@@ -1,0 +1,56 @@
+{
+  "schema_version": "OIA-DISCOVERPHYSICS-INTEGRATION-0.1",
+  "date": "2026-08-22",
+  "source": {
+    "origin": "https://github.com/SampsonML/DiscoverPhysics.git",
+    "commit": "33b7fa9df96de9c35744efd181ca7e5a8dd60ad5",
+    "tree": "68cb921b1c7347e78161622fb44194c7fa6d16b3",
+    "license": "MIT"
+  },
+  "parent_analysis": {
+    "repository_commit": "863ea9bd23e029539acb38bedb414a5d9cc8bba2",
+    "document_sha256": "64db93c90e52c4e443d68846b17a77393a190416037b58fd0a9a9f5a94d542e1",
+    "panel_sha256": "122acdbb51f7c6e2f121f165155c0973b10645012c1e77b277597e07ec3d409b"
+  },
+  "contract": "integrations/discoverphysics/CONTEXT_ADAPTER_CONTRACT.json",
+  "artifacts": {
+    "integrations/discoverphysics/context_adapter.py": {
+      "sha256": "c50a4fd10b7a0ff1fd338e78d583ea9f9372423a9f01a0925a3edc6b33e3b99b",
+      "size": 15776,
+      "role": "context_complete_fail_closed_adapter"
+    },
+    "integrations/discoverphysics/CONTEXT_ADAPTER_CONTRACT.json": {
+      "sha256": "2bead78e49393f3f943a3664fc19116abf7b22fdb07a3919dd4763c15cecfc7f",
+      "size": 3786,
+      "role": "execution_free_adapter_and_custody_contract"
+    },
+    "integrations/discoverphysics/README.md": {
+      "sha256": "c3629abbeb795106898d12065a90f11704beebecce9dcdca85bbfa8dda74fc69",
+      "size": 2844,
+      "role": "integration_boundary_and_usage_documentation"
+    },
+    "scripts/verify_discoverphysics_context_adapter.py": {
+      "sha256": "ba27d9b78b255ed11d4c18f18c75998c5d14c5140f755b8527e375f6af5d8885",
+      "size": 6397,
+      "role": "manifest_contract_trace_and_pair_verifier"
+    }
+  },
+  "execution_boundary": {
+    "model_calls_authorized": 0,
+    "service_calls_authorized": 0,
+    "simulator_calls_authorized": 0,
+    "interactive_discovery_episodes_authorized": 0,
+    "private_world_accesses_authorized": 0,
+    "candidate_executions_authorized": 0,
+    "outcome_scoring_authorized": 0
+  },
+  "claim_boundary": {
+    "maximum_claim": "context_complete_adapter_frozen_and_statically_verified",
+    "learner_discovery_established": false,
+    "private_reserve_established": false,
+    "prospective_transfer_established": false,
+    "broad_ontology_formation_claim_reopened": false,
+    "project_reopening_effect": "none"
+  },
+  "status": "context_adapter_frozen_unexecuted"
+}

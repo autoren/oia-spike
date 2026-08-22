@@ -1,0 +1,58 @@
+{
+  "actions": [
+    "ACTION6",
+    "ACTION7"
+  ],
+  "adapter": "bounded_prefix_tree_v1",
+  "candidate_checks": [
+    {
+      "candidate_id": "C0006",
+      "machine_id": "M0001",
+      "result": "pass"
+    },
+    {
+      "candidate_id": "C0008",
+      "machine_id": "M0002",
+      "result": "pass"
+    }
+  ],
+  "horizon": 3,
+  "observation_fields": [
+    "final_frame_sha256",
+    "status"
+  ],
+  "output_manifest": {
+    "OBS_17e28053ea0f713b48e0ca30e8973dfdec771984be95ffea6c90c05745371b1b": {
+      "final_frame_sha256": "9a70f549f35909c1da7539e7f65b5eb490e1c2297d0bd2c67ef85e70d468b531",
+      "status": "RUNNING"
+    },
+    "OBS_2c37378eaaf49b20b10ade6b4c4e14aa827e214ad0dac509e640518d200b2016": {
+      "final_frame_sha256": "494c906fd750f8415f6eddfe14e311bd22fbbf336f91baec849b6b57f564ac9f",
+      "status": "RUNNING"
+    },
+    "OBS_32cc6cbaaee746cbd5bf12bed190315fd18f41cb432f4e0187e0bbbbf4422193": {
+      "final_frame_sha256": "1e70d7b4ccd5c1ef1e03427d90f7295cdf461583efa978f285b55755e7a915a6",
+      "status": "RUNNING"
+    },
+    "OBS_54c6d8b21e0d7cccc1e8bef913cca618f9d4e4fb90d67695ff6e639e76bb76a5": {
+      "final_frame_sha256": "4abd6ceb909b640bdf1e855b88e2eb715c48a40e84529cf0b56fbf488e430faa",
+      "status": "RUNNING"
+    },
+    "OBS_7d084644af5e779622cb551940eb012b3fa901df88fb5a196d3cef60511dbbd1": {
+      "final_frame_sha256": "9bc639e0727b1caa3aa789b3514e6d47137458912ac8712b20e7b538fada1b96",
+      "status": "RUNNING"
+    },
+    "OBS_9b7f54e0d257fbfdff07735f0405072603bc636b4d90582e287325a273e474ce": {
+      "final_frame_sha256": "2a2aa37b9d3f8585089d9e2edca0486c523ba0a9e87bc01c8ef6980bf7406666",
+      "status": "RUNNING"
+    },
+    "OBS_BOUNDARY_EXHAUSTED": {
+      "kind": "candidate_independent_depth_boundary"
+    },
+    "OBS_a81d07005def63dd045cde9ace1516f59081c15ad27160035db761600502e37c": {
+      "final_frame_sha256": "01307698d529da3fc700ad79deda766517b1b074a386e55ce57656fae3342475",
+      "status": "RUNNING"
+    }
+  },
+  "result": "pass"
+}

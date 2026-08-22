@@ -83,3 +83,21 @@ exposes only rendered-frame hashes and declared status. The generated sources
 remain unopened and unexecuted at this freeze, and no post-P0 archive payload has
 been read. A selected separator must be committed before a separately authorized
 public-outcome extraction.
+
+## Behavior/OIA result
+
+The frozen path admitted both `C0006` and `C0008`. Each exactly replayed P0,
+completed all 14 action words, remained behaviorally distinct, and produced
+byte-identical observable traces across two repetitions under hash seeds 0, 1,
+5, and 10. The run used 254 isolated candidate processes.
+
+Unchanged OIA-1 v0.2.1 then returned the exact, optimality-certified one-step
+separator `ACTION6`; its four process reports were byte-identical. The adapter
+passed complete prefix consistency and exposed only frame hashes and declared
+status. Crucially, zero post-P0 archive payloads were read before this selection.
+
+This supports a prospective separator-selection claim relative to the still
+unopened public outcome. It does not yet show that either candidate predicts the
+actual environment, that `ACTION6` is useful in the real task, or that OIA caused
+an ontology revision. The next gate must first merge this result, then freeze and
+run an exact archive lookup for an independently recorded `ACTION6` outcome.

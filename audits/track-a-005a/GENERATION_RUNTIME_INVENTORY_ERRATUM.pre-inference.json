@@ -1,0 +1,10 @@
+{
+  "audit_id": "OIA-1-TRACK-A-005a",
+  "candidate_generations": 0,
+  "correction": "Preserve the venv executable path without resolving its interpreter symlink, then rerun only the model/runtime byte inventory.",
+  "failure": "The first inventory attempt resolved the venv Python symlink to the base interpreter, so the subprocess could not import the venv-installed MLX packages.",
+  "inference_tokens_generated": 0,
+  "model_loads_during_failed_attempt": 0,
+  "schema_version": 1,
+  "status": "pre_inference_engineering_path_failure_preserved"
+}

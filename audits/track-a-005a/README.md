@@ -45,3 +45,9 @@ copies of each `su15` reset file were byte-identical, so the canonical 64×64 P0
 is committed under [`p0/`](p0/). It exposes only actions `6` and `7`, carries a
 `RESET` action input, and has `step_index` zero. No candidate, later observation,
 trace, score, model, OIA, or real ARC action was accessed.
+
+`CANDIDATE_GENERATION_PROTOCOL.frozen.json` defines the fresh hypothesis gate.
+It pins the complete local Qwen3.8-27B 4-bit snapshot, MLX runtime, P0-only prompt,
+eight distinct epistemic stances, greedy decoding, static acceptance contract,
+and zero-repair rule. Candidate source is packaged opaquely and is not imported
+or executed during generation.

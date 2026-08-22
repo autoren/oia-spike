@@ -93,6 +93,15 @@ jobs:
       - name: Verify Track A 005b behavior/OIA outcome when present
         run: python scripts/verify_track_a_005b_behavior_outcome.py
 
+      - name: Verify Track A 005c missing-import maintenance freeze
+        run: python scripts/verify_track_a_005c_freeze.py
+
+      - name: Verify Track A 005c normalization result when present
+        run: python scripts/verify_track_a_005c_normalization_result.py
+
+      - name: Verify Track A 005c behavior/OIA outcome when present
+        run: python scripts/verify_track_a_005c_behavior_outcome.py
+
       - name: Verify accepted v0.2.1 baseline bytes and provenance
         working-directory: baseline/oia-v0.2.1
         run: |

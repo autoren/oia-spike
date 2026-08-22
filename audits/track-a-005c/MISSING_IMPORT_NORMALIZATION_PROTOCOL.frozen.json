@@ -1,0 +1,57 @@
+{
+  "audit_id": "OIA-1-TRACK-A-005c",
+  "schema_version": 1,
+  "freeze_date": "2026-08-22",
+  "status_at_freeze": "frozen_before_any_source_normalization_or_candidate_reexecution",
+  "parent": {
+    "audit_id": "OIA-1-TRACK-A-005b",
+    "candidate_package_sha256": "a49a8012b0f7f130feb5c32bfb32825ad4426d7c2203fba6e532165c1fd884d4",
+    "behavior_result_sha256": "d85d1496a11330c0064f4e87a5b1ba336437ff551c04204027ac3f9f14f9c3e7",
+    "gate_verdict": "revision_generation_or_calibration_blocker",
+    "observed_failure": "All eight candidates raised NameError before exact calibration; source inspection found unbound copy.deepcopy in every candidate.",
+    "candidate_sources": [
+      {"candidate_id": "R0001", "sha256": "c4dae01abdd0c3ded5780ca2b8b1bf4e864ba23a5dd977f752935da5084bef82"},
+      {"candidate_id": "R0002", "sha256": "fbf80e427b0e605d7cf85964f9bd5d882acf578f613c6e508f9f2a2fb4ccdf04"},
+      {"candidate_id": "R0003", "sha256": "b8cb85e044ed90dcc148b2cf928cd62859a1f5f2c29a4211c973beb92ed687b2"},
+      {"candidate_id": "R0004", "sha256": "942bf625300a7d79441845f74bb3c0125e467e63fe40ebe86f47da7bbdd3dd56"},
+      {"candidate_id": "R0005", "sha256": "9c0422424518385457e55de382993e90ec939e19be83b79b599b625aa67d77b8"},
+      {"candidate_id": "R0006", "sha256": "e59800f349e94a19cddb0a53420ab9fad7a8177951921d5f675c9af58f383b1f"},
+      {"candidate_id": "R0007", "sha256": "153da1498c19fb59a51d1ff10b68e496afe0c4f6d3729e52c8d37d7060f34905"},
+      {"candidate_id": "R0008", "sha256": "fbf80e427b0e605d7cf85964f9bd5d882acf578f613c6e508f9f2a2fb4ccdf04"}
+    ]
+  },
+  "allowed_normalization": {
+    "preconditions": [
+      "The exact parent source passes the frozen 005b AST contract.",
+      "The module does not already bind the name copy.",
+      "Every loaded use of the name copy is exactly the base of copy.deepcopy.",
+      "At least one copy.deepcopy use exists."
+    ],
+    "transformation": "Prepend the exact ASCII bytes `import copy\\n` to the unchanged parent source.",
+    "maximum_edits_per_candidate": 1,
+    "other_name_import_or_semantic_repairs": false,
+    "model_or_repair_inferences": 0,
+    "preserve_parent_and_normalized_hashes": true,
+    "deterministic_package": true
+  },
+  "post_normalization_gate": {
+    "normalized_package_must_merge_before_execution": true,
+    "runtime_image_id": "sha256:32272ac8ae641808d6b6328bcdb7210746292ea12e4aeea8b69ef93cab49ee2b",
+    "p0_sha256": "1e70d7b4ccd5c1ef1e03427d90f7295cdf461583efa978f285b55755e7a915a6",
+    "calibration_action": "ACTION6",
+    "p1_settled_sha256": "80a2fd9a8813b7ee5cd6d63a3199ffc247119b39ab60b90709696b47ec58c140",
+    "calibration_status": "RUNNING",
+    "calibration_exactness_unchanged": true,
+    "post_p1_words_seeds_repetitions_adapter_and_oia": "Reuse the merged Track A 005b frozen 14-word, seeds 0/1/5/10, two-repeat, bounded prefix-tree, and OIA-1 v0.2.1 protocol without relaxation.",
+    "step_2_or_later_payloads_read": 0
+  },
+  "allowed_verdicts": [
+    "maintenance_normalization_blocker",
+    "revision_generation_or_calibration_blocker",
+    "no_revised_behavioral_divergence",
+    "nondeterministic_or_runtime_blocker",
+    "oia_blocker",
+    "maintenance_revised_separator_selected_pre_step2"
+  ],
+  "claim_boundary": "Opened Track A deterministic maintenance of a known missing permitted import, followed by unchanged exact calibration/admission/OIA only. A successful result concerns maintenance-repaired candidates, not untouched model outputs; no step-2 outcome, sealed transfer, or Track B claim."
+}

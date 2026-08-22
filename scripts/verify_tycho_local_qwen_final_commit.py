@@ -10,6 +10,7 @@ from typing import Any
 
 ROOT = Path(__file__).resolve().parents[1]
 PROTOCOL = ROOT / "integrations/tycho-local-qwen/FINAL_COMMIT_PROTOCOL.json"
+RESULT = ROOT / "integrations/tycho-local-qwen/FINAL_COMMIT_RESULT.json"
 
 
 def load_object(path: Path) -> dict[str, Any]:
@@ -109,15 +110,103 @@ def validate_protocol(path: Path = PROTOCOL) -> dict[str, Any]:
     return payload
 
 
+def validate_result(path: Path = RESULT) -> dict[str, Any]:
+    payload = load_object(path)
+    if payload.get("schema_version") != (
+        "OIA-TYCHO-LOCAL-QWEN-FINAL-COMMIT-RESULT-0.1"
+    ):
+        raise ValueError("final-commit result schema changed")
+    if payload.get("protocol_commit") != (
+        "2bd9420088f66b460b6d39ed9dead4beb5964156"
+    ):
+        raise ValueError("final-commit result freeze changed")
+    source = payload.get("source") or {}
+    if (
+        source.get("tycho_commit")
+        != "f68912a764372ead0a610db2e1c011d41ce5197e"
+        or source.get("tycho_tree")
+        != "d5ff6a4e142934ceb865e403e3aa92d80bfa245c"
+        or source.get("agent_source_sha256")
+        != "38472ec280187305db3fd2325fb1197c28ac31b3e22c13d169b4aaa86daaf7dc"
+        or source.get("tracked_source_clean") is not True
+    ):
+        raise ValueError("final-commit result source changed")
+    execution = payload.get("execution") or {}
+    expected_exact = {
+        "runs": 1,
+        "operation_mode": "offline",
+        "game_id": "tr87-cd924810",
+        "seed": 0,
+        "run_spec_fingerprint": "dc30a2fd379b2d3d7754c7d60b2d66edc2b6bbb36257f8bf9fd9bd6f67e12590",
+        "model_calls": 5,
+        "open_ended_tool_steps": 4,
+        "final_call_type": "freeform_commit",
+        "environment_actions_recorded": 1,
+        "environment_action_sequence": ["ACTION1"],
+        "model_selected_non_reset_actions": 1,
+        "defaulted_actions": 0,
+        "explicit_action_selection_established": True,
+        "action_correctness_established": False,
+    }
+    for field, expected in expected_exact.items():
+        if execution.get(field) != expected:
+            raise ValueError(f"final-commit result changed: {field}")
+    expected_trace = {
+        "tool": "take_action",
+        "args": {"action": "ACTION1"},
+        "committed": True,
+        "final_commit": True,
+    }
+    if (
+        execution.get("final_call_response")
+        != {"tool": "take_action", "arguments": {"action": "ACTION1"}}
+        or execution.get("committed_final_commit_trace") != expected_trace
+    ):
+        raise ValueError("final-commit action trace changed")
+    zero_boundaries = [
+        "reset_actions",
+        "paid_model_or_api_calls",
+        "public_source_downloads",
+        "semi_private_or_private_games",
+        "competition_submissions",
+        "world_models_generated",
+        "oia_runs",
+    ]
+    if any(execution.get(field) != 0 for field in zero_boundaries):
+        raise ValueError("final-commit result crossed a zero boundary")
+    if payload.get("verdict") != "local_qwen_final_commit_pass":
+        raise ValueError("final-commit result verdict changed")
+    if payload.get("stopping_rule_applied") != (
+        "No further model-call or tool-step ceiling increase is authorized in "
+        "this engineering sequence."
+    ):
+        raise ValueError("final-commit stopping rule changed")
+    next_gate = payload.get("next_gate") or {}
+    if next_gate.get("status") != "documentation_and_static_resource_audit_only":
+        raise ValueError("final-commit next gate changed")
+    claims = payload.get("claim_boundary") or {}
+    if claims.get("syntactic_model_action_selection") is not True or any(
+        value is not False
+        for field, value in claims.items()
+        if field != "syntactic_model_action_selection"
+    ):
+        raise ValueError("final-commit result claim boundary broadened")
+    if payload.get("status") != "completed":
+        raise ValueError("final-commit result status changed")
+    return payload
+
+
 def main() -> None:
     payload = validate_protocol()
+    result = validate_result()
     print(
         json.dumps(
             {
                 "game": payload["unchanged_pins"]["resolved_game_id"],
                 "model_calls_maximum": 5,
                 "tool_steps_maximum": 4,
-                "status": "tycho_local_qwen_final_commit_frozen",
+                "verdict": result["verdict"],
+                "status": "tycho_local_qwen_final_commit_verified",
             },
             sort_keys=True,
         )

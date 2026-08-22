@@ -57,6 +57,32 @@ class TychoLocalQwenFinalCommitTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, "pass condition changed"):
                 verifier.validate_protocol(path)
 
+    def test_result_requires_a_committed_model_action(self) -> None:
+        payload = verifier.validate_result()
+        execution = payload["execution"]
+        self.assertEqual(execution["final_call_type"], "freeform_commit")
+        self.assertEqual(execution["model_selected_non_reset_actions"], 1)
+        self.assertEqual(execution["defaulted_actions"], 0)
+        self.assertEqual(
+            execution["committed_final_commit_trace"],
+            {
+                "tool": "take_action",
+                "args": {"action": "ACTION1"},
+                "committed": True,
+                "final_commit": True,
+            },
+        )
+        self.assertFalse(execution["action_correctness_established"])
+
+    def test_result_fails_closed_if_action_correctness_is_claimed(self) -> None:
+        payload = json.loads(verifier.RESULT.read_text(encoding="utf-8"))
+        payload["execution"]["action_correctness_established"] = True
+        with tempfile.TemporaryDirectory() as temporary:
+            path = Path(temporary) / "tampered.json"
+            path.write_text(json.dumps(payload), encoding="utf-8")
+            with self.assertRaisesRegex(ValueError, "result changed"):
+                verifier.validate_result(path)
+
 
 if __name__ == "__main__":
     unittest.main()

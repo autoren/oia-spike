@@ -81,3 +81,12 @@ total call ceiling from four to five, leaves the four analysis-tool ceiling
 fixed, requires the fifth call to be Tycho's unmodified commit-only prompt,
 and permits at most one non-`RESET` environment action. Its stopping rule
 forbids another ceiling increase after this run.
+
+The final commit-only smoke passed. The fifth call was recorded as
+`freeform_commit`, returned `take_action({"action":"ACTION1"})`, and has a
+matching committed `final_commit` tool trace; no Tycho default was used. See
+[`FINAL_COMMIT_REPORT.md`](FINAL_COMMIT_REPORT.md) and
+[`FINAL_COMMIT_RESULT.json`](FINAL_COMMIT_RESULT.json). This establishes only
+syntactic model-selected action compatibility. `ACTION1` correctness, progress,
+world-model construction, discovery, and transfer remain unestablished. The
+engineering call/tool ceilings will not be raised again.

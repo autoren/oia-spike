@@ -34,3 +34,9 @@ Verify the frozen protocol with:
 ```bash
 python scripts/verify_tycho_local_qwen_qualification.py
 ```
+
+The post-freeze transport driver is
+`scripts/run_tycho_local_qwen_transport_smoke.py`. It rejects any non-local
+endpoint, changed model identifier, non-placeholder API key, or registered
+OpenAI, Anthropic, or ARC credential before importing Tycho or making the one
+model call.
